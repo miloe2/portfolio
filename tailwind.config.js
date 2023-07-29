@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       rotate:{
-        '15': '20deg',
+        '20': '20deg',
       },
       dropShadow: {
         '5px': '5px 5px 5px rgba(0, 0, 0, 0.8)',
@@ -15,8 +15,6 @@ export default {
       top:{
         '1/5': '20%',
       },
-      height: ['responsive'],
-      maxWidth: ['responsive'],
     },
   },
   plugins: [],

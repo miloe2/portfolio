@@ -26,7 +26,7 @@ const BGItems = () => {
     return (
         <div className='overflow-hidden '>
             <div className="flex w-screen h-screen relative overflow-hidden box-border">
-                <div className='w-full rotate-15 absolute h-full max-[768px]:rotate-0 max-[768px]:top-0 max-[768px]:left-1/2'>
+                <div className='w-full rotate-20 absolute h-full max-[768px]:rotate-0 max-[768px]:top-0 max-[768px]:left-1/2'>
                 {/* 1st */}
                 <div className=' flex h-1/4 w-auto absolute'  style={{ right: `calc(-50% - ${scrollY *0.15}%)`,  }}>
                     { ImageUrl1.map((photo, index) => (
