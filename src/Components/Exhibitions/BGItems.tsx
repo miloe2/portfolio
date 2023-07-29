@@ -28,7 +28,7 @@ const BGItems = () => {
             <div className="flex w-screen h-screen relative overflow-hidden box-border">
                 <div className='w-full rotate-15 absolute h-full max-[768px]:rotate-0 max-[768px]:top-0 max-[768px]:left-1/2'>
                 {/* 1st */}
-                <div className=' flex h-1/4 w-auto absolute'  style={{ right: `calc(-50% - ${scrollY *0.1}%)`, top: `calc(0% + ${scrollY * 0.00}%)`  }}>
+                <div className=' flex h-1/4 w-auto absolute'  style={{ right: `calc(-50% - ${scrollY *0.15}%)`,  }}>
                     { ImageUrl1.map((photo, index) => (
                     <div className='w-60 m-2 flex-shrink-0 relative' key={index}>
                         <img className={ImageStyle}  src={photo} alt="" />
@@ -37,7 +37,7 @@ const BGItems = () => {
                     ))}
                 </div>
                 {/* 2nd */}
-                <div className=' flex h-1/4  w-auto absolute ' style={{ right: `calc(-20% + ${scrollY * 0.04}%)`, top: `calc(24% - ${scrollY * 0.00}%)` }}>
+                <div className=' flex h-1/4  w-auto absolute ' style={{ right: `calc(-20% + ${scrollY * 0.10}%)`, top: `calc(24% - ${scrollY * 0.00}%)` }}>
                     { ImageUrl2.map((photo, index) => (
                     <div className='w-60 m-2 flex-shrink-0 relative' key={index}>
                         <img className={ImageStyle}  src={photo} alt="" />
@@ -46,7 +46,7 @@ const BGItems = () => {
                     ))}
                 </div>
                 {/* 3st */}
-                <div className=' flex h-1/4 w-auto absolute -right-24 '  style={{ right: `calc(-110% - ${scrollY * 0.02}%)`,  top: `calc(49% + ${scrollY * 0.00}%)`}}>
+                <div className=' flex h-1/4 w-auto absolute -right-24 '  style={{ right: `calc(-110% - ${scrollY * 0.07}%)`,  top: `calc(49% + ${scrollY * 0.00}%)`}}>
                     { ImageUrl3.map((photo, index) => (
                     <div className='w-60 m-2 flex-shrink-0 relative' key={index}>
                         <img className={ImageStyle}  src={photo} alt="" />
@@ -55,7 +55,7 @@ const BGItems = () => {
                     ))}
                 </div>
                 {/* 4st */}
-                <div className=' flex h-1/4  w-auto absolute  ' style={{ right:  `calc(-30% + ${scrollY * 0.05}%)`,  top: `calc(74% + ${scrollY * 0.00}%)`}}>
+                <div className=' flex h-1/4  w-auto absolute  ' style={{ right:  `calc(-30% + ${scrollY * 0.10}%)`,  top: `calc(74% + ${scrollY * 0.00}%)`}}>
                 {/* <div className=' flex h-44 w-auto absolute  ' style={{ right: `calc(-74rem + ${scrollY * 0.05}rem)`, top: `calc(52.5rem - ${scrollY * 0.035}rem)`}}> */}
                     { ImageUrl1.map((photo, index) => (
                     <div className='w-60 m-2 flex-shrink-0 relative' key={index}>
