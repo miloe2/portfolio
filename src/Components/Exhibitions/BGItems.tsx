@@ -37,7 +37,7 @@ const BGItems = () => {
                     ))}
                 </div>
                 {/* 2nd */}
-                <div className=' flex h-1/4  w-auto absolute ' style={{ right: `calc(-20% + ${scrollY * 0.1}%)`, top: `calc(24% - ${scrollY * 0.00}%)` }}>
+                <div className=' flex h-1/4  w-auto absolute ' style={{ right: `calc(-20% + ${scrollY * 0.04}%)`, top: `calc(24% - ${scrollY * 0.00}%)` }}>
                     { ImageUrl2.map((photo, index) => (
                     <div className='w-60 m-2 flex-shrink-0 relative' key={index}>
                         <img className={ImageStyle}  src={photo} alt="" />
@@ -46,7 +46,7 @@ const BGItems = () => {
                     ))}
                 </div>
                 {/* 3st */}
-                <div className=' flex h-1/4 w-auto absolute -right-24 '  style={{ right: `calc(-110% - ${scrollY * 0.1}%)`,  top: `calc(49% + ${scrollY * 0.00}%)`}}>
+                <div className=' flex h-1/4 w-auto absolute -right-24 '  style={{ right: `calc(-110% - ${scrollY * 0.02}%)`,  top: `calc(49% + ${scrollY * 0.00}%)`}}>
                     { ImageUrl3.map((photo, index) => (
                     <div className='w-60 m-2 flex-shrink-0 relative' key={index}>
                         <img className={ImageStyle}  src={photo} alt="" />
