@@ -2,6 +2,7 @@ import React from 'react';
 import BGItems from '../Components/Exhibitions/BGItems';
 import Carousel from '../Components/Exhibitions/Carousel';
 import Whatidid from '../Components/Exhibitions/Whatidid';
+import ProjectRow from '../Components/Exhibitions/ProjectRow';
 
 
 const Exhibitions = () => {
@@ -11,12 +12,12 @@ const Exhibitions = () => {
             <div className='w-full bg-black h-72'/>
             <Carousel/>
             <div className='w-full bg-black h-72'/>
-            <Whatidid/>
+            <Whatidid/> 
+            <div className='w-full bg-black h-screen'/>
+            <div className='w-full bg-black h-screen'/>
             <div className='w-full bg-black h-72'/>
-            <div className='w-full bg-black h-72'/>
-            <div className='w-full bg-black h-72'/>
-            <div className='w-full bg-black h-72'/>
-            <div className='w-full bg-black h-72'/>
+            <ProjectRow/>
+            <div className='w-full bg-black h-screen'/>
             <div className='w-full bg-black h-72'/>
         </div>
     );

@@ -27,7 +27,7 @@ const Whatidid = () => {
     const fontGray = 'text-xs leading-6 whitespace-pre-line text-zinc-500 h-10 items-center'
     const fontTarget = 'text-base font-bold leading-6 whitespace-pre-line h-10 flex'
 
-// 
+
 
     return (
         
