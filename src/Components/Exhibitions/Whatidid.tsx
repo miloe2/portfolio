@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { ImageUrl1 } from './ImgUrl';
+import { ImageUrl1 } from '../../assets/Data/ExhibitData';
 
 const Whatidid = () => {
     const [scrollY, setScrollY] = useState(0);

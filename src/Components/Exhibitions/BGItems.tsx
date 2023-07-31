@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { ImageUrl1, ImageUrl2, ImageUrl3} from './ImgUrl';
-import BGItemsBG from '../../resources/BGItemsBG.jpg';
+import { ImageUrl1, ImageUrl2, ImageUrl3} from '../../assets/Data/ExhibitData';
+import BGItemsBG from '../../assets/Images/BGItemsBG.jpg'
 
 
 const BGItems = () => {
@@ -19,7 +19,7 @@ const BGItems = () => {
       };
     }, []);
 
-    const BlackBG =  'bg-black w-full h-full absolute top-0 left-0 opacity-70 rounded-xl';
+    const BlackBG =  'bg-black w-full h-full absolute top-0 left-0 opacity-50 rounded-xl';
     const ImageStyle = 'w-full h-full object-cover rounded-xl drop-shadow-5px';
 
   //////////////////////////////////////////// 미디어쿼리 잡기 ////////////////////////////////////////////

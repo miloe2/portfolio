@@ -1,5 +1,7 @@
 import React from 'react';
-import { carouselData } from './ImgUrl';
+import carouselData from '../../assets/Data/CarouselData';
+// import carouselData from '../../assets/Data/CarouselData.js';
+
 
 const Carousel = () => {
     return (
