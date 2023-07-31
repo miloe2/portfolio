@@ -10,14 +10,13 @@ const Exhibitions = () => {
         <div className='overflow-hidden'>
             <BGItems/>
             <div className='w-full bg-black h-72'/>
-            <Carousel/>
-            <div className='w-full bg-black h-72'/>
             <Whatidid/> 
             <div className='w-full bg-black h-screen'/>
             <div className='w-full bg-black h-screen'/>
-            <div className='w-full bg-black h-72'/>
+            <div className='w-full bg-black h-96'/>
+            <Carousel/>
+            <div className='w-full bg-black h-40'/>
             <ProjectRow/>
-            <div className='w-full bg-black h-screen'/>
             <div className='w-full bg-black h-72'/>
         </div>
     );

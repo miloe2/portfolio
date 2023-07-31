@@ -53,20 +53,20 @@ const ProjectRow = () => {
 
     return (
         <>
-        
         <div className='w-screen h-screen bg-black flex justify-center pl-48 flex-col  '>
+        <div className='text-xl font-bold py-8  text-white'> 프로젝트 </div>
             {/* 이미지 들어가는 공간 */}
             <div ref={diaryImageRef} 
                 className=' w-auto h-1/2 items-center whitespace-nowrap flex  overflow-x-auto  scrollbar-hide'>
                 {projectData.map((item, index) => (
                     <div className=' w-72 h-full box-border flex-shrink-0 overflow-hidden relative mr-1' key={index}>
                         <div className={BlackBG}/>
-                        <div className='w-full h-2/4 absolute bottom-0 text-white justify-center flex'>
+                        <div className='w-full h-2/5 absolute bottom-0 text-white justify-center flex'>
                             <div className=' w-4/5 h-auto pr-10'>
                                 <div className='text-xs leading-6 whitespace-pre-line'> {item.date} </div>
                                 <div className='text-xs leading-6 whitespace-pre-line'> {item.location} </div>
                                 <div className='text-xl font-bold py-1 whitespace-pre-line'> {item.title} </div>
-                                <div className='text-xs leading-6 whitespace-pre-line'> {item.desc} </div>
+                                {/* <div className='text-xs leading-6 whitespace-pre-line'> {item.desc} </div> */}
                             </div>
                         </div>
                         

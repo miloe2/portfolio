@@ -61,15 +61,15 @@ const Whatidid = () => {
                 <div className='text-sm'> Exhibitions</div>
                 <div className='text-3xl font-bold py-4'>What I did </div>
                 <div className='text-xs leading-6 whitespace-pre-line'> 
-                해외 전시회 대행사에 근무하며 <br/>
-                해외 전시회 출장 및 현장 운영과 제안서 기획/작성,<br/>
-                입찰 제안 발표를 수행하였습니다. </div>
-                <div className='text-2xl font-bold py-4 mt-8'> 주요 프로젝트 </div>
+                전시 대행사 해외컨벤션 팀에 근무하며 <br/>
+                해외 전시회 기획 및 현장 운영과 <br/>
+                제안서 기획/작성, 입찰 제안 발표를 수행하였습니다. </div>
+                <div className='text-xl font-bold py-4 mt-8'> 업무 분야 </div>
                 {/* <div className={} >  CES 2022</div> */}
-                {scrollY < 2100 ? (<div className={fontTarget}> → CES 2022</div>) : (<div className={fontGray}>CES 2022</div>)}
-                {scrollY >= 2100 && scrollY < 2400 ? (<div className={fontTarget}> → FIME 2022</div>) : (<div className={fontGray}>FIME 2022</div>)}
-                {scrollY >= 2400 && scrollY < 2800 ? (<div className={fontTarget}> → Growtech 2022</div>) : (<div className={fontGray}>Growtech 2022</div>)}
-                {scrollY >= 2800 ? (<div className={fontTarget}> → ASD Market Week 2022</div>) : (<div className={fontGray}>ASD Market Week 2022</div>)}
+                {scrollY < 2100 ? (<div className={fontTarget}> → 전시 운영 및 기획</div>) : (<div className={fontGray}>전시 운영 및 기획</div>)}
+                {scrollY >= 2100 && scrollY < 2400 ? (<div className={fontTarget}> → 컨퍼런스 운영 및 기획</div>) : (<div className={fontGray}>컨퍼런스 운영 및 기획</div>)}
+                {scrollY >= 2400 && scrollY < 2800 ? (<div className={fontTarget}> → 기업 커뮤니케이션</div>) : (<div className={fontGray}>기업 커뮤니케이션</div>)}
+                {scrollY >= 2800 ? (<div className={fontTarget}> → 제안서 작성/발표</div>) : (<div className={fontGray}>제안서 작성/발표</div>)}
 
 
 

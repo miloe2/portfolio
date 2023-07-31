@@ -1,11 +1,14 @@
 import React from 'react';
-import carouselData from '../../assets/Data/CarouselData';
+import carouselData from '../../assets/Data/CarouselData';  
 // import carouselData from '../../assets/Data/CarouselData.js';
 
 
 const Carousel = () => {
     return (
-        <div className='w-screen h-screen bg-blue-300 flex relative'>
+        <div className='flex-col flex bg-black'>
+        {/* <div className='text-xl font-bold py-8  text-white pl-48 '> 프로젝트 </div> */}
+        <div className='w-screen h-screen bg-blue-300 flex relative flex'>
+            
             <div className='bg-gradient-to-t to-black from-transparent w-screen h-12 absolute top-0 '/>
                 <div className='bg-black w-3/12 h-full items-center flex'>
                     <div className='w-full h-3/5 flex justify-center flex-col px-16 text-white'>
@@ -19,6 +22,7 @@ const Carousel = () => {
 
                 </div>
             <div className='bg-gradient-to-t from-black to-transparent w-screen h-12 absolute bottom-0 '/>
+        </div>
         </div>
     );
 };
