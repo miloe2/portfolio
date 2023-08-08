@@ -1,6 +1,6 @@
 import React from 'react';
 import BGItems from '../Components/Exhibitions/BGItems';
-import Carousel from '../Components/Exhibitions/Carousel';
+import CarouselSlide from '../Components/Exhibitions/CarouselSlide';
 import Whatidid from '../Components/Exhibitions/Whatidid';
 import ProjectRow from '../Components/Exhibitions/ProjectRow';
 
@@ -14,7 +14,7 @@ const Exhibitions = () => {
             <div className='w-full bg-black h-screen'/>
             <div className='w-full bg-black h-screen'/>
             <div className='w-full bg-black h-96'/>
-            <Carousel/>
+            <CarouselSlide/>
             <div className='w-full bg-black h-40'/>
             <ProjectRow/>
             <div className='w-full bg-black h-72'/>
