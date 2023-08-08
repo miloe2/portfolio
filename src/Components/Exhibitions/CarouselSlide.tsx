@@ -1,148 +1,110 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import carouselData from '../../assets/Data/CarouselData';  
+import {BsFillPauseFill, BsPlayFill} from 'react-icons/bs';
+import {MdKeyboardArrowRight, MdKeyboardArrowLeft} from 'react-icons/md';
+import {SlArrowRight} from 'react-icons/sl';
 
 
 const CarouselSlide = () => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
+  const [isPaused, setIsPaused] = useState<boolean>(false); // 일시정지 여부 상태
 
-  const onClickButton = () => {
-    if (currentSlide === carouselData.length - 1) {
-      setCurrentSlide(0);
-    } else {
-      setCurrentSlide(currentSlide + 1);
+
+    const onClickNextButton = () => {
+        if (currentSlide === carouselData.length - 1) {
+        setCurrentSlide(0);
+        } else {
+        setCurrentSlide(currentSlide + 1);
+        }
+    };
+
+    const onClickDot = (index :number) => {
+        setCurrentSlide(index);
     }
-  };
+    const togglePause = () => {
+      setIsPaused((prevState) => !prevState); // 일시정지 상태 토글
+    };
+  
+    useEffect(() => {
+      let intervalId: NodeJS.Timeout | null = null;
+  
+      if (!isPaused) {
+        intervalId = setInterval(() => {
+          setCurrentSlide((prevSlide) =>
+            prevSlide === carouselData.length - 1 ? 0 : prevSlide + 1
+          );
+        }, 5000);
+      }
+  
+      return () => {
+        if (intervalId) {
+          clearInterval(intervalId);
+        }
+      };
+    }, [isPaused]);
 
   const NEXT_SLIDE: number = currentSlide === carouselData.length - 1 ? 0 : currentSlide + 1;
   const PREV_SLIDE: number = currentSlide === 0 ? carouselData.length - 1 : currentSlide - 1;
 
   return (
-    <div>
-      <button onClick={onClickButton} className='w-full'>
-        {currentSlide}
-        {carouselData.length}
-      </button>
-       <div className='bg-red-400 w-auto h-screen  flex justify-center items-center whitespace-nowrap  overflow-x-hidden'>
-
-          <div className="bg-slate-500 w-8/12 h-3/4 rounded-3xl flex relative items-center flex-shrink-0 mx-10 ">
-          <div className='bg-gradient-to-r from-white to-transparent w-1/3 h-full absolute left-0 rounded-l-3xl'/> 
-          {PREV_SLIDE}
-                  <div className=' absolute left-0  pl-10 tracking-tight'>
-                      <div className='text-sm'> {carouselData[PREV_SLIDE].venue} </div>
-                      <div className='text-sm'> {carouselData[PREV_SLIDE].id} </div>
-                      <div className='text-4xl font-bold py-2 '> {carouselData[PREV_SLIDE].title} </div>
-                      <div className='text-xs leading-6 whitespace-pre-line'> {carouselData[PREV_SLIDE].desc} </div>
-
-                  </div>
-                  <img src={carouselData[PREV_SLIDE].imgUrl} alt="" className='object-cover w-full h-full rounded-3xl'/>
-          </div>
+       <div className='bg-black w-auto h-screen  flex justify-center items-center whitespace-nowrap relative overflow-x-hidden'>
+            <div className='w-full h-16 flex  items-end absolute top-0 pl-48'>
+                <div className='text-white relative top-10 text-lg font-bold'>주요프로젝트</div>
+            </div>
 
 
-          <div className="bg-slate-500 w-8/12 h-3/4 rounded-3xl flex relative items-center flex-shrink-0 mx-10 ">
+            {/*  PREV */}
+            
+            <div className=" w-7/12 h-3/6 rounded-3xl flex relative items-center flex-shrink-0 mx-10 ">
+                <div className='bg-gradient-to-l from-neutral-700 to-transparent w-1/3 h-full absolute right-0 rounded-r-3xl'/> 
+                <img src={carouselData[PREV_SLIDE].imgUrl} alt="" className='object-cover w-full h-full rounded-3xl'/>
+            </div>
+            {/*  현재 */}
+            <div className="w-7/12 h-3/5 rounded-3xl flex relative items-center flex-shrink-0 mx-10 ">
+                <div className='bg-gradient-to-r from-white to-transparent w-2/3 h-full absolute left-0 rounded-l-3xl '/> 
+                <div className=' absolute left-0  pl-10 tracking-tight'>
+                    <div className='text-xs text-zinc-600'> {carouselData[currentSlide].location} </div>
+                    {/* <div className='text-sm'> {carouselData[currentSlide].venue} </div> */}
+                    <div className='text-4xl font-bold py-2 '> {carouselData[currentSlide].title} </div>
+                    <div className='text-xs leading-6 whitespace-pre-line'> {carouselData[currentSlide].desc} </div>
+                </div>
+                <img src={carouselData[currentSlide].imgUrl} alt="" className='object-cover w-full h-full rounded-3xl'/>
+            </div>
+
+            {/* NEXT */}
+            <div className=" w-7/12 h-3/6  rounded-3xl flex relative items-center flex-shrink-0 mx-10 ">
+            <div className='bg-gradient-to-l from-transparent to-neutral-700 w-1/3 h-full absolute left-0 rounded-l-3xl'/> 
+                    <img src={carouselData[NEXT_SLIDE].imgUrl} alt="" className='object-cover w-full h-full rounded-3xl'/>
+            </div>
+
+            {/* 버튼 */}
+            <div className='  w-full h-16 flex justify-center items-center absolute bottom-10'>
+            <button className='w-4 h-4 bg-gray-100 mr-3 rounded-full flex justify-center items-center' onClick={onClickNextButton}><MdKeyboardArrowLeft/> </button>
+
+                {    carouselData.map((item, index) => (                    
+                    <div key={index} className=' mx-1  cursor-pointer '  onClick={() => onClickDot(index)}>
+                        
+                        {currentSlide === index ? <div className=' w-5 h-2 bg-[#616060] rounded-full'/> :<div className=' w-2 h-2 bg-white rounded-full'/>}
+                    </div>
+                ))}
+
+                      {/* 일시정지 / 재생 버튼 */}
+
+                <button
+                className="w-5 h-5  rounded-full flex justify-center items-center ml-3 text-4xl text-white"
+                onClick={togglePause}
+              >
+                {isPaused ? <BsPlayFill/> : <BsFillPauseFill />}
+              </button>
+
+              <button className='w-4 h-4 bg-gray-100 ml-3 rounded-full flex justify-center items-center' onClick={onClickNextButton}><MdKeyboardArrowRight/> </button>
 
 
-          {/* <div className='bg-gradient-to-r from-white to-transparent w-1/3 h-full absolute left-0 rounded-l-3xl'/>  */}
-          {currentSlide}
-                  <div className=' absolute left-0  pl-10 tracking-tight'>
-                      {/* <div className='text-sm'> {carouselData[currentSlide].venue} </div> */}
-                      <div className='text-sm'> {carouselData[currentSlide].id} </div>
-                      <div className='text-4xl font-bold py-2 '> {carouselData[currentSlide].title} </div>
-                      <div className='text-xs leading-6 whitespace-pre-line'> {carouselData[0].desc} </div>
-
-                  </div>
-                  <img src={carouselData[currentSlide].imgUrl} alt="" className='object-cover w-full h-full rounded-3xl'/>
-          </div>
-
-          {/* 넥스트 */}
-          <div className="bg-slate-500 w-8/12 h-3/4 rounded-3xl flex relative items-center flex-shrink-0 mx-10 ">
-          <div className='bg-gradient-to-r from-white to-transparent w-1/3 h-full absolute left-0 rounded-l-3xl'/> 
-          {NEXT_SLIDE}
-                  <div className=' absolute left-0  pl-10 tracking-tight'>
-                      <div className='text-sm'> {carouselData[NEXT_SLIDE].venue} </div>
-                      <div className='text-sm'> {carouselData[NEXT_SLIDE].id} </div>
-                      <div className='text-4xl font-bold py-2 '> {carouselData[NEXT_SLIDE].title} </div>
-                      <div className='text-xs leading-6 whitespace-pre-line'> {carouselData[NEXT_SLIDE].desc} </div>
-
-                  </div>
-                  <img src={carouselData[NEXT_SLIDE].imgUrl} alt="" className='object-cover w-full h-full rounded-3xl'/>
-          </div>
-
-
-
+            </div>
       </div>
-    </div>
 
    
   );
 }
 
 export default CarouselSlide;
-
-        // // <div className='text-xl font-bold py-8  text-white pl-48 '> 프로젝트 </div>
-        // <div className='flex-col flex bg-red-500'>
-
-        // <div className='w-3/4 h-3/4 flex relative ml-20 bg-slate-800 rounded-3xl'>
-        //     {/* <div className='bg-gradient-to-t to-black from-transparent w-screen h-12 absolute top-0 '/> */}
-        //         <div className=' w-3/12 h-3/5 items-center flex justify-center '>
-        //             <div className='w-full h-3/5 flex justify-center flex-col text-white bg-blue-500'>
-        //                 <div className='text-sm'> {carouselData[0].venue} </div>
-        //                 <div className='text-5xl font-bold py-4'> {carouselData[0].title} </div>
-        //                 <div className='text-xs leading-6 whitespace-pre-line'> {carouselData[0].desc} </div>
-        //             </div>
-        //         </div>
-        //         <div className='bg-red-400 w-9/12 h-full'>
-        //             <img src={carouselData[0].imgUrl} alt="" className='object-cover w-full h-full'/>
-
-        //         </div>
-        //     {/* <div className='bg-gradient-to-t from-black to-transparent w-screen h-12 absolute bottom-0 '/> */}
-        // </div>
-        // </div>
-// 한국에서 만든 백업
-        // <div className='bg-red-400 w-auto h-screen  flex justify-center items-center whitespace-nowrap  overflow-x-auto'>
-        // <div className="bg-slate-500 w-8/12 h-3/4 rounded-3xl flex relative items-center flex-shrink-0 ">
-        // <div className='bg-gradient-to-r from-white to-transparent w-1/3 h-full absolute left-0 rounded-l-3xl'/> 
-        //         <div className=' absolute left-0  pl-10 tracking-tight'>
-        //             <div className='text-sm'> {carouselData[0].venue} </div>
-        //             <div className='text-4xl font-bold py-2 '> {carouselData[0].title} </div>
-        //             <div className='text-xs leading-6 whitespace-pre-line'> {carouselData[0].desc} </div>
-
-        //         </div>
-        //          <img src={carouselData[0].imgUrl} alt="" className='object-cover w-full h-full rounded-3xl'/>
-        // </div>
-        // <div className="bg-slate-500 w-8/12 h-3/4 rounded-3xl flex relative items-center flex-shrink-0 ">
-        // <div className='bg-gradient-to-r from-white to-transparent w-1/3 h-full absolute left-0 rounded-l-3xl'/> 
-        //         <div className=' absolute left-0  pl-10 tracking-tight'>
-        //             <div className='text-sm'> {carouselData[0].venue} </div>
-        //             <div className='text-4xl font-bold py-2 '> {carouselData[0].title} </div>
-        //             <div className='text-xs leading-6 whitespace-pre-line'> {carouselData[0].desc} </div>
-
-        //         </div>
-        //          <img src={carouselData[0].imgUrl} alt="" className='object-cover w-full h-full rounded-3xl'/>
-        // </div>
-        // <div className="bg-slate-500 w-8/12 h-3/4 rounded-3xl flex relative items-center flex-shrink-0 ">
-        // <div className='bg-gradient-to-r from-white to-transparent w-1/3 h-full absolute left-0 rounded-l-3xl'/> 
-        //         <div className=' absolute left-0  pl-10 tracking-tight'>
-        //             <div className='text-sm'> {carouselData[0].venue} </div>
-        //             <div className='text-4xl font-bold py-2 '> {carouselData[0].title} </div>
-        //             <div className='text-xs leading-6 whitespace-pre-line'> {carouselData[0].desc} </div>
-
-        //         </div>
-        //          <img src={carouselData[0].imgUrl} alt="" className='object-cover w-full h-full rounded-3xl'/>
-        // </div>
-
-
-    // </div>
-    // // <div className='bg-black w-screen h-screen  flex justify-center items-center'>
-    // //     <div className="bg-slate-500 w-3/4 h-3/4 rounded-3xl flex">
-    // //         <div className=' w-1/4 h-full  rounded-l-3xl items-center flex'>
-    // //             <div className=' ml-4'>
-    // //                 <div className='text-sm'> {carouselData[0].venue} </div>
-    // //                 <div className='text-5xl font-bold py-4'> {carouselData[0].title} </div>
-    // //                 <div className='text-xs leading-6 whitespace-pre-line'> {carouselData[0].desc} </div>
-    // //             </div>
-    // //         </div>
-    // //         <div className='w-9/12 h-full '>
-    // //              <img src={carouselData[0].imgUrl} alt="" className='object-cover w-full h-full rounded-r-3xl'/>
-    // //          </div>
-    // //     </div>
-    // // </div>
