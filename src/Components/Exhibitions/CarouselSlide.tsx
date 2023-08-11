@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import carouselData from '../../assets/Data/CarouselData';  
 import {BsFillPauseFill, BsPlayFill} from 'react-icons/bs';
 import {MdKeyboardArrowRight, MdKeyboardArrowLeft} from 'react-icons/md';
-import {SlArrowRight} from 'react-icons/sl';
 
 
 const CarouselSlide = () => {
@@ -66,7 +65,7 @@ const CarouselSlide = () => {
                     <div className='text-xs text-zinc-600'> {carouselData[currentSlide].location} </div>
                     {/* <div className='text-sm'> {carouselData[currentSlide].venue} </div> */}
                     <div className='text-4xl font-bold py-2 '> {carouselData[currentSlide].title} </div>
-                    <div className='text-xs leading-6 whitespace-pre-line'> {carouselData[currentSlide].desc} </div>
+                    <div className='text-xs leading-6 whitespace-pre-line h-24'> {carouselData[currentSlide].desc} </div>
                 </div>
                 <img src={carouselData[currentSlide].imgUrl} alt="" className='object-cover w-full h-full rounded-3xl'/>
             </div>
