@@ -15,9 +15,9 @@ function App() {
         <Route path="/develope" element={<Develope/>}/>
         <Route path="/exhibitions" element={<Exhibitions/>}/>
       </Routes>
+      <Navigator/>
     </Router>
 
-    <Navigator/>
     </>
   );
 }

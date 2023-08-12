@@ -22,8 +22,8 @@ const DevPrjData  = [
         imgUrl:"https://picsum.photos/740/360",
         color : {
             bg : "bg-[#F7C700]",
+            title : "text-[#101420]",
             text : "text-white",
-            title : "text-[#101420]"
         },
     },
     {
@@ -33,19 +33,19 @@ const DevPrjData  = [
         imgUrl:"https://picsum.photos/540/360",
         color : {
             bg:"bg-[#0041AF]",
+            title : "text-[#101420]",
             text : "text-white",
-            title : "text-[#101420]"
         },
     },
     {
-        id: 2,  title: "포트폴리오", date : "23. 04. 14 - 23. 05. 23", 
+        id: 2,  title: "portfolio", date : "23. 04. 14 - 23. 05. 23", 
         desc : "개인 포트폴리오", 
         stack :"react, typescript, git, figma, tailwindcss",
         imgUrl:"https://picsum.photos/640/360",
         color : {
             bg:"bg-[#101420]",
+            title : "text-[#E7236B]",
             text : "text-white",
-            title : "text-white",
         },
     },
 
