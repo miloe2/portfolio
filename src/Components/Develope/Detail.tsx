@@ -22,11 +22,11 @@ const Detail = () => {
         setDevOpen(false);
     }, 400);
 
-    console.log(devPage)
-    console.log(devOpen)
+    // console.log(devPage)
+    // console.log(devOpen)
 
     return (
-        <div className='w-screen h-screen bg-blue-500 px-44'>
+        <div className='w-screen h-auto bg-gray-50 px-44'>
             <div>
                 {/* {devOpen && ( */}
                     <div ref={componentRef}>
