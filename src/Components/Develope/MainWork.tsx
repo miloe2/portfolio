@@ -9,7 +9,7 @@ const MainWork = () => {
         // 스크롤 위치에 따라 width 값 계산
 
         const newWidth = Math.max(25, 30 + scrollY * 0.13) + '%';
-        console.log(newWidth);
+        // console.log(newWidth);
         setWidth(newWidth);
       };
   

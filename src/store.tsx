@@ -1,14 +1,23 @@
 import { create } from 'zustand';
 
 type Store = {
-  devPrj: boolean;
-  setDevPrj: (isOpen: boolean) => void;
+  devOpen: boolean;
+  setDevOpen: (isOpen: boolean) => void;
+
+  devPage: string;
+  setDevPage: (page: string) => void;
+
+  
 
 };
 
 const useStore = create<Store>((set) => ({
-    devPrj: false,
-    setDevPrj: (isOpen) => set({ devPrj: isOpen }),
+
+    devOpen: false,
+    setDevOpen: (isOpen) => set({ devOpen: isOpen }),
+
+    devPage: ':DDD',
+    setDevPage: (page) => set({ devPage: page }),
 
 }));
 

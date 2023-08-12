@@ -1,7 +1,10 @@
 import { useState } from 'react';
 import DevPrjData from '../../assets/Data/DevPrjData';
+import useStore from '../../store';
 
 const PrjList = () => {
+    const {  setDevOpen, setDevPage } = useStore();
+
     
     const latestArray = [...DevPrjData].reverse().map(item => item);
     const [hoverState, setHoverState] = useState(new Array(latestArray.length).fill(false));
@@ -18,6 +21,8 @@ const PrjList = () => {
         const updatedHoverState = hoverState.map(() => false);
         setHoverState(updatedHoverState);
     };
+    // console.log(devPage);
+    // console.log(devOpen);
 
     return (
         <div className='w-screen h-auto px-10 flex flex-wrap '>
@@ -27,6 +32,7 @@ const PrjList = () => {
             className={`w-1/3 h-96 flex items-end relative text-white cursor-pointer`}
             onMouseOver={() => handleMouseOver(index)}
             onMouseLeave={handleMouseLeave}
+            onClick={() => {setDevOpen(true); setDevPage(item.title);}}
             >
             <img src={item.imgUrl} alt="photo" className='absolute top-0 w-full h-full object-cover ' />
             <div className={`w-full h-full absolute top-0 ${hoverState[index] ? item.color.bg  : ''} transition duration-500`}/>
