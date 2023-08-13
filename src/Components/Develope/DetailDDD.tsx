@@ -1,19 +1,83 @@
 import React from 'react';
 import FullVideo from '../Detail/FullVideo';
 import Left3Image from '../Detail/Left3Image';
+import RightImageLeft from '../Detail/RightImageLeft';
+import Left1ImageProps from '../Detail/Left1Image';
+import RightImageRight from '../Detail/RightImageRight';
+import FullImage from '../Detail/FullImage';
+
+
 import videoUrl from '../../assets/Video/Blue_Sky_and_Clouds_Timelapse_0892__Videvo_preview.mp4';
 
 const DetailDDD = () => {
     return (
-        <div>
+        <>
+
+        <div className=' px-44'>
             <FullVideo videoUrl={videoUrl} bgColor='[#0041AF]' />
-            <div className='w-screen h-72 bg-blue-50'></div>
+            <div className='w-screen h-72 bg-white'/>
             <Left3Image bgColor='[#0041AF]' 
                 img1='https://picsum.photos/300/130'
                 img2='https://picsum.photos/300/140'
                 img3='https://picsum.photos/300/150'
+                title='Diverse
+                        Different  
+                        Display'
+                desc='전시 예매 및 정보 공유 커뮤니티입니다. 
+                전시 예매, 전시 평가하기(다이어리), 동행찾기 등 
+                세 가지 부분을 중점으로 설계되었습니다.'
+            />
+            <div className='w-screen h-72 bg-white'/>
+            
+            <RightImageLeft bgColor='[#0041AF]' 
+                title='다이어리,
+                        사용자조회'
+
+                desc='유저는 자신만의 다이어리(전시회 평가/코멘트)를
+                    가지고있으며 유저 조회 기능으로 다른 유저의 
+                    다이어를 확인 할 수 있습니다.'
+                
+                img='https://picsum.photos/300/200'
+            
+            />
+            <div className='w-screen h-72 bg-white'/>
+            <Left1ImageProps
+            bgColor='[#0041AF]' 
+                    title='마이페이지
+                    Customized'
+
+            desc='
+            다이어리 페이지는 Firebase를 활용하여   
+            Customizing이 가능하게 설계하였습니다. '
+            
+            img1='https://picsum.photos/300/200'
+
+            />
+            <div className='w-screen h-72 bg-white'/>
+
+            <RightImageRight bgColor='[#0041AF]' 
+                title='JWT와 
+                        이메일 인증'
+
+                desc='JWT로 Token을 발급하여,  
+                    회원페이지에 접근 할 수 있게 하였으며, 
+                    회원가입/PW 찾기 등은 이메일 인증을
+                    적용하였습니다. '
+                
+                img='https://picsum.photos/300/200'
+            
+            />
+            <div className='w-screen h-72 bg-white'/>
+        </div>
+
+        <div className='px-0' style={{padding:'0'}}>
+            <FullImage 
+            img='https://picsum.photos/1280/1280' 
+            title='Diverse'
+            desc='hi'
             />
         </div>
+        </>
     );
 };
 

@@ -26,7 +26,7 @@ const Detail = () => {
     // console.log(devOpen)
 
     return (
-        <div className='w-screen h-auto bg-gray-50 px-44'>
+        <div className='w-screen h-auto bg-white '>
             <div>
                 {/* {devOpen && ( */}
                     <div ref={componentRef}>
