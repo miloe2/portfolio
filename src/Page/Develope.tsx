@@ -11,7 +11,7 @@ const Develope = () => {
             <PrjList/>
             <div className='w-full bg-white h-72'/>
             <Detail/>
-            <div className='w-full bg-white h-screen'/>
+            <div className='w-full bg-white h-72'/>
         </div>
     );
 };

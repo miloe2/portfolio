@@ -16,7 +16,7 @@ const FullImage: React.FC<FullImageProps> = ({img, title, desc }) => {
                 </div>
             </div>
             <div className='w-full h-full'>
-                <img src={img} alt="" className='w-full h-full '/>
+                <img src={img} alt="" className='w-full h-full object-cover'/>
             </div>
       </div>
     );
