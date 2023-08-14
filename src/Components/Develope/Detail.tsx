@@ -11,34 +11,34 @@ const Detail = () => {
 
     const componentRef = useRef<HTMLDivElement>(null);
   
-    useEffect(() => {
-      if (devOpen && componentRef.current) {
-        window.scrollTo({
-          top: componentRef.current.offsetTop,
-          behavior: 'smooth',
-        });
-      }
-    }, [devOpen]);
 
-    setTimeout(() => {
-        setDevOpen(false);
-    }, 400);
-
-    // console.log(devPage)
-    // console.log(devOpen)
+    const scrollToComponent = () => {
+        if (componentRef.current) {
+          window.scrollTo({
+            top: componentRef.current.offsetTop,
+            behavior: 'smooth',
+          });
+        }
+      };
+  
+      useEffect(() => {
+        if (devOpen) {
+          scrollToComponent();
+        }
+      }, [devOpen]);
+  
+      setTimeout(() => {
+          setDevOpen(false);
+      }, 1400);
 
     return (
-        <div className='w-screen h-auto bg-white '>
-            <div>
-                {/* {devOpen && ( */}
+        <div className='w-screen h-auto bg-white  '>
                     <div ref={componentRef}>
                         <Stack/>
                         {devPage === ':DDD' && <DetailDDD/>}
                         {devPage === 'portfolio' && <DetailPortfolio/>}
                         {devPage === '찾기' && <DetailFindway/>}
                     </div>
-                {/* )} */}
-            </div>
         </div>
     );
 };

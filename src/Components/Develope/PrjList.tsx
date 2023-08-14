@@ -5,6 +5,7 @@ import useStore from '../../store';
 const PrjList = () => {
     const {  setDevOpen, setDevPage } = useStore();
 
+
     
     const latestArray = [...DevPrjData].reverse().map(item => item);
     const [hoverState, setHoverState] = useState(new Array(latestArray.length).fill(false));
@@ -26,6 +27,8 @@ const PrjList = () => {
 
     return (
         <div className='w-screen h-auto px-10 flex flex-wrap '>
+
+
         {latestArray.map((item, index) => (
             <div
             key={index}
@@ -44,24 +47,28 @@ const PrjList = () => {
                 {item.title}
                 </div>
                 {hoverState[index] && (
-                <div className={`text-lg leading-10 font-bold ${item.color.text}`}>
+                <div className={`text-lg leading-10 font-bold ${item.color.text} transition duration-500`}>
                     {item.desc}
                 </div>
                 )}
             </div>
+            
             </div>
         ))}
+
             <div
             className={`w-1/3 h-96 flex items-end relative bg-zinc-400 text-white`}
             >
-            <div className={`w-full h-full absolute top-0 transition duration-500`}/>
-            <div className='m-10 z-0 text-white absolute bottom-0'>
-                <div className={`text-xs h-6`}> ... </div>
-                <div className={`text-4xl font-bold `}> ... </div>
-            </div>
-            </div>
+                <div className={`w-full h-full absolute top-0 transition duration-500`}/>
+                    <div className='m-10 z-0 text-white absolute bottom-0'>
+                        <div className={`text-xs h-6`}> ... </div>
+                        <div className={`text-4xl font-bold `}> ... </div>
+                    </div>
+                </div>
+
 
         </div>
+        
 
 
 

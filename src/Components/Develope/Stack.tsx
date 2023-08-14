@@ -23,7 +23,7 @@ const Stack = () => {
                 if (StackCircle[stack]) {
                     return (
                         <>
-                            <div key={index} className='mr-10 justify-start items-center flex flex-col'>
+                            <div key={index} className='mr-6 justify-start items-center flex flex-col'>
                                 {StackCircle[stack]()}
                             </div>
                         </>
