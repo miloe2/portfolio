@@ -36,7 +36,7 @@ const StackCircle :StackCircleType = {
         return (
             <>
             <div className="w-12 h-12  rounded-full border border-zinc-500 justify-center items-center flex">
-                <div className='w-10 h-10 bg-white rounded-full'>
+                <div className='w-10 h-10 bg-white rounded-full border-zinc-300 border'>
                     <img src={javascript} alt="" className='w-full h-full object-cover rounded-full'/>
                 </div>
             </div>
@@ -48,7 +48,7 @@ const StackCircle :StackCircleType = {
         return (
             <>
             <div className="w-12 h-12  rounded-full border border-zinc-500 justify-center items-center flex">
-                <div className='w-10 h-10 bg-white rounded-full'>
+                <div className='w-10 h-10 bg-white rounded-full border-zinc-300 border'>
                     <img src={reacticon} alt="" className='w-full h-full object-cover rounded-full'/>
                 </div>
             </div>
@@ -60,7 +60,7 @@ const StackCircle :StackCircleType = {
         return (
             <>
             <div className="w-12 h-12  rounded-full border border-zinc-500 justify-center items-center flex">
-                <div className='w-10 h-10 bg-white rounded-full'>
+                <div className='w-10 h-10 bg-white rounded-full border-zinc-300 border'>
                     <img src={mariadb} alt="" className='w-full h-full object-cover rounded-full'/>
                 </div>
             </div>
@@ -72,7 +72,7 @@ const StackCircle :StackCircleType = {
         return (
             <>
             <div className="w-12 h-12  rounded-full border border-zinc-500 justify-center items-center flex">
-                <div className='w-10 h-10 bg-white rounded-full'>
+                <div className='w-10 h-10 bg-white rounded-full border-zinc-300 border'>
                     <img src={springboot} alt="" className='w-full h-full object-cover rounded-full'/>
                 </div>
             </div>
@@ -86,7 +86,7 @@ const StackCircle :StackCircleType = {
         return (
             <>
             <div className="w-12 h-12  rounded-full border border-zinc-500 justify-center items-center flex">
-                <div className='w-10 h-10 bg-white rounded-full'>
+                <div className='w-10 h-10 bg-white rounded-full border-zinc-300 border'>
                     <img src={springboot} alt="" className='w-full h-full object-cover rounded-full'/>
                 </div>
             </div>
@@ -100,7 +100,7 @@ const StackCircle :StackCircleType = {
         return (
             <>
             <div className="w-12 h-12  rounded-full border border-zinc-500 justify-center items-center flex">
-                <div className='w-10 h-10 bg-white rounded-full'>
+                <div className='w-10 h-10 bg-white rounded-full border-zinc-300 border'>
                     <img src={git} alt="" className='w-full h-full object-cover rounded-full'/>
                 </div>
             </div>
@@ -112,7 +112,7 @@ const StackCircle :StackCircleType = {
         return (
             <>
             <div className="w-12 h-12  rounded-full border border-zinc-500 justify-center items-center flex">
-                <div className='w-10 h-10 bg-white rounded-full'>
+                <div className='w-10 h-10 bg-white rounded-full border-zinc-300 border'>
                     <img src={notion} alt="" className='w-full h-full object-cover rounded-full'/>
                 </div>
             </div>
@@ -124,7 +124,7 @@ const StackCircle :StackCircleType = {
         return (
             <>
             <div className="w-12 h-12  rounded-full border border-zinc-500 justify-center items-center flex">
-                <div className='w-10 h-10 bg-white rounded-full'>
+                <div className='w-10 h-10 bg-white rounded-full border-zinc-300 border'>
                     <img src={figma} alt="" className='w-full h-full object-cover rounded-full'/>
                 </div>
             </div>
@@ -136,7 +136,7 @@ const StackCircle :StackCircleType = {
         return (
             <>
             <div className="w-12 h-12  rounded-full border border-zinc-500 justify-center items-center flex">
-                <div className='w-10 h-10 bg-white rounded-full'>
+                <div className='w-10 h-10 bg-white rounded-full border-zinc-300 border'>
                     <img src={aws} alt="" className='w-full h-full object-cover rounded-full'/>
                 </div>
             </div>
@@ -148,7 +148,7 @@ const StackCircle :StackCircleType = {
         return (
             <>
             <div className="w-12 h-12  rounded-full border border-zinc-500 justify-center items-center flex">
-                <div className='w-10 h-10 bg-white rounded-full'>
+                <div className='w-10 h-10 bg-white rounded-full border-zinc-300 border'>
                     <img src={mysql} alt="" className='w-full h-full object-cover rounded-full'/>
                 </div>
             </div>
@@ -160,7 +160,7 @@ const StackCircle :StackCircleType = {
         return (
             <>
             <div className="w-12 h-12  rounded-full border border-zinc-500 justify-center items-center flex">
-                <div className='w-10 h-10 bg-white rounded-full'>
+                <div className='w-10 h-10 bg-white rounded-full border-zinc-300 border'>
                     <img src={tailwindcss} alt="" className='w-full h-full object-cover rounded-full'/>
                 </div>
             </div>
@@ -172,7 +172,7 @@ const StackCircle :StackCircleType = {
         return (
             <>
             <div className="w-12 h-12  rounded-full border border-zinc-500 justify-center items-center flex">
-                <div className='w-10 h-10 bg-white rounded-full'>
+                <div className='w-10 h-10 bg-white rounded-full border-zinc-300 border'>
                     <img src={typescript} alt="" className='w-full h-full object-cover rounded-full'/>
                 </div>
             </div>
@@ -184,7 +184,7 @@ const StackCircle :StackCircleType = {
         return (
             <>
             <div className="w-12 h-12  rounded-full border border-zinc-500 justify-center items-center flex">
-                <div className='w-10 h-10 bg-white rounded-full'>
+                <div className='w-10 h-10 bg-white rounded-full border-zinc-300 border'>
                     <img src={styled} alt="" className='w-full h-full object-cover rounded-full'/>
                 </div>
             </div>
