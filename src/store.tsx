@@ -4,7 +4,7 @@ type Store = {
   devOpen: boolean;
   setDevOpen: (isOpen: boolean) => void;
 
-  devPage: string;
+  devPage: string | null;
   setDevPage: (page: string) => void;
 
   
@@ -16,7 +16,7 @@ const useStore = create<Store>((set) => ({
     devOpen: false,
     setDevOpen: (isOpen) => set({ devOpen: isOpen }),
 
-    devPage: ':DDD',
+    devPage: 'portfolio',
     setDevPage: (page) => set({ devPage: page }),
 
 }));

@@ -1,9 +1,9 @@
 import React from 'react';
-
+import TSLogoSnipet from '../Detail/TSLogoSnipet';
 const DetailPortfolio = () => {
     return (
-        <div>
-            portfolio입니다.
+        <div className='w-screen h-screen px-44'>
+            <TSLogoSnipet/>
         </div>
     );
 };
