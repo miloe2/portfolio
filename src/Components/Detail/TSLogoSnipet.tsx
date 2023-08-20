@@ -3,8 +3,8 @@ import tslogo from '../../assets/Images/Typescript_logo_2020.svg'
 
 const TSLogoSnipet = () => {
     return (
-        <div className='w-full h-full flex itmes-center justify-center'>
-            <div className='w-7/12 h-full flex flex-col justify-center  '>
+        <div className='w-full h-4/5 flex itmes-center justify-center bg-zinc-50 '>
+            <div className='w-5/12 h-full flex flex-col p-10 justify-center  relative '>
                 <div className='flex flex-row'>
                     <div className='w-20 border-4 rounded-full border-fuchsia-400 mr-5'/>
                     <div className='w-20 border-4 rounded-full border-orange-400 mr-5'/>
@@ -17,11 +17,11 @@ const TSLogoSnipet = () => {
                     <div className='w-20 border-4 rounded-full border-orange-400 mr-5'/>
                 </div>
                 <div className='flex flex-row mt-8'>
-                    <div className='w-40 border-4 rounded-full border-zinc-50 mr-5'/>
+                    <div className='w-40 border-4 rounded-full border-zinc-500 mr-5'/>
                     <div className='w-20 border-4 rounded-full border-green-600 mr-5'/>
                 </div>
                 
-                <div className='w-48 h-auto mt-10'>
+                <div className='w-44 h-auto mt-10'>
                     <img src={tslogo} alt="" />
                 </div>
                 <div className='flex flex-row mt-10'>
@@ -49,14 +49,18 @@ const TSLogoSnipet = () => {
                     <div className='w-20 border-4 rounded-full border-fuchsia-600 mr-5'/>
                     <div className='w-40 border-4 rounded-full border-yellow-500 mr-5'/>
                 </div>
+                {/* <div className='w-40 h-full absolute right-0 bg-gradient-to-r from-transparent to-white'/> */}
+                
+
             
             </div>
-            <div className='w-1/2 h-full  justify-center items-center flex'>
-                <div className='bg-[#F6EF49] w-full h-1/3 p-10 justify-center flex flex-col'>
+            
+            <div className='w-1/2 h-full  justify-end items-center flex'>
+                <div className='bg-[#F6EF49] w-3/4 h-3/5 p-10 justify-center flex flex-col '>
                 <div className='text-4xl leading-12 font-bold whitespace-pre-line  text-[#134DB9] '> Typescript </div>
                     <div className='text-xs leading-6 whitespace-pre-line h-auto mt-5 text-[#101420]'> 
-                    현업에 빠르게 적응하기 위하여
-                    React.ts로 작업하였습니다.  
+                    현직 개발 트렌드와 가독성 및 안정성을 높이기 위하여, <br/>
+                    TypeScript (React.ts)를 적용하였습니다.   
                     </div>
                 </div>
             

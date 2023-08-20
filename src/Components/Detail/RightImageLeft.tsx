@@ -21,7 +21,7 @@ const RightImageLeft :React.FC<RightImageLeftProps> = ({bgColor, title, desc, im
             </div>
             <div className={`w-1/2 h-auto py-40 bg-${bgColor} flex justify-center items-start flex-col`}>
                 <div className='w-3/4 h-72'>
-                    <img src={img} alt="" className='w-full h-full '/>
+                    <img src={img} alt="" className='w-full h-full object-cover'/>
                 </div>
 
             </div>
