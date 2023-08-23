@@ -65,7 +65,6 @@ const TSLogoSnipet = () => {
                 </div>
             
             </div>
-
         </div>
 
     );

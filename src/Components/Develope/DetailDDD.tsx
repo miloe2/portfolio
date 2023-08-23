@@ -1,9 +1,8 @@
 import React from 'react';
 import FullVideo from '../Detail/FullVideo';
 import Left3Image from '../Detail/Left3Image';
-import RightImageLeft from '../Detail/RightImageLeft';
+import RightImage from '../Detail/RightImage';
 import Left1ImageProps from '../Detail/Left1Image';
-import RightImageRight from '../Detail/RightImageRight';
 import FullImage from '../Detail/FullImage';
 
 
@@ -30,7 +29,7 @@ const DetailDDD = () => {
             />
             <div className='w-screen h-72 bg-white'/>
             
-            <RightImageLeft bgColor='[#0041AF]' 
+            <RightImage bgColor='[#0041AF]' 
                 title='다이어리,
                         사용자조회'
 
@@ -39,7 +38,7 @@ const DetailDDD = () => {
                     다이어를 확인 할 수 있습니다.'
                 
                 img='https://picsum.photos/300/200'
-            
+                items='start'
             />
             <div className='w-screen h-72 bg-white'/>
             <Left1ImageProps
@@ -56,7 +55,7 @@ const DetailDDD = () => {
             />
             <div className='w-screen h-72 bg-white'/>
 
-            <RightImageRight bgColor='[#0041AF]' 
+            <RightImage bgColor='[#0041AF]' 
                 title='JWT와 
                         이메일 인증'
 
@@ -66,6 +65,7 @@ const DetailDDD = () => {
                     적용하였습니다. '
                 
                 img='https://picsum.photos/300/200'
+                items='end'
             
             />
             <div className='w-screen h-72 bg-white'/>
