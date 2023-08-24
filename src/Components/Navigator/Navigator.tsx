@@ -7,7 +7,7 @@ const Navigator = () => {
 
         <div className='w-full h-20  fixed top-0 z-0 overflow-x-hidden box-border flex justify-between overflow-hidden'>
             <div className="w-24 ">icon</div>
-            <div className='relative  w-1/3 flex text-xs text-center items-center font-bold text-white cursor-pointer'>
+            <div className='relative  w-1/3 flex text-xs text-center items-center font-bold text-zinc-500 cursor-pointer'>
                 <div className='w-20 py-4 mx-2 ' onClick={()=>(navigator('/'))}>Home</div>
                 <div className='w-20 py-4 mx-2 ' onClick={()=>(navigator('/exhibitions'))} >Exhibitions</div>
                 <div className='w-20 py-4 mx-2 ' onClick={()=>(navigator('/develope'))}>Develop</div>
