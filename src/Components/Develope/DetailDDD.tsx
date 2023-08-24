@@ -4,11 +4,13 @@ import Left3Image from '../Detail/Left3Image';
 import RightImage from '../Detail/RightImage';
 import Left1ImageProps from '../Detail/Left1Image';
 import FullImage from '../Detail/FullImage';
+import ViewCode from '../Detail/ViewCode';
 
 
 import videoUrl from '../../assets/Video/Blue_Sky_and_Clouds_Timelapse_0892__Videvo_preview.mp4';
 
 const DetailDDD = () => {
+    const themeColor = '[#0041AF]' 
     return (
         <>
 
@@ -77,6 +79,16 @@ const DetailDDD = () => {
             title='Diverse'
             desc='hi'
             />
+
+            <div className='w-screen bg-white'/>
+
+            <ViewCode
+                bgColor = {themeColor}
+                txtColor='white'
+                site = '#'
+                git = 'https://github.com/nessayj/RealFinalProject-DDD'
+            />
+
 
         </div>
         </>

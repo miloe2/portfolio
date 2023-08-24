@@ -27,13 +27,13 @@ const Develope = () => {
     return (
         <div className='overflow-hidden relative h-auto'>
 
-          {/* <MainWork /> */}
+          <MainWork />
           <div className='w-full bg-white h-72' />
           <div ref={componentRef} className='w-full h-20 relative'></div>
-          {/* <PrjList /> */}
+          <PrjList />
           <div className='w-full bg-white h-72' />
           <Detail />
-          <div className='w-full bg-white h-72' />
+          <div className='w-full bg-white ' />
           <button onClick={scrollToComponent} 
             className='fixed bottom-10 right-10 w-7 h-7 rounded-full bg-zinc-700 opacity-50 text-xs text-white
             justify-center items-center flex'>

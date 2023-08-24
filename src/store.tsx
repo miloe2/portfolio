@@ -16,7 +16,7 @@ const useStore = create<Store>((set) => ({
     devOpen: false,
     setDevOpen: (isOpen) => set({ devOpen: isOpen }),
 
-    devPage: 'portfolio',
+    devPage: '찾기',
     setDevPage: (page) => set({ devPage: page }),
 
 }));

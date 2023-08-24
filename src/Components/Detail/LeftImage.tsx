@@ -1,0 +1,47 @@
+import React from 'react';
+import videoUrl from '../../assets/Video/Blue_Sky_and_Clouds_Timelapse_0892__Videvo_preview.mp4';
+
+interface LefttImageLeftProps {
+    bgColor: string;
+    title : string;
+    desc : string;
+    source : string;
+    items : string;
+}
+// bg-${bgColor} 
+const LeftImage :React.FC<LefttImageLeftProps> = ({bgColor, title, desc, source, items}) => {
+
+    const bgClass = `bg-${bgColor}`;
+    
+    return (
+
+        <div className={`w-full h-full flex relative justify-end items-center `}>
+
+            <div className={`w-1/2 h-auto py-40 ${bgClass} flex justify-center items-${items} flex-col `}>
+
+                <div className='w-3/4 h-72'>
+
+                {source === videoUrl ? (
+                    <video autoPlay loop muted className='w-full h-full object-cover'>
+                        <source src={source} type="video/mp4" />
+                    </video>
+                ) : (
+                    <img src={source} alt="" className='w-full h-full object-cover' />
+                )}
+                </div>
+
+            </div>
+            <div className={`w-1/2 h-full flex justify-center items-center flex-col`}>
+                <div className='w-72 h-auto '>
+                    <div className='text-4xl leading-12 font-bold whitespace-pre-line  py-2 '> {title} </div>
+                    <div className='text-xs leading-6 whitespace-pre-line mt-5'> 
+                        {desc}
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    );
+};
+
+export default LeftImage;

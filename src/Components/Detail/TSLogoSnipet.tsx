@@ -3,7 +3,7 @@ import tslogo from '../../assets/Images/Typescript_logo_2020.svg'
 
 const TSLogoSnipet = () => {
     return (
-        <div className='w-full h-4/5 flex itmes-center justify-center bg-zinc-50 '>
+        <div className='w-full h-4/5 flex itmes-center justify-center '>
             <div className='w-5/12 h-full flex flex-col p-10 justify-center  relative '>
                 <div className='flex flex-row'>
                     <div className='w-20 border-4 rounded-full border-fuchsia-400 mr-5'/>
@@ -56,9 +56,9 @@ const TSLogoSnipet = () => {
             </div>
             
             <div className='w-1/2 h-full  justify-end items-center flex'>
-                <div className='bg-[#F6EF49] w-3/4 h-3/5 p-10 justify-center flex flex-col '>
-                <div className='text-4xl leading-12 font-bold whitespace-pre-line  text-[#134DB9] '> Typescript </div>
-                    <div className='text-xs leading-6 whitespace-pre-line h-auto mt-5 text-[#101420]'> 
+                <div className='bg-[#F6EF49] w-3/4 h-3/5 p-16 justify-center flex flex-col '>
+                <div className='text-4xl leading-12 font-bold whitespace-pre-line  '> Typescript </div>
+                    <div className='text-xs leading-6 whitespace-pre-line h-auto mt-5'> 
                     현직 개발 트렌드와 가독성 및 안정성을 높이기 위하여, <br/>
                     TypeScript (React.ts)를 적용하였습니다.   
                     </div>

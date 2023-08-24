@@ -58,16 +58,14 @@ const PrjList = () => {
         ))}
 
             <div
-            className={`w-1/3 h-96 flex items-end relative bg-zinc-400 text-white`}
+            className={`w-1/3 h-96 flex items-end relative bg-zinc-50 text-white`}
             >
                 <div className={`w-full h-full absolute top-0 transition duration-500`}/>
                     <div className='m-10 z-0 text-white absolute bottom-0'>
-                        <div className={`text-xs h-6`}> ... </div>
-                        <div className={`text-4xl font-bold `}> ... </div>
-                    </div>
+                        <div className={`text-xs h-2 w-10 bg-zinc-300 rounded-full ml-1`}>  </div>
+                        <div className={`text-4xl font-bold h-4 w-20 bg-zinc-300 rounded-full mt-4`}>  </div>
+                    </div>  
                 </div>
-
-
         </div>
         
 
