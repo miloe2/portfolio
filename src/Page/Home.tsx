@@ -3,13 +3,11 @@ import Hello from '../Components/Home/Hello';
 
 const Home = () => {
     return (
-        <div className='overflow-hidden box-border relative h-auto'>
+        <div  >
             <Hello/>
-            <div className='w-screen h-screen'></div>
-            <div className='w-screen h-screen'></div>
-            <div className='w-screen h-screen'></div>
-            <div className='w-screen h-screen'></div>
+            <div className='w-full bg-black h-72'/>
         </div>
+        
     );
 };
 
