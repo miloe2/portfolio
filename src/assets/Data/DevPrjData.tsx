@@ -21,8 +21,8 @@ const DevPrjData  = [
         stack :"java, jsp, javascript, react, styled, mariadb, git, notion",
         imgUrl:"https://picsum.photos/740/360",
         color : {
-            bg : "bg-[#F7C700]",
-            title : "text-[#101420]",
+            bg:"bg-[#101420]",
+            title : "text-[#E7236B]",
             text : "text-white",
         },
     },
@@ -43,8 +43,10 @@ const DevPrjData  = [
         stack :"typescript, react, tailwindcss, git, figma, ",
         imgUrl:"https://picsum.photos/640/360",
         color : {
-            bg:"bg-[#101420]",
-            title : "text-[#E7236B]",
+
+            bg : "bg-[#F6EF49]",
+
+            title : "text-[#0041AF]",
             text : "text-white",
         },
     },

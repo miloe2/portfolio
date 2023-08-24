@@ -58,7 +58,7 @@ const PrjList = () => {
         ))}
 
             <div
-            className={`w-1/3 h-96 flex items-end relative bg-zinc-50 text-white`}
+            className={`w-1/3 h-96 flex items-end relative bg-zinc-100 text-white`}
             >
                 <div className={`w-full h-full absolute top-0 transition duration-500`}/>
                     <div className='m-10 z-0 text-white absolute bottom-0'>

@@ -15,7 +15,6 @@ const DetailDDD = () => {
         <>
 
         <div className=' px-44'>
-            
             <FullVideo videoUrl={videoUrl} bgColor='[#0041AF]' />
             <div className='w-screen h-72 bg-white'/>
             <Left3Image bgColor='[#0041AF]' 
