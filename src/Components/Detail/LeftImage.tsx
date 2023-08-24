@@ -12,14 +12,15 @@ interface LefttImageLeftProps {
 // bg-${bgColor} 
 const LeftImage :React.FC<LefttImageLeftProps> = ({bgColor, txtColor, title, desc, source, items}) => {
 
-    const bgClass = `bg-${bgColor}`;
+
     
     
     return (
 
         <div className={`w-full h-full flex relative justify-end items-center `}>
 
-            <div className={`w-1/2 h-auto py-40 ${bgClass} flex justify-center items-${items} flex-col `}>
+            <div className={`w-1/2 h-auto py-40  flex justify-center items-${items} flex-col `} 
+            style={{ backgroundColor: bgColor }}>
 
                 <div className='w-3/4 h-72'>
 

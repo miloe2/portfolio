@@ -57,7 +57,7 @@ const DetailPortfolio = () => {
         <div className='w-screen h-72'/>
         
         <LeftImage
-            bgColor='[#f5f5f5]'
+            bgColor='#f5f5f5'
             txtColor={txtColor}
             title='Work.Exhibition'
             desc='기존에 근무하였던, Exhibition 업무도
