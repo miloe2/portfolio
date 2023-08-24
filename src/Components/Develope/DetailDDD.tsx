@@ -10,14 +10,18 @@ import ViewCode from '../Detail/ViewCode';
 import videoUrl from '../../assets/Video/Blue_Sky_and_Clouds_Timelapse_0892__Videvo_preview.mp4';
 
 const DetailDDD = () => {
-    const themeColor = '[#0041AF]' 
+    const themeColor = '[#0041AF]'
+    const txtColor = '#03193B'
     return (
         <>
 
         <div className=' px-44'>
-            <FullVideo videoUrl={videoUrl} bgColor='[#0041AF]' />
-            <div className='w-screen h-72 bg-white'/>
-            <Left3Image bgColor='[#0041AF]' 
+            <FullVideo videoUrl={videoUrl} bgColor={themeColor} />
+            <div className='w-screen h-72 '/>
+
+            <Left3Image 
+                bgColor={themeColor}
+                txtColor={txtColor}
                 img1='https://picsum.photos/300/130'
                 img2='https://picsum.photos/300/140'
                 img3='https://picsum.photos/300/150'
@@ -28,9 +32,11 @@ const DetailDDD = () => {
                 전시 예매, 전시 평가하기(다이어리), 동행찾기 등 
                 세 가지 부분을 중점으로 설계되었습니다.'
             />
-            <div className='w-screen h-72 bg-white'/>
+            <div className='w-screen h-72 '/>
             
-            <RightImage bgColor='[#0041AF]' 
+            <RightImage 
+                bgColor={themeColor} 
+                txtColor={txtColor}
                 title='다이어리,
                         사용자조회'
 
@@ -41,22 +47,25 @@ const DetailDDD = () => {
                 img='https://picsum.photos/300/200'
                 items='start'
             />
-            <div className='w-screen h-72 bg-white'/>
+            <div className='w-screen h-72'/>
             <Left1ImageProps
-            bgColor='[#0041AF]' 
-                    title='마이페이지
-                    Customized'
+                bgColor={themeColor}
+                txtColor={txtColor}
+                title='마이페이지
+                Customized'
 
-            desc='
-            다이어리 페이지는 Firebase를 활용하여   
-            Customizing이 가능하게 설계하였습니다. '
-            
-            img1='https://picsum.photos/300/200'
+                desc='
+                다이어리 페이지는 Firebase를 활용하여   
+                Customizing이 가능하게 설계하였습니다. '
+                
+                img1='https://picsum.photos/300/200'
 
             />
-            <div className='w-screen h-72 bg-white'/>
+            <div className='w-screen h-72 '/>
 
-            <RightImage bgColor='[#0041AF]' 
+            <RightImage 
+                bgColor={themeColor}
+                txtColor={txtColor}
                 title='JWT와 
                         이메일 인증'
 
@@ -69,17 +78,18 @@ const DetailDDD = () => {
                 items='end'
             
             />
-            <div className='w-screen h-72 bg-white'/>
+            <div className='w-screen h-72 '/>
         </div>
 
         <div className='px-0' style={{padding:'0'}}>
             <FullImage 
-            img='https://picsum.photos/1280/1280' 
-            title='Diverse'
-            desc='hi'
+                txtColor={txtColor}
+                img='https://picsum.photos/1280/1280' 
+                title='Diverse'
+                desc='hi'
             />
 
-            <div className='w-screen bg-white'/>
+            <div className='w-screen '/>
 
             <ViewCode
                 bgColor = {themeColor}

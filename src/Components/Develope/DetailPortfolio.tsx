@@ -12,6 +12,7 @@ import videoUrl from '../../assets/Video/Blue_Sky_and_Clouds_Timelapse_0892__Vid
 
 const DetailPortfolio = () => {
     const themeColor = '[#F6EF49]'
+    const txtColor  = '[#0041AF]'
 
     return (
         <>
@@ -25,6 +26,7 @@ const DetailPortfolio = () => {
         <div className='w-screen h-screen px-44'>
         <RightFullImage 
             bgColor = {themeColor}
+            txtColor={txtColor}
             img={twcssImg} 
             title='Tailwind CSS' 
             desc='기존에 사용하던 Styled Components에서
@@ -35,6 +37,7 @@ const DetailPortfolio = () => {
 
 
         <Text2Parg
+            txtColor={txtColor}
             title='Work.Develope' 
             desc='기존에 근무하였던, Exhibition 업무도
             정리하여 페이지를 구성하였습니다. ' />
@@ -55,6 +58,7 @@ const DetailPortfolio = () => {
         
         <LeftImage
             bgColor='[#f5f5f5]'
+            txtColor={txtColor}
             title='Work.Exhibition'
             desc='기존에 근무하였던, Exhibition 업무도
                 정리하여 페이지를 구성하였습니다. '

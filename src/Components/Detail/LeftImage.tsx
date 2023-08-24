@@ -3,15 +3,17 @@ import videoUrl from '../../assets/Video/Blue_Sky_and_Clouds_Timelapse_0892__Vid
 
 interface LefttImageLeftProps {
     bgColor: string;
+    txtColor :string;
     title : string;
     desc : string;
     source : string;
     items : string;
 }
 // bg-${bgColor} 
-const LeftImage :React.FC<LefttImageLeftProps> = ({bgColor, title, desc, source, items}) => {
+const LeftImage :React.FC<LefttImageLeftProps> = ({bgColor, txtColor, title, desc, source, items}) => {
 
     const bgClass = `bg-${bgColor}`;
+    
     
     return (
 
@@ -33,7 +35,7 @@ const LeftImage :React.FC<LefttImageLeftProps> = ({bgColor, title, desc, source,
             </div>
             <div className={`w-1/2 h-full flex justify-center items-center flex-col`}>
                 <div className='w-72 h-auto '>
-                    <div className='text-4xl leading-12 font-bold whitespace-pre-line  py-2 '> {title} </div>
+                    <div className={`text-4xl leading-12 font-bold whitespace-pre-line  py-2 text-${txtColor} `}> {title} </div>
                     <div className='text-xs leading-6 whitespace-pre-line mt-5'> 
                         {desc}
                     </div>

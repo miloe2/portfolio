@@ -5,9 +5,11 @@ interface Left1ImageProps {
     img1: string;
     title : string;
     desc : string;
+    txtColor :string;
+
 }
 
-const Left1Image :React.FC<Left1ImageProps> = ({ bgColor, img1, title, desc }) => {
+const Left1Image :React.FC<Left1ImageProps> = ({ bgColor, txtColor, img1, title, desc }) => {
     return (
         <div className=' w-full h-full flex relative justify-center items-center'>
             <div className={`w-2/3 h-auto  bg-${bgColor} flex justify-center items-start flex-col`}>
@@ -15,7 +17,7 @@ const Left1Image :React.FC<Left1ImageProps> = ({ bgColor, img1, title, desc }) =
             </div>
             <div className={`w-1/2 h-full  flex justify-center items-center flex-col`}>
                 <div className='w-72 h-auto '>
-                    <div className='text-4xl leading-12 font-bold whitespace-pre-line  py-2 '> {title} </div>
+                    <div className='text-4xl leading-12 font-bold whitespace-pre-line  py-2 ' style={{ color: txtColor }}> {title} </div>
                     <div className='text-xs leading-6 whitespace-pre-line '> 
                         {desc}
                     </div>

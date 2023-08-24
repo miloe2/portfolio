@@ -11,6 +11,7 @@ import videoUrl from '../../assets/Video/Blue_Sky_and_Clouds_Timelapse_0892__Vid
 
 const DetailFindway = () => {
     const themeColor = '[#101420]'
+    const txtColor  = '[#E7236B]'
     return (
         <div className='w-full h-auto'>
             <Text2Parg
@@ -18,6 +19,7 @@ const DetailFindway = () => {
             desc='막차가 끊긴 이후, 조금이라도 저렴하게 귀가하자라는
              생각으로 만들어진 프로젝트입니다.  
             *해당 프로젝트는 Frontend와 기획으로 참여하였습니다. '
+            txtColor = {txtColor}
             />
             <FullVideo
             bgColor={themeColor}
@@ -30,6 +32,7 @@ const DetailFindway = () => {
             <div className='px-44'>
                 <LeftImage
                 bgColor={themeColor}
+                txtColor = {txtColor}
                 source='https://picsum.photos/300/200'
                 items='end'
                 title='찾기'
@@ -43,6 +46,7 @@ const DetailFindway = () => {
 
                 <RightFullImage
                     bgColor='[#ffffff]'
+                    txtColor = {txtColor}
                     img='https://picsum.photos/300/200'
                     title='구현 방법'
                     desc='지도에 좌표를 찍어서

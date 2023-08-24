@@ -2,6 +2,7 @@ import React from 'react';
 
 interface LeftImageProps {
     bgColor: string;
+    txtColor :string;
     img1: string;
     img2: string;
     img3: string;
@@ -11,7 +12,7 @@ interface LeftImageProps {
   }
   
 
-const Left3Image :React.FC<LeftImageProps> = ({ bgColor, img1, img2, img3, title, desc }) => {
+const Left3Image :React.FC<LeftImageProps> = ({ bgColor, txtColor, img1, img2, img3, title, desc }) => {
     return (
         <div className=' w-full h-full flex relative justify-center items-center'>
             <div className={`w-1/2 h-full bg-${bgColor} flex justify-center items-center flex-col`}>
@@ -27,7 +28,7 @@ const Left3Image :React.FC<LeftImageProps> = ({ bgColor, img1, img2, img3, title
             </div>
             <div className={`w-1/2 h-full  flex justify-center items-center flex-col`}>
                 <div className='w-72 h-72'>
-                    <div className='text-4xl leading-12 font-bold whitespace-pre-line  py-2 '> {title} </div>
+                    <div className={`text-4xl leading-12 font-bold whitespace-pre-line py-2 `} style={{ color: txtColor }}> {title} </div>
                     <div className='text-xs leading-6 whitespace-pre-line h-24 mt-5'> 
                         {desc}
                     </div>
@@ -40,9 +41,3 @@ const Left3Image :React.FC<LeftImageProps> = ({ bgColor, img1, img2, img3, title
 
 export default Left3Image;
 
-{/* <div className='text-4xl font-bold py-2 '> Diverse <br/> Different <br/> Display </div>
-<div className='text-xs leading-6 whitespace-pre-line h-24 mt-5'> 
-전시 예매 및 정보 공유 커뮤니티입니다. <br/>
-전시 예매, 전시 평가하기(다이어리), 동행찾기 등<br/>
-세 가지 부분을 중점으로 설계되었습니다. 
-</div> */}

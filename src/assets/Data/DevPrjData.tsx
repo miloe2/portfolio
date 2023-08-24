@@ -33,7 +33,7 @@ const DevPrjData  = [
         imgUrl:"https://picsum.photos/540/360",
         color : {
             bg:"bg-[#0041AF]",
-            title : "text-[#101420]",
+            title : "text-[#03193B]",
             text : "text-white",
         },
     },
@@ -45,7 +45,6 @@ const DevPrjData  = [
         color : {
 
             bg : "bg-[#F6EF49]",
-
             title : "text-[#0041AF]",
             text : "text-white",
         },
