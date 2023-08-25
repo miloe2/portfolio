@@ -33,8 +33,8 @@ const Hello = () => {
                             </div>
 
                             <div className='absolute top-1/4 -right-48 text-9xl font-black text-[#242424]'>
-                                안녕<br/>
-                                하세요<span className='text-[#FF5851]'>.</span>
+                                HE<br/>
+                                LLO<span className='text-[#FF5851]'>.</span>
                             </div>
                         </div>
                         <div 
@@ -43,7 +43,7 @@ const Hello = () => {
                         ></div>
                     </div>
                 </div>
-                <div className='h-screen '/>
+                <div className='h-96 '/>
 
             </div>
         </div>

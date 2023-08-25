@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Hello from '../Components/Home/Hello';
+import Introduce from '../Components/Home/Introduce';
 
 const Home = () => {
 
@@ -10,7 +11,8 @@ const Home = () => {
     return (
         <div  >
             <Hello/>
-            <div className='w-full bg-black h-72'/>
+            <div className='w-full bg-white h-40' />
+            <Introduce/>
         </div>
         
     );
