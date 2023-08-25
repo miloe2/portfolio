@@ -24,7 +24,7 @@ const Hello = () => {
                             style={scrollY < 50 ? { width: '50%' } : { width: '95%' }}
                         >
                             <div 
-                                className={`absolute top-1/2 left-1/4 text-white transition-all duration-700 
+                                className={`absolute top-72 left-1/4 text-white transition-all duration-700 
                                 ${scrollY > 0 && scrollY < 1000 ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
                                 <div className='text-5xl leading-normal font-bold  whitespace-pre-line '> 
                                     내안에 빛이 있으면 <br/>

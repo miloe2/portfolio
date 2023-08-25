@@ -29,10 +29,10 @@ const Introduce = () => {
                         if (imageRef.current) {
                             imageObserver.observe(imageRef.current);
                         }
-                    }, 1000); // 1초 후 이미지 애니메이션 시작 (시간 조절 가능)
+                    }, 200); // 1초 후 이미지 애니메이션 시작 (시간 조절 가능)
                 }
             },
-            { threshold: 0.3 }
+            { threshold: 0.2 }
         );
 
         if (textRef.current) {
@@ -57,11 +57,11 @@ const Introduce = () => {
                     transition-all duration-1000 whitespace-nowrap 
                     ${!isTextVisible ? 'opacity-0 transform translate-y-10' : 'opacity-100 transform translate-y-0'}`}
                      >
-                <div>안녕하세요</div>
+                <div>안녕하세요.</div>
                 <div style={{marginLeft:'4ch'}}>환하게 빛을</div>
                 <div style={{marginLeft:'4ch'}}>밝히고 있는,</div>
                 <div style={{marginLeft:'2ch'}}>이택현입니다.</div>
-                <div className='absolute -bottom-36 -right-20' ref={imageRef}>
+                <div className='absolute -bottom-32 -right-20' ref={imageRef}>
                     <img 
                         src={photo1} 
                         alt="" 
@@ -70,7 +70,7 @@ const Introduce = () => {
                     />
                 </div>
 
-                <div className='absolute -bottom-80 right-1/2'>
+                <div className='absolute -bottom-60 right-1/2'>
                     <img 
                         src={photo2} 
                         alt="" 

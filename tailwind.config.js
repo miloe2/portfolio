@@ -34,6 +34,9 @@ export default {
       top:{
         '1/5': '20%',
       },
+      borderWidth: {
+        '1': '1px',
+      },
     },
   },
   plugins: [

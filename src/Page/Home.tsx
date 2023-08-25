@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Hello from '../Components/Home/Hello';
 import Introduce from '../Components/Home/Introduce';
+import ExpSkill from '../Components/Home/ExpSkill';
 
 const Home = () => {
 
@@ -11,11 +12,10 @@ const Home = () => {
     return (
         <div  >
             <Hello/>
-            <div className='w-full bg-white h-40' />
+            <div className='w-full bg-white h-32' />
             <Introduce/>
-            <div className='w-full bg-white h-40' />
-            <div className='w-full bg-white h-40' />
-            <div className='w-full bg-white h-40' />
+            <div className='w-full bg-white h-80' />
+            <ExpSkill/>
             
         </div>
         
