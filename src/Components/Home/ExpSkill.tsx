@@ -1,25 +1,34 @@
 import React from 'react';
-import StackCircle from './../Detail/StackCircle';
+import SkillsList from '../../assets/Data/SkillsList';
+// import StackCircle from './../Detail/StackCircle';
 import Marquee from "react-fast-marquee";
 
 
 
 const ExpSkill = () => {
 
-    const renderedSkills = Object.keys(StackCircle).map((skillKey, index) => {
-        const SkillComponent = StackCircle[skillKey as keyof typeof StackCircle];
-        return <SkillComponent key={index} />;
-    });
+    // const renderedSkills = Object.keys(StackCircle).map((skillKey, index) => {
+    //     const SkillComponent = StackCircle[skillKey as keyof typeof StackCircle];
+    //     return <SkillComponent key={index} />;
+    // });
 
     return (
-        <div className='w-full h-screen border-1 border-red-500 flex flex-col items-center relative'>
-            <div className='font-extrabold text-zinc-200 text-9xl'>Experienced Skills</div>
-            <div className='flex flex-row'>
-                <Marquee  speed={200} className='bg-yellow-500' >
-                {renderedSkills}
-                </Marquee>
-            </div>
-            <div className='w-40 h-80 rounded-3xl border-zinc-600 border-1 relative -top-16' />
+        <div className='w-full h-screen  flex flex-col items-center relative px-24'>
+            <div className='font-extrabold text-red-200 text-9xl whitespace-nowrap '>Experienced Skills</div>
+            <div className='w-44 h-80 rounded-3xl border-zinc-600 border-1 absolute top-20 z-10' />
+
+            <Marquee speed={100} pauseOnHover gradient className=' h-52 w-auto z-0 ' >
+                {SkillsList.map((skill, index) => (
+                    <div className='justify-center items-center  flex flex-col mr-20 w-20'>
+                        <div key={index} className='flex flex-col w-14 h-14 border-1 rounded-full justify-start items-start bg-white'>
+                            <img src={skill.imgUrl} alt="" className='w-full h-full rounded-full object-cover'/>
+                        </div>
+                        <div className='mt-5 text-xs font-semibold h-12'>
+                            {skill.skill}
+                        </div>
+                    </div>
+                ))}
+            </Marquee>
         </div>
     );
 };
