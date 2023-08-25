@@ -17,16 +17,11 @@ const Whatidid = () => {
       };
     }, []);
 
-    // useEffect(() => {
-    //     console.log(scrollY);
-    // }, [scrollY]);
-
     const blackBG =  'bg-black w-full h-full absolute top-0 left-0 opacity-80  transition-opacity';
     const blackOpacity =  'bg-black w-full h-full absolute top-0 left-0 opacity-20  transition-opacity';
 
     const fontGray = 'text-xs leading-6 whitespace-pre-line text-zinc-500 h-10 items-center'
     const fontTarget = 'text-base font-semibold leading-6 whitespace-pre-line h-10 flex '
-    console.log(scrollY)
 
 
 
@@ -37,7 +32,7 @@ const Whatidid = () => {
             <div className='w-2/5 h-auto  flex flex-col overflow-hidden'>
                 <div className='w-full h-96 relative'>
                     <img src={ImageUrl1[0]} alt="" className='w-full h-full object-cover '/>
-                    { scrollY >= 750 && scrollY < 1100 ?  <div className={blackOpacity}/> : <div className={blackBG}/>  }
+                    { scrollY >= 400 && scrollY < 1100 ?  <div className={blackOpacity}/> : <div className={blackBG}/>  }
                 </div>
                 <div className='bg-black w-2/5 h-12'/>
                 
@@ -67,7 +62,7 @@ const Whatidid = () => {
                 제안서 기획/작성, 입찰 제안 발표를 수행하였습니다. </div>
                 <div className='text-xl font-bold py-4 mt-8'> 업무 분야 </div>
                 {/* <div className={} >  CES 2022</div> */}
-                {scrollY >= 750 && scrollY < 1100 ? (<div className={fontTarget}> → 전시 운영 및 기획</div>) : (<div className={fontGray}>전시 운영 및 기획</div>)}
+                {scrollY >= 400 && scrollY < 1100 ? (<div className={fontTarget}> → 전시 운영 및 기획</div>) : (<div className={fontGray}>전시 운영 및 기획</div>)}
                 {scrollY >= 1100 && scrollY < 1500 ? (<div className={fontTarget}> → 컨퍼런스 운영 및 기획</div>) : (<div className={fontGray}>컨퍼런스 운영 및 기획</div>)}
                 {scrollY >= 1500 && scrollY < 1900 ? (<div className={fontTarget}> → 기업 커뮤니케이션</div>) : (<div className={fontGray}>기업 커뮤니케이션</div>)}
                 {scrollY >= 1900 ? (<div className={fontTarget}> → 제안서 작성/발표</div>) : (<div className={fontGray}>제안서 작성/발표</div>)}

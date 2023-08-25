@@ -32,7 +32,7 @@ const CarouselSlide = () => {
           setCurrentSlide((prevSlide) =>
             prevSlide === carouselData.length - 1 ? 0 : prevSlide + 1
           );
-        }, 5000);
+        }, 2000);
       }
   
       return () => {
@@ -46,7 +46,7 @@ const CarouselSlide = () => {
   const PREV_SLIDE: number = currentSlide === 0 ? carouselData.length - 1 : currentSlide - 1;
 
   return (
-       <div className='bg-black w-auto h-screen  flex justify-center items-center whitespace-nowrap relative overflow-x-hidden'>
+       <div className='bg-black w-auto h-screen  flex justify-center items-center whitespace-nowrap relative overflow-x-hidden '>
             <div className='w-full h-16 flex  items-end absolute top-0 pl-48'>
                 <div className='text-white relative top-10 text-lg font-bold'>주요프로젝트</div>
             </div>
@@ -87,7 +87,7 @@ const CarouselSlide = () => {
                     </div>
                 ))}
 
-                      {/* 일시정지 / 재생 버튼 */}
+                {/* 일시정지 / 재생 버튼 */}
 
                 <button
                 className="w-5 h-5  rounded-full flex justify-center items-center ml-3 text-4xl text-white"
