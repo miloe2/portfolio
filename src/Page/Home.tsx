@@ -13,6 +13,10 @@ const Home = () => {
             <Hello/>
             <div className='w-full bg-white h-40' />
             <Introduce/>
+            <div className='w-full bg-white h-40' />
+            <div className='w-full bg-white h-40' />
+            <div className='w-full bg-white h-40' />
+            
         </div>
         
     );
