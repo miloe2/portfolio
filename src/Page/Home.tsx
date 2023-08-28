@@ -16,10 +16,12 @@ const Home = () => {
             <Hello/>
             <div className='w-full bg-white h-52' />
             <Introduce/>
+            <div className='w-full bg-white h-96' />
             <div className='w-full bg-white h-80' />
             <ExpSkill/>
-            <div className='w-full bg-white h-80' />
+            <div className='w-full bg-white h-96' />
             <Career/>
+            <div className='w-full bg-white h-20' />
             
         </div>
         

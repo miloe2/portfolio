@@ -9,6 +9,9 @@ export default {
   ],
   theme: {
     extend: {
+      inset: {
+        '1/5': '20%', // 여기에 1/5를 위한 값 20% 추가
+      },
       height: {
         '1/12': '8.3333%',
         '2/12': '16.6667%',
@@ -37,6 +40,12 @@ export default {
       borderWidth: {
         '1': '1px',
       },
+      right:{
+        '1/5': '20%',
+      },
+      left:{
+        '1/5': '20%',
+      }
     },
   },
   plugins: [
