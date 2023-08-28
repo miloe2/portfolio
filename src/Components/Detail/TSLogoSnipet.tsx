@@ -1,4 +1,3 @@
-import React from 'react';
 import tslogo from '../../assets/Images/Typescript_logo_2020.svg'
 
 const TSLogoSnipet = () => {

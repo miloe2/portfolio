@@ -1,4 +1,3 @@
-import React from 'react';
 import ViewCode from '../Detail/ViewCode';
 import Text2Parg from '../Detail/Text2Parg';
 import FullVideo from '../Detail/FullVideo';

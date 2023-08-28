@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 // #134DB9
 const MainWork = () => {
     const [width, setWidth] = useState('25%'); // 초기값으로 75% 설정

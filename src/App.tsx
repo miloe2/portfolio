@@ -1,4 +1,3 @@
-import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Exhibitions from './Page/Exhibitions';
@@ -10,7 +9,7 @@ import Home from './Page/Home';
 function App() {
   return (
     <>
-    <Router>
+    <Router basename="/portfolio.ts.vite">
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/develope" element={<Develope/>}/>

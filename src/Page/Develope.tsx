@@ -1,4 +1,3 @@
-import React from 'react';
 import MainWork from '../Components/Develope/MainWork';
 import PrjList from '../Components/Develope/PrjList';
 import Detail from '../Components/Develope/Detail';

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import Hello from '../Components/Home/Hello';
 import Introduce from '../Components/Home/Introduce';
 import ExpSkill from '../Components/Home/ExpSkill';

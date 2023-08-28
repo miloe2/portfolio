@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import  {useEffect, useState} from 'react';
 import { ImageUrl1 } from '../../assets/Data/ExhibitData';
 
 const Whatidid = () => {

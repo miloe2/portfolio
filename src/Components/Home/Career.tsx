@@ -1,4 +1,3 @@
-import React from 'react';
 import javascript from '../../assets/Images/javascript.png';
 import {LiaStarSolid, LiaStarHalfSolid} from 'react-icons/lia'
 import useIntersectionObserver from '../../hooks/useIntersectionObserver';

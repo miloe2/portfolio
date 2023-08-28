@@ -1,4 +1,3 @@
-import React from 'react';
 import FullVideo from '../Detail/FullVideo';
 import Left3Image from '../Detail/Left3Image';
 import RightImage from '../Detail/RightImage';

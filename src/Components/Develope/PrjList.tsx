@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import React from 'react';
 import DevPrjData from '../../assets/Data/DevPrjData';
 import useStore from '../../store';
 
@@ -13,7 +12,7 @@ const PrjList = () => {
 
     // onMouseDown 이벤트 핸들러
     const handleMouseOver = (index :number) => {
-        const updatedHoverState = hoverState.map((item, idx) => (idx === index ? true : false));
+        const updatedHoverState = hoverState.map((idx) => (idx === index ? true : false));
         setHoverState(updatedHoverState);
     };
 

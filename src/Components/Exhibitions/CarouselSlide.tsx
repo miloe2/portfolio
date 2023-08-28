@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import carouselData from '../../assets/Data/CarouselData';  
 import {BsFillPauseFill, BsPlayFill} from 'react-icons/bs';
 import {MdKeyboardArrowRight, MdKeyboardArrowLeft} from 'react-icons/md';
@@ -80,10 +80,10 @@ const CarouselSlide = () => {
             <div className='  w-full h-16 flex justify-center items-center absolute bottom-10'>
             <button className='w-4 h-4 bg-gray-100 mr-3 rounded-full flex justify-center items-center' onClick={onClickNextButton}><MdKeyboardArrowLeft/> </button>
 
-                {    carouselData.map((item, index) => (                    
-                    <div key={index} className=' mx-1  cursor-pointer '  onClick={() => onClickDot(index)}>
+                {    carouselData.map((item) => (                    
+                    <div key={item.id} className=' mx-1  cursor-pointer '  onClick={() => onClickDot(item.id)}>
                         
-                        {currentSlide === index ? <div className=' w-5 h-2 bg-[#616060] rounded-full'/> :<div className=' w-2 h-2 bg-white rounded-full'/>}
+                        {currentSlide === item.id ? <div className=' w-5 h-2 bg-[#616060] rounded-full'/> :<div className=' w-2 h-2 bg-white rounded-full'/>}
                     </div>
                 ))}
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import twcssImg from '../../assets/Images/tailwind css.png'
 import TSLogoSnipet from '../Detail/TSLogoSnipet';
 import RightFullImage from '../Detail/RightFullImage';

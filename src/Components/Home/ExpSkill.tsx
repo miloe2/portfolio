@@ -1,4 +1,3 @@
-import React, {  } from 'react';
 import SkillsList from '../../assets/Data/SkillsList';
 // import StackCircle from './../Detail/StackCircle';
 import Marquee from "react-fast-marquee";

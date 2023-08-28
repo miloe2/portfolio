@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const Introduce = () => {
     const photo1 = 'https://picsum.photos/320/430';
