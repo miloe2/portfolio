@@ -31,7 +31,7 @@ const DetailFindway = () => {
             <div className='w-screen h-20'/>
             <div className='px-44'>
                 <LeftImage
-                bgColor={themeColor}
+                bgColor='#101420'
                 txtColor = {txtColor}
                 source='https://picsum.photos/300/200'
                 items='end'
@@ -58,6 +58,7 @@ const DetailFindway = () => {
             </div>
             <div className='w-full h-72'/>
             <FullImage 
+            txtColor='white'
             img='https://picsum.photos/1280/1280' 
             title='Diverse'
             desc='hi'

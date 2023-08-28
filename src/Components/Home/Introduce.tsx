@@ -59,7 +59,7 @@ const Introduce = () => {
                      >
                 <div>안녕하세요.</div>
                 <div style={{marginLeft:'4ch'}}>환하게 빛을</div>
-                <div style={{marginLeft:'4ch'}}>밝히고 있는,</div>
+                <div style={{marginLeft:'3ch'}}>밝히고 있는,</div>
                 <div style={{marginLeft:'2ch'}}>이택현입니다.</div>
                 <div className='absolute -bottom-32 -right-20' ref={imageRef}>
                     <img 

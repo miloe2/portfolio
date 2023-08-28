@@ -33,7 +33,7 @@ const SkillsList: SkillType[] = [
     { skill: 'Notion', imgUrl: notion },
     { skill: 'Springboot', imgUrl: springboot },
     { skill: 'TailwindCSS', imgUrl: tailwindcss },
-    { skill: 'styled-Component', imgUrl: styled },
+    { skill: 'Styled-Component', imgUrl: styled },
 ];
 
 export default  SkillsList;

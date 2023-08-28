@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {  } from 'react';
 import SkillsList from '../../assets/Data/SkillsList';
 // import StackCircle from './../Detail/StackCircle';
 import Marquee from "react-fast-marquee";
@@ -7,17 +7,20 @@ import Marquee from "react-fast-marquee";
 
 const ExpSkill = () => {
 
-    // const renderedSkills = Object.keys(StackCircle).map((skillKey, index) => {
-    //     const SkillComponent = StackCircle[skillKey as keyof typeof StackCircle];
-    //     return <SkillComponent key={index} />;
-    // });
+
 
     return (
-        <div className='w-full h-screen  flex flex-col items-center relative px-24'>
-            <div className='font-extrabold text-red-200 text-9xl whitespace-nowrap '>Experienced Skills</div>
-            <div className='w-44 h-80 rounded-3xl border-zinc-600 border-1 absolute top-20 z-10' />
+        <div className='w-full h-96  flex flex-col items-center justify-center relative px-24'>
+            <div className='absolute top-0'>
+                <div className='font-extrabold text-zinc-200 text-9xl whitespace-nowrap '>Experienced Skills</div>
+                <div className='font-extrabold text-zinc-100 text-9xl whitespace-nowrap '>Experienced Skills</div>
+                <div className='font-extrabold text-zinc-50 text-9xl whitespace-nowrap '>Experienced Skills</div>
+            </div>
 
-            <Marquee speed={100} pauseOnHover gradient className=' h-52 w-auto z-0 ' >
+            <div className='w-44 h-80 rounded-3xl border-zinc-600 border-1 absolute top-20 z-10' />
+   
+
+            <Marquee speed={100} pauseOnHover gradient className=' h-52 w-auto  ' >
                 {SkillsList.map((skill, index) => (
                     <div className='justify-center items-center  flex flex-col mr-20 w-20'>
                         <div key={index} className='flex flex-col w-14 h-14 border-1 rounded-full justify-start items-start bg-white'>
