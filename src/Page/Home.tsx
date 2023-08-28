@@ -13,6 +13,7 @@ const Home = () => {
   
     return (
         <div  >
+
             <Hello/>
             <div className='w-full bg-white h-52' />
             <Introduce/>

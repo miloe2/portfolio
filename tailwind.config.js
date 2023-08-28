@@ -9,6 +9,33 @@ export default {
   ],
   theme: {
     extend: {
+      animation: {
+        bounce: 'bounce 2s infinite',
+      },
+      keyframes: {
+        bounce: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '5%': { transform: 'translateY(1px)' },
+          '10%': { transform: 'translateY(2px)' },
+          '15%': { transform: 'translateY(1px)' },
+          '20%': { transform: 'translateY(0px)' },
+          '25%': { transform: 'translateY(-1px)' },
+          '30%': { transform: 'translateY(-2px)' },
+          '35%': { transform: 'translateY(-1px)' },
+          '40%': { transform: 'translateY(0px)' },
+          '45%': { transform: 'translateY(1px)' },
+          '50%': { transform: 'translateY(2px)' },
+          '55%': { transform: 'translateY(1px)' },
+          '60%': { transform: 'translateY(0px)' },
+          '65%': { transform: 'translateY(-1px)' },
+          '70%': { transform: 'translateY(-2px)' },
+          '75%': { transform: 'translateY(-1px)' },
+          '80%': { transform: 'translateY(0px)' },
+          '85%': { transform: 'translateY(1px)' },
+          '90%': { transform: 'translateY(2px)' },
+          '95%': { transform: 'translateY(1px)' },
+        },
+      },
       inset: {
         '1/5': '20%', // 여기에 1/5를 위한 값 20% 추가
       },
