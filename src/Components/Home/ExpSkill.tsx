@@ -33,7 +33,7 @@ const ExpSkill = () => {
 
             <Marquee speed={100} pauseOnClick gradient className=' h-96 w-auto absolute top-1/2' >
                 {SkillsList.map((skill, index) => (
-                    <div className='justify-center items-center  flex flex-col mr-20 w-20'>
+                    <div className='justify-center items-center  flex flex-col mr-20 w-20' key={index}>
                         <div key={index} className='flex flex-col w-14 h-14 border-1 rounded-full justify-start items-start bg-white'>
                             <img src={skill.imgUrl} alt="" className='w-full h-full rounded-full object-cover'/>
                         </div>
