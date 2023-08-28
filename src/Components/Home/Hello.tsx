@@ -37,8 +37,8 @@ const Hello = () => {
                             </div>
 
                             <div className='absolute top-1/3 -right-48 text-9xl font-black text-[#242424]'>
-                                HE<br/>
-                                LLO<span className='text-[#FF5851]'>.</span>
+                                안녕<br/>
+                                하세요<span className='text-[#FF5851]'>.</span>
                             </div>
                         </div>
                         <div 
@@ -49,13 +49,14 @@ const Hello = () => {
                     
                     <div className="animate-bounce left-1/3 flex  items-center w-2/12 h-auto justify-end
                         transition-all duration-700   text-white absolute bottom-20 " 
-                        style={scrollY < 850 ? {opacity:'100'} : {opacity:'0'}  }>
+                        style={scrollY < 1000 ? {opacity:'100'} : {opacity:'0'}  }>
                         <div className='-rotate-90'>
                             <div className=' text-lg flex'><BsArrowLeft/> <span className='text-xs ml-2'>Scroll</span>  </div>
                         </div>
                     </div>
 
                 </div>
+                <div className='h-96 '/>
                 <div className='h-96 '/>
 
             </div>

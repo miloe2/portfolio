@@ -10,7 +10,7 @@ export default {
   theme: {
     extend: {
       animation: {
-        bounce: 'bounce 2s infinite',
+        bounce: 'bounce 1.5s infinite',
       },
       keyframes: {
         bounce: {

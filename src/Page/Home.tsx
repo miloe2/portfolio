@@ -15,10 +15,10 @@ const Home = () => {
         <div  >
 
             <Hello/>
-            <div className='w-full bg-white h-52' />
+            <div className='w-full bg-white h-40' />
             <Introduce/>
             <div className='w-full bg-white h-96' />
-            <div className='w-full bg-white h-80' />
+            <div className='w-full bg-white h-60' />
             <ExpSkill/>
             <div className='w-full bg-white h-96' />
             <Career/>

@@ -1,14 +1,24 @@
 import React from 'react';
 import javascript from '../../assets/Images/javascript.png';
 import {LiaStarSolid, LiaStarHalfSolid} from 'react-icons/lia'
+import useIntersectionObserver from '../../hooks/useIntersectionObserver';
+
+    
 
 const Career = () => {
+    const [divRef, isDivVisible] = useIntersectionObserver({
+        rootMargin: '0px',
+        threshold: 0.2,
+    });
+    
+    const visibilityClasses = isDivVisible
+    ? 'opacity-100 transform translate-y-0'
+    : 'opacity-0 transform translate-y-10';
+
     return (
-        <div className='w-full h-auto 0 flex overflow-x-hidden px-10 justify-center '>
-
-
-            <div className='w-auto h-auto flex flex-col mx-5  '>
-                <div className='w-80 flex'>
+        <div className={`w-full h-auto 0 flex overflow-hidden px-44 justify-between  transition-all duration-1000 ${visibilityClasses}`} ref={divRef}>
+            <div className={`w-auto h-auto flex flex-col mx-5 transition-all duration-1000 delay-0 ${visibilityClasses} `}>
+                <div className='w-72 flex delay-300'>
                     <div className='w-16  font-bold text-lg'>교육사항</div>
                 </div>
                 <div className='w-1 h-3'/>
@@ -30,8 +40,8 @@ const Career = () => {
                 </div>
             </div>
 
-            <div className='w-72 h-auto  flex flex-col mx-5   '>
-                <div className='w-80 flex'>
+            <div className={`w-auto h-auto flex flex-col mx-5 transition-all duration-1000 delay-300 ${visibilityClasses}  `}>
+                <div className='w-72 flex'>
                     <div className='w-16  font-bold text-lg'>경력사항</div>
                 </div>
                 <div className='w-1 h-3'/>
@@ -59,8 +69,8 @@ const Career = () => {
                 </div>
             </div>
 
-            <div className='w-72 h-auto  flex flex-col mx-5    '>
-                <div className='w-80 flex'>
+            <div className={`w-auto h-auto flex flex-col mx-5 transition-all duration-1000 delay-500 ${visibilityClasses} `}>
+                <div className='w-72 flex'>
                     <div className='w-16  font-bold text-lg'>어학</div>
                 </div>
                 <div className='w-1 h-3'/>
@@ -98,8 +108,8 @@ const Career = () => {
                 </div>
             </div>
 
-            <div className='w-72 h-auto flex flex-col mx-5 '>
-                <div className='w-auto flex'>
+            <div className={`w-auto h-auto flex flex-col mx-5 transition-all duration-1000 delay-700 ${visibilityClasses} `}>
+                <div className='w-auto flex delay-1000'>
                     <div className='w-16  font-bold text-lg'>자격증</div>
                 </div>
                 <div className='w-1 h-3'/>
