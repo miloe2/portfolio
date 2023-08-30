@@ -1,4 +1,6 @@
-import javascript from '../../assets/Images/javascript.png';
+import ppt from '../../assets/Images/Icons/PPT-Logo.png';
+import excel from '../../assets/Images/Icons/Excel.png';
+import hwp from '../../assets/Images/Icons/hwp.png';
 import {LiaStarSolid, LiaStarHalfSolid} from 'react-icons/lia'
 import useIntersectionObserver from '../../hooks/useIntersectionObserver';
 
@@ -125,16 +127,16 @@ const Career = () => {
                 <div className='w-1 h-3'/>
                 <div className='flex flex-row  '>
                     <div className='h-7 flex text-sm flex-col mr-5'>
-                        <div className='w-10 h-10 '><img src={javascript} alt="" className='w-full h-full object-cover'/></div>
-                        <div className='w-10  text-center'>상</div>
+                        <div className='w-10 h-10 '><img src={ppt} alt="" className='w-full h-full object-cover'/></div>
+                        <div className='w-10 text-xs mt-1   text-center'>상</div>
                     </div>
                     <div className='h-7 flex text-sm flex-col mr-5 '>
-                        <div className='w-10 h-10 '><img src={javascript} alt="" /></div>
-                        <div className='w-10  text-center'>상</div>
+                        <div className='w-10 h-10 '><img src={excel} alt="" className='w-full h-full object-cover' /></div>
+                        <div className='w-10 text-xs mt-1   text-center'>중</div>
                     </div>
                     <div className='h-7 flex text-sm flex-col '>
-                        <div className='w-10 h-10 '><img src={javascript} alt="" /></div>
-                        <div className='w-10  text-center'>상</div>
+                        <div className='w-10 h-10 '><img src={hwp} alt="" className='w-full h-full object-cover' /></div>
+                        <div className='w-10 text-xs mt-1 text-center'>상</div>
                     </div>
                 </div>
 

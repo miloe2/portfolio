@@ -1,4 +1,4 @@
-import twcssImg from '../../assets/Images/tailwind css.png'
+import twcssImg from '../../assets/Images/photos/tailwind css.png'
 import TSLogoSnipet from '../Detail/TSLogoSnipet';
 import RightFullImage from '../Detail/RightFullImage';
 import Text2Parg from '../Detail/Text2Parg';

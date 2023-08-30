@@ -1,18 +1,17 @@
-import java from '../../assets/Images/java.jpg';
-import javascript from '../../assets/Images/javascript.png';
-import aws from '../../assets/Images/aws.jpg';
-import figma from '../../assets/Images/Figma-logo.svg';
-import git from '../../assets/Images/GitHub_Logo.svg';
-import mariadb from '../../assets/Images/mariadb.svg';
-import mysql from '../../assets/Images/Mysql2.webp';
+import java from '../../assets/Images/Icons/java.jpg';
+import javascript from '../../assets/Images/Icons/javascript.png';
+import aws from '../../assets/Images/Icons/aws.jpg';
+import figma from '../../assets/Images/Icons/Figma-logo.svg';
+import git from '../../assets/Images/Icons/GitHub_Logo.svg';
+import mariadb from '../../assets/Images/Icons/mariadb.svg';
+import mysql from '../../assets/Images/Icons/Mysql2.webp';
 
-import reacticon from '../../assets/Images/React-logo.svg';
-import typescript from '../../assets/Images/Typescript_logo_2020.svg';
-import notion from '../../assets/Images/notion.svg';
-import springboot from '../../assets/Images/spring-boot.png';
-import tailwindcss from '../../assets/Images/tailwindcss.svg';
-
-import styled from '../../assets/Images/styled.png';
+import reacticon from '../../assets/Images/Icons/React-logo.svg';
+import typescript from '../../assets/Images/Icons/Typescript_logo_2020.svg';
+import notion from '../../assets/Images/Icons/notion.svg';
+import springboot from '../../assets/Images/Icons/spring-boot.png';
+import tailwindcss from '../../assets/Images/Icons/tailwindcss.svg';
+import styled from '../../assets/Images/Icons/styled.png';
 
 interface StackCircleType {
     [key: string]: () => JSX.Element;

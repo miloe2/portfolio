@@ -1,7 +1,7 @@
-import asdSummer from '../Images/ASD22SUMMER.jpg';
-import vietnamSBA from '../Images/VietnamSBA.jpg';
-import jbtp from '../Images/jbtp.jpg'
-import UsBiz from '../Images/USbiz.jpg'
+import asdSummer from '../Images/photos/ASD22SUMMER.jpg';
+import vietnamSBA from '../Images/photos/VietnamSBA.jpg';
+import jbtp from '../Images/photos/jbtp.jpg'
+import UsBiz from '../Images/photos/USbiz.jpg'
 
 const projectData = [
 

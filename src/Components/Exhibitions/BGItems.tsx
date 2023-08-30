@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { ImageUrl1, ImageUrl2, ImageUrl3} from '../../assets/Data/ExhibitData';
-import BGItemsBG from '../../assets/Images/BGItemsBG.jpg'
+import BGItemsBG from '../../assets/Images/photos/BGItemsBG.jpg'
 
 
 const BGItems = () => {

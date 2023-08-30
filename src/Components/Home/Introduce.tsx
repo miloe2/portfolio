@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
+import pht1 from '../../assets/Images/photos/Int-pht1.jpg';
+import pht2 from '../../assets/Images/photos/Int-pht2.jpg';
 
 const Introduce = () => {
-    const photo1 = 'https://picsum.photos/320/430';
-    const photo2 = 'https://picsum.photos/370/250';
 
     const [isTextVisible, setTextVisible] = useState(false);
     const [isImageVisible, setImageVisible] = useState(false);
@@ -55,18 +55,18 @@ const Introduce = () => {
             <div>
 
             
-            <div className='absolute -bottom-60 right-1/5' ref={imageRef}>
+            <div className='absolute -bottom-48 right-1/5 w-80 h-96' ref={imageRef}>
                     <img 
-                        src={photo1} 
+                        src={pht1}
                         alt="" 
                         className={`w-full h-full object-cover transition-all duration-1000 
                             ${!isImageVisible ? 'opacity-0 transform translate-y-10' : 'opacity-100 transform translate-y-0'}`}
                     />
                 </div>
 
-                <div className='absolute -bottom-80 right-1/2'>
+                <div className='absolute -bottom-96 right-1/2 w-96 h-72'>
                     <img 
-                        src={photo2} 
+                        src={pht2}
                         alt="" 
                         className={`w-full h-full object-cover transition-all duration-1000 
                             ${!isImageVisible ? 'opacity-0 transform translate-y-10' : 'opacity-100 transform translate-y-0'}`}

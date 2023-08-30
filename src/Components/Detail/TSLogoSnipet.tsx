@@ -1,4 +1,4 @@
-import tslogo from '../../assets/Images/Typescript_logo_2020.svg'
+import tslogo from '../../assets/Images/Icons/Typescript_logo_2020.svg'
 
 const TSLogoSnipet = () => {
     return (

@@ -1,4 +1,4 @@
-import Mywork from '../../assets/Images/MyworkImg.jpg'
+import Mywork from '../../assets/Images/photos/MyworkImg.jpg'
 // 이미지 url 배열
 
 const ImageUrl1 = [
