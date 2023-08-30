@@ -49,7 +49,7 @@ const ProjectRow = () => {
     }
     };
 
-    const BlackBG =  'bg-black w-full h-full absolute top-0 left-0 opacity-70 ';
+    const BlackBG =  'bg-black w-full h-full absolute top-0 left-0 opacity-10 ';
 
     return (
         <>
@@ -61,7 +61,7 @@ const ProjectRow = () => {
                 {projectData.map((item, index) => (
                     <div className=' w-72 h-full box-border flex-shrink-0 overflow-hidden relative mr-1' key={index}>
                         <div className={BlackBG}/>
-                        <div className='w-full h-2/5 absolute bottom-0 text-white justify-center flex'>
+                        <div className='w-full h-2/5 absolute bottom-0 text-zinc-100 justify-center flex'>
                             <div className=' w-4/5 h-auto pr-10'>
                                 <div className='text-xs leading-6 whitespace-pre-line'> {item.date} </div>
                                 <div className='text-xs leading-6 whitespace-pre-line'> {item.location} </div>

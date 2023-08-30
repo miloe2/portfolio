@@ -17,9 +17,9 @@ const Career = () => {
     : 'opacity-0 transform translate-y-10';
 
     return (
-        <div className={`w-full h-auto 0 flex overflow-hidden px-44 justify-between  transition-all duration-1000 ${visibilityClasses}`} ref={divRef}>
+        <div className={`w-full h-auto 0 flex overflow-hidden px-32 justify-center  transition-all duration-1000 ${visibilityClasses}`} ref={divRef}>
             <div className={`w-auto h-auto flex flex-col mx-5 transition-all duration-1000 delay-0 ${visibilityClasses} `}>
-                <div className='w-72 flex delay-300'>
+                <div className='w-72 flex '>
                     <div className='w-16  font-bold text-lg'>교육사항</div>
                 </div>
                 <div className='w-1 h-3'/>

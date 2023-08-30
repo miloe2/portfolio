@@ -1,6 +1,10 @@
-import Mywork from '../../assets/Images/photos/MyworkImg.jpg'
-// 이미지 url 배열
+import Mywork from '../Images/photos/MyworkImg.jpg'
+import tradeshow from '../Images/Photos/tradeshow.jpg'
+import conference from '../Images/Photos/conference.jpg'
+import communication from '../Images/Photos/communication.jpg'
+import rfp from '../Images/Photos/rfp.png'
 
+// mywork 배경 화면 이미지 배열
 const ImageUrl1 = [
     "https://ak-d.tripcdn.com/images/1i65322344hw4f28iE209_W_800_0_R5_Q90.jpg?proc=source/trip",
     "https://www.savinamuseum.com/upload/exinfo/1644552713982_10.jpg",
@@ -39,11 +43,16 @@ const ImageUrl3 = [
     "https://artlogic-res.cloudinary.com/w_1000,c_limit,f_auto,fl_lossy,q_auto/artlogicstorage/gallerybaton/images/view/527c05ddd942d5ffb91ef3df0a895dfaj/gallerybaton-kim-bohie-towards-2023.jpg",
     "https://artlogic-res.cloudinary.com/w_850,c_limit,f_auto,fl_lossy,q_auto/artlogicstorage/gallerybaton/images/view/701ecb29549752fd4b0adb583f30dde3j/gallerybaton-kim-bohie-beyond-2023.jpg",
     "https://www.savinamuseum.com/upload/exinfo/1628835044139_20.jpg",
+]
 
+const whatIdidPhotos =[
+    tradeshow,
+    conference,
+    communication,
+    rfp
 ]
 
 
 
 
-
-export  {ImageUrl1, ImageUrl2, ImageUrl3};
+export  {ImageUrl1, ImageUrl2, ImageUrl3, whatIdidPhotos};

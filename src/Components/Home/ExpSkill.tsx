@@ -1,5 +1,4 @@
 import SkillsList from '../../assets/Data/SkillsList';
-// import StackCircle from './../Detail/StackCircle';
 import Marquee from "react-fast-marquee";
 import useIntersectionObserver from '../../hooks/useIntersectionObserver';
 

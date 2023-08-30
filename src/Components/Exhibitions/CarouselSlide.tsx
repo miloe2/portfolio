@@ -32,7 +32,7 @@ const CarouselSlide = () => {
           setCurrentSlide((prevSlide) =>
             prevSlide === carouselData.length - 1 ? 0 : prevSlide + 1
           );
-        }, 2000);
+        }, 5000);
       }
   
       return () => {
@@ -60,7 +60,7 @@ const CarouselSlide = () => {
             </div>
             {/*  현재 */}
             <div className="w-7/12 h-3/5 rounded-3xl flex relative items-center flex-shrink-0 mx-10 ">
-                <div className='bg-gradient-to-r from-white to-transparent w-2/3 h-full absolute left-0 rounded-l-3xl '/> 
+                <div className='bg-gradient-to-r from-white to-transparent w-4/5 h-full absolute left-0 rounded-l-3xl '/> 
                 <div className=' absolute left-0  pl-10 tracking-tight'>
                     <div className='text-xs text-zinc-600'> {carouselData[currentSlide].location} </div>
                     {/* <div className='text-sm'> {carouselData[currentSlide].venue} </div> */}
