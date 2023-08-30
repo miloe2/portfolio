@@ -9,7 +9,7 @@ import useIntersectionObserver from '../../hooks/useIntersectionObserver';
 const Career = () => {
     const [divRef, isDivVisible] = useIntersectionObserver({
         rootMargin: '0px',
-        threshold: 0.2,
+        threshold: 0.1,
     });
     
     const visibilityClasses = isDivVisible

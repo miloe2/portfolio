@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { ImageUrl1, ImageUrl2, ImageUrl3} from '../../assets/Data/ExhibitData';
-// import BGItemsBG from '../../assets/Images/photos/BGItemsBG.jpg'
+import BGItemsBG from '../../assets/Images/photos/BGItemsBG.jpg'
 
 
 const BGItems = () => {
@@ -19,7 +19,7 @@ const BGItems = () => {
       };
     }, []);
 
-    const BlackBG =  'bg-black w-full h-full absolute top-0 left-0 opacity-5 rounded-xl';
+    const BlackBG =  'bg-black w-full h-full absolute top-0 left-0 opacity-50 rounded-xl';
     const ImageStyle = 'w-full h-full object-cover rounded-xl drop-shadow-5px';
 
     return (
@@ -67,7 +67,7 @@ const BGItems = () => {
 
                 
 
-                {/* <img src={BGItemsBG} alt="" className='object-cover w-full overflow-hidden'/>  */}
+                <img src={BGItemsBG} alt="" className='object-cover w-full overflow-hidden'/> 
 
                 <div className='bg-gradient-to-t from-black to-transparent w-screen h-6 absolute bottom-0 '/>
             </div>

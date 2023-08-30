@@ -3,6 +3,7 @@ import vietnamSBA from '../Images/photos/VietnamSBA.jpg';
 import jbtp from '../Images/photos/jbtp.jpg'
 import UsBiz from '../Images/photos/USbiz.jpg'
 
+
 const projectData = [
 
     {location:"튀르키예, 안탈리아", title: "Growtech Eruaisa ", date:"2022-11", desc :"한국농업기술진흥원 10개사 한국관 전시 운영 총괄" , img:"http://www.businessantalya.com/wp-content/uploads/2017/12/1513852271_Growtech_Standlar__8_-1024x684.jpg",},
