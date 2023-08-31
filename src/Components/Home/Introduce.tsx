@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
-import pht1 from '../../assets/Images/photos/Int-pht1.jpg';
-import pht2 from '../../assets/Images/photos/Int-pht2.jpg';
+import pht1 from '../../assets/Images/photos/Int-pht1.webp';
+import pht2 from '../../assets/Images/photos/Int-pht2.webp';
 
 const Introduce = () => {
 

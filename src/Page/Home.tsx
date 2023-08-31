@@ -22,8 +22,7 @@ const Home = () => {
             <ExpSkill/>
             <div className='w-full bg-white h-96' />
             <Career/>
-            <div className='w-full bg-white h-40' />
-            
+            <div className='w-full bg-white h-screen' />
         </div>
         
     );
