@@ -7,6 +7,7 @@ import ViewCode from '../Detail/ViewCode';
 
 
 import videoUrl from '../../assets/Video/Blue_Sky_and_Clouds_Timelapse_0892__Videvo_preview.mp4';
+import mobile from '../../assets/Images/Photos/Detail/DDDMobile.webp'
 
 const DetailDDD = () => {
     const themeColor = '[#0041AF]'
@@ -15,7 +16,7 @@ const DetailDDD = () => {
         <>
 
         <div className=' px-44'>
-            <FullVideo videoUrl={videoUrl} bgColor={themeColor} />
+            <FullVideo videoUrl={videoUrl} bgColor={themeColor} padding={40}/>
             <div className='w-screen h-72 '/>
 
             <Left3Image 
@@ -80,16 +81,18 @@ const DetailDDD = () => {
             <div className='w-screen h-72 '/>
         </div>
 
-        <div className='px-0' style={{padding:'0'}}>
+        <div className='px-0' style={{padding:'0rem'}}>
             <FullImage 
                 txtColor={txtColor}
-                img='https://picsum.photos/1280/1280' 
-                title='Diverse'
-                desc='hi'
+                img={mobile}
+                title='미디어 쿼리'
+                desc='모든 페이지는 768px로 미디어쿼리 기준으로
+                적용되어 모든 Digital Device에서 접근성을
+                높였습니다. '
             />
 
-            <div className='w-screen '/>
-
+        <div className='w-screen '/>
+        <div className='px-0' style={{padding:'0'}}>
             <ViewCode
                 bgColor = {themeColor}
                 txtColor='white'
@@ -97,7 +100,7 @@ const DetailDDD = () => {
                 git = 'https://github.com/nessayj/RealFinalProject-DDD'
             />
 
-
+            </div>
         </div>
         </>
     );

@@ -12,9 +12,10 @@ const PrjList = () => {
 
     // onMouseDown 이벤트 핸들러
     const handleMouseOver = (index :number) => {
-        const updatedHoverState = hoverState.map((idx) => (idx === index ? true : false));
+        const updatedHoverState = hoverState.map((_, idx) => (idx === index ? true : false));
         setHoverState(updatedHoverState);
     };
+    
 
     // onMouseLeave 이벤트 핸들러
     const handleMouseLeave = () => {
@@ -32,14 +33,14 @@ const PrjList = () => {
         {latestArray.map((item, index) => (
             <div
             key={index}
-            className={`w-1/3 h-96 flex items-end relative text-white cursor-pointer`}
+            className={`w-1/3 h-96 flex items-end relative text-black cursor-pointer`}
             onMouseOver={() => handleMouseOver(index)}
             onMouseLeave={handleMouseLeave}
             onClick={() => {setDevOpen(true); setDevPage(item.title);}}
             >
             <img src={item.imgUrl} alt="photo" className='absolute top-0 w-full h-full object-cover ' />
             <div className={`w-full h-full absolute top-0 ${hoverState[index] ? item.color.bg  : ''} transition duration-500`}/>
-            <div className='m-10 z-0 text-white absolute bottom-0'>
+            <div className='m-10 z-0 text-black absolute bottom-0'>
                 <div className={`text-xs h-6 ${hoverState[index] ? item.color.text : ''}`}>
                 {item.date}
                 </div>

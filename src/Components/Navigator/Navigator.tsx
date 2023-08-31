@@ -5,7 +5,9 @@ const Navigator = () => {
     return (
 
         <div className='w-full h-16 fixed top-0 overflow-x-hidden box-border flex justify-between overflow-hidden z-50'>
-            <div className="w-24 ">icon</div>
+            <div className="w-24 justify-center items-center flex">
+                {/* <div className='w-8 h-8 bg-zinc-500 rounded-full'></div> */}
+            </div>
             <div className='relative  w-1/3 flex text-xs text-center items-center font-bold text-zinc-500 cursor-pointer'>
                 <div className='w-20 py-4 mx-2 ' onClick={()=>(navigator('/'))}>Home</div>
                 <div className='w-20 py-4 mx-2 ' onClick={()=>(navigator('/develope'))}>work.Dev</div>

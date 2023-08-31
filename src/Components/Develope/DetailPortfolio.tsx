@@ -6,12 +6,22 @@ import Center9image from '../Detail/Center9image';
 import LeftImage from '../Detail/LeftImage';
 import ViewCode from '../Detail/ViewCode';
 
-import videoUrl from '../../assets/Video/Blue_Sky_and_Clouds_Timelapse_0892__Videvo_preview.mp4';
+import videoUrl from '../../assets/Video/exhibitVideo.mp4';
+import pfDetail1 from '../../assets/Images/Photos/Detail/dv2.webp'
+import pfDetail2 from '../../assets/Images/Photos/Detail/dv1.webp'
+import pfDetail3 from '../../assets/Images/Photos/Detail/dv3.webp'
+import pfDetail4 from '../../assets/Images/Photos/Detail/dv4.webp'
+import pfDetail5 from '../../assets/Images/Photos/Detail/dv5.webp'
+import pfDetail6 from '../../assets/Images/Photos/Detail/dv6.webp'
+import pfDetail7 from '../../assets/Images/Photos/Detail/dv7.webp'
+import pfDetail8 from '../../assets/Images/Photos/Detail/dv8.webp'
+import pfDetail9 from '../../assets/Images/Photos/Detail/dv9.webp'
 
 
 const DetailPortfolio = () => {
-    const themeColor = '[#F6EF49]'
-    const txtColor  = '[#0041AF]'
+    const themeColor = '[#FF5851]'
+    const txtColor = '[#0041AF]'
+    const descColor ='white'
 
     return (
         <>
@@ -26,6 +36,7 @@ const DetailPortfolio = () => {
         <RightFullImage 
             bgColor = {themeColor}
             txtColor={txtColor}
+            descColor = {descColor}
             img={twcssImg} 
             title='Tailwind CSS' 
             desc='기존에 사용하던 Styled Components에서
@@ -43,15 +54,15 @@ const DetailPortfolio = () => {
 
         <Center9image
             bgColor = {themeColor}
-            img1='https://picsum.photos/300/200'
-            img2='https://picsum.photos/300/200'
-            img3='https://picsum.photos/300/200'
-            img4='https://picsum.photos/300/200'
-            img5='https://picsum.photos/300/200'
-            img6='https://picsum.photos/300/200'
-            img7='https://picsum.photos/300/200'
-            img8='https://picsum.photos/300/200'
-            img9='https://picsum.photos/300/200'
+            img1={pfDetail1}
+            img2={pfDetail2}
+            img3={pfDetail3}
+            img4={pfDetail4}
+            img5={pfDetail5}
+            img6={pfDetail6}
+            img7={pfDetail7}
+            img8={pfDetail8}
+            img9={pfDetail9}
         />
         <div className='w-screen h-72'/>
         

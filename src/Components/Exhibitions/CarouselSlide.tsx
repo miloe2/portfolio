@@ -32,7 +32,7 @@ const CarouselSlide = () => {
           setCurrentSlide((prevSlide) =>
             prevSlide === carouselData.length - 1 ? 0 : prevSlide + 1
           );
-        }, 5000);
+        }, 2000);
       }
   
       return () => {

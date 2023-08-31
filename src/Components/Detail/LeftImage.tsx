@@ -1,5 +1,4 @@
 import React from 'react';
-import videoUrl from '../../assets/Video/Blue_Sky_and_Clouds_Timelapse_0892__Videvo_preview.mp4';
 
 interface LefttImageLeftProps {
     bgColor: string;
@@ -19,12 +18,12 @@ const LeftImage :React.FC<LefttImageLeftProps> = ({bgColor, txtColor, title, des
 
         <div className={`w-full h-full flex relative justify-end items-center `}>
 
-            <div className={`w-1/2 h-auto py-40  flex justify-center items-${items} flex-col `} 
+            <div className={`w-1/2 h-auto py-20  flex justify-center items-${items} flex-col `} 
             style={{ backgroundColor: bgColor }}>
 
                 <div className='w-3/4 h-72'>
 
-                {source === videoUrl ? (
+                {source.includes('mp4') ? (
                     <video autoPlay loop muted className='w-full h-full object-cover'>
                         <source src={source} type="video/mp4" />
                     </video>

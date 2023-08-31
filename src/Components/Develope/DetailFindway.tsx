@@ -5,7 +5,7 @@ import LeftImage from '../Detail/LeftImage';
 import RightFullImage from '../Detail/RightFullImage';
 import FullImage from '../Detail/FullImage';
 
-import videoUrl from '../../assets/Video/Blue_Sky_and_Clouds_Timelapse_0892__Videvo_preview.mp4';
+import videoUrl from '../../assets/Video/findwayVideo.mp4';
 
 
 const DetailFindway = () => {
@@ -22,7 +22,8 @@ const DetailFindway = () => {
             />
             <FullVideo
             bgColor={themeColor}
-            videoUrl={videoUrl}            
+            videoUrl={videoUrl} 
+            padding={40}        
             />
 
             <div className='w-full h-72'/>
@@ -46,6 +47,7 @@ const DetailFindway = () => {
                 <RightFullImage
                     bgColor='[#ffffff]'
                     txtColor = {txtColor}
+                    descColor = ''
                     img='https://picsum.photos/300/200'
                     title='구현 방법'
                     desc='지도에 좌표를 찍어서
