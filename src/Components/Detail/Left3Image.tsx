@@ -17,13 +17,13 @@ const Left3Image :React.FC<LeftImageProps> = ({ bgColor, txtColor, img1, img2, i
         <div className=' w-full h-full flex relative justify-center items-center'>
             <div className={`w-1/2 h-full bg-${bgColor} flex justify-center items-center flex-col`}>
                 <div className=' w-8/12 h-40  mb-10'>
-                    <img src={img1} alt="" className='w-full h-full'/>
+                    <img src={img1} alt="" className='w-full h-full object-cover object-center'/>
                 </div>
                 <div className=' w-8/12 h-60  mb-10'>
-                    <img src={img2} alt="" className='w-full h-full '/>
+                    <img src={img2} alt="" className='w-full h-full object-cover object-center'/>
                 </div>
                 <div className=' w-8/12 h-40'>
-                    <img src={img3} alt="" className='w-full h-full '/>
+                    <img src={img3} alt="" className='w-full h-full object-cover object-center'/>
                 </div>
             </div>
             <div className={`w-1/2 h-full  flex justify-center items-center flex-col`}>

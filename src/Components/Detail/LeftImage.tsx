@@ -21,14 +21,14 @@ const LeftImage :React.FC<LefttImageLeftProps> = ({bgColor, txtColor, title, des
             <div className={`w-1/2 h-auto py-20  flex justify-center items-${items} flex-col `} 
             style={{ backgroundColor: bgColor }}>
 
-                <div className='w-3/4 h-72'>
+                <div className='w-3/4 h-72 '>
 
                 {source.includes('mp4') ? (
-                    <video autoPlay loop muted className='w-full h-full object-cover'>
+                    <video autoPlay loop muted className='w-full h-full object-cover '>
                         <source src={source} type="video/mp4" />
                     </video>
                 ) : (
-                    <img src={source} alt="" className='w-full h-full object-cover' />
+                    <img src={source} alt="" className='w-full h-full object-cover object-left' />
                 )}
                 </div>
 

@@ -6,8 +6,14 @@ import FullImage from '../Detail/FullImage';
 import ViewCode from '../Detail/ViewCode';
 
 
-import videoUrl from '../../assets/Video/Blue_Sky_and_Clouds_Timelapse_0892__Videvo_preview.mp4';
+import videoUrl from '../../assets/Video/DDDLogin.mp4';
+import img1 from '../../assets/Images/Photos/DDD.webp'
+import img2 from '../../assets/Images/Photos/dd1.webp'
+import img3 from '../../assets/Images/Photos/dd2.webp'
+import img4 from '../../assets/Images/Photos/dd3.webp'
+import img5 from '../../assets/Images/Photos/dd4.webp'
 import mobile from '../../assets/Images/Photos/Detail/DDDMobile.webp'
+
 
 const DetailDDD = () => {
     const themeColor = '[#0041AF]'
@@ -22,9 +28,9 @@ const DetailDDD = () => {
             <Left3Image 
                 bgColor={themeColor}
                 txtColor={txtColor}
-                img1='https://picsum.photos/300/130'
-                img2='https://picsum.photos/300/140'
-                img3='https://picsum.photos/300/150'
+                img1={img1}
+                img2={img2}
+                img3={img5}
                 title='Diverse
                         Different  
                         Display'
@@ -44,7 +50,7 @@ const DetailDDD = () => {
                     가지고있으며 유저 조회 기능으로 다른 유저의 
                     다이어를 확인 할 수 있습니다.'
                 
-                img='https://picsum.photos/300/200'
+                img={img2}
                 items='start'
             />
             <div className='w-screen h-72'/>
@@ -58,7 +64,7 @@ const DetailDDD = () => {
                 다이어리 페이지는 Firebase를 활용하여   
                 Customizing이 가능하게 설계하였습니다. '
                 
-                img1='https://picsum.photos/300/200'
+                img1={img3}
 
             />
             <div className='w-screen h-72 '/>
@@ -74,8 +80,8 @@ const DetailDDD = () => {
                     회원가입/PW 찾기 등은 이메일 인증을
                     적용하였습니다. '
                 
-                img='https://picsum.photos/300/200'
-                items='end'
+                img={img4}
+                items='center'
             
             />
             <div className='w-screen h-72 '/>

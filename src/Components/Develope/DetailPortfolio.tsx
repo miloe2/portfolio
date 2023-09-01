@@ -80,7 +80,7 @@ const DetailPortfolio = () => {
         <ViewCode
         bgColor = {themeColor}
         txtColor='black'
-        site = '#'
+        site = 'https://miloe2.github.io/portfolio.ts.vite/'
         git = 'https://github.com/miloe2/portfolio.ts.vite'
         />
 
