@@ -51,17 +51,17 @@ const Introduce = () => {
 
     return (
         <div className='w-full h-auto relative flex justify-center items-center px-44 max-[768px]:px-0'>
-            <div>
-            <div className='absolute -bottom-80 right-1/5 w-80 h-96 max-[768px]:right-0 max-[768px]:-bottom-60' ref={imageRef}>
+            <div className='relative'>
+                <div className='absolute -bottom-80 -right-1/12 w-80 h-96   ' ref={imageRef}>
                     <img 
                         src={pht1}
                         alt="" 
-                        className={`w-full h-full object-cover transition-all duration-1000 
+                        className={`w-full h-full object-cover transition-all duration-1000 object-bottom
                             ${!isImageVisible ? 'opacity-0 transform translate-y-10' : 'opacity-100 transform translate-y-0'}`}
                     />
                 </div>
 
-                <div className='absolute -bottom-96 right-1/2 w-96 h-72'>
+                <div className='absolute -bottom-11/12 right-7/12 w-96 h-72 max-[768px]:-left-10'>
                     <img 
                         src={pht2}
                         alt="" 

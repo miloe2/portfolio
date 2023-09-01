@@ -38,7 +38,7 @@ const Hello = () => {
                                 </div>
                             </div>
 
-                            <div className='absolute top-1/3 -right-48 text-9xl font-black text-[#242424] '>
+                            <div className='absolute top-1/3 -right-48 text-9xl font-black text-[#242424] max-[768px]:text-8xl '>
                                 안녕<br/>
                                 하세요<span className='text-[#FF5851]'>.</span>
                             </div>

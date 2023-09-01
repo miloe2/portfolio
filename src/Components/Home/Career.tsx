@@ -17,9 +17,9 @@ const Career = () => {
     : 'opacity-0 transform translate-y-10';
 
     return (
-        <div className={`w-full h-auto 0 flex overflow-hidden px-32 justify-center  transition-all duration-1000 ${visibilityClasses}`} ref={divRef}>
-            <div className={`w-80 h-auto flex flex-col mx-5 transition-all duration-1000 delay-0 ${visibilityClasses} `}>
-                {/* <div className='w-72 flex '>
+        <div className={`w-full h-auto 0 flex overflow-hidden px-0 justify-center flex-wrap transition-all duration-1000 ${visibilityClasses}`} ref={divRef}>
+            <div className={`w-72 h-60  flex flex-col mx-5 transition-all duration-1000 delay-0 ${visibilityClasses} `}>
+                <div className='w-72 flex '>
                     <div className='w-16  font-bold text-lg'>교육사항</div>
                 </div>
                 <div className='w-1 h-3'/>
@@ -38,10 +38,10 @@ const Career = () => {
                 <div className='w-80 h-7 flex text-sm'>
                     <div className='w-16 '>2009.02</div>
                     <div className='w-auto '>경일고등학교 졸업</div>
-                </div> */}
+                </div>
             </div>
 
-            <div className={`w-auto h-auto flex flex-col mx-5 transition-all duration-1000 delay-300 ${visibilityClasses}  `}>
+            <div className={`w-72 h-72  flex flex-col mx-5 transition-all duration-1000 delay-300 ${visibilityClasses}  `}>
                 <div className='w-72 flex'>
                     <div className='w-16  font-bold text-lg'>경력사항</div>
                 </div>
@@ -70,8 +70,8 @@ const Career = () => {
                 </div>
             </div>
 
-            <div className={`w-auto h-auto flex flex-col mx-5 transition-all duration-1000 delay-500 ${visibilityClasses} `}>
-                <div className='w-72 flex'>
+            <div className={`w-72 h-72  flex flex-col mx-5 transition-all duration-1000 delay-500 ${visibilityClasses} `}>
+            <div className='w-72 flex'>
                     <div className='w-16  font-bold text-lg'>어학</div>
                 </div>
                 <div className='w-1 h-3'/>
@@ -109,7 +109,7 @@ const Career = () => {
                 </div>
             </div>
 
-            <div className={`w-auto h-auto flex flex-col mx-5 transition-all duration-1000 delay-700 ${visibilityClasses} `}>
+            <div className={`w-72 h-72  flex flex-col mx-5 transition-all duration-1000 delay-700 ${visibilityClasses} `}>
                 <div className='w-auto flex delay-1000'>
                     <div className='w-16  font-bold text-lg'>자격증</div>
                 </div>
@@ -139,12 +139,7 @@ const Career = () => {
                         <div className='w-10 text-xs mt-1 text-center'>상</div>
                     </div>
                 </div>
-
-
             </div>
-
-
-            
         </div>
     );
 };
