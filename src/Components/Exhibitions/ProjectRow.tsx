@@ -63,10 +63,10 @@ const ProjectRow = () => {
                         <div className={BlackBG}/>
                         <div className='w-full h-2/5 absolute bottom-0 text-zinc-100 justify-center flex'>
                             <div className=' w-4/5 h-auto pr-10'>
-                                <div className='text-xs/6 whitespace-pre-line'> {item.date} </div>
-                                <div className='text-xs/6 whitespace-pre-line'> {item.location} </div>
+                                <div className='text-sm/6 whitespace-pre-line'> {item.date} </div>
+                                <div className='text-sm/6 whitespace-pre-line'> {item.location} </div>
                                 <div className='text-xl font-bold py-1 whitespace-pre-line'> {item.title} </div>
-                                {/* <div className='text-xs/6 whitespace-pre-line'> {item.desc} </div> */}
+                                {/* <div className='text-sm/6 whitespace-pre-line'> {item.desc} </div> */}
                             </div>
                         </div>
                         

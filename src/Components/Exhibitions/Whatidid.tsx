@@ -20,7 +20,7 @@ const Whatidid = () => {
     const blackBG =  'bg-black w-full h-full absolute top-0 left-0 opacity-80  transition-opacity';
     const blackOpacity =  'bg-black w-full h-full absolute top-0 left-0 opacity-5  transition-opacity';
 
-    const fontGray = 'text-xs/6 whitespace-pre-line text-zinc-500 h-10 items-center'
+    const fontGray = 'text-sm/6 whitespace-pre-line text-zinc-500 h-10 items-center'
     const fontTarget = 'text-base font-semibold leading-6 whitespace-pre-line h-10 flex '
 
 
@@ -59,7 +59,8 @@ const Whatidid = () => {
                 <div className='text-xs/6 whitespace-pre-line'> 
                 전시 대행사 해외컨벤션 팀에 근무하며 <br/>
                 해외 전시회 기획 및 현장 운영과 <br/>
-                제안서 기획/작성, 입찰 제안 발표를 수행하였습니다. </div>
+                제안서 기획/작성, 입찰 제안 발표를 
+                수행하였습니다. </div>
                 <div className='text-xl font-bold py-4 mt-8'> 업무 분야 </div>
                 {scrollY >= 400 && scrollY < 1100 ? (<div className={fontTarget}> → 전시 운영 및 기획</div>) : (<div className={fontGray}>전시 운영 및 기획</div>)}
                 {scrollY >= 1100 && scrollY < 1500 ? (<div className={fontTarget}> → 컨퍼런스 운영 및 기획</div>) : (<div className={fontGray}>컨퍼런스 운영 및 기획</div>)}

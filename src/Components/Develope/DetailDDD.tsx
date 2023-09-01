@@ -6,7 +6,7 @@ import FullImage from '../Detail/FullImage';
 import ViewCode from '../Detail/ViewCode';
 
 
-import videoUrl from '../../assets/Video/DDDLogin.mp4';
+import videoUrl from '../../assets/Video/DDD.mp4';
 import img1 from '../../assets/Images/Photos/DDD.webp'
 import img2 from '../../assets/Images/Photos/dd1.webp'
 import img3 from '../../assets/Images/Photos/dd2.webp'
