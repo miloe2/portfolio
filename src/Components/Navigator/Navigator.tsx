@@ -3,7 +3,7 @@ import {BiWorld} from 'react-icons/bi'
 import useStore from '../../store';
 
 const Navigator = () => {
-    const { currentPage, setCurrentPage } = useStore();
+    const { currentPage, setCurrentPage, contactModal, setContactModal } = useStore();
     const navigator = useNavigate();
 
     const handleClick = (route :string, page:string) => {
@@ -15,7 +15,7 @@ const Navigator = () => {
         { route: '/', page: 'home', label: 'home' },
         { route: '/develope', page: 'dev', label: 'work.Dev' },
         { route: '/exhibitions', page: 'exhibit', label: 'work.Exhibit' },
-        { route: '/about', page: 'about', label: 'About' },
+        // { route: '/about', page: 'about', label: 'About' },
     ];
 
     return (
@@ -31,6 +31,7 @@ const Navigator = () => {
                         {label}
                     </div>
                 ))}
+                <div className='w-20 py-4 mx-1  text-[#8c8c8c]' onClick={()=>{setContactModal(!contactModal)}}>contact</div>
                 <div className='w-20 py-4 mx-1 text-xl text-[#090909]'><BiWorld/></div>
             </div>
         </div>

@@ -6,7 +6,7 @@ import FullImage from '../Detail/FullImage';
 import ViewCode from '../Detail/ViewCode';
 
 
-import videoUrl from '../../assets/Video/DDD.mp4';
+import videoUrl from '../../assets/Video/DDD2.mp4';
 import img1 from '../../assets/Images/Photos/DDD.webp'
 import img2 from '../../assets/Images/Photos/dd1.webp'
 import img3 from '../../assets/Images/Photos/dd2.webp'
@@ -22,10 +22,7 @@ const DetailDDD = () => {
         <>
 
         <div className=' px-44'>
-            <FullVideo videoUrl={videoUrl} bgColor={themeColor} padding={40}/>
-            <div className='w-screen h-72 '/>
-
-            <Left3Image 
+        <Left3Image 
                 bgColor={themeColor}
                 txtColor={txtColor}
                 img1={img1}
@@ -37,7 +34,11 @@ const DetailDDD = () => {
                 desc='전시 예매 및 정보 공유 커뮤니티입니다. 
                 전시 예매, 전시 평가하기(다이어리), 동행찾기 등 
                 세 가지 부분을 중점으로 설계되었습니다.'
-            />
+            /> 
+
+            <div className='w-screen h-72 '/>
+
+            <FullVideo videoUrl={videoUrl} bgColor={themeColor} padding={40}/>
             <div className='w-screen h-72 '/>
             
             <RightImage 
@@ -48,7 +49,7 @@ const DetailDDD = () => {
 
                 desc='유저는 자신만의 다이어리(전시회 평가/코멘트)를
                     가지고있으며 유저 조회 기능으로 다른 유저의 
-                    다이어를 확인 할 수 있습니다.'
+                    다이어리를 확인 할 수 있습니다.'
                 
                 img={img2}
                 items='start'
@@ -61,7 +62,7 @@ const DetailDDD = () => {
                 Customized'
 
                 desc='
-                다이어리 페이지는 Firebase를 활용하여   
+                마이페이지는 Firebase를 활용하여   
                 Customizing이 가능하게 설계하였습니다. '
                 
                 img1={img3}

@@ -10,6 +10,9 @@ type Store = {
   currentPage : string | null;
   setCurrentPage : (page : string) => void;
 
+  contactModal : boolean;
+  setContactModal : (isOpen :boolean) => void;
+
 };
 
 const useStore = create<Store>((set) => ({
@@ -21,7 +24,10 @@ const useStore = create<Store>((set) => ({
     setDevPage: (component) => set({ devPage: component }),
 
     currentPage :'home', 
-    setCurrentPage : (page) => set({ currentPage : page})
+    setCurrentPage : (page) => set({ currentPage : page}),
+
+    contactModal: false,
+    setContactModal: (isOpen) => set({ contactModal: isOpen }),
 
 }));
 

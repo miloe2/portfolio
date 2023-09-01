@@ -17,7 +17,7 @@ const DetailFindway = () => {
         <div className='w-full h-auto'>
             <Text2Parg
             title='찾기'
-            desc='막차가 끊긴 이후, 조금이라도 저렴하게 귀가하자라는
+            desc='막차가 끊긴 이후, 조금이라도 저렴하게 귀가해보자라는
              생각으로 만들어진 프로젝트입니다.  
             *해당 프로젝트는 Frontend와 기획으로 참여하였습니다. '
             txtColor = {txtColor}
@@ -32,19 +32,7 @@ const DetailFindway = () => {
 
             {/* <div className='w-screen h-20'/> */}
             <div className='px-44'>
-                <LeftImage
-                bgColor='#101420'
-                txtColor = {txtColor}
-                source={img1}
-                items='end'
-                title='찾기'
-                desc='찾기는 기존 막차가 끊긴 이후, 
-                조금이라도 저렴하게 집으로 귀가를 해보자라는
-                생각으로 만들어진 프로젝트입니다.  '
-                
-                />
-
-                <div className='w-full h-40'/>
+                <div className='w-full h-20'/>
 
                 <RightFullImage
                     bgColor='[#ffffff]'
@@ -52,10 +40,24 @@ const DetailFindway = () => {
                     descColor = ''
                     img={img3}
                     title='구현 방법'
-                    desc='지도에 좌표를 찍어서
-                    다익스트라 알고리즘으로 길찾기를
-                    구현하였습니다.   '
+                    desc='지하철 노선도에
+                    지하철 호선, 좌표와 역사명을 입력하고,
+                    다익스트라 알고리즘을 활용하여 
+                    길찾기를 구현하였습니다.'
                 
+                />
+
+                <div className='w-full h-20'/>
+                <LeftImage
+                    bgColor='#101420'
+                    txtColor = {txtColor}
+                    source={img1}
+                    items='end'
+                    title='경로 찾기'
+                    desc='백엔드에서 최소환승/최소시간을 
+                    연산하고 결과값을 전달합니다.
+                    전달 받은 데이터를 탑승역/환승역으로 
+                    나누어 출력합니다.'
                 />
 
             </div>

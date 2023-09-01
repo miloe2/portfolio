@@ -13,7 +13,8 @@ const ViewCode :React.FC<ViewCodeProps> = ({bgColor, txtColor, site, git}) => {
     return (
         <div className={`w-screen h-auto bg-${bgColor} flex justify-center items-center py-10 text-${txtColor}`} >
             <div className='w-auto h-auto underline mr-10 font-bold'> 
-                <a href={site} target="_blank" rel="noopener noreferrer">View Site</a>
+                {site !== '#' ? (<a href={site} target="_blank" rel="noopener noreferrer">View Site</a>): null
+                }
              </div>
             <div className='w-8 h-8 bg-white rounded-full justify-center flex items-center'> 
                 <a href={git} target="_blank" rel="noopener noreferrer">

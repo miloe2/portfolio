@@ -4,6 +4,7 @@ import Exhibitions from './Page/Exhibitions';
 import Navigator from './Components/Navigator/Navigator';
 import Develope from './Page/Develope';
 import Home from './Page/Home';
+import Contact from './Page/Contact';
 
 
 function App() {
@@ -16,6 +17,8 @@ function App() {
         <Route path="/exhibitions" element={<Exhibitions/>}/>
       </Routes>
       <Navigator/>
+      <Contact/>
+
     </Router>
 
     </>
