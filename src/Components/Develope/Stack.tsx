@@ -1,3 +1,4 @@
+import React from 'react';
 import DevPrjData from '../../assets/Data/DevPrjData';
 import useStore from '../../store';
 import StackCircle from './../Detail/StackCircle';
@@ -19,16 +20,14 @@ const Stack = () => {
             <div className=' mb-10 font-bold text-xl'>Stack</div>
             <div  className='flex flex-row'>
                 {stacks.map((stack, index) => {
-                if (StackCircle[stack]) {
-                    return (
-                        <>
-                            <div key={index} className='mr-6 justify-start items-center flex flex-col'>
-                                {StackCircle[stack]()}
-                            </div>
-                        </>
-                    );
-                }
-                return null;
+                    if (StackCircle[stack]) {
+                        return (
+                        <div key={index} className='mr-6 justify-start items-center flex flex-col'>
+                            {StackCircle[stack](index)}
+                        </div>
+                        );
+                    }
+                    return null;
                 })}                       
                 </div>
             </div>

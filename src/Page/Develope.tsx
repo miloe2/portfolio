@@ -6,6 +6,7 @@ import {SlArrowUp} from 'react-icons/sl'
 
 
 const Develope = () => {
+
   const componentRef = useRef<HTMLDivElement>(null);
   
 

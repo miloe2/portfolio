@@ -1,3 +1,4 @@
+import React from 'react';
 import java from '../../assets/Images/Icons/java.jpg';
 import javascript from '../../assets/Images/Icons/javascript.png';
 import aws from '../../assets/Images/Icons/aws.jpg';
@@ -14,62 +15,62 @@ import tailwindcss from '../../assets/Images/Icons/tailwindcss.svg';
 import styled from '../../assets/Images/Icons/styled.png';
 
 interface StackCircleType {
-    [key: string]: () => JSX.Element;
+    [key: string]: (key: string | number) => JSX.Element;
   }
 
 const StackCircle :StackCircleType = {
-    java : () => {
+    java : (key) => {
         return (
-            <>
+            <React.Fragment key={key}>
             <div className="w-12 h-12  rounded-full border border-zinc-500 justify-center items-center flex">
                 <div className='w-10 h-10 bg-white rounded-full border-zinc-300 border'>
                     <img src={java} alt="" className='w-full h-full object-cover rounded-full'/>
                 </div>
             </div>
             <div className="text-xs mt-3 text-zinc-600"> Java </div>
-            </>
+            </React.Fragment>
 
         )
     },
-    javascript : () => {
+    javascript : (key) => {
         return (
-            <>
+            <React.Fragment key={key}>
             <div className="w-12 h-12  rounded-full border border-zinc-500 justify-center items-center flex">
                 <div className='w-10 h-10 bg-white rounded-full border-zinc-300 border'>
                     <img src={javascript} alt="" className='w-full h-full object-cover rounded-full'/>
                 </div>
             </div>
             <div className="text-xs mt-3 text-zinc-600"> Javascript </div>
-            </>
+            </React.Fragment>
         )
     },
-    react : () => {
+    react : (key) => {
         return (
-            <>
+            <React.Fragment key={key}>
             <div className="w-12 h-12  rounded-full border border-zinc-500 justify-center items-center flex">
                 <div className='w-10 h-10 bg-white rounded-full border-zinc-300 border'>
                     <img src={reacticon} alt="" className='w-full h-full object-cover rounded-full'/>
                 </div>
             </div>
             <div className="text-xs mt-3 text-zinc-600"> React </div>
-            </>
+            </React.Fragment>
         )
     },
-    mariadb : () => {
+    mariadb : (key) => {
         return (
-            <>
+            <React.Fragment key={key}>
             <div className="w-12 h-12  rounded-full border border-zinc-500 justify-center items-center flex">
                 <div className='w-10 h-10 bg-white rounded-full border-zinc-300 border'>
                     <img src={mariadb} alt="" className='w-full h-full object-cover rounded-full'/>
                 </div>
             </div>
             <div className="text-xs mt-3 text-zinc-600"> MariaDB </div>
-            </>
+            </React.Fragment>
         )
     },
-    jpa : () => {
+    jpa : (key) => {
         return (
-            <>
+            <React.Fragment key={key}>
             <div className="w-12 h-12  rounded-full border border-zinc-500 justify-center items-center flex">
                 <div className='w-10 h-10 bg-white rounded-full border-zinc-300 border'>
                     <img src={springboot} alt="" className='w-full h-full object-cover rounded-full'/>
@@ -78,12 +79,12 @@ const StackCircle :StackCircleType = {
             <div className="text-xs mt-3 text-zinc-600 whitespace-pre-line text-center"> 
             {`Springboot 
             with JPA` }</div>
-            </>
+            </React.Fragment>
         )
     },
-    jsp : () => {
+    jsp : (key) => {
         return (
-            <>
+            <React.Fragment key={key}>
             <div className="w-12 h-12  rounded-full border border-zinc-500 justify-center items-center flex">
                 <div className='w-10 h-10 bg-white rounded-full border-zinc-300 border'>
                     <img src={springboot} alt="" className='w-full h-full object-cover rounded-full'/>
@@ -92,96 +93,96 @@ const StackCircle :StackCircleType = {
             <div className="text-xs mt-3 text-zinc-600 whitespace-pre-line text-center"> 
             {`Springboot 
             with JSP` }</div>
-            </>
+            </React.Fragment>
         )
     },
-    git : () => {
+    git : (key) => {
         return (
-            <>
+            <React.Fragment key={key}>
             <div className="w-12 h-12  rounded-full border border-zinc-500 justify-center items-center flex">
                 <div className='w-10 h-10 bg-white rounded-full border-zinc-300 border'>
                     <img src={git} alt="" className='w-full h-full object-cover rounded-full'/>
                 </div>
             </div>
             <div className="text-xs mt-3 text-zinc-600"> Git </div>
-            </>
+            </React.Fragment>
         )
     },
-    notion : () => {
+    notion : (key) => {
         return (
-            <>
+            <React.Fragment key={key}>
             <div className="w-12 h-12  rounded-full border border-zinc-500 justify-center items-center flex">
                 <div className='w-10 h-10 bg-white rounded-full border-zinc-300 border'>
                     <img src={notion} alt="" className='w-full h-full object-cover rounded-full'/>
                 </div>
             </div>
             <div className="text-xs mt-3 text-zinc-600"> notion </div>
-            </>
+            </React.Fragment>
         )
     },
-    figma : () => {
+    figma : (key) => {
         return (
-            <>
+            <React.Fragment key={key}>
             <div className="w-12 h-12  rounded-full border border-zinc-500 justify-center items-center flex">
                 <div className='w-10 h-10 bg-white rounded-full border-zinc-300 border'>
                     <img src={figma} alt="" className='w-full h-full object-cover rounded-full'/>
                 </div>
             </div>
             <div className="text-xs mt-3 text-zinc-600"> Figma </div>
-            </>
+            </React.Fragment>
         )
     },
-    aws : () => {
+    aws : (key) => {
         return (
-            <>
+            <React.Fragment key={key}>
             <div className="w-12 h-12  rounded-full border border-zinc-500 justify-center items-center flex">
                 <div className='w-10 h-10 bg-white rounded-full border-zinc-300 border'>
                     <img src={aws} alt="" className='w-full h-full object-cover rounded-full'/>
                 </div>
             </div>
             <div className="text-xs mt-3 text-zinc-600"> AWS </div>
-            </>
+            </React.Fragment>
         )
     },
-    mysql : () => {
+    mysql : (key) => {
         return (
-            <>
+            <React.Fragment key={key}>
             <div className="w-12 h-12  rounded-full border border-zinc-500 justify-center items-center flex">
                 <div className='w-10 h-10 bg-white rounded-full border-zinc-300 border'>
                     <img src={mysql} alt="" className='w-full h-full object-cover rounded-full'/>
                 </div>
             </div>
             <div className="text-xs mt-3 text-zinc-600"> MySQL </div>
-            </>
+            </React.Fragment>
         )
     },
-    tailwindcss : () => {
+    tailwindcss : (key) => {
         return (
-            <>
+            <React.Fragment key={key}>
             <div className="w-12 h-12  rounded-full border border-zinc-500 justify-center items-center flex">
                 <div className='w-10 h-10 bg-white rounded-full border-zinc-300 border'>
                     <img src={tailwindcss} alt="" className='w-full h-full object-cover rounded-full'/>
                 </div>
             </div>
             <div className="text-xs mt-3 text-zinc-600"> Tailwind CSS </div>
-            </>
+            </React.Fragment>
         )
     },
-    typescript : () => {
+    typescript : (key) => {
         return (
-            <>
+            <React.Fragment key={key}>
             <div className="w-12 h-12  rounded-full border border-zinc-500 justify-center items-center flex">
                 <div className='w-10 h-10 bg-white rounded-full border-zinc-300 border'>
                     <img src={typescript} alt="" className='w-full h-full object-cover rounded-full'/>
                 </div>
             </div>
             <div className="text-xs mt-3 text-zinc-600"> Typescript </div>
-            </>
+            </React.Fragment>
         )
     },
-    styled : () => {
+    styled : (key) => {
         return (
-            <>
+            <React.Fragment key={key}>
             <div className="w-12 h-12  rounded-full border border-zinc-500 justify-center items-center flex">
                 <div className='w-10 h-10 bg-white rounded-full border-zinc-300 border'>
                     <img src={styled} alt="" className='w-full h-full object-cover rounded-full'/>
@@ -190,7 +191,7 @@ const StackCircle :StackCircleType = {
             <div className="text-xs mt-3 text-zinc-600 whitespace-pre-line text-center"> 
             {`Styled
             Components` }</div>
-            </>
+            </React.Fragment>
         )
     },
 }

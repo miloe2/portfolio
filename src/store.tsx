@@ -5,9 +5,10 @@ type Store = {
   setDevOpen: (isOpen: boolean) => void;
 
   devPage: string | null;
-  setDevPage: (page: string) => void;
+  setDevPage: (component: string) => void;
 
-  
+  currentPage : string | null;
+  setCurrentPage : (page : string) => void;
 
 };
 
@@ -17,7 +18,10 @@ const useStore = create<Store>((set) => ({
     setDevOpen: (isOpen) => set({ devOpen: isOpen }),
 
     devPage: 'portfolio',
-    setDevPage: (page) => set({ devPage: page }),
+    setDevPage: (component) => set({ devPage: component }),
+
+    currentPage :'home', 
+    setCurrentPage : (page) => set({ currentPage : page})
 
 }));
 

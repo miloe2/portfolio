@@ -3,8 +3,6 @@ import Text2Parg from '../Detail/Text2Parg';
 import FullVideo from '../Detail/FullVideo';
 import LeftImage from '../Detail/LeftImage';
 import RightFullImage from '../Detail/RightFullImage';
-import FullImage from '../Detail/FullImage';
-
 
 import videoUrl from '../../assets/Video/findwayVideo.mp4';
 import img1 from '../../assets/Images/Photos/fw1.webp'
