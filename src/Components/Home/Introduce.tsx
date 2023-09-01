@@ -50,12 +50,9 @@ const Introduce = () => {
     }, []);
 
     return (
-        <div className='w-full h-screen relative flex justify-center items-center px-44 max-[768px]:px-0'>
-
+        <div className='w-full h-auto relative flex justify-center items-center px-44 max-[768px]:px-0'>
             <div>
-
-            
-            <div className='absolute -bottom-48 right-1/5 w-80 h-96 max-[768px]:right-0 max-[768px]:-bottom-60' ref={imageRef}>
+            <div className='absolute -bottom-80 right-1/5 w-80 h-96 max-[768px]:right-0 max-[768px]:-bottom-60' ref={imageRef}>
                     <img 
                         src={pht1}
                         alt="" 

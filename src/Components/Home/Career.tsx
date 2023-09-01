@@ -18,8 +18,8 @@ const Career = () => {
 
     return (
         <div className={`w-full h-auto 0 flex overflow-hidden px-32 justify-center  transition-all duration-1000 ${visibilityClasses}`} ref={divRef}>
-            <div className={`w-auto h-auto flex flex-col mx-5 transition-all duration-1000 delay-0 ${visibilityClasses} `}>
-                <div className='w-72 flex '>
+            <div className={`w-80 h-auto flex flex-col mx-5 transition-all duration-1000 delay-0 ${visibilityClasses} `}>
+                {/* <div className='w-72 flex '>
                     <div className='w-16  font-bold text-lg'>교육사항</div>
                 </div>
                 <div className='w-1 h-3'/>
@@ -38,7 +38,7 @@ const Career = () => {
                 <div className='w-80 h-7 flex text-sm'>
                     <div className='w-16 '>2009.02</div>
                     <div className='w-auto '>경일고등학교 졸업</div>
-                </div>
+                </div> */}
             </div>
 
             <div className={`w-auto h-auto flex flex-col mx-5 transition-all duration-1000 delay-300 ${visibilityClasses}  `}>
