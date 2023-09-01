@@ -50,12 +50,12 @@ const Introduce = () => {
     }, []);
 
     return (
-        <div className='w-full h-screen relative flex justify-center items-center px-44'>
+        <div className='w-full h-screen relative flex justify-center items-center px-44 max-[768px]:px-0'>
 
             <div>
 
             
-            <div className='absolute -bottom-48 right-1/5 w-80 h-96' ref={imageRef}>
+            <div className='absolute -bottom-48 right-1/5 w-80 h-96 max-[768px]:right-0 max-[768px]:-bottom-60' ref={imageRef}>
                     <img 
                         src={pht1}
                         alt="" 
@@ -74,7 +74,7 @@ const Introduce = () => {
                 </div>
                 <div ref={textRef}
                 className={`text-8xl h-full w-auto font-bold leading-snug text-[#242424] 
-                    transition-all duration-1000 whitespace-nowrap 
+                    transition-all duration-1000 whitespace-nowrap max-[768px]:text-7xl max-[768px]:leading-relaxed
                     ${!isTextVisible ? 'opacity-0 transform translate-y-10' : 'opacity-100 transform translate-y-0'}`}
                     >
                             <div>안녕하세요.</div>

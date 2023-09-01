@@ -20,7 +20,7 @@ const Whatidid = () => {
     const blackBG =  'bg-black w-full h-full absolute top-0 left-0 opacity-80  transition-opacity';
     const blackOpacity =  'bg-black w-full h-full absolute top-0 left-0 opacity-5  transition-opacity';
 
-    const fontGray = 'text-xs leading-6 whitespace-pre-line text-zinc-500 h-10 items-center'
+    const fontGray = 'text-xs/6 whitespace-pre-line text-zinc-500 h-10 items-center'
     const fontTarget = 'text-base font-semibold leading-6 whitespace-pre-line h-10 flex '
 
 
@@ -56,7 +56,7 @@ const Whatidid = () => {
             <div className='w-1/3 h-96  flex flex-col sticky top-1/3 overflow-hidden text-white'>
                 <div className='text-sm '> Exhibitions</div>
                 <div className='text-3xl font-bold py-4 '>What I did </div>
-                <div className='text-xs leading-6 whitespace-pre-line'> 
+                <div className='text-xs/6 whitespace-pre-line'> 
                 전시 대행사 해외컨벤션 팀에 근무하며 <br/>
                 해외 전시회 기획 및 현장 운영과 <br/>
                 제안서 기획/작성, 입찰 제안 발표를 수행하였습니다. </div>

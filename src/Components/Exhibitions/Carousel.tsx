@@ -13,7 +13,7 @@ const Carousel = () => {
                     <div className='w-full h-3/5 flex justify-center flex-col px-16 text-white'>
                         <div className='text-sm'> {carouselData[0].venue} </div>
                         <div className='text-5xl font-bold py-4'> {carouselData[0].title} </div>
-                        <div className='text-xs leading-6 whitespace-pre-line'> {carouselData[0].desc} </div>
+                        <div className='text-xs/6 whitespace-pre-line'> {carouselData[0].desc} </div>
                     </div>
                 </div>
                 <div className='bg-red-400 w-9/12 h-full'>

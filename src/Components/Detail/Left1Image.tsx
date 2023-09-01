@@ -17,8 +17,8 @@ const Left1Image :React.FC<Left1ImageProps> = ({ bgColor, txtColor, img1, title,
             </div>
             <div className={`w-1/2 h-full  flex justify-center items-center flex-col`}>
                 <div className='w-72 h-auto '>
-                    <div className='text-4xl leading-12 font-bold whitespace-pre-line  py-2 ' style={{ color: txtColor }}> {title} </div>
-                    <div className='text-xs leading-6 whitespace-pre-line '> 
+                    <div className='text-4xl/12 font-bold whitespace-pre-line  py-2 ' style={{ color: txtColor }}> {title} </div>
+                    <div className='text-xs/6 whitespace-pre-line '> 
                         {desc}
                     </div>
                 </div>

@@ -14,8 +14,8 @@ const RightFullImage :React.FC<RightFullImageProps> = ({bgColor, txtColor, descC
             
             <div className={`w-1/2 h-full  flex justify-center items-center flex-col  `}>
                 <div className={`w-full h-7/12  bg-${bgColor} flex justify-center  flex-col pl-24`}>
-                    <div className={`text-4xl leading-12 font-bold whitespace-pre-line text-${txtColor}`}> {title} </div>
-                    <div className={`text-xs leading-6 whitespace-pre-line mt-5 text-${descColor}`}> 
+                    <div className={`text-4xl/12 font-bold whitespace-pre-line text-${txtColor}`}> {title} </div>
+                    <div className={`text-xs/6 whitespace-pre-line mt-5 text-${descColor}`}> 
                         {desc}
                     </div>
                 </div>

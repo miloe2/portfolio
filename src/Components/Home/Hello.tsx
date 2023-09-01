@@ -27,16 +27,18 @@ const Hello = () => {
                     
 
                             <div 
-                                className={`absolute top-72 left-1/4 text-white transition-all duration-700 
+                                className={`absolute top-1/2 left-1/3 transform -translate-x-1/2 -translate-y-1/2  text-white transition-all duration-700
+                                            max-[768px]:left-1/2
                                 ${scrollY > 0 && scrollY < 1000 ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
                                     
-                                <div className='text-5xl leading-normal font-bold  whitespace-pre-line '> 
+                                <div className='text-5xl leading-normal font-bold  whitespace-pre-line
+                                                max-[768px]:text-3xl max-[768px]:leading-relaxed '> 
                                     내안에 빛이 있으면 <br/>
                                     스스로 빛나는 법이다.
                                 </div>
                             </div>
 
-                            <div className='absolute top-1/3 -right-48 text-9xl font-black text-[#242424]'>
+                            <div className='absolute top-1/3 -right-48 text-9xl font-black text-[#242424] '>
                                 안녕<br/>
                                 하세요<span className='text-[#FF5851]'>.</span>
                             </div>

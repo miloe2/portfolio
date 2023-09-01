@@ -11,8 +11,8 @@ const FullImage: React.FC<FullImageProps> = ({img, txtColor, title, desc }) => {
     return (
       <div className={`w-full h-screen flex relative items-center`}>
             <div className='absolute left-40 '>
-                <div className='text-4xl leading-12 font-bold whitespace-pre-line  py-2 ' style={{ color: txtColor }}> {title} </div>
-                <div className='text-xs leading-6 whitespace-pre-line '> 
+                <div className='text-4xl/12 font-bold whitespace-pre-line  py-2 ' style={{ color: txtColor }}> {title} </div>
+                <div className='text-xs/6 whitespace-pre-line '> 
                     {desc}
                 </div>
             </div>

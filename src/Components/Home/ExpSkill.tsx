@@ -19,11 +19,13 @@ const ExpSkill = () => {
 
     return (
         <div className='w-full h-96  flex flex-col items-center justify-center relative px-24'>
-            <div className={`absolute top-0  transition-all duration-1000 ${visibilityClasses}`} ref={divRef}>
-                <div className='font-extrabold text-zinc-300 text-9xl whitespace-nowrap '>Experienced Skills</div>
-                <div className='font-extrabold text-zinc-200 text-9xl whitespace-nowrap '>Experienced Skills</div>
-                <div className='font-extrabold text-zinc-100 text-9xl whitespace-nowrap '>Experienced Skills</div>
-                <div className='font-extrabold text-zinc-50 text-9xl whitespace-nowrap '>Experienced Skills</div>
+            <div className={`absolute top-0 font-extrabold text-9xl whitespace-nowrap transition-all duration-1000 ${visibilityClasses}
+                max-[768px]:text-6xl max-[425px]:text-6xl
+            `} ref={divRef}>
+                <div className=' text-zinc-300 '>Experienced Skills</div>
+                <div className=' text-zinc-200 '>Experienced Skills</div>
+                <div className=' text-zinc-100 '>Experienced Skills</div>
+                <div className=' text-zinc-50 '>Experienced Skills</div>
             </div>
 
             <div className='w-44 h-80 rounded-3xl border-zinc-600 border-1 absolute top-1/2 z-10 ' />

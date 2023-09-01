@@ -48,7 +48,7 @@ const PrjList = () => {
                 {item.title}
                 </div>
                 {hoverState[index] && (
-                <div className={`text-lg leading-10 font-bold ${item.color.text} transition duration-500`}>
+                <div className={`text-lg/10 font-bold ${item.color.text} transition duration-500`}>
                     {item.desc}
                 </div>
                 )}
