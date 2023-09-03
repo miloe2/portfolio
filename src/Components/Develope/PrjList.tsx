@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import DevPrjData from '../../assets/Data/DevPrjData';
 import useStore from '../../store';
 
@@ -26,6 +26,7 @@ const PrjList = () => {
 
 
     return (
+        <React.Fragment>
         <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4 w-screen h-auto px-10'>
 
 
@@ -68,7 +69,7 @@ const PrjList = () => {
         </div>
         
 
-
+        </React.Fragment>
 
     );
 };

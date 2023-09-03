@@ -18,7 +18,7 @@ const Career = () => {
 
     return (
         <div className={`w-full h-auto 0 flex overflow-hidden px-10 justify-center flex-wrap transition-all duration-1000 ${visibilityClasses}`} ref={divRef}>
-            <div className='flex flex-row bg-blue-500  justify-between  flex-wrap'>
+            <div className='flex flex-row  justify-between  flex-wrap'>
                 <div className={`w-72 h-60  flex flex-col mx-5 transition-all duration-1000 delay-0 ${visibilityClasses} `}>
                     <div className='w-72 flex '>
                         <div className='w-16  font-bold text-lg'>교육사항</div>

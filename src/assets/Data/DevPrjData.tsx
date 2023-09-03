@@ -27,7 +27,7 @@ const DevPrjData  = [
         },
     },
     {
-        id: 2,  title: "portfolio", date : "23. 04. 14 - 23. 05. 23", 
+        id: 2,  title: "portfolio", date : "23. 08. 01 - 23. 09. 01", 
         desc : "개인 포트폴리오", 
         stack :"typescript, react, tailwindcss, git, figma, ",
         imgUrl: portfolioThumnail,
