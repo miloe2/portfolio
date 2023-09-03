@@ -27,13 +27,14 @@ const PrjList = () => {
     // console.log(devOpen);
 
     return (
-        <div className='w-screen h-auto px-10 flex flex-wrap '>
+        // <div className='w-screen h-auto px-10 flex flex-wrap '>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4 w-screen h-auto px-10'>
 
 
         {latestArray.map((item, index) => (
             <div
             key={index}
-            className={`w-1/3 h-96 flex items-end relative text-black cursor-pointer`}
+            className={`w-full h-96 flex items-end relative text-black cursor-pointer`}
             onMouseOver={() => handleMouseOver(index)}
             onMouseLeave={handleMouseLeave}
             onClick={() => {setDevOpen(true); setDevPage(item.title);}}

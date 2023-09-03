@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import {BiWorld} from 'react-icons/bi'
+// import {BiWorld} from 'react-icons/bi'
 import useStore from '../../store';
 import React, { useEffect, useState } from 'react';
 
@@ -84,9 +84,10 @@ const Navigator = () => {
                 </div></>}
 
 
-                {crossed800 && 
-                    <div className='bg-black w-12 h-12  mr-8 rounded-full flex justify-center items-center fixed top-2 right-0 transition-all ease-in-out duration-500' 
-                        onClick={handleXBtn}>
+                    <div className='bg-black w-12 h-12 border-1 border-zinc-600 mr-8 rounded-full flex justify-center items-center 
+                                    cursor-pointer fixed top-2 right-0 transition-all ease-in-out duration-500' 
+                        onClick={handleXBtn}
+                        style={crossed800 ? {opacity:'100'} : {opacity:'0'} }>
                             
                         <div className="relative w-5 h-3 flex flex-col justify-between items-stretch ">
                             <div className="transition-all ease-in-out duration-500 w-5 h-1 border-t-1 " 
@@ -103,8 +104,6 @@ const Navigator = () => {
                             ></div>
                         </div>
                     </div> 
-                }
-                
             </div>
             {/* <div className='fixed top-20 left-10'>{`naviModal ${naviModal} //// crossed800 ${crossed800} ///// XBtn ${XBtn}`}</div> */}
         </React.Fragment>

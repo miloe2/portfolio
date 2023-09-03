@@ -20,7 +20,7 @@ const Home = () => {
             <div className='w-full bg-white h-96' />
             <div className='w-full bg-white h-60' />
             <ExpSkill/>
-            <div className='w-full bg-white h-96' />
+            <div className='w-full bg-white h-48' />
             <Career/>
             <div className='w-full bg-white h-40' />
         </div>
