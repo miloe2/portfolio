@@ -4,7 +4,7 @@ import useStore from '../../store';
 import React, { useEffect, useState } from 'react';
 
 const Navigator = () => {
-    const { currentPage, setCurrentPage, naviModal, setNaviModal, XBtn, setXBtn } = useStore();
+    const { currentPage, setCurrentPage, naviModal, setNaviModal, XBtn, setXBtn, contactModal, setContactModal} = useStore();
     const navigator = useNavigate();
 
     const [scrollY, setScrollY] = useState<number>(0);
@@ -43,6 +43,7 @@ const Navigator = () => {
 
 
 
+
     const navItems = [
         { route: '/', page: 'home', label: 'home' },
         { route: '/develope', page: 'dev', label: 'work.Dev' },
@@ -53,6 +54,13 @@ const Navigator = () => {
     const handleXBtn = () => {
         setNaviModal(!XBtn);
         setXBtn(!XBtn);
+        if(contactModal){
+            setContactModal(false)
+        }
+    }
+
+    const handleContact = () => {
+        setContactModal(!contactModal)
     }
     
     return (
@@ -78,7 +86,7 @@ const Navigator = () => {
                                 {label}
                             </div>
                         ))}
-                        <div className='w-20 py-4  text-[#8c8c8c]'>contact</div>
+                        <div className='w-20 py-4  text-[#8c8c8c]' onClick={handleContact}>contact</div>
                         <div className='w-20 h-full'/>
                     </div>
                 </div></>}
@@ -87,7 +95,7 @@ const Navigator = () => {
                     <div className='bg-black w-12 h-12 border-1 border-zinc-600 mr-8 rounded-full flex justify-center items-center 
                                     cursor-pointer fixed top-2 right-0 transition-all ease-in-out duration-500' 
                         onClick={handleXBtn}
-                        style={crossed800 ? {opacity:'100'} : {opacity:'0'} }>
+                        style={crossed800 || contactModal ? {opacity:'100'} : {opacity:'0'} }>
                             
                         <div className="relative w-5 h-3 flex flex-col justify-between items-stretch ">
                             <div className="transition-all ease-in-out duration-500 w-5 h-1 border-t-1 " 

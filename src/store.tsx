@@ -13,6 +13,9 @@ type Store = {
   naviModal : boolean;
   setNaviModal : (isOpen :boolean) => void;
 
+  contactModal : boolean;
+  setContactModal : (isOpen :boolean) => void;
+
   XBtn : boolean;
   setXBtn : (isOpen :boolean) => void;
 
@@ -34,6 +37,9 @@ const useStore = create<Store>((set) => ({
 
     XBtn: false,
     setXBtn: (isOpen) => set({ XBtn: isOpen }),
+
+    contactModal : false,
+    setContactModal : (isOpen) => set({contactModal : isOpen})
 
 }));
 
