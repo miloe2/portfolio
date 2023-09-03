@@ -23,12 +23,10 @@ const PrjList = () => {
         const updatedHoverState = hoverState.map(() => false);
         setHoverState(updatedHoverState);
     };
-    // console.log(devPage);
-    // console.log(devOpen);
+
 
     return (
-        // <div className='w-screen h-auto px-10 flex flex-wrap '>
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-4 w-screen h-auto px-10'>
+        <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4 w-screen h-auto px-10'>
 
 
         {latestArray.map((item, index) => (

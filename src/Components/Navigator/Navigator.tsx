@@ -52,20 +52,35 @@ const Navigator = () => {
     ];
 
     const handleXBtn = () => {
-        setNaviModal(!XBtn);
-        setXBtn(!XBtn);
-        if(contactModal){
+
+        if(XBtn && scrollY < 800){
+            setNaviModal(true)
+            setXBtn(false)
             setContactModal(false)
-        }
+        }  else if(XBtn && scrollY > 800){
+            setNaviModal(false)
+            setXBtn(false)
+            setContactModal(false)
+        } else if(!XBtn && scrollY > 800){
+            setNaviModal(true)
+            setXBtn(true)
+            setContactModal(false)
+        } 
     }
 
     const handleContact = () => {
-        setContactModal(!contactModal)
+        if(!contactModal){
+            setContactModal(true)
+            setXBtn(true)
+        } else{
+            setContactModal(false)
+            setXBtn(false)
+        }
     }
+
     
     return (
         <React.Fragment>
-            
             
             <div className='w-full h-16 fixed top-0 right-0 overflow-x-hidden box-border flex items-center overflow-hidden z-50 '
                 >
@@ -80,13 +95,16 @@ const Navigator = () => {
                         {navItems.map(({ route, page, label }) => (
                             <div 
                                 key={route}
-                                className={`w-20 py-4 mr-1 cursor-pointer ${currentPage === page ? 'text-[#090909]' : ''}`}
+                                className={`w-20 py-4 mr-1 cursor-pointer ${currentPage === page && !contactModal? 'text-[#090909]' : ''}`}
                                 onClick={() => handleClick(route, page)}
                             >
                                 {label}
                             </div>
                         ))}
-                        <div className='w-20 py-4  text-[#8c8c8c]' onClick={handleContact}>contact</div>
+                        <div className='w-20 py-4  ' 
+                        style={contactModal ? {color:'#090909'} : {color:'#8c8c8c'}}
+                        onClick={handleContact}
+                        >contact</div>
                         <div className='w-20 h-full'/>
                     </div>
                 </div></>}
@@ -113,7 +131,10 @@ const Navigator = () => {
                         </div>
                     </div> 
             </div>
-            {/* <div className='fixed top-20 left-10'>{`naviModal ${naviModal} //// crossed800 ${crossed800} ///// XBtn ${XBtn}`}</div> */}
+            {/* <div className='fixed  top-20 left-20'>
+                {`currentPage : ${currentPage}, 
+                naviModal : ${naviModal}, XBtn: ${XBtn}, contactModal :${contactModal}`}
+            </div> */}
         </React.Fragment>
     );
 };

@@ -23,21 +23,30 @@ const Detail = () => {
   
       useEffect(() => {
         if (devOpen) {
-          scrollToComponent();
+            scrollToComponent();
+            const timer = setTimeout(() => {
+                setDevOpen(false);
+            }, 1400);
+            return () => clearTimeout(timer); // Cleanup function
         }
-      }, [devOpen]);
-  
-      setTimeout(() => {
-          setDevOpen(false);
-      }, 1400);
+    }, [devOpen]);
 
     return (
         <div className='w-screen h-auto bg-white  '>
                     <div ref={componentRef}>
                         <Stack/>
-                        {devPage === ':DDD' && <DetailDDD/>}
-                        {devPage === 'portfolio' && <DetailPortfolio/>}
-                        {devPage === '찾기' && <DetailFindway/>}
+                        
+                        {devPage === ':DDD' && 
+                        <DetailDDD/>
+                        }
+
+                        {devPage === 'portfolio' && 
+                        <DetailPortfolio/>
+                        }
+
+                        {devPage === '찾기' && 
+                        <DetailFindway/>
+                        }
                     </div>
         </div>
     );
