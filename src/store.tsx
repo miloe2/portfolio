@@ -10,8 +10,11 @@ type Store = {
   currentPage : string | null;
   setCurrentPage : (page : string) => void;
 
-  contactModal : boolean;
-  setContactModal : (isOpen :boolean) => void;
+  naviModal : boolean;
+  setNaviModal : (isOpen :boolean) => void;
+
+  XBtn : boolean;
+  setXBtn : (isOpen :boolean) => void;
 
 };
 
@@ -26,8 +29,11 @@ const useStore = create<Store>((set) => ({
     currentPage :'home', 
     setCurrentPage : (page) => set({ currentPage : page}),
 
-    contactModal: false,
-    setContactModal: (isOpen) => set({ contactModal: isOpen }),
+    naviModal: true,
+    setNaviModal: (isOpen) => set({ naviModal: isOpen }),
+
+    XBtn: false,
+    setXBtn: (isOpen) => set({ XBtn: isOpen }),
 
 }));
 

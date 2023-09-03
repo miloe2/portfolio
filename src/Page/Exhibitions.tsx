@@ -14,6 +14,7 @@ const Exhibitions = () => {
 
     return (
         <div className='overflow-hidden'>
+            {/* <div className='w-full bg-black h-10'/> */}
             <BGItems/>
             <div className='w-full bg-black h-72'/>
             <Whatidid/> 
