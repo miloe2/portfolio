@@ -3,6 +3,8 @@ import useStore from '../store';
 import {BiAlignLeft} from 'react-icons/bi'
 import {FcPhone, FcInvite, FcCalendar} from 'react-icons/fc'
 import {TfiLocationPin} from  'react-icons/tfi'
+import {AiFillGithub} from 'react-icons/ai'
+import {RiNotionFill} from 'react-icons/ri'
 
 const Contact = () => {
     const {contactModal } =useStore();
@@ -57,6 +59,20 @@ const Contact = () => {
                     <div className='flex items-center '><span className='text-yellow-300'> <TfiLocationPin/></span> &nbsp; 서울시 성동구 성수동</div>
                     <div className='flex items-center'><FcPhone/> &nbsp; 010-9155-3194</div>
                     <div className='flex items-center'><FcInvite/> &nbsp; miloe0117@gmail.com</div>
+                    <div className='flex flex-row  w-full h-40 pt-4'>
+                    <div className='text-3xl mr-3'>
+                        <a href="https://github.com/miloe2" target="_blank" rel="noopener noreferrer">
+                            <AiFillGithub/>
+                        </a>
+                    </div>
+                    <div className='text-3xl'>
+                        <a href="https://www.notion.so/fc901c1fe0154841951b4113c63404ea" target="_blank" rel="noopener noreferrer">
+                            <RiNotionFill/>
+                        </a>
+                    </div>
+
+
+                    </div>
                 </div>
 
             </div>
