@@ -1,11 +1,14 @@
 import React, {useEffect} from 'react';
 import useStore from '../store';
+import {BiAlignLeft} from 'react-icons/bi'
+import {FcPhone, FcInvite, FcCalendar} from 'react-icons/fc'
+import {TfiLocationPin} from  'react-icons/tfi'
 
 const Contact = () => {
     const {contactModal } =useStore();
 
     useEffect(() => {
-        const preventScroll = (e) => {
+        const preventScroll = (e :WheelEvent) => {
             e.preventDefault();
         };
 
@@ -22,19 +25,44 @@ const Contact = () => {
 
     return (
         <React.Fragment>
-            <div className='bg-black opacity-80 fixed top-0 transition-all duration-700 overflow-hidden'
+            <div className='bg-black opacity-80 fixed top-0 transition-all ease-in-out duration-700 overflow-hidden'
             style={contactModal ? {width:'100%', height:'100%'} : undefined} ></div>
 
-            <div className='fixed top-0 right-0 h-screen bg-white transition-width duration-700 ease-in-out'
-            style={contactModal? {width:'30%'} : {width:'0%'}}
+            {/* <div className='fixed top-0 right-0 h-screen bg-white transition-all duration-700 ease-in-out'
+                style={
+                contactModal
+                ? { width:'0%', clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }
+                : { width:'30%', clipPath: 'polygon(0 0, 100% 0, 80% 100%, 0 100%)' }
+                }
             >
                 <div className='roboto-font relative top-96'>
                     Hey there!
                 </div>
+            </div> */}
 
-
+            <div className={`fixed top-0 right-0 h-screen transition-all duration-700 bg-white `}
+                style={contactModal? { width:'30%' } : { width:'0%' } }
+            >
+                <div className='relative text-lg/9 top-1/4  w-full h-96 flex flex-col whitespace-nowrap pl-16'>
+                    {/* <div className='font-serif text-9xl absolute -top-20 left-20'> &quot; </div> */}
+                    <div className='font-serif text-3xl/12 font-black'>
+                        I hope to<br/>
+                        have a good<br/>
+                        relationship with you.
+                    </div>
+                    <div className='w-10 h-1 border-b-2 border-zinc-600 my-5'></div>
+                    {/* <div className='font-serif text-9xl absolute top-20 left-20'> &quot; </div> */}
+                    <div className='flex items-center'><BiAlignLeft/> &nbsp; 이택현</div>
+                    <div className='flex items-center'><FcCalendar/> &nbsp; 1991. 01. 17</div>
+                    <div className='flex items-center '><span className='text-yellow-300'> <TfiLocationPin/></span> &nbsp; 서울시 성동구 성수동</div>
+                    <div className='flex items-center'><FcPhone/> &nbsp; 010-9155-3194</div>
+                    <div className='flex items-center'><FcInvite/> &nbsp; miloe0117@gmail.com</div>
+                </div>
 
             </div>
+
+
+
             
         </React.Fragment>
     );

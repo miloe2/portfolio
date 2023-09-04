@@ -49,8 +49,9 @@ const DetailPortfolio = () => {
         <Text2Parg
             txtColor={txtColor}
             title='Work.Develope' 
-            desc='기존에 근무하였던, Exhibition 업무도
-            정리하여 페이지를 구성하였습니다. ' />
+            desc='현재까지 연습한 개발 관련 프로젝트를
+             정리하였습니다. 
+            ' />
 
         <Center9image
             bgColor = {themeColor}

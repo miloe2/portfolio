@@ -66,7 +66,7 @@ const Career = () => {
                         </div>
                         <div className='  flex text-sm flex-col justify-between'>
                             <div className='w-auto '>하나투어</div>
-                            <div className='w-auto '>서유럽팀 인턴</div>
+                            <div className='w-auto '>서유럽팀</div>
                         </div>
                     </div>
                 </div>

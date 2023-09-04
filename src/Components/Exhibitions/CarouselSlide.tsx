@@ -48,7 +48,7 @@ const CarouselSlide = () => {
   return (
        <div className='bg-black w-auto h-screen  flex justify-center items-center whitespace-nowrap relative overflow-x-hidden '>
             <div className='w-full h-16 flex  items-end absolute top-0 pl-48'>
-                <div className='text-white relative top-10 text-lg font-bold'>주요프로젝트</div>
+                <div className='text-red-600 relative top-10 text-lg font-bold'>주요프로젝트</div>
             </div>
 
 
@@ -83,7 +83,7 @@ const CarouselSlide = () => {
                 {    carouselData.map((item) => (                    
                     <div key={item.id} className=' mx-1  cursor-pointer '  onClick={() => onClickDot(item.id)}>
                         
-                        {currentSlide === item.id ? <div className=' w-5 h-2 bg-[#616060] rounded-full'/> :<div className=' w-2 h-2 bg-white rounded-full'/>}
+                        {currentSlide === item.id ? <div className=' w-5 h-2 bg-[#D81519] rounded-full'/> :<div className=' w-2 h-2 bg-white rounded-full'/>}
                     </div>
                 ))}
 

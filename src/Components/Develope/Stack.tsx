@@ -1,4 +1,3 @@
-import React from 'react';
 import DevPrjData from '../../assets/Data/DevPrjData';
 import useStore from '../../store';
 import StackCircle from './../Detail/StackCircle';

@@ -11,8 +11,11 @@ export default {
     extend: {
       animation: {
         bounce: 'bounce 1.5s infinite',
+        'my-animation': 'my-animation 0.5s forwards',
       },
+      
       keyframes: {
+        //바운스 애니메이션
         bounce: {
           '0%, 100%': { transform: 'translateY(0px)' },
           '5%': { transform: 'translateY(1px)' },
@@ -34,6 +37,29 @@ export default {
           '85%': { transform: 'translateY(1px)' },
           '90%': { transform: 'translateY(2px)' },
           '95%': { transform: 'translateY(1px)' },
+        },
+        'my-animation': {
+          '0%': { 
+            clipPath: 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)',
+          },
+          // '50%': { 
+          //   clipPath: 'polygon(100% 0, 30% 0, 30% 100%, 100% 100%)',
+          // },
+          '60%': { 
+            clipPath: 'polygon(100% 0, 20% 0, 40% 100%, 100% 100%)',
+          },
+          '70%': { 
+            clipPath: 'polygon(100% 0, 15% 0, 30% 100%, 100% 100%)',
+          },
+          '80%': { 
+            clipPath: 'polygon(100% 0, 10% 0, 20% 100%, 100% 100%)',
+          },
+          '90%': { 
+            clipPath: 'polygon(100% 0, 5% 0, 10% 100%, 100% 100%)',
+          },
+          '100%': {
+            clipPath: 'polygon(100% 0, 0% 0, 0% 100%, 100% 100%)'
+          }
         },
       },
       inset: {
