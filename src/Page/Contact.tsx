@@ -43,7 +43,7 @@ const Contact = () => {
             <div className={`fixed top-0 right-0 h-screen transition-all duration-700 bg-white `}
                 style={contactModal? { width:'30%' } : { width:'0%' } }
             >
-                <div className='relative text-lg/9 top-1/4  w-full h-96 flex flex-col whitespace-nowrap pl-16'>
+                <div className='relative text-base/9 top-1/4  w-full h-96 flex flex-col whitespace-nowrap pl-16'>
                     {/* <div className='font-serif text-9xl absolute -top-20 left-20'> &quot; </div> */}
                     <div className='font-serif text-3xl/12 font-black'>
                         I hope to<br/>

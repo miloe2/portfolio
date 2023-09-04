@@ -79,7 +79,7 @@ const ProjectRow = () => {
             {/* 가로 스크롤바  */}
             <div className='bg-black w-1/3 h-16 min-w-fit max-[1024px]:w-80 items-end flex '>
                 <div className='w-4/5 h-1 bg-[#616060] ' >
-                    <div className=' h-full bg-[#B6B6B6]'
+                    <div className=' h-full bg-red-600'
                     style={{ width: `${( scrollX / totalWidth) * 200}%`, maxWidth: '100%' }}
                     >
 

@@ -103,7 +103,7 @@ const DetailDDD = () => {
             <ViewCode
                 bgColor = {themeColor}
                 txtColor='white'
-                site = '#'
+                site = 'https://www.myexhibitions.store/'
                 git = 'https://github.com/nessayj/RealFinalProject-DDD'
             />
 
