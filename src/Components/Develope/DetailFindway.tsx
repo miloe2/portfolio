@@ -31,7 +31,7 @@ const DetailFindway = () => {
             <div className='w-full h-72'/>
 
             {/* <div className='w-screen h-20'/> */}
-            <div className='px-44'>
+            <div className='px-44 max-[1024px]:px-10 w-full'>
                 <div className='w-full h-20'/>
 
                 <RightFullImage
@@ -47,7 +47,7 @@ const DetailFindway = () => {
                 
                 />
 
-                <div className='w-full h-20'/>
+                <div className='w-full h-80'/>
                 <LeftImage
                     bgColor='#101420'
                     txtColor = {txtColor}
@@ -63,7 +63,7 @@ const DetailFindway = () => {
             </div>
             <div className='w-full h-40'/>
 
-            <div className='w-screen h-screen px-44'>
+            <div className='w-screen h-screen px-44 max-[1024px]:px-10'>
                 <RightFullImage 
                     bgColor = {themeColor}
                     txtColor={txtColor}

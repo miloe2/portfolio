@@ -53,7 +53,7 @@ const ProjectRow = () => {
 
     return (
         <>
-        <div className='w-screen h-screen bg-black flex justify-center pl-48 flex-col  '>
+        <div className='w-screen h-screen bg-black flex justify-center pl-48 flex-col max-[1024px]:px-10 '>
         <div className='text-xl font-bold py-8 text-red-600'> 프로젝트 </div>
             {/* 이미지 들어가는 공간 */}
             <div ref={diaryImageRef} 

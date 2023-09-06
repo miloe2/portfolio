@@ -25,6 +25,9 @@ const Contact = () => {
         };
     }, [contactModal]);
 
+    const width = window.innerWidth;
+
+
     return (
         <React.Fragment>
             <div className='bg-black opacity-80 fixed top-0 transition-all ease-in-out duration-700 overflow-hidden'
@@ -42,9 +45,9 @@ const Contact = () => {
                 </div>
             </div> */}
 
-            <div className={`fixed top-0 right-0 h-screen transition-all duration-700 bg-white `}
-                style={contactModal? { width:'30%' } : { width:'0%' } }
-            >
+                <div className="fixed top-0 right-0 h-screen transition-all duration-700 bg-white"
+                    style={contactModal ? { width: width <= 1024 ? '80%' : '30%' } : { width:'0%' }}
+                >
                 <div className='relative text-base/9 top-1/4  w-full h-96 flex flex-col whitespace-nowrap pl-16'>
                     {/* <div className='font-serif text-9xl absolute -top-20 left-20'> &quot; </div> */}
                     <div className='font-serif text-3xl/12 font-black'>

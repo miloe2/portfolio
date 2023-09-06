@@ -90,18 +90,18 @@ const Navigator = () => {
                 <div className=' w-full h-full flex justify-between transition-width ease-in-out duration-500'
                 style={scrollY > 800  ? {backgroundColor:'white'}:{}}
                 >
-                    <div className="w-24 justify-center items-center flex "></div>
-                    <div className='relative w-1/3 flex text-xs text-center  items-center justify-end font-bold text-[#8c8c8c] '>
+                    <div className="w-full justify-center items-center flex "></div>
+                    <div className='relative w-1/3 flex  max-[768px]:w-full text-xs text-center  items-center justify-end font-bold text-[#8c8c8c] '>
                         {navItems.map(({ route, page, label }) => (
                             <div 
                                 key={route}
-                                className={`w-20 py-4 mr-1 cursor-pointer ${currentPage === page && !contactModal? 'text-[#090909]' : ''}`}
+                                className={`w-20 py-4mr-1 cursor-pointer ${currentPage === page && !contactModal? 'text-[#090909]' : ''}`}
                                 onClick={() => handleClick(route, page)}
                             >
                                 {label}
                             </div>
                         ))}
-                        <div className='w-20 py-4  ' 
+                        <div className='w-20 py-4   ' 
                         style={contactModal ? {color:'#090909'} : {color:'#8c8c8c'}}
                         onClick={handleContact}
                         >contact</div>

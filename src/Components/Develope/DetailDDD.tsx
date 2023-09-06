@@ -21,7 +21,7 @@ const DetailDDD = () => {
     return (
         <>
 
-        <div className=' px-44'>
+        <div className=' px-44 max-[768px]:px-10'>
         <Left3Image 
                 bgColor={themeColor}
                 txtColor={txtColor}
@@ -103,8 +103,9 @@ const DetailDDD = () => {
             <ViewCode
                 bgColor = {themeColor}
                 txtColor='white'
-                site = 'https://www.myexhibitions.store/'
+                site = 'http://3.39.206.99:8111/'
                 git = 'https://github.com/nessayj/RealFinalProject-DDD'
+                notice = 'ID: test / PW :test'
             />
 
             </div>

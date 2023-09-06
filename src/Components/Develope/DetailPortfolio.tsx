@@ -1,3 +1,4 @@
+import React from 'react';
 import twcssImg from '../../assets/Images/photos/tailwind css.png'
 import TSLogoSnipet from '../Detail/TSLogoSnipet';
 import RightFullImage from '../Detail/RightFullImage';
@@ -24,15 +25,15 @@ const DetailPortfolio = () => {
     const descColor ='white'
 
     return (
-        <>
-        <div className='w-screen h-screen px-44'>
+        <React.Fragment>
+        <div className='w-screen h-screen px-44 max-[1023px]:px-10'>
             <TSLogoSnipet/>
         </div>
 
         <div className='w-screen h-20'/>
 
 
-        <div className='w-screen h-screen px-44'>
+        <div className='w-screen h-screen px-44 max-[1023px]:px-10'>
         <RightFullImage 
             bgColor = {themeColor}
             txtColor={txtColor}
@@ -45,12 +46,12 @@ const DetailPortfolio = () => {
         </div>
             <div className='w-screen h-40'/>
 
-
+            <div className='w-full h-auto max-[1023px]:px-10'>
         <Text2Parg
             txtColor={txtColor}
             title='Work.Develope' 
-            desc='현재까지 연습한 개발 관련 프로젝트를
-             정리하였습니다. 
+            desc='현재까지 연습한 개발 관련 
+            프로젝트를 정리하였습니다. 
             ' />
 
         <Center9image
@@ -76,8 +77,9 @@ const DetailPortfolio = () => {
             source={videoUrl}
             items='center'
         />
-        <div className='w-screen h-40'/>
 
+        <div className='w-screen h-40'/>
+        </div>
         <ViewCode
         bgColor = {themeColor}
         txtColor='black'
@@ -87,7 +89,7 @@ const DetailPortfolio = () => {
 
 
 
-        </>
+        </React.Fragment>
         
         
     );

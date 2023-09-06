@@ -27,7 +27,7 @@ const Whatidid = () => {
 
     return (
         
-        <div className='w-full h-auto bg-black px-48 flex justify-between absolute '  >
+        <div className='w-full h-auto bg-black px-48 flex justify-between absolute max-[1024px]:px-10'  >
 
             <div className='w-2/5 h-auto  flex flex-col overflow-hidden'>
                 <div className='w-full h-96 relative'>

@@ -10,7 +10,7 @@ interface RightFullImageProps {
 }
 const RightFullImage :React.FC<RightFullImageProps> = ({bgColor, txtColor, descColor, title, desc, img}) => {
     return (
-        <div className={` w-full h-screen flex relative justify-end items-center `}>
+        <div className={` w-full h-screen flex relative justify-end items-center`}>
             
             <div className={`w-1/2 h-full  flex justify-center items-center flex-col  `}>
                 <div className={`w-full h-7/12  bg-${bgColor} flex justify-center  flex-col pl-24`}>

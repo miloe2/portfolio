@@ -3,7 +3,7 @@ import tslogo from '../../assets/Images/Icons/Typescript_logo_2020.svg'
 const TSLogoSnipet = () => {
     return (
         <div className='w-full h-4/5 flex itmes-center justify-center '>
-            <div className='w-5/12 h-full flex flex-col p-10 justify-center  relative '>
+            <div className='w-5/12 h-full flex flex-col p-10 justify-center  relative  max-[1023px]:p-0'>
                 <div className='flex flex-row'>
                     <div className='w-20 border-4 rounded-full border-fuchsia-400 mr-5'/>
                     <div className='w-20 border-4 rounded-full border-orange-400 mr-5'/>
@@ -54,8 +54,8 @@ const TSLogoSnipet = () => {
             
             </div>
             
-            <div className='w-1/2 h-full  justify-end items-center flex'>
-                <div className='bg-[#FF5851] w-3/4 h-3/5 p-16 justify-center flex flex-col '>
+            <div className='w-1/2 h-full  justify-end items-center flex max-[1023px]:w-full'>
+                <div className='bg-[#FF5851] w-3/4 h-3/5 p-16 justify-center flex flex-col max-[1023px]:w-full'>
                 <div className='text-4xl/12 font-bold whitespace-pre-line text-[#0041AF]  '> Typescript </div>
                     <div className='text-sm/6 whitespace-pre-line h-auto mt-5 text-white'> 
                     현직 개발 트렌드와 가독성 및 안정성을 높이기 위하여, <br/>

@@ -59,7 +59,7 @@ const CarouselSlide = () => {
                 <img src={carouselData[PREV_SLIDE].imgUrl} alt="" className='object-cover w-full h-full rounded-3xl'/>
             </div>
             {/*  현재 */}
-            <div className="w-7/12 h-3/5 rounded-3xl flex relative items-center flex-shrink-0 mx-10 ">
+            <div className="w-7/12 h-3/5 rounded-3xl flex relative items-center flex-shrink-0 mx-10 max-[1024px]:w-full">
                 <div className='bg-gradient-to-r from-white to-transparent w-4/5 h-full absolute left-0 rounded-l-3xl '/> 
                 <div className=' absolute left-0  pl-10 tracking-tight'>
                     <div className='text-xs text-zinc-600'> {carouselData[currentSlide].location} </div>

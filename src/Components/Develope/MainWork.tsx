@@ -22,7 +22,7 @@ const MainWork = () => {
     return (
         <div className='w-screen h-screen flex items-center relative  '>
             <div className=' h-11/12 bg-white  '  style={{ width: width }}>
-              <div className='absolute top-1/3 left-72 text-9xl font-black text-[#134DB9]'>
+              <div className='absolute top-1/3 left-72 max-[768px]:left-24 text-9xl font-black text-[#134DB9]'>
                   WO <br/> RK.
               </div>
 

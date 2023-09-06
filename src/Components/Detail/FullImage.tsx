@@ -10,7 +10,7 @@ interface FullImageProps {
 const FullImage: React.FC<FullImageProps> = ({img, txtColor, title, desc }) => {
     return (
       <div className={`w-full h-screen flex relative items-center`}>
-            <div className='absolute left-40 '>
+            <div className='absolute left-40 max-[768px]:left-28 '>
                 <div className='text-4xl/12 font-bold whitespace-pre-line  py-2 ' style={{ color: txtColor }}> {title} </div>
                 <div className='text-sm/6 whitespace-pre-line '> 
                     {desc}

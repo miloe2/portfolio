@@ -15,7 +15,8 @@ const FullVideo: React.FC<FullVideoProps> = ({ videoUrl, bgColor, padding }) => 
   // bg-[#0041AF]
   // p-40
   return (
-    <div className={`w-full h-full ${computedPadding} ${computedBgColor} flex justify-center items-center `}>
+    <div className={`w-full h-full ${computedPadding} ${computedBgColor} flex justify-center items-center
+    max-[768px]:p-20`}>
       <video autoPlay loop muted>
         <source src={videoUrl} type="video/mp4" />
       </video>

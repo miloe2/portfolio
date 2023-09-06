@@ -18,10 +18,10 @@ const LeftImage :React.FC<LefttImageLeftProps> = ({bgColor, txtColor, title, des
 
         <div className={`w-full h-full flex relative justify-end items-center `}>
 
-            <div className={`w-1/2 h-auto py-20  flex justify-center items-${items} flex-col `} 
+            <div className={`w-1/2 h-auto py-20 max-[768px]:p-0 flex justify-center items-${items} flex-col `} 
             style={{ backgroundColor: bgColor }}>
 
-                <div className='w-3/4 h-72 '>
+                <div className='w-3/4 h-72 max-[768px]:w-full'>
 
                 {source.includes('mp4') ? (
                     <video autoPlay loop muted className='w-full h-full object-cover '>
@@ -33,8 +33,8 @@ const LeftImage :React.FC<LefttImageLeftProps> = ({bgColor, txtColor, title, des
                 </div>
 
             </div>
-            <div className={`w-1/2 h-full flex justify-center items-center flex-col`}>
-                <div className='w-72 h-auto '>
+            <div className={`w-1/2 h-full flex justify-center items-center flex-col  `}>
+                <div className='w-72 h-auto max-[768px]:w-full max-[768px]:pl-10'>
                     <div className={`text-4xl/12 font-bold whitespace-pre-line  py-2 text-${txtColor} `}> {title} </div>
                     <div className='text-sm/6 whitespace-pre-line mt-5'> 
                         {desc}
