@@ -17,8 +17,8 @@ const Navigator = () => {
 
             // scrollY > 800이고 crossed800이 false일 때 (즉, 800을 처음 넘었을 때)
             if (window.scrollY > 800 && !crossed800) {
-                setNaviModal(false);
-                setXBtn(false);
+                setNaviModal(true);
+                setXBtn(true);
                 setCrossed800(true);  // 상태 업데이트
             }
 

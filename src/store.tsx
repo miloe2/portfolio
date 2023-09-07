@@ -26,7 +26,7 @@ const useStore = create<Store>((set) => ({
     devOpen: false,
     setDevOpen: (isOpen) => set({ devOpen: isOpen }),
 
-    devPage: 'portfolio',
+    devPage: ':DDD',
     setDevPage: (component) => set({ devPage: component }),
 
     currentPage :'home', 

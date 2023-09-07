@@ -51,9 +51,9 @@ const Contact = () => {
                 <div className='relative text-base/9 top-1/4  w-full h-96 flex flex-col whitespace-nowrap pl-16'>
                     {/* <div className='font-serif text-9xl absolute -top-20 left-20'> &quot; </div> */}
                     <div className='font-serif text-3xl/12 font-black'>
-                        I hope to<br/>
+                        " I hope to<br/>
                         have a good<br/>
-                        relationship with you.
+                        relationship with you."
                     </div>
                     <div className='w-10 h-1 border-b-2 border-zinc-600 my-5'></div>
                     {/* <div className='font-serif text-9xl absolute top-20 left-20'> &quot; </div> */}

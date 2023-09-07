@@ -5,7 +5,7 @@ interface ViewCodeProps {
     site : string;
     git : string;
     txtColor : string;
-    notice: string;
+    notice?: string;
 }
 
 const ViewCode :React.FC<ViewCodeProps> = ({bgColor, txtColor, site, git, notice}) => {

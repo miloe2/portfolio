@@ -27,6 +27,7 @@ const PrjList = () => {
 
     return (
         <React.Fragment>
+            <div className=' w-full h-10 px-10 text-right text-sm'>클릭 하시면 자세히 보실수 있습니다. </div>
         <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4 w-screen h-auto px-10'>
 
 
