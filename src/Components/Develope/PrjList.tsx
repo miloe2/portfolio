@@ -1,14 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import DevPrjData from '../../assets/Data/DevPrjData';
 import useStore from '../../store';
 
 const PrjList = () => {
     const {  setDevOpen, setDevPage } = useStore();
-
-
+    const [offsetX, setOffsetX] = useState<number>(0);
+    const [offsetY, setOffsetY] = useState<number>(0);
+    const [opacity, setOpacity] = useState<number>(1); // opacity 상태 추가
+    const circleRef = useRef<HTMLDivElement>(null);
     
     const latestArray = [...DevPrjData].reverse().map(item => item);
     const [hoverState, setHoverState] = useState(new Array(latestArray.length).fill(false));
+
+    const CircleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>)=> {
+        const circle = circleRef.current; // 타입 단언
+        if (!circle) return;
+        
+        // 상위 div 요소의 좌표를 가져옴
+        const rect = e.currentTarget.getBoundingClientRect(); 
+        
+        // 상위 div와 마우스 좌표간의 상대적인 위치를 계산
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        setOffsetX(x - circle.offsetWidth / 2);
+        setOffsetY(y - circle.offsetHeight / 2);
+        setOpacity(1);
+    };
+
+    const CircleMouseLeave = () => {
+        setOpacity(0); // 마우스가 div 밖으로 나갈 때 opacity를 0으로 설정
+      };
 
     // onMouseDown 이벤트 핸들러
     const handleMouseOver = (index :number) => {
@@ -16,7 +38,6 @@ const PrjList = () => {
         setHoverState(updatedHoverState);
     };
     
-
     // onMouseLeave 이벤트 핸들러
     const handleMouseLeave = () => {
         // 모든 컴포넌트의 hover 상태를 초기화하려면
@@ -27,8 +48,23 @@ const PrjList = () => {
 
     return (
         <React.Fragment>
-            <div className=' w-full h-10 px-10 text-right text-sm'>클릭 하시면 자세히 보실수 있습니다. </div>
-        <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4 w-screen h-auto px-10'>
+            
+        <div className=' w-full h-10 px-10 text-right text-sm'>클릭 하시면 자세히 보실수 있습니다. </div>
+        <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4 w-screen h-auto px-10 relative'
+            onMouseMove={CircleMouseMove}
+            onMouseLeave={CircleMouseLeave}
+        >
+            <div
+                ref={circleRef} 
+                className="z-50 absolute w-28 h-28 bg-white opacity-0 rounded-full text-xs
+                transition-all ease-linear duration-100 pointer-events-none text-center flex flex-col justify-center items-center"
+                style={{ left: `${offsetX}px`, top: `${offsetY}px`, opacity: opacity }}
+            > VIEW <br/>
+            PROJECT <br/>
+            ↓</div>
+        
+
+
 
 
         {latestArray.map((item, index) => (
