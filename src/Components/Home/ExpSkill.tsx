@@ -20,7 +20,7 @@ const ExpSkill = () => {
     return (
         <div className='w-full h-96  flex flex-col items-center justify-center relative px-24'>
             <div className={`absolute top-0 font-extrabold text-9xl whitespace-nowrap transition-all duration-1000 ${visibilityClasses}
-                max-[768px]:text-6xl max-[425px]:text-6xl
+                max-[768px]:text-6xl max-[412px]:text-4xl
             `} ref={divRef}>
                 <div className=' text-zinc-300 '>Experienced Skills</div>
                 <div className=' text-zinc-200 '>Experienced Skills</div>

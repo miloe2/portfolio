@@ -19,7 +19,7 @@ const Hello = () => {
             <div className='w-full h-auto relative'>
 
                 <div className='sticky top-0 h-full w-full overflow-hidden'>
-                    <div className='bg-white w-full h-screen justify-start items-center flex pl-10'>
+                    <div className='bg-white w-full h-screen justify-start items-center flex pl-10 max-[768px]:p-0'>
                         <div 
                             className='box-border h-11/12 relative bg-[#FF5851] transition-width duration-700 ease-in-out' 
                             style={scrollY < 50 ? { width: '50%' } : { width: '95%' }}

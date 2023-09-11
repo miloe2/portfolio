@@ -52,7 +52,7 @@ const Introduce = () => {
     return (
         <div className='w-full h-auto relative flex justify-center items-center px-44 max-[768px]:px-0'>
             <div className='relative'>
-                <div className='absolute -bottom-80 -right-1/12 w-80 h-96   ' ref={imageRef}>
+                <div className='absolute -bottom-80 -right-1/12 w-80 h-96 ' ref={imageRef}>
                     <img 
                         src={pht1}
                         alt="" 
