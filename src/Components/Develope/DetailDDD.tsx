@@ -4,7 +4,7 @@ import RightImage from '../Detail/RightImage';
 import Left1ImageProps from '../Detail/Left1Image';
 import FullImage from '../Detail/FullImage';
 import ViewCode from '../Detail/ViewCode';
-
+import PrjSummary from '../Detail/prjSummary';
 
 import videoUrl from '../../assets/Video/DDD2.mp4';
 import img1 from '../../assets/Images/Photos/DDD.webp'
@@ -20,8 +20,35 @@ const DetailDDD = () => {
     const txtColor = '#03193B'
     return (
         <>
+        <PrjSummary
+            title1='개요'
+            desc1='팀 구성 : 풀스택 3명
+            개발 기간 : 1개월
+            역할 : 풀스택 (BE + FE)'
+            title2='주요역할'
+            desc2='- 로그인, 회원가입, 비밀번호 찾기, 
+            회원정보 수정 등 회원 정보 관련 일체
+            - JWT 보안 적용
+            (Access/Refresh Token 적용)
+                    '
+            desc3='- 전시회 평점/코멘트 관리 및 mypage 연동
+            - Firebase를 활용한 회원페이지 이미지 수정
+            - 모바일 미디어쿼리 적용'
+
+            txtColor = {txtColor}
+        />
+        <ViewCode
+                bgColor = {themeColor}
+                txtColor='white'
+                site = 'https://3.39.206.99:8111/'
+                git = 'https://github.com/nessayj/RealFinalProject-DDD'
+                notice = 'ID: test / PW :test'
+            />
+
+        <div className='w-screen h-40'/>
 
         <div className=' px-44 max-[768px]:px-10'>
+
         <Left3Image 
                 bgColor={themeColor}
                 txtColor={txtColor}
@@ -99,16 +126,7 @@ const DetailDDD = () => {
             />
 
         <div className='w-screen '/>
-        <div className='px-0' style={{padding:'0'}}>
-            <ViewCode
-                bgColor = {themeColor}
-                txtColor='white'
-                site = 'https://3.39.206.99:8111/'
-                git = 'https://github.com/nessayj/RealFinalProject-DDD'
-                notice = 'ID: test / PW :test'
-            />
 
-            </div>
         </div>
         </>
     );

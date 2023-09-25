@@ -101,7 +101,7 @@ const Navigator = () => {
                                 {label}
                             </div>
                         ))}
-                        <div className='w-20 py-4   ' 
+                        <div className='w-20 py-4 cursor-pointer ' 
                         style={contactModal ? {color:'#090909'} : {color:'#8c8c8c'}}
                         onClick={handleContact}
                         >contact</div>

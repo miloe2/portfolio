@@ -6,6 +6,7 @@ import Text2Parg from '../Detail/Text2Parg';
 import Center9image from '../Detail/Center9image';
 import LeftImage from '../Detail/LeftImage';
 import ViewCode from '../Detail/ViewCode';
+import PrjSummary from '../Detail/prjSummary';
 
 import videoUrl from '../../assets/Video/exhibitVideo.mp4';
 import pfDetail1 from '../../assets/Images/Photos/Detail/dv2.webp'
@@ -26,6 +27,29 @@ const DetailPortfolio = () => {
 
     return (
         <React.Fragment>
+
+        <PrjSummary
+            title1='개요'
+            desc1='팀 구성 : 개인 프로젝트
+            개발 기간 : 1개월
+            역할 : 100%'
+            title2='주요역할'
+            desc2='- 전반적인 사이트 제작 
+            - 인터렉티브한 UI/UX 구현
+                    '
+            desc3='- TypeScript, Tailiwind CSS 연습
+            - IntersectionObserve, zustand 적용'
+            txtColor = {txtColor}
+        />
+
+        <ViewCode
+        bgColor = {themeColor}
+        txtColor='black'
+        site = 'https://miloe2.github.io/portfolio.ts.vite/'
+        git = 'https://github.com/miloe2/portfolio.ts.vite'
+        />
+        <div className='w-screen h-40'/>
+
         <div className='w-screen h-screen px-44 max-[1023px]:px-10'>
             <TSLogoSnipet/>
         </div>
@@ -80,13 +104,6 @@ const DetailPortfolio = () => {
 
         <div className='w-screen h-40'/>
         </div>
-        <ViewCode
-        bgColor = {themeColor}
-        txtColor='black'
-        site = 'https://miloe2.github.io/portfolio.ts.vite/'
-        git = 'https://github.com/miloe2/portfolio.ts.vite'
-        />
-
 
 
         </React.Fragment>
