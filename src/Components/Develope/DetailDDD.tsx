@@ -4,7 +4,7 @@ import RightImage from '../Detail/RightImage';
 import Left1ImageProps from '../Detail/Left1Image';
 import FullImage from '../Detail/FullImage';
 import ViewCode from '../Detail/ViewCode';
-import PrjSummary from '../Detail/prjSummary';
+import PrjSummary from '../Detail/PrjSummary';
 
 import videoUrl from '../../assets/Video/DDD2.mp4';
 import img1 from '../../assets/Images/Photos/DDD.webp'

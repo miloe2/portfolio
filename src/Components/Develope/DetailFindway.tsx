@@ -1,7 +1,8 @@
 import ViewCode from '../Detail/ViewCode';
 import LeftImage from '../Detail/LeftImage';
 import RightFullImage from '../Detail/RightFullImage';
-import PrjSummary from '../Detail/prjSummary';
+import PrjSummary from '../Detail/PrjSummary';
+
 
 import videoUrl from '../../assets/Video/findwayVideo.mp4';
 import img1 from '../../assets/Images/Photos/fw1.webp'

@@ -6,7 +6,7 @@ import Text2Parg from '../Detail/Text2Parg';
 import Center9image from '../Detail/Center9image';
 import LeftImage from '../Detail/LeftImage';
 import ViewCode from '../Detail/ViewCode';
-import PrjSummary from '../Detail/prjSummary';
+import PrjSummary from '../Detail/PrjSummary';
 
 import videoUrl from '../../assets/Video/exhibitVideo.mp4';
 import pfDetail1 from '../../assets/Images/Photos/Detail/dv2.webp'

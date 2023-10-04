@@ -30,11 +30,11 @@ const Career = () => {
                     </div>
                     <div className='w-80 h-7 flex text-sm'>
                         <div className='w-16 '>2017.08</div>
-                        <div className='w-auto '>건국대학교(글로컬캠퍼스) 경영학과 졸업</div>
+                        <div className='w-auto '>건국대학교 경영학과 졸업</div>
                     </div>
                     <div className='w-80 h-7 flex text-sm'>
                         <div className='w-16'>2013.03</div>
-                        <div className='w-auto '>건국대학교(글로컬캠퍼스) 경영학과 입학</div>
+                        <div className='w-auto '>건국대학교 경영학과 입학</div>
                     </div>
                     <div className='w-80 h-7 flex text-sm'>
                         <div className='w-16 '>2009.02</div>
@@ -62,7 +62,7 @@ const Career = () => {
                     <div className='flex h-12  '>
                     <div className='  flex text-sm  flex-col justify-between'>
                             <div className='w-20 '>2018.08  </div>
-                            <div className='w-20 '>~ 2018.11 </div>
+                            <div className='w-20 '>~ 2019.08 </div>
                         </div>
                         <div className='  flex text-sm flex-col justify-between'>
                             <div className='w-auto '>하나투어</div>
