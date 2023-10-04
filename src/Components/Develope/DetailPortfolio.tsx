@@ -31,7 +31,7 @@ const DetailPortfolio = () => {
         <PrjSummary
             title1='개요'
             desc1='팀 구성 : 개인 프로젝트
-            개발 기간 : 1개월
+            개발 기간 : 1개월.
             역할 : 100%'
             title2='주요역할'
             desc2='- 전반적인 사이트 제작 
