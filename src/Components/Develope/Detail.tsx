@@ -3,6 +3,7 @@ import useStore from "../../store";
 import DetailDDD from "./DetailDDD";
 import DetailPortfolio from "./DetailPortfolio";
 import DetailFindway from "./DetailFindway";
+import DetailPADA from './DetailPADA';
 import Stack from "./Stack";
 
 
@@ -36,6 +37,10 @@ const Detail = () => {
                     <div ref={componentRef}>
                         <Stack/>
                         
+                        {devPage === 'PADA' && 
+                        <DetailPADA/>
+                        
+                        }
                         {devPage === ':DDD' && 
                         <DetailDDD/>
                         }

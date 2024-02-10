@@ -1,6 +1,7 @@
 import portfolioThumnail from '../Images/Photos/portfolio.webp'
 import findwayThumnail from '../Images/Photos/findway2.webp'
 import dddThumnail from '../Images/Photos/DDD.webp'
+import pada from '../Images/Photos/pada.png'
 
 
 const DevPrjData  = [
@@ -35,6 +36,17 @@ const DevPrjData  = [
 
             bg : "bg-[#FF5851]",
             title : "text-[#0041AF]",
+            text : "text-white",
+        },
+    },
+    {
+        id: 3,  title: "PADA", date : "23. 12. 01 - 24. 01. 31", 
+        desc : "파충류 커뮤니티 플랫폼 ", 
+        stack :"javascript, vue, tailwindcss, aws, ",
+        imgUrl: pada,
+        color : {
+            bg : "bg-[#00D191]",
+            title : "text-yellow-300",
             text : "text-white",
         },
     },

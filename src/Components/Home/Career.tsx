@@ -49,6 +49,18 @@ const Career = () => {
                     <div className='w-1 h-3'/>
                     <div className='flex h-12  '>
                         <div className='  flex text-sm flex-col justify-between'>
+                            <div className='w-20  '>2023.10  </div>
+                            <div className='w-auto '>~ 재직중 </div>
+                        </div>
+                        <div className='w-auto  flex text-sm flex-col justify-between'>
+                            <div className='w-auto  '>피소프트</div>
+                            <div className='w-auto '>프론트엔드 개발</div>
+                        </div>
+                    </div>
+
+                    <div className='w-1 h-3'/>
+                    <div className='flex h-12  '>
+                        <div className='  flex text-sm flex-col justify-between'>
                             <div className='w-20  '>2019.11  </div>
                             <div className='w-auto '>~ 2022.12 </div>
                         </div>

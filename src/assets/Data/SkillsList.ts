@@ -13,6 +13,7 @@ import springboot from '../../assets/Images/Icons/spring-boot.png';
 import tailwindcss from '../../assets/Images/Icons/tailwindcss.svg';
 
 import styled from '../../assets/Images/Icons/styled.png';
+import vue from '../../assets/Images/Icons/vue.svg'
 
 
 interface SkillType {
@@ -34,6 +35,7 @@ const SkillsList: SkillType[] = [
     { skill: 'Springboot', imgUrl: springboot },
     { skill: 'TailwindCSS', imgUrl: tailwindcss },
     { skill: 'Styled-Component', imgUrl: styled },
+    { skill: 'vue', imgUrl: vue },
 ];
 
 export default  SkillsList;

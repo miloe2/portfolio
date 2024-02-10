@@ -22,7 +22,7 @@ const RightFullImage :React.FC<RightFullImageProps> = ({bgColor, txtColor, descC
             </div>
             <div className={`w-1/2 h-3/4 flex justify-start items-start  `}>
                 <div className='w-full h-full'>
-                    <img src={img} alt="" className='w-full h-full object-left-top object-cover'/>
+                    <img src={img} alt="" className='w-full h-full object-left-top object-cover shadow-md'/>
                 </div>
             </div>
             
