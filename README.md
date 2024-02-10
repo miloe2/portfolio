@@ -1,27 +1,29 @@
-# React + TypeScript + Vite
+## Portfolio
+React.ts + tailwind CSS 를 활용한 개인 포트폴리오
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### 🎬프로젝트 소개
+개발 프로젝트와 경력을 정리한 포트폴리오 사이트입니다.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### ⏲개발 기간
+* 22.08.01 - 22.09.01
 
-## Expanding the ESLint configuration
+  
+### 🙋‍♂️팀 구성
+- 개인 프로젝트
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+  
+### 📌개발 주안점
+- Typescript 및 tailwind CSS 활용
+- Intersection Observer 기능을 활용한 UI/UX 디자인
+- zustand를 활용한 상태 관리
+- Vite와 Github Page를 통한 배포
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### ⚙개발 환경
+- Language: TypeScript (5.0.2)
+- build : Vite (4.4.5)
+- Framework: React (18.2.0)
+- Library: Zustand (4.4.1), react-router-dom (6.15.0)
+- Style: TailwindCSS (3.3.3)
+- IDE: Visual Studio Code
