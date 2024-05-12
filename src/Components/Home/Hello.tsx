@@ -19,9 +19,9 @@ const Hello = () => {
             <div className='w-full h-auto relative'>
 
                 <div className='sticky top-0 h-full w-full overflow-hidden'>
-                    <div className='bg-white w-full h-screen justify-start items-center flex pl-10 max-[768px]:p-0'>
+                    <div className=' w-full h-screen justify-start items-center flex pl-10 max-[768px]:p-0'>
                         <div 
-                            className='box-border h-11/12 relative bg-[#FF5851] transition-width duration-700 ease-in-out' 
+                            className='box-border min-w-1/2 h-[86%] relative bg-[#FF5851] transition-width duration-700 ease-in-out' 
                             style={scrollY < 50 ? { width: '50%' } : { width: '95%' }}
                         >
                     
@@ -38,15 +38,15 @@ const Hello = () => {
                                 </div>
                             </div>
 
-                            <div className='absolute top-1/3 -right-48 text-9xl font-black text-[#242424] max-[768px]:text-8xl '>
+                            <div className='absolute top-1/3 md:-right-1/3 -right-1/2  font-black text-[#242424] md:text-9xl text-6xl '>
                                 안녕<br/>
                                 하세요<span className='text-[#FF5851]'>.</span>
                             </div>
                         </div>
-                        <div 
+                        {/* <div 
                             className='bg-zinc-50 h-11/12 transition-width duration-700 ease-in-out' 
                             style={scrollY < 50 ? { width: '50%' } : { width: '5%' }}
-                        ></div>
+                        ></div> */}
                     </div>
                     
                     <div className="animate-bounce left-1/3 flex  items-center w-2/12 h-auto justify-end

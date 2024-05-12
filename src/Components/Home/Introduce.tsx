@@ -50,28 +50,31 @@ const Introduce = () => {
     }, []);
 
     return (
-        <div className='w-full h-auto relative flex justify-center items-center px-44 max-[768px]:px-0'>
-            <div className='relative'>
-                <div className='absolute -bottom-80 -right-1/12 w-80 h-96 ' ref={imageRef}>
+        <div className='w-full h-auto relative flex justify-center items-center  max-[768px]:px-0'>
+            <div className='relative h-[80vh]'>
+                <div className='absolute md:-bottom-80 -bottom-10 -right-2/12 md:w-80 w-full h-96 ' ref={imageRef}>
                     <img 
                         src={pht1}
                         alt="" 
-                        className={`w-full h-full object-cover transition-all duration-1000 object-bottom
+                        className={`w-full h-full object-cover transition-all duration-1000 object-bottom max-w-xs
                             ${!isImageVisible ? 'opacity-0 transform translate-y-10' : 'opacity-100 transform translate-y-0'}`}
                     />
                 </div>
 
-                <div className='absolute -bottom-11/12 right-7/12 w-96 h-72 max-[768px]:-left-10'>
+                <div className='absolute md:-bottom-11/12 -bottom-8/12 right-7/12 md:w-96 w-full h-72 max-[768px]:-left-10'>
                     <img 
                         src={pht2}
                         alt="" 
-                        className={`w-full h-full object-cover transition-all duration-1000 
+                        className={`w-full h-full object-cover transition-all duration-1000 max-w-xs
                             ${!isImageVisible ? 'opacity-0 transform translate-y-10' : 'opacity-100 transform translate-y-0'}`}
                     />
                 </div>
                 <div ref={textRef}
-                className={`text-8xl h-full w-auto font-bold leading-snug text-[#242424] 
-                    transition-all duration-1000 whitespace-nowrap max-[768px]:text-7xl max-[768px]:leading-relaxed
+                className={` md:w-xl w-full h-full  
+                max-w-xs text-4xl md:text-8xl md:leading-normal 
+                font-bold leading-snug text-[#242424] 
+                    transition-all duration-1000 whitespace-nowrap 
+                    
                     ${!isTextVisible ? 'opacity-0 transform translate-y-10' : 'opacity-100 transform translate-y-0'}`}
                     >
                             <div>안녕하세요.</div>
