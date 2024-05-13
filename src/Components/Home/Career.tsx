@@ -84,7 +84,7 @@ const Career = () => {
                 </div>
 
                 <div className={`w-72 h-72  flex flex-col mx-5 transition-all duration-1000 delay-500 ${visibilityClasses} `}>
-                <div className='w-72 flex max-[768px]:text-center  max-[768px]:justify-center '>
+                <div className='w-72 flex  max-[768px]:text-center  max-[768px]:justify-center '>
                         <div className='w-16  font-bold text-lg'>어학</div>
                     </div>
                     <div className='w-1 h-3'/>
@@ -123,17 +123,17 @@ const Career = () => {
                 </div>
 
                 <div className={`w-60 h-72  flex flex-col mx-5 transition-all duration-1000 delay-700 ${visibilityClasses} `}>
-                    <div className='w-auto flex delay-1000 max-[768px]:text-center  max-[768px]:justify-center '>
+                    <div className='w-72  flex delay-1000 max-[768px]:text-center  max-[768px]:justify-center '>
                         <div className='w-16  font-bold text-lg'>자격증</div>
                     </div>
                     <div className='w-1 h-3'/>
-                    <div className='w-auto h-7 flex text-sm max-[768px]:justify-center'>
+                    <div className='w-auto h-7 flex text-sm '>
                         <div className='w-16 '>2021.02</div>
                         <div className='w-auto '>국제무역사 1급</div>
                     </div>
 
                     <div className='w-1 h-3 max-[768px]:h-10'/>
-                    <div className=' flex max-[768px]:text-center  max-[768px]:justify-center '>
+                    <div className='w-72 flex max-[768px]:text-center  max-[768px]:justify-center '>
                         <div className='w-16  font-bold text-lg'>문서활용</div>
                     </div>
 

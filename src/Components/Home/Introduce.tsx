@@ -52,7 +52,7 @@ const Introduce = () => {
     return (
         <div className='w-full h-auto relative flex justify-center items-center  max-[768px]:px-0'>
             <div className='relative h-[80vh]'>
-                <div className='absolute md:-bottom-80 -bottom-10 -right-2/12 md:w-80 w-full h-96 ' ref={imageRef}>
+                <div className='absolute md:-bottom-80 -bottom-14 -right-2/12 md:w-80 w-full h-96 ' ref={imageRef}>
                     <img 
                         src={pht1}
                         alt="" 
@@ -70,8 +70,8 @@ const Introduce = () => {
                     />
                 </div>
                 <div ref={textRef}
-                className={` md:w-xl w-full h-full  
-                max-w-xs text-4xl md:text-8xl md:leading-normal 
+                className={`lg:w-96 w-full h-full  
+                max-w-xs text-5xl lg:text-8xl lg:leading-normal 
                 font-bold leading-snug text-[#242424] 
                     transition-all duration-1000 whitespace-nowrap 
                     
