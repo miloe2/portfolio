@@ -2,8 +2,9 @@ import tslogo from '../../assets/Images/Icons/Typescript_logo_2020.svg'
 
 const TSLogoSnipet = () => {
     return (
-        <div className='w-full h-4/5 flex itmes-center justify-center '>
-            <div className='w-5/12 h-full flex flex-col p-10 justify-center  relative  max-[1023px]:p-0'>
+        <div className=' w-full flex-col-reverse lg:w-[1024px] h-[800px] flex lg:flex-row itmes-center justify-center mx-auto'>
+            <div className='lg:w-1/2 w-full h-full flex flex-col lg:p-10 p-0 justify-center 
+            relative  mt-20 lg:mt-0' >
                 <div className='flex flex-row'>
                     <div className='w-20 border-4 rounded-full border-fuchsia-400 mr-5'/>
                     <div className='w-20 border-4 rounded-full border-orange-400 mr-5'/>
@@ -48,16 +49,15 @@ const TSLogoSnipet = () => {
                     <div className='w-20 border-4 rounded-full border-fuchsia-600 mr-5'/>
                     <div className='w-40 border-4 rounded-full border-yellow-500 mr-5'/>
                 </div>
-                {/* <div className='w-40 h-full absolute right-0 bg-gradient-to-r from-transparent to-white'/> */}
-                
-
             
             </div>
             
-            <div className='w-1/2 h-full  justify-end items-center flex max-[1023px]:w-full'>
-                <div className='bg-[#FF5851] w-3/4 h-3/5 p-16 justify-center flex flex-col max-[1023px]:w-full'>
-                <div className='text-4xl/12 font-bold whitespace-pre-line text-[#0041AF]  '> Typescript </div>
-                    <div className='text-sm/6 whitespace-pre-line h-auto mt-5 text-white'> 
+            <div className=' lg:w-1/2 w-full
+              h-full  lg:justify-end justify-center  items-center flex '>
+                <div className='bg-[#FF5851] w-full lg:h-3/5 h-full p-16 
+                justify-center flex flex-col  items-center'>
+                <div className='sm:text-5xl/12 text-4xl/10 font-bold whitespace-pre-line text-[#0041AF]  '> Typescript </div>
+                    <div className='sm:text-lg/8 text-sm/6 whitespace-pre-line h-auto mt-5 text-white'> 
                     현직 개발 트렌드와 가독성 및 안정성을 높이기 위하여, <br/>
                     TypeScript (React.ts)를 적용하였습니다.   
                     </div>

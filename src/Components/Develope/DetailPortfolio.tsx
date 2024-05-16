@@ -50,14 +50,14 @@ const DetailPortfolio = () => {
         />
         <div className='w-screen h-40'/>
 
-        <div className='w-screen h-screen px-44 max-[1023px]:px-10'>
+        <div className='w-screen h-screen mx-auto px-10 lg:px-0'>
             <TSLogoSnipet/>
         </div>
 
         <div className='w-screen h-20'/>
 
 
-        <div className='w-screen h-screen px-44 max-[1023px]:px-10'>
+        <div className='w-screen h-screen mx-auto lg:px-10 px-0'>
         <RightFullImage 
             bgColor = {themeColor}
             txtColor={txtColor}
@@ -68,9 +68,9 @@ const DetailPortfolio = () => {
             평소 사용해보고 싶었던, Tailwind CSS로 
             작업하였습니다.  ' />
         </div>
-            <div className='w-screen h-40'/>
+            {/* <div className='w-screen h-40'/> */}
 
-            <div className='w-full h-auto max-[1023px]:px-10'>
+            <div className='w-screen h-auto mx-auto px-0'>
         <Text2Parg
             txtColor={txtColor}
             title='Work.Develope' 
@@ -90,17 +90,20 @@ const DetailPortfolio = () => {
             img8={pfDetail8}
             img9={pfDetail9}
         />
-        <div className='w-screen h-72'/>
+        <div className='w-screen h-72 '/>
         
-        <LeftImage
-            bgColor='#f5f5f5'
-            txtColor={txtColor}
-            title='Work.Exhibition'
-            desc='기존에 근무하였던, Exhibition 업무도
-                정리하여 페이지를 구성하였습니다. '
-            source={videoUrl}
-            items='center'
-        />
+        <div className='lg:px-10 px-0'>
+            <LeftImage
+                bgColor='#f5f5f5'
+                txtColor={txtColor}
+                title='Work.Exhibition'
+                desc='기존에 근무하였던, Exhibition 업무도
+                    정리하여 페이지를 구성하였습니다. '
+                source={videoUrl}
+                items='center'
+            />
+        </div>
+
 
         <div className='w-screen h-40'/>
         </div>

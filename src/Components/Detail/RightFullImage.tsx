@@ -10,17 +10,17 @@ interface RightFullImageProps {
 }
 const RightFullImage :React.FC<RightFullImageProps> = ({bgColor, txtColor, descColor, title, desc, img}) => {
     return (
-        <div className={` w-full h-screen flex relative justify-end items-center`}>
+        <div className={` w-full h-screen flex flex-col lg:flex-row relative justify-end items-center mt-40 `}>
             
-            <div className={`w-1/2 h-full  flex justify-center items-center flex-col  `}>
-                <div className={`w-full h-7/12  bg-${bgColor} flex justify-center  flex-col pl-24`}>
-                    <div className={`text-4xl/12 font-bold whitespace-pre-line text-${txtColor}`}> {title} </div>
-                    <div className={`text-sm/6 whitespace-pre-line mt-5 text-${descColor}`}> 
+            <div className={`lg:w-1/2 w-full h-full  flex justify-center items-center flex-col  `}>
+                <div className={`w-full lg:h-7/12 h-full  bg-${bgColor} flex justify-center  flex-col lg:pl-24 pl-10`}>
+                    <div className={`text-5xl/12 font-bold whitespace-pre-line text-${txtColor}`}> {title} </div>
+                    <div className={`sm:text-lg/8 text-sm/6 whitespace-pre-line mt-5 text-${descColor}`}> 
                         {desc}
                     </div>
                 </div>
             </div>
-            <div className={`w-1/2 h-3/4 flex justify-start items-start  `}>
+            <div className={`lg:w-1/2 w-full h-3/4 flex justify-start items-start  `}>
                 <div className='w-full h-full'>
                     <img src={img} alt="" className='w-full h-full object-left-top object-cover shadow-md'/>
                 </div>

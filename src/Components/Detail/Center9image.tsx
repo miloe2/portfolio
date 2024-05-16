@@ -14,8 +14,10 @@ interface Center9imageProps {
 const Center9image :React.FC<Center9imageProps>= ({bgColor, img1, img2, img3, img4, img5, img6, img7, img8, img9}) => {
     return (
         <div className='w-screen h-auto border-0'>
-<div className={`bg-${bgColor} w-full h-auto pt-32 grid grid-cols-3 grid-rows-3 gap-4 px-20
-  lg:grid-cols-3 lg:px-44 md:grid-cols-2 md:px-20 sm:grid-cols-1`}>
+<div className={`bg-${bgColor} w-full h-auto pt-32 grid grid-cols-1 gap-4 lg:px-20 px-10
+  lg:grid-cols-3 md:grid-cols-2`}>
+{/* <div className={`bg-${bgColor} w-full h-auto pt-32 grid grid-cols-3 grid-rows-3 gap-4 px-20
+  lg:grid-cols-3 lg:px-44 md:grid-cols-2 md:px-20 sm:grid-cols-1`}> */}
                 <div className="bg-red-500 w-auto h-full"><img src={img1} alt="" className='w-full h-full object-cover'/></div>
                 <div className="bg-green-500 w-full h-full"><img src={img2} alt=""  className='w-full h-full object-cover'/></div>
                 <div className="bg-blue-500 w-full h-full"><img src={img3} alt="" className='w-full h-full object-cover'/></div>

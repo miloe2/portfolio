@@ -17,8 +17,7 @@ const Home = () => {
             <Hello/>
             <div className='w-full bg-white h-40' />
             <Introduce/>
-            <div className='w-full bg-white h-96' />
-            <div className='w-full bg-white h-60' />
+            <div className='w-full bg-white h-[60rem]' />
             <ExpSkill/>
             <div className='w-full bg-white h-48' />
             <Career/>
