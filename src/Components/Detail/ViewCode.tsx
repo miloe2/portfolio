@@ -12,15 +12,15 @@ const ViewCode :React.FC<ViewCodeProps> = ({bgColor, txtColor, site, git, notice
         
 
     return (
-        <div className={`w-screen h-auto bg-${bgColor} flex justify-center items-center py-10 text-${txtColor}`} >
-           <div className='flex flex-col mr-10 w-auto h-auto'>
-           <div className=' underline  font-bold '> 
-                {site !== '#' ? (<a href={site} target="_blank" rel="noopener noreferrer">사이트 접속하기</a>): null}
+        <div className={`w-full h-auto bg-${bgColor} flex justify-center items-center py-10 text-${txtColor} space-x-4 lg:mb-40 mb-20`} >
+           <div className='flex flex-col  w-auto h-auto '>
+                <div className=' underline  font-bold '> 
+                        {site !== '#' ? (<a href={site} target="_blank" rel="noopener noreferrer">사이트 접속하기</a>): null}
 
-             </div>
-             {notice && (
-                <div className='no-underline text-sm font-normal'>{notice}</div>
-             ) }
+                    </div>
+                    {notice && (
+                        <div className='no-underline text-sm font-normal'>{notice}</div>
+                ) }
             </div>
             { git &&
             <div className='w-8 h-8 bg-white rounded-full justify-center flex items-center'> 

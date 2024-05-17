@@ -6,8 +6,8 @@ interface FullVideoProps {
   padding: number
 }
 
-const FullVideo: React.FC<FullVideoProps> = ({ videoUrl, bgColor, padding }) => {
-  const computedPadding = `p-${padding}`;
+const FullVideo: React.FC<FullVideoProps> = ({ videoUrl, bgColor }) => {
+  // const computedPadding = `p-${padding}`;
   const computedBgColor = `bg-${bgColor}`;
 
   // console.log(computedBgColor)
@@ -15,9 +15,8 @@ const FullVideo: React.FC<FullVideoProps> = ({ videoUrl, bgColor, padding }) => 
   // bg-[#0041AF]
   // p-40
   return (
-    <div className={`w-full h-full ${computedPadding} ${computedBgColor} flex justify-center items-center
-    max-[768px]:p-20`}>
-      <video autoPlay loop muted>
+    <div className={`w-screen h-auto lg:py-40 lg:px-0 py-20 px-10  ${computedBgColor} flex justify-center items-center mb-40`}>
+      <video autoPlay loop muted playsInline>
         <source src={videoUrl} type="video/mp4" />
       </video>
     </div>

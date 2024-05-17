@@ -13,14 +13,13 @@ import img3 from '../../assets/Images/Photos/dd2.webp'
 import img4 from '../../assets/Images/Photos/dd3.webp'
 import img5 from '../../assets/Images/Photos/dd4.webp'
 import mobile from '../../assets/Images/Photos/Detail/DDDMobile.webp'
-import React from 'react';
 
 
 const DetailDDD = () => {
     const themeColor = '[#0041AF]'
     const txtColor = '#03193B'
     return (
-        <React.Fragment>
+        <>
         <PrjSummary
             title1='개요'
             desc1='팀 구성 : 풀스택 3명
@@ -46,7 +45,9 @@ const DetailDDD = () => {
                 notice = 'ID: test / PW :test'
             />
 
+        <div className='w-screen h-40'/>
 
+        <div className=' px-44 max-[768px]:px-10'>
 
         <Left3Image 
                 bgColor={themeColor}
@@ -62,8 +63,10 @@ const DetailDDD = () => {
                 세 가지 부분을 중점으로 설계되었습니다.'
             /> 
 
+            <div className='w-screen h-72 '/>
 
             <FullVideo videoUrl={videoUrl} bgColor={themeColor} padding={40}/>
+            <div className='w-screen h-72 '/>
             
             <RightImage 
                 bgColor={themeColor} 
@@ -78,18 +81,21 @@ const DetailDDD = () => {
                 img={img2}
                 items='start'
             />
+            <div className='w-screen h-72'/>
             <Left1ImageProps
                 bgColor={themeColor}
                 txtColor={txtColor}
                 title='마이페이지
                 Customized'
 
-                desc='마이페이지는 Firebase를 활용하여   
+                desc='
+                마이페이지는 Firebase를 활용하여   
                 Customizing이 가능하게 설계하였습니다. '
                 
                 img1={img3}
 
             />
+            <div className='w-screen h-72 '/>
 
             <RightImage 
                 bgColor={themeColor}
@@ -106,7 +112,10 @@ const DetailDDD = () => {
                 items='center'
             
             />
+            <div className='w-screen h-72 '/>
+        </div>
 
+        <div className='px-0' style={{padding:'0rem'}}>
             <FullImage 
                 txtColor={txtColor}
                 img={mobile}
@@ -116,8 +125,10 @@ const DetailDDD = () => {
                 높였습니다. '
             />
 
+        <div className='w-screen '/>
 
-        </React.Fragment>
+        </div>
+        </>
     );
 };
 

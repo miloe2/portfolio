@@ -46,14 +46,14 @@ const DetailPortfolio = () => {
 
 
 
-        <div className='w-screen h-screen px-44 max-[1023px]:px-10'>
+        <div className='w-screen h-screen px-10 lg:px-0'>
         <RightFullImage 
             bgColor = {themeColor}
             txtColor={txtColor}
             descColor = {descColor}
             img={pada1} 
-            title='최소의 API 호출을 위한
-             VUEX 설계 ' 
+            title=' API 호출 최소화
+              ' 
             desc='종/모프가 100종 이상이었기 때문에,
             API 호출이 잦을수 있었습니다.
             대분류를 vuex로 상태관리하여 최소한의 통신으로

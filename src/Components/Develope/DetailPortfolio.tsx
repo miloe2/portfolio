@@ -48,9 +48,9 @@ const DetailPortfolio = () => {
         site = 'https://miloe2.github.io/portfolio.ts.vite/'
         git = 'https://github.com/miloe2/portfolio.ts.vite'
         />
-        <div className='w-screen h-40'/>
+        <div className='w-full h-40'/>
 
-        <div className='w-screen h-screen mx-auto px-10 lg:px-0'>
+        <div className='w-full h-screen mx-auto px-10 lg:px-0'>
             <TSLogoSnipet/>
         </div>
 
