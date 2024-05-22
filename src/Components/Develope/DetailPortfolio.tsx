@@ -21,8 +21,8 @@ import pfDetail9 from '../../assets/Images/Photos/Detail/dv9.webp'
 
 
 const DetailPortfolio = () => {
-    const themeColor = '[#FF5851]'
-    const txtColor = '[#0041AF]'
+    const themeColor = '#FF5851'
+    const txtColor = '#0041AF'
     const descColor ='white'
 
     return (
@@ -48,16 +48,11 @@ const DetailPortfolio = () => {
         site = 'https://miloe2.github.io/portfolio.ts.vite/'
         git = 'https://github.com/miloe2/portfolio.ts.vite'
         />
-        <div className='w-full h-40'/>
 
-        <div className='w-full h-screen mx-auto px-10 lg:px-0'>
             <TSLogoSnipet/>
-        </div>
-
-        <div className='w-screen h-20'/>
 
 
-        <div className='w-screen h-screen mx-auto lg:px-10 px-0'>
+
         <RightFullImage 
             bgColor = {themeColor}
             txtColor={txtColor}
@@ -67,10 +62,8 @@ const DetailPortfolio = () => {
             desc='기존에 사용하던 Styled Components에서
             평소 사용해보고 싶었던, Tailwind CSS로 
             작업하였습니다.  ' />
-        </div>
             {/* <div className='w-screen h-40'/> */}
 
-            <div className='w-screen h-auto mx-auto px-0'>
         <Text2Parg
             txtColor={txtColor}
             title='Work.Develope' 
@@ -90,9 +83,7 @@ const DetailPortfolio = () => {
             img8={pfDetail8}
             img9={pfDetail9}
         />
-        <div className='w-screen h-72 '/>
         
-        <div className='lg:px-10 px-0'>
             <LeftImage
                 bgColor='#f5f5f5'
                 txtColor={txtColor}
@@ -102,11 +93,8 @@ const DetailPortfolio = () => {
                 source={videoUrl}
                 items='center'
             />
-        </div>
 
 
-        <div className='w-screen h-40'/>
-        </div>
 
 
         </React.Fragment>

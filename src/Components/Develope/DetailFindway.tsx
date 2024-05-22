@@ -11,8 +11,8 @@ import img3 from '../../assets/Images/Photos/fw3.webp'
 
 
 const DetailFindway = () => {
-    const themeColor = '[#101420]'
-    const txtColor  = '[#E7236B]'
+    const themeColor = '#101420'
+    const txtColor  = '#E7236B'
     return (
         <div className='w-full h-auto '>
         <PrjSummary
@@ -39,18 +39,14 @@ const DetailFindway = () => {
             
             />
 
-            <div className='w-screen h-20'/>
-            <div className='px-44 max-[1024px]:px-10 w-full'>
             <LeftImage
             bgColor='#101420'
             txtColor={txtColor}
             title='찾기'
-            desc='막차가 끊긴 이후, 저렴하게 귀가해보자라는
-            생각으로 만들어진 프로젝트입니다.  '
+            desc='막차가 끊긴 이후, 저렴하게 귀가해보자라는 생각으로 만들어진 프로젝트입니다.  '
             source={videoUrl}
             items='center'
         />
-                <div className='w-full h-20'/>
 
                 <RightFullImage
                     bgColor='[#ffffff]'
@@ -78,10 +74,7 @@ const DetailFindway = () => {
                     나누어 출력합니다.'
                 />
 
-            </div>
-            <div className='w-full h-40'/>
 
-            <div className='w-screen h-screen px-44 max-[1024px]:px-10'>
                 <RightFullImage 
                     bgColor = {themeColor}
                     txtColor={txtColor}
@@ -93,9 +86,7 @@ const DetailFindway = () => {
                     카카오맵 API를 활용하여 
                     현재 거치된 따릉이 개수를 출력합니다.                     
                     ' />
-            </div>
 
-            
         </div>
     );
 };

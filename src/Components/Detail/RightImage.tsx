@@ -21,7 +21,8 @@ const RightImage :React.FC<RightImageLeftProps> = ({bgColor, txtColor, title, de
                     </div>
                 </div>
             </div>
-            <div className={`lg:w-1/2 w-full h-auto lg:py-40 py-20 bg-${bgColor} flex justify-center items-${items} flex-col`}>
+            <div className={`lg:w-1/2 w-full h-auto lg:py-40 py-20 flex justify-center items-${items} flex-col`}
+              style={{ backgroundColor : bgColor}}>
                 <div className='lg:w-3/4 w-full h-auto'>
                     <img src={img} alt="" className='w-full h-full object-cover'/>
                 </div>

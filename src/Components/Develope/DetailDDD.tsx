@@ -17,7 +17,7 @@ import React from 'react';
 
 
 const DetailDDD = () => {
-    const themeColor = '[#0041AF]'
+    const themeColor = '#0041AF'
     const txtColor = '#03193B'
     return (
         <React.Fragment>

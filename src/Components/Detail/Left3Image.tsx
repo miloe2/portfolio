@@ -14,8 +14,9 @@ interface LeftImageProps {
 
 const Left3Image :React.FC<LeftImageProps> = ({ bgColor, txtColor, img1, img2, img3, title, desc }) => {
     return (
-        <div className='lg:w-[1240px] w-full h-full mx-auto flex lg:flex-row flex-col  relative justify-center items-center mb-40 '>
-            <div className={`lg:w-1/2 w-full ring-0 h-full bg-${bgColor} flex justify-center items-center flex-col`}>
+        <div className='lg:w-[1240px] w-full h-full mx-auto flex lg:flex-row flex-col-reverse  relative justify-center items-center mb-40 '>
+            <div className={`lg:w-1/2 w-full ring-0 h-full  flex justify-center items-center flex-col`}
+            style={{ backgroundColor : bgColor}}>
                 <div className=' w-8/12 h-40  mb-10'>
                     <img src={img1} alt="" className='w-full h-full object-cover object-center'/>
                 </div>

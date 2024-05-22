@@ -3,7 +3,7 @@ import tslogo from '../../assets/Images/Icons/Typescript_logo_2020.svg'
 const TSLogoSnipet = () => {
     return (
         <div className=' w-full flex-col-reverse lg:w-[1024px] h-[800px] flex lg:flex-row itmes-center justify-center mx-auto'>
-            <div className='lg:w-1/2 w-full h-full flex flex-col lg:p-10 p-0 justify-center 
+            <div className='lg:w-1/2 w-full h-full flex flex-col  pl-10 lg:p-0 justify-center 
             relative  mt-20 lg:mt-0' >
                 <div className='flex flex-row'>
                     <div className='w-20 border-4 rounded-full border-fuchsia-400 mr-5'/>
