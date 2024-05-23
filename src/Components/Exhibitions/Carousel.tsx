@@ -6,7 +6,7 @@ const Carousel = () => {
     return (
         <div className='flex-col flex bg-black'>
         {/* <div className='text-xl font-bold py-8  text-white pl-48 '> 프로젝트 </div> */}
-        <div className='w-screen h-screen bg-blue-300 flex relative flex'>
+        <div className='w-screen h-screen bg-blue-300  relative flex'>
             
             <div className='bg-gradient-to-t to-black from-transparent w-screen h-12 absolute top-0 '/>
                 <div className='bg-black w-3/12 h-full items-center flex'>

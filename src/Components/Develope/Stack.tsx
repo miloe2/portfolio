@@ -21,7 +21,7 @@ const Stack = () => {
                 {stacks.map((stack, index) => {
                     if (StackCircle[stack]) {
                         return (
-                        <div key={index} className='mx-3 justify-center items-center flex flex-col mb-4'>
+                        <div key={index} className='mx-3  items-center flex flex-col mb-4'>
                             {StackCircle[stack](index)}
                         </div>
                         );

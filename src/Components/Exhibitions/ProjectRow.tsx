@@ -6,7 +6,7 @@ const ProjectRow = () => {
     const diaryImageRef = useRef<HTMLDivElement | null>(null);
     const [scrollX, setScrollX] = useState(0);
     const [totalWidth, setTotalWidth] = useState(0);
-
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     // 컴포넌트가 마운트될 때 스크롤 이벤트 리스너 등록
 
     useEffect(() => {
@@ -53,7 +53,7 @@ const ProjectRow = () => {
 
     return (
         <>
-        <div className='w-screen h-screen bg-black flex justify-center pl-48 flex-col max-[1024px]:px-10 '>
+        <div className='w-full h-screen bg-black flex justify-center pl-48 flex-col max-[1024px]:px-10 '>
         <div className='text-xl font-bold py-8 text-red-600'> 프로젝트 </div>
             {/* 이미지 들어가는 공간 */}
             <div ref={diaryImageRef} 
@@ -77,11 +77,16 @@ const ProjectRow = () => {
                 ))}
             </div>
             {/* 가로 스크롤바  */}
-            <div className='bg-black w-1/3 h-16 min-w-fit max-[1024px]:w-80 items-end flex '>
-                <div className='w-4/5 h-1 bg-[#616060] ' >
+            <div className='bg-green-500 h-16 lg:min-w-[20rem] w-full  items-end flex ring-4 '>
+                <div className='w-full h-10 bg-[#616060] ' >
+                    {/* {(scrollX / totalWidth) * 100} <br /> */}
+                    {/* { (scrollX / (totalWidth - windowWidth)) * 100} <br />
+                    {totalWidth}
+                    {windowWidth} */}
                     <div className=' h-full bg-red-600'
-                    style={{ width: `${( scrollX / totalWidth) * 200}%`, maxWidth: '100%' }}
+                    style={{ width: `${(scrollX / (totalWidth - windowWidth))* 200}%`, maxWidth: '100%' }}
                     >
+                    {totalWidth}
 
                     </div>
                 </div>

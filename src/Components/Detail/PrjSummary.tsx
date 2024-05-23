@@ -9,7 +9,11 @@ interface prjSummaryProps {
 }
 const PrjSummary :React.FC<prjSummaryProps>  = ({title1, desc1, title2, desc2, desc3, txtColor}) => {
     return (
-        <div className='lg:max-w-5xl w-full grid grid-cols-1 md:grid-cols-3  mx-auto mb-40 ring-4'>
+        <div className='lg:max-w-5xl w-full  mx-auto mb-40  flex flex-col lg:flex-row space-y-4 text-center'>
+
+
+
+
             <div className='flex   col-span-1 '>
                 <div className={`text-4xl/12 font-bold whitespace-pre-line  w-40 mx-4 `}  style={{ color: txtColor }}>{title1}</div>
                 <div className='text-sm/6 whitespace-pre-line '>{desc1}</div>
@@ -27,3 +31,15 @@ const PrjSummary :React.FC<prjSummaryProps>  = ({title1, desc1, title2, desc2, d
 };
 
 export default PrjSummary;
+
+            {/* - URL : https://padaapp.com
+- 연계/소속회사 : 피소프트 / 파충류 다 있다
+- 주요 업무 : 프론트엔드
+- 담당 역할 : 화면 기획 및 설계, 프론트엔드 구현
+- 기술 스택 : VUE, Typescript, Vuex, tailwind CSS
+- 업무 기간 : 2024.01 ~ 2024.05 (약 5개월)
+- 개발 인원 : 총 2인 ( 백엔드, 프론트엔드 )
+                {/* <div className='lg:'>역할 : 화면 기획 및 설계 프론트엔드 구현</div>
+                <div>기간 : 2024.01 ~ 2024.05</div>
+                <div>인원 : BE 1명 / FE 1명</div> 
+- 상세 내용 : */}
