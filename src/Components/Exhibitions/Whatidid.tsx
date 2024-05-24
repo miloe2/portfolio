@@ -50,7 +50,7 @@ const Whatidid = () => {
                     { scrollY >= 1900 ? <div className={blackOpacity}/> : <div className={blackBG}/>  }
                 </div>
             </div>
-            <div className='lg:w-1/3 w-full px-14 py-10 lg:px-0  h-auto  flex-col sticky top-16 overflow-hidden text-white bg-black bg-opacity-80 lg:bg-transparent '>
+            <div className='lg:w-1/3 w-full px-14 py-10 lg:px-0  h-auto  flex-col sticky lg:top-1/3 top-16 overflow-hidden text-white bg-black bg-opacity-80 lg:bg-transparent '>
                 <div className='text-sm text-zinc-500'> Exhibitions</div>
                 <div className='text-3xl font-bold py-4 text-[#D81519]'>What I did </div>
                 <div className='text-xs/6 whitespace-pre-line '> 

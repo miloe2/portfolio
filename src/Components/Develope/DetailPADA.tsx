@@ -2,14 +2,15 @@ import React from 'react';
 import pada1 from '../../assets/Images/Photos/pada1.png'
 import pada2 from '../../assets/Images/Photos/pada2.png'
 import pada3 from '../../assets/Images/Photos/pada3.png'
+import pada4 from '../../assets/Images/Photos/pada_event.png'
 
 import RightFullImage from '../Detail/RightFullImage';
 import LeftImage from '../Detail/LeftImage';
 import ViewCode from '../Detail/ViewCode';
-// import PrjSummary from '../Detail/PrjSummary';
-import Left3Image from '../Detail/Left3Image';
+import PrjSummary from '../Detail/PrjSummary';
+// import Left3Image from '../Detail/Left3Image';
 import Left1ImageProps from '../Detail/Left1Image'
-
+import RightImage from '../Detail/RightImage';
 import videoUrl from '../../assets/Video/pada3video.mp4';
 
 
@@ -21,7 +22,7 @@ const DetailPortfolio = () => {
     const descColor ='white'
     return (
         <React.Fragment>
-{/* 
+
         <PrjSummary
             title1='개요'
             desc1='팀 구성: BE 1명, FE 1명, 
@@ -36,9 +37,9 @@ const DetailPortfolio = () => {
             desc3='- 게시글 작성 업로드 이미지 압축
             - 글수정 이미지 변경 체크 및 드래그 수정'
             txtColor = {txtColor}
-        /> */}
+        />
 
-<Left3Image 
+{/* <Left3Image 
                 bgColor={themeColor}
                 txtColor={txtColor}
                 img1={pada1}
@@ -50,7 +51,7 @@ const DetailPortfolio = () => {
                 desc='전시 예매 및 정보 공유 커뮤니티입니다. 
                 전시 예매, 전시 평가하기(다이어리), 동행찾기 등 
                 세 가지 부분을 중점으로 설계되었습니다.'
-            /> 
+            />  */}
 
         <ViewCode
         bgColor = {themeColor}
@@ -65,17 +66,42 @@ const DetailPortfolio = () => {
             txtColor={txtColor}
             descColor = {descColor}
             img={pada1} 
-            title=' API 호출 최소화
-              ' 
-            desc='종/모프가 100종 이상이었기 때문에,
-            API 호출이 잦을수 있었습니다.
-            대분류를 vuex로 상태관리하여 최소한의 통신으로
-            사용자경험을 끌어올렸습니다.     ' />
+            title='VUEX를 통한 
+            중복 호출 방지' 
+            desc='사용자가 카테고리는 VUEX로 객체화하여
+            서버 호출 없이 접근 할수 있도록 하여
+            잦은 호출을 방지하였습니다.' />
+            <RightImage 
+                bgColor={themeColor} 
+                txtColor={txtColor}
+                title='소셜로그인 및
+                카카오 API'
+
+                desc='기존 앱과 연동하여 구글/카카오 로그인을 구현하고
+                기존 회원이 아닌 경우 자동으로 회원가입이 될 수 있게 하였습니다.
+                
+                이벤트 페이지에서 카카오 API를 활용하여서,
+                장소 위치를 출력하고, 카카오 공유를 구현하였습니다.
+                '
+                
+                img={pada4}
+                items='start'
+            />
+
+<LeftImage
+            bgColor='#00D191'
+            txtColor={txtColor}
+            title='커서형 무한스크롤'
+            desc='무한스크롤을 적용하여서, 
+            사용자 경험을 개선하였습니다.'
+            source={videoUrl}
+            items='center'
+        />
             <Left1ImageProps
                 bgColor={themeColor}
                 txtColor={txtColor}
-                title='게시글 작성 
-                및 수정'
+                title='이미지 압축 및
+                Drag&Drop을 통한 순서 변경'
 
                 desc='
                 이미지 업로드 시, 용량을 압축하고
@@ -98,15 +124,7 @@ const DetailPortfolio = () => {
                분양탭 모두 미디어쿼리가 적용되었습니다. ' />
 
         
-        <LeftImage
-            bgColor='#00D191'
-            txtColor={txtColor}
-            title='커서형 무한스크롤'
-            desc='무한스크롤을 적용하여서, 
-            사용자 경험을 개선하였습니다.'
-            source={videoUrl}
-            items='center'
-        />
+
 
 
 
