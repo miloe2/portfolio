@@ -109,8 +109,8 @@ const Navigator = () => {
                 </div></>}
 
 
-                    <div className='bg-black w-12 h-12 border-1 border-zinc-600 mr-8 rounded-full flex justify-center items-center 
-                                    cursor-pointer fixed top-2 right-0 transition-all ease-in-out duration-500' 
+                    <div className='bg-black sm:w-12 sm:h-12 h-8 w-8 border-1 border-zinc-600 mr-8 rounded-full flex justify-center items-center 
+                                    cursor-pointer fixed sm:top-2 top-4 sm:right-0 -right-8 transition-all ease-in-out duration-500' 
                         onClick={handleXBtn}
                         style={crossed800 || contactModal ? {opacity:'100'} : {opacity:'0'} }>
                             
