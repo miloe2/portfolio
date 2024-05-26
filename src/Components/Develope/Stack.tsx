@@ -14,14 +14,14 @@ const Stack = () => {
   
 
     return (
-        <div className='w-3xl min-h-[300px] justify-center items-center flex'>
+        <div className='w-3xl min-h-[300px] justify-center items-center flex '>
             <div className='w-full h-full flex justify-center items-center flex-col'>
-            <div className=' mb-10 font-bold text-xl'>Stack</div>
-            <div  className='flex  flex-wrap justify-center'>
+            <div className=' mb-4 font-bold text-lg'>Stack</div>
+            <div  className='flex  flex-wrap justify-center  bg-zinc-50 rounded-xl px-4 pb-4 pt-6'>
                 {stacks.map((stack, index) => {
                     if (StackCircle[stack]) {
                         return (
-                        <div key={index} className='mx-3  items-center flex flex-col mb-4'>
+                        <div key={index} className='mx-3  items-center flex flex-col mb-4 '>
                             {StackCircle[stack](index)}
                         </div>
                         );

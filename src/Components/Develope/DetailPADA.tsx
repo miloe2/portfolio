@@ -7,7 +7,7 @@ import pada4 from '../../assets/Images/Photos/pada_event.png'
 import RightFullImage from '../Detail/RightFullImage';
 import LeftImage from '../Detail/LeftImage';
 import ViewCode from '../Detail/ViewCode';
-import PrjSummary from '../Detail/PrjSummary';
+// import PrjSummary from '../Detail/PrjSummary';
 // import Left3Image from '../Detail/Left3Image';
 import Left1ImageProps from '../Detail/Left1Image'
 import RightImage from '../Detail/RightImage';
@@ -23,7 +23,7 @@ const DetailPortfolio = () => {
     return (
         <React.Fragment>
 
-        <PrjSummary
+        {/* <PrjSummary
             title1='개요'
             desc1='팀 구성: BE 1명, FE 1명, 
             디자이너 1명
@@ -37,7 +37,7 @@ const DetailPortfolio = () => {
             desc3='- 게시글 작성 업로드 이미지 압축
             - 글수정 이미지 변경 체크 및 드래그 수정'
             txtColor = {txtColor}
-        />
+        /> */}
 
 {/* <Left3Image 
                 bgColor={themeColor}

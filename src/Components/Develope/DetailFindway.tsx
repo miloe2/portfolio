@@ -1,7 +1,7 @@
 import ViewCode from '../Detail/ViewCode';
 import LeftImage from '../Detail/LeftImage';
 import RightFullImage from '../Detail/RightFullImage';
-import PrjSummary from '../Detail/PrjSummary';
+// import PrjSummary from '../Detail/PrjSummary';
 
 
 import videoUrl from '../../assets/Video/findwayVideo.mp4';
@@ -15,7 +15,7 @@ const DetailFindway = () => {
     const txtColor  = '#E7236B'
     return (
         <div className='w-full h-auto '>
-        <PrjSummary
+        {/* <PrjSummary
             title1='개요'
             desc1='팀 구성 : BE 2명 + FE 2명
             개발 기간 : 1개월
@@ -28,7 +28,7 @@ const DetailFindway = () => {
             desc3='- 따릉이 조회 및 출력
                 (공공API + 카카오맵 연동)'
             txtColor = {txtColor}
-        />
+        /> */}
 
 
         <ViewCode

@@ -29,16 +29,8 @@ const DetailPortfolio = () => {
         <React.Fragment>
 
         <PrjSummary
-            title1='개요'
-            desc1='팀 구성 : 개인 프로젝트
-            개발 기간 : 1개월.
-            역할 : 100%'
-            title2='주요역할'
-            desc2='- 전반적인 사이트 제작 
-            - 인터렉티브한 UI/UX 구현
-                    '
-            desc3='- TypeScript, Tailiwind CSS 연습
-            - IntersectionObserve, zustand 적용'
+            desc1={['개인 프로젝트', '프론트엔드', '1개월']}
+            desc2={['포트폴리오 사이트 제작', 'Typescript, Tailwind css 연습', 'Intersection Observer 연습', 'Git을 이용한 정적페이지 배포']}
             txtColor = {txtColor}
         />
 

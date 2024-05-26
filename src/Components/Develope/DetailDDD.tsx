@@ -4,7 +4,7 @@ import RightImage from '../Detail/RightImage';
 import Left1ImageProps from '../Detail/Left1Image';
 import FullImage from '../Detail/FullImage';
 import ViewCode from '../Detail/ViewCode';
-import PrjSummary from '../Detail/PrjSummary';
+// import PrjSummary from '../Detail/PrjSummary';
 
 import videoUrl from '../../assets/Video/DDD2.mp4';
 import img1 from '../../assets/Images/Photos/DDD.webp'
@@ -21,7 +21,7 @@ const DetailDDD = () => {
     const txtColor = '#03193B'
     return (
         <React.Fragment>
-        <PrjSummary
+        {/* <PrjSummary
             title1='개요'
             desc1='팀 구성 : 풀스택 3명
             개발 기간 : 1개월
@@ -37,7 +37,7 @@ const DetailDDD = () => {
             - 모바일 미디어쿼리 적용'
 
             txtColor = {txtColor}
-        />
+        /> */}
         <ViewCode
                 bgColor = {themeColor}
                 txtColor='white'
