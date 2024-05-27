@@ -3,28 +3,33 @@ interface prjSummaryProps {
     desc1 : string[];
     desc2 : string[];
     txtColor: string;
+    themeColor: string;
 }
-const PrjSummary :React.FC<prjSummaryProps>  = ({ desc1, title2, desc2, desc3, txtColor}) => {
+const PrjSummary :React.FC<prjSummaryProps>  = ({ desc1, desc2, txtColor}) => {
     return (
         <div className='lg:max-w-5xl w-full h-40  mx-auto mb-40  
-        flex flex-col lg:flex-row space-y-4 text-center ring-4 bg-blue-500 rounded-xl
+        flex flex-col lg:flex-row space-y-4 text-center  bg-blue-00 rounded-xl
         p-6'>
-            <div className='bg-yellow-500 w-full h-full flex text-left'>
-                <div className='bg-purple-500 w-1/2 flex flex-col px-0'>
-                    <div className={`text-3xl/12 font-bold whitespace-pre-line ring-4`}  style={{ color: txtColor }}>개요</div>
-                    <div className='flex space-x-4'>
-                        <div className='text-sm/6 whitespace-pre-line '> 인원 : {desc1[0]}</div>
-                        <div className='text-sm/6 whitespace-pre-line '> 역할 : {desc1[1]} </div>
-                        <div className='text-sm/6 whitespace-pre-line '> 기간 : {desc1[2]}</div>
+            <div className='bg-yellow-00 w-full h-full flex text-left'>
+                <div className='bg-purple-00 w-1/2 flex flex-col px-0'>
+                    <div className={`text-3xl/12 font-bold whitespace-pre-line `}>개요</div>
+                    <div className='flex space-x-5 text-zinc-600 font-semibold mt-2'>
+                        <div className='text-sm/6 whitespace-pre-line ' > 인원 <span className=' ml-2' style={{ color: txtColor }}> {desc1[0]}</span></div>
+                        <div className='text-sm/6 whitespace-pre-line '> 역할  <span className='ml-2'
+                        style={{ color: txtColor }} >{desc1[1]} </span></div>
+                        <div className='text-sm/6 whitespace-pre-line '> 기간  <span className='ml-2' style={{ color: txtColor }}>{desc1[2]}</span></div>
+                    </div>
+                    <div className='font-semibold mt-1 text-zinc-600 text-sm/6'>
+                        개인 포트폴리오 사이트 제작
                     </div>
 
                 </div>
-                <div className='bg-green-500 w-1/2'>
-                <div className={`text-3xl/12 font-bold whitespace-pre-line ring-4`}  style={{ color: txtColor }}>개요</div>
-                    <ul className='grid grid-cols-2 pl-4 ring-4'>
+                <div className='w-1/2'>
+                <div className={`text-3xl/12 font-bold whitespace-pre-line `}>상세 내용</div>
+                    <ul className='grid grid-cols-2 pl-4 gap-y-1 text-zinc-600 font-semibold mt-2'>
                         {desc2.map((desc, index) => {
                             return (
-                            <li key={index} className='text-sm/6 whitespace-pre-line list-disc bg-red-500'>
+                            <li key={index} className='text-sm/6 whitespace-pre-line list-disc '>
                                 {desc}
                             </li>
                             );

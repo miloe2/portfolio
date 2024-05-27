@@ -55,9 +55,9 @@ const TSLogoSnipet = () => {
             <div className=' lg:w-1/2 w-full
               h-full  lg:justify-end justify-center  items-center flex '>
                 <div className='bg-[#FF5851] w-full lg:h-3/5 h-full p-16 
-                justify-center flex flex-col  items-center'>
-                <div className='sm:text-5xl/12 text-4xl/10 font-bold whitespace-pre-line text-[#0041AF]  '> Typescript </div>
-                    <div className='sm:text-lg/8 text-sm/6 whitespace-pre-line h-auto mt-5 text-white'> 
+                justify-center flex flex-col  items-start'>
+                <div className='lg:text-4xl/12 text-3xl/10 font-bold  whitespace-pre-line text-[#0041AF]  '> Typescript </div>
+                    <div className='lg:text-base/8 text-sm/6 whitespace-pre-line h-auto mt-5 text-white'> 
                     현직 개발 트렌드와 가독성 및 안정성을 높이기 위하여, <br/>
                     TypeScript (React.ts)를 적용하였습니다.   
                     </div>
