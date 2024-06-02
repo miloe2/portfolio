@@ -29,8 +29,8 @@ const DetailPortfolio = () => {
         <React.Fragment>
 
         <PrjSummary
-            desc1={['개인 프로젝트', '프론트엔드', '1개월']}
-            desc2={['포트폴리오 사이트 제작', 'Typescript, Tailwind css 연습', 'Intersection Observer 연습', 'Git을 이용한 정적페이지 배포']}
+            desc1={['개인 프로젝트', '프론트엔드', '1개월', '개인 포트폴리오 사이트 제작']}
+            desc2={['페이지 디자인 및 기획', 'Typescript, Tailwind css 사용', 'Scroll 기반 애니메이션 디자인', 'Git을 이용한 정적페이지 배포']}
             txtColor = {txtColor}
             themeColor = {themeColor}
         />
@@ -52,16 +52,16 @@ const DetailPortfolio = () => {
             descColor = {descColor}
             img={twcssImg} 
             title='Tailwind CSS' 
-            desc='기존에 사용하던 Styled Components에서
-            평소 사용해보고 싶었던, Tailwind CSS로 
-            작업하였습니다.  ' />
+            desc=' 평소 사용해보고 싶었던, 
+            Tailwind CSS로 작업하고
+            기존보다 빠르게 스타일링을 완성하였습니다.  ' />
             {/* <div className='w-screen h-40'/> */}
 
         <Text2Parg
             txtColor={txtColor}
             title='Work.Develope' 
-            desc='현재까지 연습한 개발 관련 
-            프로젝트를 정리하였습니다. 
+            desc='페이지 디자인 및 구성을
+            혼자 기획하고 제작하였습니다.
             ' />
 
         <Center9image
@@ -80,9 +80,10 @@ const DetailPortfolio = () => {
             <LeftImage
                 bgColor='#f5f5f5'
                 txtColor={txtColor}
-                title='Scroll 기반 애니메이션'
-                desc='기존에 근무하였던, Exhibition 업무도
-                    정리하여 페이지를 구성하였습니다. '
+                title='Scroll 기반 
+                애니메이션'
+                desc='Scroll 좌표를 활용하여, 
+                인터렉티브한 애니메이션을 구현하였습니다. '
                 source={videoUrl}
                 items='center'
             />

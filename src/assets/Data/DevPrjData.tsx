@@ -42,7 +42,7 @@ const DevPrjData  = [
     {
         id: 3,  title: "PADA", date : "23. 12. 01 - 24. 01. 31", 
         desc : "파충류 커뮤니티 플랫폼 ", 
-        stack :"javascript, vue, tailwindcss, aws, ",
+        stack :"typescript, vue, tailwindcss, aws,  git, figma,  ",
         imgUrl: pada,
         color : {
             bg : "bg-[#00D191]",

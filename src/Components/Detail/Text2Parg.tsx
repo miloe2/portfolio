@@ -7,7 +7,7 @@ interface Text2PargProps {
 
 const Text2Parg :React.FC<Text2PargProps>  = ({title, desc, txtColor}) => {
     return (
-        <div className='lg:w-[600px] w-full h-auto py-5 ring-4 grid lg:grid-cols-2 grid-cols-1  mx-auto mb-0'>
+        <div className='lg:w-[600px] w-full h-auto py-5 grid lg:grid-cols-2 grid-cols-1  mx-auto mb-0'>
                 <div className={`lg:text-4xl/12 text-3xl/10   justify-center font-bold 
                 whitespace-pre-line mx-12 flex items-center `} style={{ color: txtColor }}>
                     {title}

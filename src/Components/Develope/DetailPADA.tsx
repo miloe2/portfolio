@@ -7,7 +7,7 @@ import pada4 from '../../assets/Images/Photos/pada_event.png'
 import RightFullImage from '../Detail/RightFullImage';
 import LeftImage from '../Detail/LeftImage';
 import ViewCode from '../Detail/ViewCode';
-// import PrjSummary from '../Detail/PrjSummary';
+import PrjSummary from '../Detail/PrjSummary';
 // import Left3Image from '../Detail/Left3Image';
 import Left1ImageProps from '../Detail/Left1Image'
 import RightImage from '../Detail/RightImage';
@@ -22,9 +22,17 @@ const DetailPortfolio = () => {
     const descColor ='white'
     return (
         <React.Fragment>
-
+        <PrjSummary
+            desc1={['BE 1명, FE 1명, Designer 1명', '프론트엔드', '3개월', '앱서비스 PADA 홈페이지 버전 / 관리자 페이지 ']}
+            desc2={['VUEX를 활용한 중복 호출 방지', '커서형 페이지네이션/무한스크롤', '소셜로그인 및 카카오 API', 'S3, Route53, CloudFront 웹 배포', '관리자 페이지 제작', 'Indexed DB']}
+            txtColor = {txtColor}
+            themeColor = {themeColor}
+        />
         {/* <PrjSummary
-            title1='개요'
+            desc1={['개인 프로젝트', '프론트엔드', '1개월']}
+            desc2={['포트폴리오 사이트 제작', 'Typescript, Tailwind css 연습', 'Intersection Observer 연습', 'Git을 이용한 정적페이지 배포']}
+            txtColor = {txtColor}
+            themeColor = {themeColor}
             desc1='팀 구성: BE 1명, FE 1명, 
             디자이너 1명
             개발 기간 : 2개월.
