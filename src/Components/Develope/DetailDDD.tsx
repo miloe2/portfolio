@@ -4,7 +4,7 @@ import RightImage from '../Detail/RightImage';
 import Left1ImageProps from '../Detail/Left1Image';
 import FullImage from '../Detail/FullImage';
 import ViewCode from '../Detail/ViewCode';
-// import PrjSummary from '../Detail/PrjSummary';
+import PrjSummary from '../Detail/PrjSummary';
 
 import videoUrl from '../../assets/Video/DDD2.mp4';
 import img1 from '../../assets/Images/Photos/DDD.webp'
@@ -21,6 +21,12 @@ const DetailDDD = () => {
     const txtColor = '#03193B'
     return (
         <React.Fragment>
+        <PrjSummary
+            desc1={['풀스택 3명', '백엔드, 프론트엔드', '1개월', '전시 공공API를 활용한 커뮤니티']}
+            desc2={['스프링부트 JPA를 활용한 백엔드 구현', 'JWT / 이메일 인증 적용 ', 'zustand를 활용한 회원 정보 전역 관리', 'EC2를 활용한 웹 배포']}
+            txtColor = {txtColor}
+            themeColor = {themeColor}
+        />
         {/* <PrjSummary
             title1='개요'
             desc1='팀 구성 : 풀스택 3명
@@ -41,9 +47,9 @@ const DetailDDD = () => {
         <ViewCode
                 bgColor = {themeColor}
                 txtColor='white'
-                site = 'https://3.39.206.99:8111/'
+                site = '#'
                 git = 'https://github.com/nessayj/RealFinalProject-DDD'
-                notice = 'ID: test / PW :test'
+                // notice = 'ID: test / PW :test'
             />
 
 
@@ -54,12 +60,12 @@ const DetailDDD = () => {
                 img1={img1}
                 img2={img2}
                 img3={img5}
-                title='Diverse
-                        Different  
-                        Display'
-                desc='전시 예매 및 정보 공유 커뮤니티입니다. 
-                전시 예매, 전시 평가하기(다이어리), 동행찾기 등 
-                세 가지 부분을 중점으로 설계되었습니다.'
+                title='백엔드 &
+                프론트엔드 
+                제작'
+                desc='Springboot와 React를 활용하여,
+                풀스택으로 백엔드&프론트엔드 
+                모두 구현하였습니다.'
             /> 
 
 
@@ -69,11 +75,11 @@ const DetailDDD = () => {
                 bgColor={themeColor} 
                 txtColor={txtColor}
                 title='다이어리,
-                        사용자조회'
+                        평가 및 조회'
 
-                desc='유저는 자신만의 다이어리(전시회 평가/코멘트)를
-                    가지고있으며 유저 조회 기능으로 다른 유저의 
-                    다이어리를 확인 할 수 있습니다.'
+                desc='별점으로 평가를 남기고,
+                해당 데이터는 조인을 통하여 
+                다른 유저도 조회를 할 수 있게 구현하였습니다. '
                 
                 img={img2}
                 items='start'
@@ -81,11 +87,12 @@ const DetailDDD = () => {
             <Left1ImageProps
                 bgColor={themeColor}
                 txtColor={txtColor}
-                title='마이페이지
-                Customized'
+                title='zustand를 활용한
+                회원 정보 전역관리'
 
-                desc='마이페이지는 Firebase를 활용하여   
-                Customizing이 가능하게 설계하였습니다. '
+                desc='zustand와 localStorage로,
+                다른 유저의 페이지 조회가 가능하고 
+                자신의 마이페이지에서만 수정할 수 있게 설계하였습니다. '
                 
                 img1={img3}
 

@@ -11,7 +11,7 @@ interface Left1ImageProps {
 
 const Left1Image :React.FC<Left1ImageProps> = ({ bgColor, txtColor, img1, title, desc }) => {
     return (
-        <div className='lg:w-[1240px] w-full h-full flex lg:flex-row flex-col-reverse relative justify-center items-center mx-auto mb-40'>
+        <div className='lg:w-[1240px] w-full h-full flex lg:flex-row flex-col-reverse relative justify-center items-center mx-auto mb-60'>
             <div className={`lg:w-2/3 w-full h-auto   flex justify-center items-start flex-col lg:p-0 p-6`}     style={{ backgroundColor : bgColor}}>
                 <img src={img1} alt="" className='w-full h-full '/>
             </div>

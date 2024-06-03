@@ -13,7 +13,7 @@ interface Center9imageProps {
 }
 const Center9image :React.FC<Center9imageProps>= ({bgColor, img1, img2, img3, img4, img5, img6, img7, img8, img9}) => {
     return (
-        <div className='w-screen h-auto border-0 mb-40'>
+        <div className='w-screen h-auto border-0 mb-60'>
 <div className={`w-full h-auto pt-32 grid grid-cols-1 gap-4 lg:px-20 px-10
   lg:grid-cols-3 md:grid-cols-2`}
   style={{ backgroundColor : bgColor}}>

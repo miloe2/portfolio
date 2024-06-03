@@ -1,7 +1,7 @@
 import ViewCode from '../Detail/ViewCode';
 import LeftImage from '../Detail/LeftImage';
 import RightFullImage from '../Detail/RightFullImage';
-// import PrjSummary from '../Detail/PrjSummary';
+import PrjSummary from '../Detail/PrjSummary';
 
 
 import videoUrl from '../../assets/Video/findwayVideo.mp4';
@@ -15,6 +15,12 @@ const DetailFindway = () => {
     const txtColor  = '#E7236B'
     return (
         <div className='w-full h-auto '>
+            <PrjSummary
+            desc1={['BE 2명, FE 2명', '프론트엔드', '1개월', '지하철 노선도를 활용한 길 찾기']}
+            desc2={['지하철 노선도를 통한 UI', '소요시간/환승역/시간표 등 결과값 표시', '따릉이API + 카카오맵 구현']}
+            txtColor = {txtColor}
+            themeColor = {themeColor}
+        />
         {/* <PrjSummary
             title1='개요'
             desc1='팀 구성 : BE 2명 + FE 2명

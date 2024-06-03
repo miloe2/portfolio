@@ -16,7 +16,7 @@ const LeftImage :React.FC<LefttImageLeftProps> = ({bgColor, txtColor, title, des
     
     return (
 
-        <div className={`w-full h-full flex relative justify-end items-center lg:flex-row flex-col-reverse mb-40 `}>
+        <div className={`w-full h-full flex relative justify-end items-center lg:flex-row flex-col-reverse mb-60 `}>
 
             <div className={`lg:w-1/2 w-full h-auto py-20 flex  mt-10
             justify-center items-${items} flex-col `} 
@@ -35,7 +35,7 @@ const LeftImage :React.FC<LefttImageLeftProps> = ({bgColor, txtColor, title, des
 
             </div>
             <div className={`lg:w-1/2 w-full h-full flex justify-center items-center flex-col`}>
-                <div className='lg:w-80   h-auto mx-auto'>
+                <div className='w-80  h-auto mx-auto'>
                     <div className={`text-4xl/12 font-bold whitespace-pre-line  py-2 `}  style={{ color: txtColor }}> {title} </div>
                     <div className='text-lg/8 whitespace-pre-line mt-5'> 
                         {desc}

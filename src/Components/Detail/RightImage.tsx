@@ -12,7 +12,7 @@ interface RightImageLeftProps {
 
 const RightImage :React.FC<RightImageLeftProps> = ({bgColor, txtColor, title, desc, img, items}) => {
     return (
-        <div className=' lg:w-[1240px]  w-full mx-auto h-full flex lg:flex-row flex-col relative justify-end items-center mb-40'>
+        <div className=' lg:w-[1240px]  w-full mx-auto h-full flex lg:flex-row flex-col relative justify-end items-center mb-60'>
             <div className={`lg:w-1/2 w-full h-full flex justify-center items-center flex-col mx-auto`}>
                 <div className='w-80 h-auto lg:mb-0 mb-10 '>
                     <div className='text-4xl/12 font-bold whitespace-pre-line  py-2 ' style={{ color: txtColor }}> {title} </div>

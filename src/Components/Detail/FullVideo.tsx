@@ -15,7 +15,7 @@ const FullVideo: React.FC<FullVideoProps> = ({ videoUrl, bgColor }) => {
   // bg-[#0041AF]
   // p-40
   return (
-    <div className={`w-screen h-auto lg:py-40 lg:px-0 py-20 px-10  flex justify-center items-center mb-40`}
+    <div className={`w-screen h-auto lg:py-40 lg:px-0 py-20 px-10  flex justify-center items-center mb-60`}
     style={{ backgroundColor : bgColor}}>
       <video autoPlay loop muted playsInline>
         <source src={videoUrl} type="video/mp4" />

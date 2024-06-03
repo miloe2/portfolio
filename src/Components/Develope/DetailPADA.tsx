@@ -23,7 +23,7 @@ const DetailPortfolio = () => {
     return (
         <React.Fragment>
         <PrjSummary
-            desc1={['BE 1명, FE 1명, Designer 1명', '프론트엔드', '3개월', '앱서비스 PADA 홈페이지 버전 / 관리자 페이지 ']}
+            desc1={['BE 1명, FE 1명', '프론트엔드', '3개월', '앱서비스 PADA 홈페이지 버전 / 관리자 페이지 ']}
             desc2={['VUEX를 활용한 중복 호출 방지', '커서형 페이지네이션/무한스크롤', '소셜로그인 및 카카오 API', 'S3, Route53, CloudFront 웹 배포', '관리자 페이지 제작', 'Indexed DB']}
             txtColor = {txtColor}
             themeColor = {themeColor}

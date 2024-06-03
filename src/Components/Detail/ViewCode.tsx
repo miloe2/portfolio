@@ -15,7 +15,7 @@ const ViewCode :React.FC<ViewCodeProps> = ({bgColor, txtColor, site, git, notice
         <div className={`w-full h-auto flex justify-center items-center py-10 space-x-4 lg:mb-40 mb-20`} 
         style={{ backgroundColor : bgColor, color  : txtColor}}>
            <div className='flex flex-col  w-auto h-auto '>
-                <div className=' underline  font-bold '> 
+                <div className=' underline  font-semibold text-white'> 
                         {site !== '#' ? (<a href={site} target="_blank" rel="noopener noreferrer">사이트 접속하기</a>): null}
 
                     </div>
