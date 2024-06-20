@@ -14,7 +14,8 @@ import tailwindcss from '../../assets/Images/Icons/tailwindcss.svg';
 
 import styled from '../../assets/Images/Icons/styled.png';
 import vue from '../../assets/Images/Icons/vue.svg'
-
+// import nuxt from '../../assets/Images/Icons/nuxt.svg'
+import nuxt from '../../assets/Images/Icons/nuxt.svg'
 
 interface SkillType {
     skill: string;
@@ -36,6 +37,7 @@ const SkillsList: SkillType[] = [
     { skill: 'TailwindCSS', imgUrl: tailwindcss },
     { skill: 'Styled-Component', imgUrl: styled },
     { skill: 'vue', imgUrl: vue },
+    { skill: 'nuxt', imgUrl: nuxt },
 ];
 
 export default  SkillsList;

@@ -76,7 +76,7 @@ const DetailPortfolio = () => {
             img={pada1} 
             title='VUEX를 통한 
             중복 호출 방지' 
-            desc='사용자가 카테고리는 VUEX로 객체화하여
+            desc='카테고리는 VUEX로 객체화하여
             서버 호출 없이 접근 할수 있도록 하여
             잦은 호출을 방지하였습니다.' />
             <RightImage 

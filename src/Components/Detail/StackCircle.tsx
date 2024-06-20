@@ -14,6 +14,7 @@ import springboot from '../../assets/Images/Icons/spring-boot.png';
 import tailwindcss from '../../assets/Images/Icons/tailwindcss.svg';
 import styled from '../../assets/Images/Icons/styled.png';
 import vue from '../../assets/Images/Icons/vue.svg'
+import nuxt from '../../assets/Images/Icons/nuxt.svg'
 
 interface StackCircleType {
     [key: string]: (key: string | number) => JSX.Element;
@@ -205,6 +206,19 @@ const StackCircle :StackCircleType = {
             </div>
             <div className="text-xs mt-3 text-zinc-600 whitespace-pre-line text-center"> 
             {`vue` }</div>
+            </React.Fragment>
+        )
+    },
+    nuxt : (key) => {
+        return (
+            <React.Fragment key={key}>
+            <div className="w-12 h-12  rounded-full border border-zinc-500 justify-center items-center flex">
+                <div className='w-10 h-10 bg-white rounded-full border-zinc-300 border'>
+                    <img src={nuxt} alt="" className='w-full h-full object-cover rounded-full'/>
+                </div>
+            </div>
+            <div className="text-xs mt-3 text-zinc-600 whitespace-pre-line text-center"> 
+            {`nuxt` }</div>
             </React.Fragment>
         )
     },

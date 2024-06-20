@@ -4,6 +4,7 @@ import DetailDDD from "./DetailDDD";
 import DetailPortfolio from "./DetailPortfolio";
 import DetailFindway from "./DetailFindway";
 import DetailPADA from './DetailPADA';
+import DetailPia from './DetailPia'
 import Stack from "./Stack";
 
 
@@ -37,6 +38,10 @@ const Detail = () => {
                     <div ref={componentRef}>
                         <Stack/>
                         
+                        {devPage === 'piaenm' && 
+                        <DetailPia/>
+                        
+                        }
                         {devPage === 'PADA' && 
                         <DetailPADA/>
                         

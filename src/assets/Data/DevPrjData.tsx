@@ -2,6 +2,7 @@ import portfolioThumnail from '../Images/Photos/portfolio.webp'
 import findwayThumnail from '../Images/Photos/findway2.webp'
 import dddThumnail from '../Images/Photos/DDD.webp'
 import pada from '../Images/Photos/pada.png'
+import pia from '../Images/Photos/pia_main.webp'
 
 
 const DevPrjData  = [
@@ -41,12 +42,23 @@ const DevPrjData  = [
     },
     {
         id: 3,  title: "PADA", date : "23. 12. 01 - 24. 01. 31", 
-        desc : "파충류 커뮤니티 플랫폼 ", 
+        desc : "파충류 커뮤니티 플랫폼 / 관리자 페이지", 
         stack :"typescript, vue, tailwindcss, aws,  git, figma,  ",
         imgUrl: pada,
         color : {
             bg : "bg-[#00D191]",
             title : "text-yellow-300",
+            text : "text-white",
+        },
+    },
+    {
+        id: 4,  title: "piaenm", date : "24. 06. 01 - 24. 06. 21", 
+        desc : "영상프로덕션 홍보페이지 ", 
+        stack :"nuxt, tailwindcss, aws, git, figma,",
+        imgUrl: pia,
+        color : {
+            bg : "bg-black",
+            title : "text-[#353DFF]",
             text : "text-white",
         },
     },

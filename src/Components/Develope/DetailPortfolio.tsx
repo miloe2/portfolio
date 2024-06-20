@@ -60,8 +60,8 @@ const DetailPortfolio = () => {
         <Text2Parg
             txtColor={txtColor}
             title='Work.Develope' 
-            desc='페이지 디자인 및 구성을
-            혼자 기획하고 제작하였습니다.
+            desc='1인 개발로 페이지 디자인 구성부터
+            기획& 배포까지 진행하였습니다. 
             ' />
 
         <Center9image

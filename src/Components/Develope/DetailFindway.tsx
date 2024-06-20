@@ -8,6 +8,7 @@ import videoUrl from '../../assets/Video/findwayVideo.mp4';
 import img1 from '../../assets/Images/Photos/fw1.webp'
 import img2 from '../../assets/Images/Photos/fw2.webp'
 import img3 from '../../assets/Images/Photos/fw3.webp'
+import img4 from '../../assets/Images/Photos/findway2.webp'
 
 
 const DetailFindway = () => {
@@ -50,7 +51,7 @@ const DetailFindway = () => {
             txtColor={txtColor}
             title='찾기'
             desc='막차가 끊긴 이후, 저렴하게 귀가해보자라는 생각으로 만들어진 프로젝트입니다.  '
-            source={videoUrl}
+            source={img4}
             items='center'
         />
 
