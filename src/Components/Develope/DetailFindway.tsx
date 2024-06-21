@@ -4,7 +4,6 @@ import RightFullImage from '../Detail/RightFullImage';
 import PrjSummary from '../Detail/PrjSummary';
 
 
-import videoUrl from '../../assets/Video/findwayVideo.mp4';
 import img1 from '../../assets/Images/Photos/fw1.webp'
 import img2 from '../../assets/Images/Photos/fw2.webp'
 import img3 from '../../assets/Images/Photos/fw3.webp'

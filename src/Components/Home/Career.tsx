@@ -128,6 +128,10 @@ const Career = () => {
                     </div>
                     <div className='w-1 h-3'/>
                     <div className='w-auto h-7 flex text-sm '>
+                        <div className='w-16 '>2024.06</div>
+                        <div className='w-auto '>정보처리기사</div>
+                    </div>
+                    <div className='w-auto h-7 flex text-sm '>
                         <div className='w-16 '>2021.02</div>
                         <div className='w-auto '>국제무역사 1급</div>
                     </div>

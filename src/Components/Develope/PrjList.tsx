@@ -94,7 +94,7 @@ const PrjList = () => {
             </div>
         ))}
 
-            <div
+            {/* <div
             className={`w-full h-96 flex items-end relative bg-zinc-100 text-white`}
             >
                 <div className={`w-full h-full absolute top-0 transition duration-500`}/>
@@ -102,7 +102,7 @@ const PrjList = () => {
                         <div className={`text-xs h-2 w-10 bg-zinc-300 rounded-full ml-1`}>  </div>
                         <div className={`text-4xl font-bold h-4 w-20 bg-zinc-300 rounded-full mt-4`}>  </div>
                     </div>  
-                </div>
+                </div> */}
         </div>
         
 

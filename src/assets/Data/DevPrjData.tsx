@@ -9,7 +9,7 @@ const DevPrjData  = [
     {
         id: 0,  title: "찾기", date : "23. 04. 14 - 23. 05. 23", 
         desc : "막차 시간 이후 길 찾기 사이트", 
-        stack :"java, jsp, javascript, react, styled, mariadb, git, notion",
+        stack :"java, jsp,  react, styled, mariadb, git, notion",
         imgUrl:findwayThumnail,
         color : {
             bg:"bg-[#101420]",
@@ -20,7 +20,7 @@ const DevPrjData  = [
     {
         id: 1,  title: ":DDD", date : "23. 06. 01 - 23. 07. 25", 
         desc : "전시 예매 및 정보 공유 커뮤니티 사이트", 
-        stack :"java, jpa, javascript, react, styled, mysql, aws, git, figma, notion",
+        stack :"java, jpa,  react, styled, mysql, aws, git, figma, notion",
         imgUrl: dddThumnail,
         color : {
             bg:"bg-[#0041AF]",

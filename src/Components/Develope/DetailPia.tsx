@@ -12,13 +12,8 @@ import LeftImage from '../Detail/LeftImage';
 import ViewCode from '../Detail/ViewCode';
 import PrjSummary from '../Detail/PrjSummary';
 // import Left3Image from '../Detail/Left3Image';
-import Left1ImageProps from '../Detail/Left1Image'
 import RightImage from '../Detail/RightImage';
 import videoUrl from '../../assets/Video/pia_video.mp4';
-
-
-import FullVideo from '../Detail/FullVideo';
-import Text2Parg from '../Detail/Text2Parg';
 
 
 
