@@ -10,15 +10,15 @@ import Contact from './pages/Contact';
 function App() {
   return (
     <>
-    <Router basename="/portfolio.ts.vite">
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/develope" element={<Develope/>}/>
-        <Route path="/exhibitions" element={<Exhibitions/>}/>
-      </Routes>
-      <Navigator/>
-      <Contact/>
-    </Router>
+      <Router basename="/portfolio.ts.vite">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/develope" element={<Develope />} />
+          <Route path="/exhibitions" element={<Exhibitions />} />
+        </Routes>
+        <Navigator />
+        <Contact />
+      </Router>
 
     </>
   );
