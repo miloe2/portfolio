@@ -20,6 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "src/Components/Detail/TSLogoSnippet.tsx"],
+  "include": ["src", "src/Components/detail/TSLogoSnippet.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
