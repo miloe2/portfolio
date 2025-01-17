@@ -21,12 +21,12 @@ const Hello = () => {
               className='box-border min-w-1/2 h-11/12 relative bg-[#FF5851] transition-width duration-700 ease-in-out'
               style={scrollY < 50 ? { width: '50%' } : { width: '95%' }}
             >
-              <div className={`absolute top-1/2 -translate-y-1/2 right-0 translate-x-1/2 font-black text-[#242424] transition-opacity duration-1000 text-hello-heading ${scrollY > 50 ? 'opacity-10' : 'opacity-100'}`}>
+              <div className={`absolute top-1/2 -translate-y-1/2 right-0 translate-x-1/2 font-black bg-[#242424] text-[#242424] transition-opacity duration-1000 text-hello-heading ${scrollY > 50 ? 'opacity-10' : 'opacity-100'}`}>
                 안녕<br />
                 하세요<span className='text-[#FF5851]'>.</span>
               </div>
               <div
-                className={`absolute left-3/12 top-1/2 text-white transition-all duration-700  
+                className={`absolute left-3/12 top-1/2 text-white transition-all duration-700 bg-white 
                 ${scrollY > 0 && scrollY < 1000 ? '-translate-y-1/2 opacity-100' : 'opacity-0'}`}>
                 <p className='text-4xl leading-normal whitespace-nowrap font-bold text-hello-title'>
                   내안에 빛이 있으면 <br />

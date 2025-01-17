@@ -12,6 +12,7 @@ export default {
       fontSize: {
         "hello-heading" : "clamp(3rem, 9vw, 8.5rem)",
         "hello-title" : "clamp(1.875rem, 3vw, 3rem)",
+        "introduce-heading" : "clamp(3rem, 6.5vw, 8rem)",
       },
       // animation
       animation: {

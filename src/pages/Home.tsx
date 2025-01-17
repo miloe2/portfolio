@@ -12,17 +12,16 @@ const Home = () => {
   }, []); // 빈 배열로 전달하여 컴포넌트가 처음 마운트될 때 한 번만 실행
 
   return (
-    <div  >
-
+    <>
       <Hello />
-      <div className='w-full bg-white h-40' />
-      {/* <Introduce /> */}
+      <div className='w-full bg-yellow-100 h-40' />
+      <Introduce />
       <div className='w-full bg-white h-[60rem]' />
-      <ExpSkill />
+      {/* <ExpSkill /> */}
       <div className='w-full bg-white h-48' />
-      <Career />
+      {/* <Career /> */}
       <div className='w-full bg-white h-40' />
-    </div>
+    </>
 
   );
 };

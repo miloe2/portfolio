@@ -50,38 +50,42 @@ const Introduce = () => {
   }, []);
 
   return (
-    <div className='w-full h-auto relative flex justify-center items-center  max-[768px]:px-0'>
-      <div className='relative h-[80vh]'>
-        <div className='absolute md:-bottom-80 -bottom-14 -right-2/12 md:w-80 w-full h-96 ' ref={imageRef}>
-          <img 
-            src={pht1}
-            alt="" 
-            className={`w-full h-full object-cover transition-all duration-1000 object-bottom max-w-xs
-                            ${!isImageVisible ? 'opacity-0 transform translate-y-10' : 'opacity-100 transform translate-y-0'}`}
-          />
+    //  bg-green-500 lg:bg-red-500 2xl:bg-blue-500 
+    <div className='w-full flex flex-col max-w-sm lg:max-w-2xl 2xl:max-w-4xl mx-auto bg-green-200'>
+      <div
+        className={`
+          ${!isTextVisible ? 'opacity-0 translate-y-10' : 'opacity-100 translate-y-0'}
+          w-full h-full mx-auto text-introduce-heading font-bold leading-snug text-[#242424] transition-all relative duration-0000  whitespace-nowrap `}
+      >
+        <div
+          className='space-y-2'
+          ref={textRef}>
+          <p>Similique.</p>
+          <p className='text-right'>Lorem um</p>
+          <p className='text-center'>dolor sitip,</p>
+          <p className='text-center pl-[10%]'>consectetr</p>
         </div>
-
-        <div className='absolute md:-bottom-11/12 -bottom-8/12 right-7/12 md:w-96 w-full h-72 max-[768px]:-left-10'>
-          <img 
-            src={pht2}
-            alt="" 
-            className={`w-full h-full object-cover transition-all duration-1000 max-w-xs
-                            ${!isImageVisible ? 'opacity-0 transform translate-y-10' : 'opacity-100 transform translate-y-0'}`}
-          />
-        </div>
-        <div ref={textRef}
-          className={`lg:w-96 w-full h-full  
-                max-w-xs text-5xl lg:text-8xl lg:leading-normal 
-                font-bold leading-snug text-[#242424] 
-                    transition-all duration-1000 whitespace-nowrap 
-                    
-                    ${!isTextVisible ? 'opacity-0 transform translate-y-10' : 'opacity-100 transform translate-y-0'}`}
-        >
-          <div>안녕하세요.</div>
-          <div style={{marginLeft:'4ch'}}>환하게 빛을</div>
-          <div style={{marginLeft:'3ch'}}>밝히고 있는,</div>
-          <div style={{marginLeft:'2ch'}}>이택현입니다.</div>                
-        </div>
+      </div>
+      <div 
+      ref={imageRef}
+      className={`
+        ${!isImageVisible ? 'opacity-0 translate-y-10' : 'opacity-100  translate-y-0'}
+        min-w-60 w-1/2 self-end sm:translate-x-10 -translate-y-[10%] bg-red-500 ring-4 opacity-20`} >
+        <img
+          src={pht1}
+          alt=""
+          className="w-full h-full object-cover transition-all duration-1000 object-bottom"
+        />
+      </div>
+      <div 
+        className={`
+          ${!isImageVisible ? 'opacity-0 translate-y-0' : 'opacity-100 translate-y-0'}
+        min-w-64 w-1/2  bg-blue-500`}>
+        <img
+          src={pht2}
+          alt=""
+          className="w-full h-full object-cover transition-all duration-1000 opacity-10"
+        />
       </div>
     </div>
   );
