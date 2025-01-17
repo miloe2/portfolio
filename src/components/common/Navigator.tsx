@@ -83,9 +83,9 @@ const Navigator = () => {
 
   return (
     <React.Fragment>
-      <div className='w-full h-16 fixed inset-0 overflow-x-hidden box-border flex items-center z-50 bg-blue-500 justify-end '
+      <div className='w-full h-16 fixed inset-0 overflow-x-hidden box-border flex items-center z-50 justify-end '
       >
-        <ul className='flex space-x-4 bg-yellow-500 mr-6'>
+        <ul className='flex space-x-4  mr-6'>
           {navItems.map(({ route, page, label }) => (
             <li
               key={route}

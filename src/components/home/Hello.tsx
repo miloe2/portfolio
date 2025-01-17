@@ -12,48 +12,44 @@ const Hello = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  // bg-[#FF5851]
   return (
-    <div>
-      <div className='w-full h-auto relative bg-yellow-100'>
+    <>
+      <div className='w-full h-auto relative bg-white'>
         <div className='sticky top-0 h-full w-full overflow-hidden'>
-          <div className=' w-full h-screen justify-start items-center flex pl-10 max-[768px]:p-0'>
+          <div className=' w-full h-screen justify-start items-center flex pl-10'>
             <div
-              className='box-border min-w-1/2 h-11/12 relative bg-yellow-200 transition-width duration-700 ease-in-out'
+              className='box-border min-w-1/2 h-11/12 relative bg-[#FF5851] transition-width duration-700 ease-in-out'
               style={scrollY < 50 ? { width: '50%' } : { width: '95%' }}
             >
-
-
-              <div
-                className={`absolute top-5/12 left-1/3 transform -translate-x-1/2 -translate-y-1/2  text-white transition-all duration-700
-                                            max-[768px]:left-1/2 
-                                ${scrollY > 0 && scrollY < 1000 ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-
-                <div className='text-4xl leading-normal whitespace-nowrap   font-bold
-                                                max-[768px]:text-3xl max-[768px]:leading-relaxed '>
-                  내안에 빛이 있으면 <br />
-                  스스로 빛나는 법이다.
-                </div>
-              </div>
-
-              <div className='absolute top-1/3 md:-right-1/3 -right-1/2  font-black text-[#242424] md:text-9xl text-6xl '>
+              <div className={`absolute top-1/2 -translate-y-1/2 right-0 translate-x-1/2 font-black text-[#242424] transition-opacity duration-1000 text-hello-heading ${scrollY > 50 ? 'opacity-10' : 'opacity-100'}`}>
                 안녕<br />
                 하세요<span className='text-[#FF5851]'>.</span>
               </div>
+              <div
+                className={`absolute left-3/12 top-1/2 text-white transition-all duration-700  
+                ${scrollY > 0 && scrollY < 1000 ? '-translate-y-1/2 opacity-100' : 'opacity-0'}`}>
+                <p className='text-4xl leading-normal whitespace-nowrap font-bold text-hello-title'>
+                  내안에 빛이 있으면 <br />
+                  스스로 빛나는 법이다.
+                </p>
+              </div>
             </div>
           </div>
 
-          <div className="animate-bounce left-1/3 flex  items-center w-2/12 h-auto justify-end
-                        transition-all duration-700   text-white absolute bottom-20 "
+          <div className="animate-bounce left-1/3 flex  items-center w-2/12 h-auto justify-end transition-all duration-700   text-white absolute bottom-20"
             style={scrollY < 1000 ? { opacity: '100' } : { opacity: '0' }}>
             <div className='-rotate-90'>
-              <div className=' text-lg flex'><BsArrowLeft /> <span className='text-xs ml-2'>Scroll</span>  </div>
+              <div className=' text-lg flex'>
+                <BsArrowLeft />
+                <span className='text-xs ml-2'>Scroll</span>
+              </div>
             </div>
           </div>
-
         </div>
+        {/* sticky 속성을 위한 height 추가 */}
+        <div className='h-[50vh]'></div>
       </div>
-    </div>
+    </>
   );
 };
 

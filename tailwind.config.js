@@ -9,11 +9,17 @@ export default {
   ],
   theme: {
     extend: {
+      fontSize: {
+        "hello-heading" : "clamp(3rem, 9vw, 8.5rem)",
+        "hello-title" : "clamp(1.875rem, 3vw, 3rem)",
+      },
+      // animation
       animation: {
         bounce: 'bounce 1.5s infinite',
         'my-animation': 'my-animation 0.5s forwards',
       },
-      
+
+      // keyframe
       keyframes: {
         //바운스 애니메이션
         bounce: {
