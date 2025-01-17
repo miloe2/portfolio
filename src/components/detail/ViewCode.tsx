@@ -1,5 +1,5 @@
 import React from 'react';
-import gitIcon from '../../assets/Images/Icons/GitHub_Logo.svg';
+import gitIcon from '../../assets/Images/icon/GitHub_Logo.svg';
 interface ViewCodeProps {
     bgColor :string;
     site : string;

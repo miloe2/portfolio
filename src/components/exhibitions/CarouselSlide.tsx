@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import carouselData from '../../assets/Data/CarouselData';  
+import carouselData from '../../assets/data/CarouselData';  
 import {BsFillPauseFill, BsPlayFill} from 'react-icons/bs';
 import {MdKeyboardArrowRight, MdKeyboardArrowLeft} from 'react-icons/md';
 

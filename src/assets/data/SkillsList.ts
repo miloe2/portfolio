@@ -1,21 +1,21 @@
-import java from '../../assets/Images/Icons/java.jpg';
-import javascript from '../../assets/Images/Icons/javascript.png';
-import aws from '../../assets/Images/Icons/aws.jpg';
-import figma from '../../assets/Images/Icons/Figma-logo.svg';
-import git from '../../assets/Images/Icons/GitHub_Logo.svg';
-import mariadb from '../../assets/Images/Icons/mariadb.svg';
-import mysql from '../../assets/Images/Icons/Mysql2.webp';
+import java from '../../assets/Images/icon/java.jpg';
+import javascript from '../../assets/Images/icon/javascript.png';
+import aws from '../../assets/Images/icon/aws.jpg';
+import figma from '../../assets/Images/icon/Figma-logo.svg';
+import git from '../../assets/Images/icon/GitHub_Logo.svg';
+import mariadb from '../../assets/Images/icon/mariadb.svg';
+import mysql from '../../assets/Images/icon/Mysql2.webp';
 
-import react from '../../assets/Images/Icons/React-logo.svg';
-import typescript from '../../assets/Images/Icons/Typescript_logo_2020.svg';
-import notion from '../../assets/Images/Icons/notion.svg';
-import springboot from '../../assets/Images/Icons/spring-boot.png';
-import tailwindcss from '../../assets/Images/Icons/tailwindcss.svg';
+import react from '../../assets/Images/icon/React-logo.svg';
+import typescript from '../../assets/Images/icon/Typescript_logo_2020.svg';
+import notion from '../../assets/Images/icon/notion.svg';
+import springboot from '../../assets/Images/icon/spring-boot.png';
+import tailwindcss from '../../assets/Images/icon/tailwindcss.svg';
 
-import styled from '../../assets/Images/Icons/styled.png';
-import vue from '../../assets/Images/Icons/vue.svg'
-// import nuxt from '../../assets/Images/Icons/nuxt.svg'
-import nuxt from '../../assets/Images/Icons/nuxt.svg'
+import styled from '../../assets/Images/icon/styled.png';
+import vue from '../../assets/Images/icon/vue.svg'
+// import nuxt from '../../assets/Images/icon/nuxt.svg'
+import nuxt from '../../assets/Images/icon/nuxt.svg'
 
 interface SkillType {
     skill: string;

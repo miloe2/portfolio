@@ -1,6 +1,6 @@
-import ppt from '../../assets/Images/Icons/PPT-Logo.png';
-import excel from '../../assets/Images/Icons/Excel.png';
-import hwp from '../../assets/Images/Icons/hwp.png';
+import ppt from '../../assets/images/icon/PPT-Logo.png';
+import excel from '../../assets/images/icon/Excel.png';
+import hwp from '../../assets/images/icon/hwp.png';
 import {LiaStarSolid, LiaStarHalfSolid} from 'react-icons/lia';
 import useIntersectionObserver from '../../hooks/useIntersectionObserver';
 
