@@ -51,7 +51,7 @@ const Introduce = () => {
 
   return (
     //  bg-green-500 lg:bg-red-500 2xl:bg-blue-500 
-    <div className='w-full flex flex-col max-w-sm lg:max-w-2xl 2xl:max-w-4xl mx-auto bg-green-200'>
+    <div className='w-full flex flex-col max-w-sm lg:max-w-2xl 2xl:max-w-4xl mx-auto bg-green-00'>
       <div
         className={`
           ${!isTextVisible ? 'opacity-0 translate-y-10' : 'opacity-100 translate-y-0'}
@@ -67,8 +67,8 @@ const Introduce = () => {
         </div>
       </div>
       <div 
-      ref={imageRef}
-      className={`
+        ref={imageRef}
+        className={`
         ${!isImageVisible ? 'opacity-0 translate-y-10' : 'opacity-100  translate-y-0'}
         min-w-60 w-1/2 self-end sm:translate-x-10 -translate-y-[10%] bg-red-500 ring-4 opacity-20`} >
         <img

@@ -85,11 +85,11 @@ const Navigator = () => {
     <React.Fragment>
       <div className='w-full h-16 fixed inset-0 overflow-x-hidden box-border flex items-center z-50 justify-end '
       >
-        <ul className='flex space-x-4  mr-6'>
+        <ul className='flex space-x-4 mr-6'>
           {navItems.map(({ route, page, label }) => (
             <li
               key={route}
-              className={`${currentPage === page && !contactModal ? 'text-[#090909]' : ''}`}
+              className={`cursor-pointer ${currentPage === page && !contactModal ? 'text-[#090909]' : ''}`}
               onClick={() => handleClick(route, page)}
             >
               {label}
