@@ -12,12 +12,12 @@ const Home = () => {
   }, []); 
 
   return (
-    <>
+    <div className='bg-zinc-200 pb-40'>
       <Hello />
       <Introduce />
       <ExpSkill />
       <Career />
-    </>
+    </div>
   );
 };
 

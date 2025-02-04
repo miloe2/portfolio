@@ -1,28 +1,43 @@
-import SkillsList from '../../assets/data/SkillsList';
+import { useRef, useState } from 'react';
 import Marquee from "react-fast-marquee";
 import useIntersectionObserver from '../../hooks/useIntersectionObserver';
+import SkillsList from '../../assets/data/SkillsList';
 
 const ExpSkill = () => {
-  const [divRef, isDivVisible] = useIntersectionObserver({
-    rootMargin: '0px',
-    threshold: 0.1,
-  });
-    
-  const visibilityClasses = isDivVisible
-    ? 'opacity-100 transform translate-y-0'
-    : 'opacity-0 transform translate-y-10';
+  const textRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
 
+  const handleVisibilityChange  = (_target : Element, isIntersecting : boolean) => {
+    setIsVisible(isIntersecting);
+  };
+
+  useIntersectionObserver([textRef], handleVisibilityChange);
+
+  const texts = [
+    { text: 'Experienced Skills', class: 'text-zinc-300', delay: 'delay-300' },
+    { text: 'Experienced Skills', class: 'text-zinc-200', delay: 'delay-500' },
+    { text: 'Experienced Skills', class: 'text-zinc-100', delay: 'delay-700' },
+    { text: 'Experienced Skills', class: 'text-zinc-50', delay: 'delay-1000' }
+  ];
   return (
     <div 
-      className='max-w-8xl mx-auto px-40 flex flex-col items-center justify-center relative bg-red-00 '>
+      className='max-w-8xl mx-auto px-40 mt-40 flex flex-col items-center justify-center relative bg-red-00 '>
       <div 
-        ref={divRef}
-        className={`text-hello-heading font-extrabold  whitespace-nowrap transition-all duration-1000 ${visibilityClasses}`}
+        ref={textRef}
+        className={`text-hello-heading font-extrabold  whitespace-nowrap transition-all duration-1000 `}
       >
-        <div className='text-zinc-300'>Experienced Skills</div>
-        <div className='text-zinc-200'>Experienced Skills</div>
-        <div className='text-zinc-100'>Experienced Skills</div>
-        <div className='text-zinc-50'>Experienced Skills</div>
+        {texts.map((item, index) => (
+          <div
+            key={index}
+            className={`
+              ${item.class} transition-all duration-1000 transform 
+              ${item.delay} 
+              ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}
+            `}
+          >
+            {item.text}
+          </div>
+        ))}
       </div>
 
       <div className='w-full absolute top-1/2 -translate-y-1/2 cursor-pointer'>

@@ -1,29 +1,33 @@
-import { useState, useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
+type IntersectionCallback = (target: Element, isVisible: boolean) => void;
 
-// 반환 타입을 정의해줍니다. [ref: RefObject<HTMLDivElement>, isVisible: boolean]
-type UseIntersectionObserverReturnType = [React.RefObject<HTMLDivElement>, boolean];
-
-const useIntersectionObserver = (options?: IntersectionObserverInit): UseIntersectionObserverReturnType => {
-  const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-
+const useIntersectionObserver = (
+  refs: React.RefObject<HTMLDivElement>[],
+  callback?: IntersectionCallback,
+  options?: globalThis.IntersectionObserverInit
+)  => {
   useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      setIsVisible(entry.isIntersecting);
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        // console.log(`Observing element: ${entry.target}, isIntersecting: ${entry.isIntersecting}`);
+        if(callback) callback(entry.target, entry.isIntersecting);
+      });
     }, options);
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
+    refs.forEach(ref => {
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
+    });
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
+      refs.forEach(ref => {
+        if (ref.current) {
+          observer.unobserve(ref.current);
+        }
+      });
     };
-  }, [options]);
-
-  return [ref, isVisible];
+  }, [refs, options]);
 };
 
 export default useIntersectionObserver;
