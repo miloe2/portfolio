@@ -26,9 +26,7 @@ const Develope = () => {
 
   return (
     <div className='overflow-hidden relative h-auto'>
-
       <MainWork />
-      <div className='w-full bg-white h-40' />
       <div ref={componentRef} className='w-full h-20 relative'></div>
       <PrjList />
       <div className='w-full bg-white h-40' />

@@ -1,27 +1,29 @@
-import ViewCode from '../detail/ViewCode';
-import LeftImage from '../detail/LeftImage';
-import RightFullImage from '../detail/RightFullImage';
-import PrjSummary from '../detail/PrjSummary';
+import ViewCode from "../detail/ViewCode";
+import LeftImage from "../detail/LeftImage";
+import RightFullImage from "../detail/RightFullImage";
+import PrjSummary from "../detail/PrjSummary";
 
-
-import img1 from '../../assets/Images/Photos/fw1.webp'
-import img2 from '../../assets/Images/Photos/fw2.webp'
-import img3 from '../../assets/Images/Photos/fw3.webp'
-import img4 from '../../assets/Images/Photos/findway2.webp'
-
+import img1 from "../../assets/Images/Photos/fw1.webp";
+import img2 from "../../assets/Images/Photos/fw2.webp";
+import img3 from "../../assets/Images/Photos/fw3.webp";
+import img4 from "../../assets/Images/Photos/findway2.webp";
 
 const DetailFindway = () => {
-    const themeColor = '#101420'
-    const txtColor  = '#E7236B'
-    return (
-        <div className='w-full h-auto '>
-            <PrjSummary
-            desc1={['BE 2명, FE 2명', '프론트엔드', '1개월', '지하철 노선도를 활용한 길 찾기']}
-            desc2={['지하철 노선도를 통한 UI', '소요시간/환승역/시간표 등 결과값 표시', '따릉이API + 카카오맵 구현']}
-            txtColor = {txtColor}
-            themeColor = {themeColor}
-        />
-        {/* <PrjSummary
+  const themeColor = "#101420";
+  const txtColor = "#E7236B";
+  return (
+    <div className="w-full h-auto ">
+      <PrjSummary
+        desc1={["BE 2명, FE 2명", "프론트엔드", "1개월", "지하철 노선도를 활용한 길 찾기"]}
+        desc2={[
+          "지하철 노선도를 통한 UI",
+          "소요시간/환승역/시간표 등 결과값 표시",
+          "따릉이API + 카카오맵 구현",
+        ]}
+        txtColor={txtColor}
+        themeColor={themeColor}
+      />
+      {/* <PrjSummary
             title1='개요'
             desc1='팀 구성 : BE 2명 + FE 2명
             개발 기간 : 1개월
@@ -36,65 +38,61 @@ const DetailFindway = () => {
             txtColor = {txtColor}
         /> */}
 
+      <ViewCode
+        bgColor={themeColor}
+        txtColor="white"
+        site="#"
+        git="https://github.com/miloe2/subwayPresentation"
+      />
 
-        <ViewCode
-            bgColor={themeColor}
-            txtColor='white'
-            site='#'
-            git='https://github.com/miloe2/subwayPresentation'
-            
-            />
+      <LeftImage
+        bgColor="#101420"
+        txtColor={txtColor}
+        title="찾기"
+        desc="막차가 끊긴 이후, 저렴하게 귀가해보자라는 생각으로 만들어진 프로젝트입니다."
+        source={img4}
+        items="center"
+      />
 
-            <LeftImage
-            bgColor='#101420'
-            txtColor={txtColor}
-            title='찾기'
-            desc='막차가 끊긴 이후, 저렴하게 귀가해보자라는 생각으로 만들어진 프로젝트입니다.  '
-            source={img4}
-            items='center'
-        />
-
-                <RightFullImage
-                    bgColor='[#ffffff]'
-                    txtColor = {txtColor}
-                    descColor = ''
-                    img={img3}
-                    title='구현 방법'
-                    desc='지하철 노선도에
+      <RightFullImage
+        bgColor="[#ffffff]"
+        txtColor={txtColor}
+        descColor=""
+        img={img3}
+        title="구현 방법"
+        desc="지하철 노선도에
                     지하철 호선, 좌표와 역사명을 입력하고,
                     다익스트라 알고리즘을 활용하여 
-                    길찾기를 구현하였습니다.'
-                
-                />
+                    길찾기를 구현하였습니다."
+      />
 
-                <div className='w-full h-80'/>
-                <LeftImage
-                    bgColor='#101420'
-                    txtColor = {txtColor}
-                    source={img1}
-                    items='end'
-                    title='경로 찾기'
-                    desc='백엔드에서 최소환승/최소시간을 
+      <div className="w-full h-80" />
+      <LeftImage
+        bgColor="#101420"
+        txtColor={txtColor}
+        source={img1}
+        items="end"
+        title="경로 찾기"
+        desc="백엔드에서 최소환승/최소시간을 
                     연산하고 결과값을 전달합니다.
                     전달 받은 데이터를 탑승역/환승역으로 
-                    나누어 출력합니다.'
-                />
+                    나누어 출력합니다."
+      />
 
-
-                <RightFullImage 
-                    bgColor = {themeColor}
-                    txtColor={txtColor}
-                    descColor = 'white'
-                    img={img2} 
-                    title='공공데이터 및
-                            카카오맵 API' 
-                    desc='서울시 공공데이터(따릉이 API)와
+      <RightFullImage
+        bgColor={themeColor}
+        txtColor={txtColor}
+        descColor="white"
+        img={img2}
+        title="공공데이터 및
+                            카카오맵 API"
+        desc="서울시 공공데이터(따릉이 API)와
                     카카오맵 API를 활용하여 
                     현재 거치된 따릉이 개수를 출력합니다.                     
-                    ' />
-
-        </div>
-    );
+                    "
+      />
+    </div>
+  );
 };
 
 export default DetailFindway;
