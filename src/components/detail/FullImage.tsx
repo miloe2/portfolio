@@ -1,4 +1,6 @@
 import React from "react";
+import TitleText from "../common/TitleText";
+import Text from "../common/Text";
 interface FullImageProps {
   img: string;
   title: string;
@@ -12,14 +14,9 @@ const FullImage: React.FC<FullImageProps> = ({ img, txtColor, title, desc }) => 
       className={`w-full h-screen flex relative items-center bg-cover bg-center`}
       style={{ backgroundImage: `url(${img})` }}
     >
-      <div className="ring-4 absolute top-1/2 -translate-y-1/2 left-1/12">
-        <div
-          className="text-4xl/12 font-bold whitespace-pre-line py-2 "
-          style={{ color: txtColor }}
-        >
-          {title}
-        </div>
-        <div className="text-sm/6 whitespace-pre-line ">{desc}</div>
+      <div className="absolute top-1/2 -translate-y-1/2 left-1/12 max-w-[360px]">
+        <TitleText title={title} txtColor={txtColor} />
+        <Text desc={desc} />
       </div>
     </div>
   );
