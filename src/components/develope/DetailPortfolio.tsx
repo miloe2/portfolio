@@ -68,15 +68,7 @@ const DetailPortfolio = () => {
 
       <Center9image
         bgColor={themeColor}
-        img1={pfDetail1}
-        img2={pfDetail2}
-        img3={pfDetail3}
-        img4={pfDetail4}
-        img5={pfDetail5}
-        img6={pfDetail6}
-        img7={pfDetail7}
-        img8={pfDetail8}
-        img9={pfDetail9}
+        images={[pfDetail1, pfDetail2, pfDetail3, pfDetail4, pfDetail5, pfDetail6, pfDetail7, pfDetail8, pfDetail9]}
       />
 
       <LeftImage
