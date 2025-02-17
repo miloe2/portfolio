@@ -46,7 +46,7 @@ const PrjList = () => {
   };
 
   return (
-    <React.Fragment>
+    <section className="mb-40">
       <div className=" w-full h-10 px-10 text-right text-sm">
         클릭 하시면 자세히 보실수 있습니다.{" "}
       </div>
@@ -111,7 +111,7 @@ const PrjList = () => {
               </div>  
           </div> */}
       </div>
-    </React.Fragment>
+    </section>
   );
 };
 
