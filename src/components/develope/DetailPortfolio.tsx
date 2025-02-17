@@ -2,7 +2,7 @@ import React from "react";
 import twcssImg from "../../assets/Images/photos/tailwind css.png";
 import TSLogoSnipet from "../detail/TSLogoSnipet";
 import RightFullImage from "../detail/RightFullImage";
-import Text2Parg from "../detail/Text2Parg";
+import ParagraphRow from "../detail/ParagraphRow";
 import Center9image from "../detail/Center9image";
 import LeftImage from "../detail/LeftImage";
 import ViewCode from "../detail/ViewCode";
@@ -58,7 +58,7 @@ const DetailPortfolio = () => {
             기존보다 빠르게 스타일링을 완성하였습니다.  "
       />
 
-      <Text2Parg
+      <ParagraphRow
         txtColor={txtColor}
         title="Work.Develope"
         desc="1인 개발로 페이지 디자인 구성부터
