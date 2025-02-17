@@ -8,8 +8,7 @@ import RightFullImage from "../detail/RightFullImage";
 import LeftImage from "../detail/LeftImage";
 import ViewCode from "../detail/ViewCode";
 import PrjSummary from "../detail/PrjSummary";
-// import Left3Image from '../Detail/Left3Image';
-import Left1ImageProps from "../detail/Left1Image";
+import Left1Image from "../detail/Left1Image";
 import RightImage from "../detail/RightImage";
 import videoUrl from "../../assets/Video/pada3video.mp4";
 
@@ -37,39 +36,6 @@ const DetailPortfolio = () => {
         txtColor={txtColor}
         themeColor={themeColor}
       />
-      {/* <PrjSummary
-            desc1={['개인 프로젝트', '프론트엔드', '1개월']}
-            desc2={['포트폴리오 사이트 제작', 'Typescript, Tailwind css 연습', 'Intersection Observer 연습', 'Git을 이용한 정적페이지 배포']}
-            txtColor = {txtColor}
-            themeColor = {themeColor}
-            desc1='팀 구성: BE 1명, FE 1명, 
-            디자이너 1명
-            개발 기간 : 2개월.
-            역할 : 프론트엔드 100%'
-            title2='개발주안점'
-            desc2='- 100개 이상의 종/모프 필터 검색
-            - API 호출을 최소화 하기 위한 설계
-            - Cursor형 무한 스크롤
-                    '
-            desc3='- 게시글 작성 업로드 이미지 압축
-            - 글수정 이미지 변경 체크 및 드래그 수정'
-            txtColor = {txtColor}
-        /> */}
-
-      {/* <Left3Image 
-                bgColor={themeColor}
-                txtColor={txtColor}
-                img1={pada1}
-                img2={pada2}
-                img3={pada3}
-                title='Diverse
-                        Different  
-                        Display'
-                desc='전시 예매 및 정보 공유 커뮤니티입니다. 
-                전시 예매, 전시 평가하기(다이어리), 동행찾기 등 
-                세 가지 부분을 중점으로 설계되었습니다.'
-            />  */}
-
       <ViewCode bgColor={themeColor} txtColor="black" site="https://padaapp.com" />
 
       <RightFullImage
@@ -107,16 +73,16 @@ const DetailPortfolio = () => {
         source={videoUrl}
         items="center"
       />
-      <Left1ImageProps
+      <Left1Image
         bgColor={themeColor}
         txtColor={txtColor}
         title="이미지 압축 및
-                Drag&Drop을 통한 순서 변경"
-        desc="
-                이미지 업로드 시, 용량을 압축하고
-                드래그 순서 변경이 가능합니다. 
-                글 수정 시 이미지 변경을 추적하여
-                다른 API 백엔드에 전달합니다.  "
+              Drag&Drop을 통한
+              순서 변경"
+        desc="이미지 업로드 시, 용량을 압축하고
+              드래그 순서 변경이 가능합니다. 
+              글 수정 시 이미지 변경을 추적하여
+              다른 API 백엔드에 전달합니다.  "
         img1={pada3}
       />
       <LeftImage
@@ -127,8 +93,8 @@ const DetailPortfolio = () => {
         title="APP 유입을 위한
                 미디어쿼리 "
         desc="앱 기반으로 만들어진 프로젝트 특성 상
-               웹에서 앱으로 유입이 되도록 
-               분양탭 모두 미디어쿼리가 적용되었습니다. "
+              웹에서 앱으로 유입이 되도록 
+              분양탭 모두 미디어쿼리가 적용되었습니다. "
       />
     </React.Fragment>
   );

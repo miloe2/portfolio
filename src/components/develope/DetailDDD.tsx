@@ -1,7 +1,7 @@
 import FullVideo from "../detail/FullVideo";
 import Left3Image from "../detail/Left3Image";
 import RightImage from "../detail/RightImage";
-import Left1ImageProps from "../detail/Left1Image";
+import Left1Image from "../detail/Left1Image";
 import FullImage from "../detail/FullImage";
 import ViewCode from "../detail/ViewCode";
 import PrjSummary from "../detail/PrjSummary";
@@ -41,9 +41,7 @@ const DetailDDD = () => {
       <Left3Image
         bgColor={themeColor}
         txtColor={txtColor}
-        img1={img1}
-        img2={img2}
-        img3={img5}
+        images={[img1, img2, img5]}
         title="백엔드 &
                 프론트엔드 
                 제작"
@@ -52,7 +50,7 @@ const DetailDDD = () => {
                 모두 구현하였습니다."
       />
 
-      <FullVideo videoUrl={videoUrl} bgColor={themeColor} padding={40} />
+      <FullVideo videoUrl={videoUrl} bgColor={themeColor} />
 
       <RightImage
         bgColor={themeColor}
@@ -65,7 +63,7 @@ const DetailDDD = () => {
         img={img2}
         items="start"
       />
-      <Left1ImageProps
+      <Left1Image
         bgColor={themeColor}
         txtColor={txtColor}
         title="zustand를 활용한

@@ -10,7 +10,7 @@ const DevPrjData = [
     title: "찾기",
     date: "23. 04. 14 - 23. 05. 23",
     desc: "막차 시간 이후 길 찾기 사이트",
-    stack: "java, jsp,  react, styled, mariadb, git, notion",
+    stack: ["Java", "Springboot", "React", "Styled-Component", "mariaDB", "git"],
     imgUrl: findwayThumnail,
     color: {
       bg: "bg-[#101420]",
@@ -23,7 +23,7 @@ const DevPrjData = [
     title: ":DDD",
     date: "23. 06. 01 - 23. 07. 25",
     desc: "전시 예매 및 정보 공유 커뮤니티 사이트",
-    stack: "java, jpa,  react, styled, mysql, aws, git, figma, notion",
+    stack: ["Java", "Springboot", "React", "AWS", "Styled-Component", "MySQL", "git", "Figma"],
     imgUrl: dddThumnail,
     color: {
       bg: "bg-[#0041AF]",
@@ -36,7 +36,7 @@ const DevPrjData = [
     title: "portfolio",
     date: "23. 08. 01 - 23. 09. 01",
     desc: "개인 포트폴리오",
-    stack: "typescript, react, tailwindcss, git, figma, ",
+    stack: ["Typescript", "React", "TailwindCSS", "git", "Figma"],
     imgUrl: portfolioThumnail,
     color: {
       bg: "bg-[#FF5851]",
@@ -49,7 +49,7 @@ const DevPrjData = [
     title: "PADA",
     date: "23. 12. 01 - 24. 01. 31",
     desc: "파충류 커뮤니티 플랫폼 / 관리자 페이지",
-    stack: "typescript, vue, tailwindcss, aws,  git, figma,  ",
+    stack: ["vue", "Typescript", "TailwindCSS", "AWS", "git", "Figma"],
     imgUrl: pada,
     color: {
       bg: "bg-[#00D191]",
@@ -62,7 +62,7 @@ const DevPrjData = [
     title: "piaenm",
     date: "24. 06. 01 - 24. 06. 21",
     desc: "영상프로덕션 홍보페이지 ",
-    stack: "nuxt, tailwindcss, aws, git, figma,",
+    stack: ["nuxt", "TailwindCSS", "AWS", "git", "Figma"],
     imgUrl: pia,
     color: {
       bg: "bg-black",
