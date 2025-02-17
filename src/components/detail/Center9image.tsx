@@ -6,7 +6,7 @@ interface Center9imageProps {
 const Center9image: React.FC<Center9imageProps> = ({ bgColor, images = [] }) => {
   return (
     <div
-      className={`w-full h-auto pt-32 grid grid-cols-1 gap-4 lg:px-20 px-10 lg:grid-cols-3 md:grid-cols-2`}
+      className={`w-full h-auto pt-32 grid grid-cols-1 gap-4 lg:px-20 px-10 lg:grid-cols-3 md:grid-cols-2 mb-60`}
       style={{ backgroundColor: bgColor }}
     >
       {images.map((img, idx) => (
