@@ -42,12 +42,10 @@ const DetailDDD = () => {
         bgColor={themeColor}
         txtColor={txtColor}
         images={[img1, img2, img5]}
-        title="백엔드 &
-                프론트엔드 
-                제작"
-        desc="Springboot와 React를 활용하여,
-                풀스택으로 백엔드&프론트엔드 
-                모두 구현하였습니다."
+        title="SpringBoots 
+              & React"
+        desc="백엔드&프론트엔드 
+              모두 구현하였습니다."
       />
 
       <FullVideo videoUrl={videoUrl} bgColor={themeColor} />
@@ -55,11 +53,11 @@ const DetailDDD = () => {
       <RightImage
         bgColor={themeColor}
         txtColor={txtColor}
-        title="커서형 무한 스크롤,
-              useMemo를 자동완성"
-        desc="마지막 아이템의 id를 저장하는 ,
-              커서형 방식으로 무한스크롤을 구현하고  
-              useMemo를 활용하여 "
+        title="커서형 무한스크롤
+              & useMemo"
+        desc="커서형 방식으로 무한스크롤을 구현하고  
+              useMemo를 활용하여 렌더링을
+              최적화 하였습니다."
         img={img2}
         items="start"
       />
@@ -68,9 +66,9 @@ const DetailDDD = () => {
         txtColor={txtColor}
         title="zustand를 활용한
               회원 정보 전역관리"
-        desc="zustand와 localStorage로,
-              다른 유저의 페이지 조회가 가능하고 
-              자신의 마이페이지에서만 수정할 수 있게 설계하였습니다. "
+        desc="zustand와 localStorage를 조합하여,
+              마이페이지 / 다른 유저의 페이지
+              분기를 구현하였습니다."
         img1={img3}
       />
 
@@ -79,10 +77,8 @@ const DetailDDD = () => {
         txtColor={txtColor}
         title="JWT와 
               이메일 인증"
-        desc="JWT로 Token을 발급하여,  
-              회원페이지에 접근 할 수 있게 하였으며, 
-              회원가입/PW 찾기 등은 이메일 인증을
-              적용하였습니다. "
+        desc="JWT로 Accees Toeken / Refresh Token을
+              관리하여 로그인을 구현하였습니다."
         img={img4}
         items="center"
       />
@@ -91,9 +87,9 @@ const DetailDDD = () => {
         txtColor={txtColor}
         img={mobile}
         title="미디어 쿼리"
-        desc="모든 페이지는 768px로 미디어쿼리 기준으로
-              적용되어 모든 Digital Device에서 접근성을
-              높였습니다. "
+        desc="768px로 반응형 페이지를 적용하여
+              Digital Device에서 접근성을
+              높혔습니다. "
       />
     </React.Fragment>
   );

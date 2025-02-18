@@ -23,20 +23,6 @@ const DetailFindway = () => {
         txtColor={txtColor}
         themeColor={themeColor}
       />
-      {/* <PrjSummary
-            title1='개요'
-            desc1='팀 구성 : BE 2명 + FE 2명
-            개발 기간 : 1개월
-            역할 : Frontend '
-            title2='주요역할'
-            desc2='- 메인 페이지 및 페이지 이동 기능
-            - 백엔드 연산 값 출력 및 UI 
-            (노선 색상, 핀 좌표, Modal 컨트롤)
-                    '
-            desc3='- 따릉이 조회 및 출력
-                (공공API + 카카오맵 연동)'
-            txtColor = {txtColor}
-        /> */}
 
       <ViewCode
         bgColor={themeColor}
@@ -49,7 +35,8 @@ const DetailFindway = () => {
         bgColor="#101420"
         txtColor={txtColor}
         title="찾기"
-        desc="막차가 끊긴 이후, 저렴하게 귀가해보자라는 생각으로 만들어진 프로젝트입니다."
+        desc="다익스트라 알고리즘을 활용하여, 
+              지하철에 맞는 UI/UX를 구축했습니다."
         source={img4}
         items="center"
       />
@@ -60,10 +47,9 @@ const DetailFindway = () => {
         descColor=""
         img={img3}
         title="구현 방법"
-        desc="지하철 노선도에
-                    지하철 호선, 좌표와 역사명을 입력하고,
-                    다익스트라 알고리즘을 활용하여 
-                    길찾기를 구현하였습니다."
+        desc="absolute를 활용하여
+        HitBox를 적용하고 클릭 좌표를 계산하여 
+        시작/도착역을 설정합니다."
       />
 
       <div className="w-full h-80" />
@@ -72,11 +58,10 @@ const DetailFindway = () => {
         txtColor={txtColor}
         source={img1}
         items="end"
-        title="경로 찾기"
-        desc="백엔드에서 최소환승/최소시간을 
-                    연산하고 결과값을 전달합니다.
-                    전달 받은 데이터를 탑승역/환승역으로 
-                    나누어 출력합니다."
+        title="지하철에 적합한
+                UI 구현"
+        desc="시간/호선/환승 등의 결과 값을 
+        지하철 UI에 맞게 바꾸어 출력합니다. "
       />
 
       <RightFullImage
@@ -85,11 +70,10 @@ const DetailFindway = () => {
         descColor="white"
         img={img2}
         title="공공데이터 및
-                            카카오맵 API"
-        desc="서울시 공공데이터(따릉이 API)와
-                    카카오맵 API를 활용하여 
-                    현재 거치된 따릉이 개수를 출력합니다.                     
-                    "
+              카카오맵 API"
+        desc="카카오맵 API과 따릉이API를
+              연계하여 근처역 따릉이 개수를 
+              출력합니다."
       />
     </div>
   );

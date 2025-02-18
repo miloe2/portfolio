@@ -35,13 +35,10 @@ const Detail = () => {
     <div className="w-screen h-auto bg-white">
       <div ref={componentRef}>
         <Stack />
-
         {devPage === "piaenm" && <DetailPia />}
         {devPage === "PADA" && <DetailPADA />}
         {devPage === ":DDD" && <DetailDDD />}
-
         {devPage === "portfolio" && <DetailPortfolio />}
-
         {devPage === "찾기" && <DetailFindway />}
       </div>
     </div>

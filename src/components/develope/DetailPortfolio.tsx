@@ -53,9 +53,8 @@ const DetailPortfolio = () => {
         descColor={descColor}
         img={twcssImg}
         title="Tailwind CSS"
-        desc="평소 사용해보고 싶었던, 
-            Tailwind CSS로 작업하고
-            기존보다 빠르게 스타일링을 완성하였습니다.  "
+        desc="Tailwind CSS로 생산성 있는
+              스타일링 작업을 진행하였습니다.  "
       />
 
       <ParagraphRow
@@ -68,16 +67,26 @@ const DetailPortfolio = () => {
 
       <Center9image
         bgColor={themeColor}
-        images={[pfDetail1, pfDetail2, pfDetail3, pfDetail4, pfDetail5, pfDetail6, pfDetail7, pfDetail8, pfDetail9]}
+        images={[
+          pfDetail1,
+          pfDetail2,
+          pfDetail3,
+          pfDetail4,
+          pfDetail5,
+          pfDetail6,
+          pfDetail7,
+          pfDetail8,
+          pfDetail9,
+        ]}
       />
 
       <LeftImage
         bgColor="#f5f5f5"
         txtColor={txtColor}
         title="Scroll 기반 
-                애니메이션"
+              애니메이션"
         desc="Scroll 좌표를 활용하여, 
-                인터렉티브한 애니메이션을 구현하였습니다. "
+              인터렉티브한 애니메이션을 구현하였습니다. "
         source={videoUrl}
         items="center"
       />

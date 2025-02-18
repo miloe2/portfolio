@@ -32,13 +32,7 @@ const DetailPia = () => {
       />
 
       <ViewCode bgColor={themeColor} txtColor="black" site="https://piaenm.com" />
-      {/* <Text2Parg
-        txtColor={themeColor}
-        title='영상 프로덕션 홍보 사이트 ' 
-        desc='영상 프로덕션 영상에 맞춰서
-        동적인 UI를 적용하였습니다.
-        ' />
-        <FullVideo videoUrl={videoUrl} bgColor={themeColor} padding={40}/> */}
+
       <LeftImage
         bgColor={themeColor}
         txtColor={txtColor}
@@ -54,18 +48,18 @@ const DetailPia = () => {
         txtColor={txtColor}
         descColor={descColor}
         img={pia1}
-        title="Youtube를 활용한
-            Grid 레이아웃"
-        desc="Grid 레이아웃과 iFrame을 활용하여 
-            이미자와 영상을 매칭시켰습니다."
+        title="iframe을 활용한
+              이미지&비디오 레이아웃"
+        desc="Youtube iFrame을 활용하여 
+              이미자와 영상을 매칭시켰습니다."
       />
       <RightImage
         bgColor={themeColor}
         txtColor={txtColor}
         title="matter.js"
-        desc="Matter.js 라이브러리를 활용하여 
-                객체들을 조작 할 수 있는 기능을 추가하여 
-                웹 사이트에 독특한 포인트를 적용하였습니다."
+        desc="Matter.js 라이브러리로 화면의 객체를
+              가지고 놀 수 있는 기능을 추가하여 
+              웹 사이트에 독특한 포인트를 적용하였습니다."
         img={pia2}
         items="center"
       />
@@ -77,7 +71,7 @@ const DetailPia = () => {
         title="AWS 활용한
               SSG 웹 호스팅"
         desc="S3, Route53, CloudFront를 활용하여
-              SSG 웹 호스팅 하였습니다. "
+              SSG 웹 호스팅 하였습니다."
       />
     </React.Fragment>
   );
