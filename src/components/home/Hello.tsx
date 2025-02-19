@@ -16,7 +16,7 @@ const Hello = () => {
     <>
       <div className='w-full h-auto relative bg-white'>
         <div className='sticky top-0 h-full w-full overflow-hidden'>
-          <div className=' w-full h-screen justify-start items-center flex pl-10'>
+          <div className=' w-full h-screen justify-start items-center flex sm:pl-10 pl-0'>
             <div
               className='box-border min-w-1/2 h-11/12 relative bg-[#FF5851] transition-width duration-700 ease-in-out'
               style={scrollY < 50 ? { width: '50%' } : { width: '95%' }}
@@ -26,7 +26,7 @@ const Hello = () => {
                 하세요<span className='text-[#FF5851]'>.</span>
               </div>
               <div
-                className={`absolute left-3/12 top-1/2 text-white transition-all duration-700 bg-white 
+                className={`absolute left-1/12 sm:left-3/12 top-1/2 text-white transition-all duration-700 bg-white 
                 ${scrollY > 0 && scrollY < 1000 ? '-translate-y-1/2 opacity-100' : 'opacity-0'}`}>
                 <p className='text-4xl leading-normal whitespace-nowrap font-bold text-hello-title'>
                   내안에 빛이 있으면 <br />

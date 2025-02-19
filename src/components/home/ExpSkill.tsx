@@ -24,7 +24,7 @@ const ExpSkill = () => {
       className='max-w-8xl mx-auto px-40 mt-40 flex flex-col items-center justify-center relative bg-red-00 '>
       <div 
         ref={textRef}
-        className={`text-hello-heading font-extrabold  whitespace-nowrap transition-all duration-1000 `}
+        className={`text-exp-title font-extrabold  whitespace-nowrap transition-all duration-1000 `}
       >
         {texts.map((item, index) => (
           <div

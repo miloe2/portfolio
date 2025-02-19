@@ -12,7 +12,7 @@ export const project = {
   title : '주요 프로젝트',
   type: 'desc',
   desc : [
-    { title: 'OO카드 컴포넌트 제작 및 레거시 코드 개선', content: 'vue2, Storybook, SCSS'},
+    { title: 'OO카드사 APP 통합 마이그레이션 ', content: 'vue2, Storybook, SCSS'},
     { title: '파충류 커뮤니티 웹서비스 제작', content: 'vue3, TS, vuex, S3, tailwind'},
     { title: 'PiaENM 프로모션 페이지 제작', content: 'nuxt3, TS, pinia, S3, tailwind'},
     { title: '칵테일 Ai 추천 웹서비스 ', content: 'next18, TS, opneAi, zustand,  indexedDB'},
