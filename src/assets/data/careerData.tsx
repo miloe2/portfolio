@@ -1,3 +1,8 @@
+import { BiAlignLeft } from "react-icons/bi";
+import { FcInvite, FcCalendar } from "react-icons/fc";
+import { TfiLocationPin } from "react-icons/tfi";
+
+
 export const career = {
   title: '경력사항',
   type: 'text',
@@ -12,7 +17,7 @@ export const project = {
   title : '주요 프로젝트',
   type: 'desc',
   desc : [
-    { title: 'OO카드사 APP 통합 마이그레이션 ', content: 'vue2, Storybook, SCSS'},
+    { title: 'OO카드 APP 통합 마이그레이션 ', content: 'vue2, Storybook, SCSS'},
     { title: '파충류 커뮤니티 웹서비스 제작', content: 'vue3, TS, vuex, S3, tailwind'},
     { title: 'PiaENM 프로모션 페이지 제작', content: 'nuxt3, TS, pinia, S3, tailwind'},
     { title: '칵테일 Ai 추천 웹서비스 ', content: 'next18, TS, opneAi, zustand,  indexedDB'},
@@ -40,3 +45,10 @@ export const education = {
     { title: '2013.03', content: '건국대학교 경영학과 입학'},
   ],
 };
+export const contactInfo = [
+  { icon: <BiAlignLeft />, label: "이택현" },
+  { icon: <FcCalendar />, label: "1991. 01. 17" },
+  // { icon: <FcPhone />, label: "1991. 01. 17" },
+  { icon: <TfiLocationPin />, label: "서울시 송파구 가락동" },
+  { icon: <FcInvite />, label: "miloe0117@gmail.com" },
+];

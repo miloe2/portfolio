@@ -16,39 +16,55 @@ interface NaviStatusProps {
 }
 
 const Navigator = () => {
-  const { contactModal, setContactModal } = useStore();
   const navigator = useNavigate();
   const { pathname } = useLocation();
-
-  /* 리팩토링 시작  */
-  /* 리팩토링 시작  */
-  /* 리팩토링 시작  */
-  /* 리팩토링 시작  */
-
+  const scrollYRef = useRef(0); // scrollY 값을 저장
+  const INNER_HEIGHT = window.innerHeight; // 초기 브라우저 높이
+  const [contactIsOpen, setContactIsOpen] = useState(false);
   const [naviStatus, setNaviStatus] = useState({
     currentPage: "",
     scrolledInnerHeight: false,
     xBtn: false,
+    contactToggle : false,
   });
 
-  // const [contactModal, setContactModal] = useState({
-  //   isOpen: false,
-  // });
+  const navItems = [
+    { route: "/", page: "home", label: "home" },
+    { route: "/develope", page: "dev", label: "work.Dev" },
+    { route: "/exhibitions", page: "exhibit", label: "work.Exhibit" },
+    { route: "/contact", page: "contact", label: "contact" },
+  ];
 
-  const scrollYRef = useRef(0); // ✅ 최신 scrollY 값을 저장
-  const INNER_HEIGHT = window.innerHeight; // ✅ 초기 브라우저 높이
+  // contact modal hanlder
+  const handleContact = () => {
+    setContactIsOpen(!contactIsOpen);
+    naviStatus.contactToggle = (!naviStatus.contactToggle)
+  };
+
+  // navi menu button handler
+  const handleMenuButton = (route: string) => {
+    if (route === "/contact") {
+      handleContact();
+    } else {
+      navigator(route);
+      setNaviStatus((prev) => ({
+        ...prev,
+        currentPage: route,
+      }));
+  
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      scrollYRef.current = currentScrollY; // ✅ 최신 값 저장
+      scrollYRef.current = currentScrollY;
 
       setNaviStatus((prev) => ({
         ...prev,
-        scrolledInnerHeight: currentScrollY > INNER_HEIGHT, // ✅ 기준값 초과 여부 업데이트
+        scrolledInnerHeight: currentScrollY > INNER_HEIGHT, 
       }));
     };
-    console.log(naviStatus);
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -62,114 +78,29 @@ const Navigator = () => {
     }));
   }, [pathname]);
 
-  const handleContact = () => {
-    setContactModal(!contactModal);
-  };
-
-  const handleMenuButton = (route: string) => {
-    setNaviStatus((prev) => ({
-      ...prev,
-      currentPage: route,
-    }));
-
-    if (route === "/contact") {
-      handleContact();
-    } else {
-      navigator(route);
-    }
-  };
-
-  const navItems = [
-    { route: "/", page: "home", label: "home" },
-    { route: "/develope", page: "dev", label: "work.Dev" },
-    { route: "/exhibitions", page: "exhibit", label: "work.Exhibit" },
-    { route: "/contact", page: "contact", label: "contact" },
-  ];
-
-  // const handleXBtn = () => {
-
-  //   if (XBtn && scrollY < 800) {
-  //     setNaviModal(true)
-  //     setXBtn(false)
-  //     setContactModal(false)
-  //   } else if (XBtn && scrollY > 800) {
-  //     setNaviModal(false)
-  //     setXBtn(false)
-  //     setContactModal(false)
-  //   } else if (!XBtn && scrollY > 800) {
-  //     setNaviModal(true)
-  //     setXBtn(true)
-  //     setContactModal(false)
-  //   }
-  // }
-
-  // const handleContact = () => {
-  //   if (!contactModal) {
-  //     setContactModal(true)
-  //     setXBtn(true)
-  //   } else {
-  //     setContactModal(false)
-  //     setXBtn(false)
-  //   }
-  // }
-
-  // // scrollY > 800이고 crossed800이 false일 때 (즉, 800을 처음 넘었을 때)
-  // if (window.scrollY > 800 && !crossed800) {
-  //   setNaviModal(true);
-  //   setXBtn(true);
-  //   setCrossed800(true);  // 상태 업데이트
-  // }
-
-  // // scrollY < 800이고 crossed800이 true일 때 (즉, 800 미만으로 내려왔을 때)
-  // else if (window.scrollY < 800 && crossed800) {
-  //   setNaviModal(true);
-  //   setXBtn(false);
-  //   setCrossed800(false);  // 상태 업데이트
-  // }
   return (
     <React.Fragment>
       <div
-        className="w-full h-16 fixed inset-0 flex items-center z-50 transition-all duration-300"
-        style={{ backgroundColor: naviStatus.scrolledInnerHeight ? "white" : "transparent" }}
+        className={`
+          fixed w-full h-16 inset-0 flex items-center z-50 transition-all duration-300
+          ${naviStatus.scrolledInnerHeight ? "glassmorphism" : "bg-transparent"}
+          `}
       >
-        <ul className="flex text-sm font-bold ml-auto cursor-pointer">
+        <ul className="w-full flex text-sm font-bold cursor-pointer mr-0 sm:mr-16">
           {navItems.map((menu) => (
             <li
               key={menu.route}
               onClick={() => handleMenuButton(menu.route)}
               className={`
                 ${naviStatus.currentPage === menu.route ? "text-[#090909]" : "text-[#8c8c8c]"}
-                p-2`}
+                p-2  first:ml-auto`}
             >
               {menu.label}
             </li>
           ))}
         </ul>
-
-        {/* <div className='bg-black sm:w-12 sm:h-12 h-8 w-8 border-1 border-zinc-600 
-        mr-8 rounded-full flex justify-center items-center 
-        cursor-pointer fixed sm:top-2 top-4 sm:right-0 -right-7 transition-all 
-        ease-in-out duration-500'
-          onClick={handleXBtn}
-          >
-
-          <div className="relative w-5 h-3 flex flex-col justify-between items-stretch ">
-            <div className="transition-all ease-in-out duration-500 w-5 h-1 border-t-1 "
-              style={{
-                ...(XBtn ? { transform: 'translate(-0%, 100%) rotate(-45deg)' } : {}),
-
-              }}
-            ></div>
-            <div className="transition-all ease-in-out duration-500 w-5 h-1 border-b-1  "
-              style={{
-                ...(XBtn ? { transform: 'translate(-0%, -155%) rotate(45deg)', } : {}),
-
-              }}
-            ></div>
-          </div>
-        </div> */}
       </div>
-      {<Contact />}
+      {<Contact contactIsOpen={contactIsOpen}/>}
     </React.Fragment>
   );
 };

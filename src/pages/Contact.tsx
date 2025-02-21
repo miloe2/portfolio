@@ -1,109 +1,72 @@
+// @ts-nocheck
 import React, { useEffect, useState } from "react";
 import useStore from "../store";
-import { BiAlignLeft } from "react-icons/bi";
-import { FcPhone, FcInvite, FcCalendar } from "react-icons/fc";
-import { TfiLocationPin } from "react-icons/tfi";
+import { contactInfo } from "../assets/data/careerData";
 import { AiFillGithub } from "react-icons/ai";
 import { RiNotionFill } from "react-icons/ri";
 
-const Contact = () => {
-  // const [visible, setVisible] = useState(false);
-  const { contactModal, setContactModal } = useStore();
+const Contact = ({ contactIsOpen }) => {
+  
+  useEffect(() => {
+    const preventScroll = (e: WheelEvent) => {
+      e.preventDefault();
+    };
 
-  // useEffect(() => {
-  //   if (isOpen) {
-  //     setVisible(true); // ✅ Contact를 먼저 렌더링
-  //   } else {
-  //     console.log('close', visible)
-  //     setTimeout(() => setVisible(false), 700); // ✅ 트랜지션 완료 후 제거
-  //     console.log('close', visible)
-  //   }
-  // }, [isOpen]);
-  // const { contactModal } = useStore();
+    if (contactIsOpen) {
+      document.addEventListener('wheel', preventScroll, { passive: false });
+    } else {
+      document.removeEventListener('wheel', preventScroll);
+    }
 
-  // useEffect(() => {
-  //   const preventScroll = (e: WheelEvent) => {
-  //     e.preventDefault();
-  //   };
-
-  //   if (contactModal) {
-  //     document.addEventListener('wheel', preventScroll, { passive: false });
-  //   } else {
-  //     document.removeEventListener('wheel', preventScroll);
-  //   }
-
-  //   return () => {
-  //     document.removeEventListener('wheel', preventScroll);
-  //   };
-  // }, [contactModal]);
-
-  const width = window.innerWidth;
+    return () => {
+      document.removeEventListener('wheel', preventScroll);
+    };
+  }, [contactIsOpen]);
 
   return (
     <React.Fragment>
       <section className="overflow-scroll">
         <div
-          className={`fixed inset-0 bg-black opacity-80 transition-transform duration-700 
-            ${contactModal ? "translate-x-0" : "-translate-x-full"}`}
+          className={`
+            fixed inset-0 bg-black opacity-80 transition-all duration-300 
+            ${contactIsOpen ? "block" : "hidden"}
+          `}
         />
         <div
-          className={`fixed right-0 top-0 bg-white w-full sm:w-1/3 h-full transition-transform duration-1000 ease-in-out 
-              ${contactModal ? "translate-x-0" : "translate-x-full"}`}
-        ></div>
+          className={`
+            fixed top-0 right-0 bg-white w-full sm:w-1/2 xl:w-1/3 h-full flex items-center transition-transform duration-500 
+            ${contactIsOpen ? "translate-x-0" : "translate-x-full"}
+          `}
+        >
+          <div className='w-full flex flex-col whitespace-nowrap pl-16 bg-red-00'>
+            <p className='font-serif text-xl/8 font-black'>
+              " I hope to <br />
+              have a good <br />
+              relationship with you."
+            </p>
+            <div className='w-10 h-1 border-b-2 border-zinc-600 my-5'/>
+            <div>
+              {
+                contactInfo.map((info, index) => (
+                  <div key={index} className='flex items-center'>
+                    <i>{info.icon}</i>
+                    <p className='ml-2 text-sm/9'>{info.label}</p>
+                  </div>
+                ))
+              }
+            </div>
+            <div className='flex flex-row w-full mt-4 text-4xl space-x-2'>
+              <a href="https://github.com/miloe2" target="_blank" rel="noopener noreferrer">
+                <AiFillGithub />
+              </a>
+              <a href="https://www.notion.so/fc901c1fe0154841951b4113c63404ea" target="_blank" rel="noopener noreferrer">
+                <RiNotionFill />
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
     </React.Fragment>
-    // <React.Fragment>
-    //   {
-    //     visible && isOpen &&
-    //     <section className='overflow-scroll'>
-    //       <div className='fixed inset-0 bg-black opacity-80'/>
-    //       <div className={`
-    //         ${visible ? 'translate-x-0' : 'translate-x-full'}
-    //         fixed right-0 top-0 bg-white w-full sm:w-1/3 h-full transition-all duration-700 ease-in-out`}>
-    //       </div>
-    //     </section>
-    //   }
-    // </React.Fragment>
-    // return (
-    //   <React.Fragment>
-    //     <div className='bg-black opacity-80 fixed top-0 transition-all ease-in-out duration-700 overflow-hidden'
-    //       style={contactModal ? { width: '100%', height: '100%' } : undefined} ></div>
-
-    //     <div className="fixed top-0 right-0 h-full transition-all duration-700 bg-white"
-    //       style={contactModal ? { width: width <= 1024 ? '80%' : '30%' } : { width: '0%' }}
-    //     >
-    //       <div className='relative text-base/9 top-1/4  w-full h-96 flex flex-col whitespace-nowrap lg:pl-16 pl-8'>
-    //         {/* <div className='font-serif text-9xl absolute -top-20 left-20'> &quot; </div> */}
-    //         <div className='font-serif sm:text-3xl/12 text-lg/8 font-black'>
-    //           " I hope to<br />
-    //           have a good<br />
-    //           relationship with you."
-    //         </div>
-    //         <div className='w-10 h-1 border-b-2 border-zinc-600 my-5'></div>
-    //         {/* <div className='font-serif text-9xl absolute top-20 left-20'> &quot; </div> */}
-    //         <div className='flex items-center'><BiAlignLeft /> &nbsp; 이택현</div>
-    //         <div className='flex items-center'><FcCalendar /> &nbsp; 1991. 01. 17</div>
-    //         <div className='flex items-center '><span className='text-yellow-300'> <TfiLocationPin /></span> &nbsp; 서울시 성동구 성수동</div>
-    //         <div className='flex items-center'><FcPhone /> &nbsp; 010-9155-3194</div>
-    //         <div className='flex items-center'><FcInvite /> &nbsp; miloe0117@gmail.com</div>
-    //         <div className='flex flex-row  w-full h-40 pt-4'>
-    //           <div className='text-3xl mr-3'>
-    //             <a href="https://github.com/miloe2" target="_blank" rel="noopener noreferrer">
-    //               <AiFillGithub />
-    //             </a>
-    //           </div>
-    //           <div className='text-3xl'>
-    //             <a href="https://www.notion.so/fc901c1fe0154841951b4113c63404ea" target="_blank" rel="noopener noreferrer">
-    //               <RiNotionFill />
-    //             </a>
-    //           </div>
-
-    //         </div>
-    //       </div>
-
-    //     </div>
-
-    //   </React.Fragment>
   );
 };
 

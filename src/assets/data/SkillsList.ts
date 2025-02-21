@@ -8,7 +8,7 @@ import mysql from "../../assets/Images/icon/Mysql2.webp";
 
 import react from "../../assets/Images/icon/React-logo.svg";
 import typescript from "../../assets/Images/icon/Typescript_logo_2020.svg";
-import notion from "../../assets/Images/icon/notion.svg";
+// import notion from "../../assets/Images/icon/notion.svg";
 import springboot from "../../assets/Images/icon/spring-boot.png";
 import tailwindcss from "../../assets/Images/icon/tailwindcss.svg";
 
@@ -31,7 +31,7 @@ const SkillsList: SkillType[] = [
   { skill: "MySQL", imgUrl: mysql },
   { skill: "React", imgUrl: react },
   { skill: "Typescript", imgUrl: typescript },
-  { skill: "Notion", imgUrl: notion },
+  // { skill: "Notion", imgUrl: notion },
   { skill: "Springboot", imgUrl: springboot },
   { skill: "TailwindCSS", imgUrl: tailwindcss },
   { skill: "Styled-Component", imgUrl: styled },
