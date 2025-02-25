@@ -6,7 +6,10 @@ interface TextProps {
 const Text = ({ txtColor='#0B0D0F', className, desc } : TextProps) => {
   return (
     <p
-      className={`text-base/8 mt-4 ${className}`}
+      className={`
+        ${className?.includes('mt-') ? className : 'mt-4'}
+        text-base/8
+      `}
       style={{ color: txtColor}}
     >
       {desc.split("\n").map((line, index) => (

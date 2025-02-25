@@ -2,7 +2,6 @@ import { BiAlignLeft } from "react-icons/bi";
 import { FcInvite, FcCalendar } from "react-icons/fc";
 import { TfiLocationPin } from "react-icons/tfi";
 
-
 export const career = {
   title: '경력사항',
   type: 'text',
