@@ -25,7 +25,7 @@ const Contact = ({ contactIsOpen }) => {
 
   return (
     <React.Fragment>
-      <section className="overflow-scroll">
+      <section className="">
         <div
           className={`
             fixed inset-0 bg-black opacity-80 transition-all duration-300 

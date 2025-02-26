@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import BGItems from '../components/exhibitions/BGItems';
+import Intro from '../components/exhibitions/Intro';
 import CarouselSlide from '../components/exhibitions/CarouselSlide';
 import Whatidid from '../components/exhibitions/Whatidid';
 import ProjectRow from '../components/exhibitions/ProjectRow';
@@ -15,7 +15,7 @@ const Exhibitions = () => {
   return (
     <div className='bg-black '>
       {/* <div className='w-full bg-black h-10'/> */}
-      <BGItems />
+      <Intro />
       <Whatidid />
       <CarouselSlide />
       <ProjectRow />
