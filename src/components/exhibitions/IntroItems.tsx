@@ -89,7 +89,7 @@ const IntroItems = () => {
           {item.images.map((photo, index) => (
             <figure
               key={index}
-              className="relative flex w-72 h-48 lg:w-80 lg:h-60 rounded-xl bg-cover bg-center flex-shrink-0 shadow-2xl"
+              className="relative flex w-72 h-48 xl:w-80 xl:h-60 rounded-xl bg-cover bg-center flex-shrink-0 shadow-2xl"
               style={{ backgroundImage: `url(${photo})` }}
             >
               {item.id === 1 && index === 3 ? null : (

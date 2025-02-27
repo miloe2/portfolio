@@ -1,80 +1,98 @@
-import  {useEffect, useState} from 'react';
-import { whatIdidPhotos } from '../../assets/Data/ExhibitData';
+import { useEffect, useState, useRef, useCallback } from "react";
+import { whatIdidPhotos, whatIdidText } from "../../assets/data/ExhibitData";
+import Text from "../common/Text";
+import TitleText from "../common/TitleText";
 
 const Whatidid = () => {
-    const [scrollY, setScrollY] = useState(0);
-    
-    // 스크롤 이벤트 핸들러
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-    
-    // 컴포넌트가 마운트될 때 스크롤 이벤트 리스너 등록
-    useEffect(() => {
-      window.addEventListener('scroll', handleScroll);
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-      };
-    }, []);
+  const imageRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [imageOffsets, setImageOffsets] = useState<number[]>([]);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const blackBG = "bg-black w-full h-full absolute top-0 left-0 opacity-80  transition-opacity";
+  const blackOpacity = "bg-black w-full h-full absolute top-0 left-0 opacity-5  transition-opacity";
 
-    const blackBG =  'bg-black w-full h-full absolute top-0 left-0 opacity-80  transition-opacity';
-    const blackOpacity =  'bg-black w-full h-full absolute top-0 left-0 opacity-5  transition-opacity';
+  // 위치 값 배열에 초기값 세팅 
+  useEffect(() => {
+    if (imageRefs.current.length > 0) {
+      const offsets = imageRefs.current.map(
+        (el) => (el?.getBoundingClientRect().top || 0) - window.innerHeight / 2,
+      );
+      setImageOffsets(offsets);
+    }
+  }, [whatIdidPhotos]); 
 
-    const fontGray = 'text-sm/6 whitespace-pre-line text-zinc-500 h-10 items-center'
-    const fontTarget = 'text-base font-semibold leading-6 whitespace-pre-line h-10 flex text-[#D81519]'
+  // 스크롤 이동시 activeIndex 변경
+  const handleScroll = useCallback(() => {
+    if (imageOffsets.length === 0) return;
+    const scrollY = window.scrollY;
+    let newIndex: number | null = null;
 
+    for (let i = 0; i < imageOffsets.length; i++) {
+      if (
+        scrollY >= imageOffsets[i] &&
+        (i === imageOffsets.length - 1 || scrollY < imageOffsets[i + 1])
+      ) {
+        newIndex = i;
+        break;
+      }
+    }
 
+    setActiveIndex((prevIndex) => (prevIndex !== newIndex ? newIndex : prevIndex));
+  }, [imageOffsets]);
 
-    return (
-        
-        <div className='lg:w-[1024px] w-full h-auto bg-black mx-auto flex sm:flex-row flex-col-reverse sm:justify-between sm:items-start items-center relative my-60'  >
+  // useEffect(() => {
+  //   if (imageOffsets.length > 0) {
+  //     handleScroll();
+  //   }
+  // }, [imageOffsets]);
 
-            <div className='w-2/5 min-w-[300px] h-auto  flex flex-col '>
-                <div className='w-full h-96 relative'>
-                    <img src={whatIdidPhotos[0]} alt="" className='w-full h-full object-cover '/>
-                    { scrollY >= 400 && scrollY < 1100 ?  <div className={blackOpacity}/> : <div className={blackBG}/>  }
-                </div>
-                
-                <div className='w-full h-96 relative '>
-                    <img src={whatIdidPhotos[1]} alt="" className='w-full h-full object-cover '/> 
-                        { scrollY >= 1100 && scrollY < 1500 ? <div className={blackOpacity}/> : <div className={blackBG}/>  }
-                </div>
+  // 스크롤 이벤트 리스너 추가
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
 
-                <div className='w-full h-96 relative overflow-hidden'>
-                    <img src={whatIdidPhotos[2]} alt="" className='w-full h-full object-cover'/> 
-                    { scrollY >= 1500 && scrollY < 1900 ?  <div className={blackOpacity}/> : <div className={blackBG}/>  }
-                </div>
-
-                <div className='w-full h-96 relative overflow-hidden'>
-                    <img src={whatIdidPhotos[3]} alt="" className='w-full h-full object-cover'/> 
-                    { scrollY >= 1900 ? <div className={blackOpacity}/> : <div className={blackBG}/>  }
-                </div>
+  return (
+    <>
+      <section className="flex justify-between max-w-5xl mx-auto relative my-60 ">
+        <div className="max-w-sm w-full flex flex-col ">
+          {whatIdidPhotos.map((photo, index) => (
+            <div
+              className="w-full h-96 relative"
+              key={index}
+              ref={(el) => (imageRefs.current[index] = el)}
+            >
+              <img src={photo} alt={photo} className="w-full h-full object-cover" />
+              <div className={activeIndex === index ? blackOpacity : blackBG} />
             </div>
-            <div className='lg:w-1/3 w-full px-14 py-10 lg:px-0  h-auto  flex-col sticky lg:top-1/3 top-16 overflow-hidden text-white bg-black bg-opacity-80 lg:bg-transparent '>
-                <div className='text-sm text-zinc-500'> Exhibitions</div>
-                <div className='text-3xl font-bold py-4 text-[#D81519]'>What I did </div>
-                <div className='text-xs/6 whitespace-pre-line '> 
-                전시 대행사 해외컨벤션 팀에 근무하며 <br/>
-                해외 전시회 기획 및 현장 운영과 <br/>
-                제안서 기획/작성, 입찰 제안 발표를 
-                수행하였습니다. </div>
-                <div className='hidden sm:block'>
-                    <div className='text-xl font-bold py-4  mt-6'> 업무 분야 </div>
-                    {scrollY >= 400 && scrollY < 1100 ? (<div className={fontTarget}> → 전시 운영 및 기획</div>) : (<div className={fontGray}>전시 운영 및 기획</div>)}
-                    {scrollY >= 1100 && scrollY < 1500 ? (<div className={fontTarget}> → 컨퍼런스 운영 및 기획</div>) : (<div className={fontGray}>컨퍼런스 운영 및 기획</div>)}
-                    {scrollY >= 1500 && scrollY < 1900 ? (<div className={fontTarget}> → 기업 커뮤니케이션</div>) : (<div className={fontGray}>기업 커뮤니케이션</div>)}
-                    {scrollY >= 1900 ? (<div className={fontTarget}> → 제안서 작성/발표</div>) : (<div className={fontGray}>제안서 작성/발표</div>)}
-
-                </div>
-
-
-
-            </div>
-
-            
+          ))}
         </div>
 
-    );
+        <div className="max-w-sm w-full sticky top-1/3 h-auto self-start">
+          <figure>
+            <Text desc="Exhibitions" txtColor="#71717A" />
+            <TitleText title="What I did" txtColor="#D81519" />
+            <Text
+              desc="전시 대행사 해외컨벤션 팀에 근무하며
+              해외 전시회 기획 및 현장 운영과
+              제안서 기획/작성, 입찰 제안 발표를 수행하였습니다."
+              txtColor="#fff"
+            />
+          </figure>
+          <figure className="mt-6">
+            <Text desc={`업무분야`} txtColor="#aaa" className="mt-0 mb-4 font-bold text-lg" />
+            {whatIdidText.map((text, index) => (
+              <Text
+                key={index}
+                desc={`${activeIndex === index ? "→ " : ""}${text}`}
+                txtColor={activeIndex === index ? "#D81519" : "#71717A"}
+                className={`mt-0 ${activeIndex === index ? "font-bold" : ""}`}
+              />
+            ))}
+          </figure>
+        </div>
+      </section>
+    </>
+  );
 };
 
 export default Whatidid;
