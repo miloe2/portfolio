@@ -1,11 +1,14 @@
-// @ts-nocheck
-import React, { useEffect, useState } from "react";
-import useStore from "../store";
+import React, { useEffect } from "react";
 import { contactInfo } from "../assets/data/careerData";
 import { AiFillGithub } from "react-icons/ai";
 import { RiNotionFill } from "react-icons/ri";
 
-const Contact = ({ contactIsOpen }) => {
+interface ContactProps { 
+  contactIsOpen: boolean;
+  onClose: () => void;
+}
+
+const Contact = ({ contactIsOpen, onClose }:ContactProps) => {
   
   useEffect(() => {
     const preventScroll = (e: WheelEvent) => {
@@ -25,7 +28,7 @@ const Contact = ({ contactIsOpen }) => {
 
   return (
     <React.Fragment>
-      <section className="">
+      <section>
         <div
           className={`
             fixed inset-0 bg-black opacity-80 transition-all duration-300 
@@ -37,6 +40,7 @@ const Contact = ({ contactIsOpen }) => {
             fixed top-0 right-0 bg-white w-full sm:w-1/2 xl:w-1/3 h-full flex items-center transition-transform duration-500 
             ${contactIsOpen ? "translate-x-0" : "translate-x-full"}
           `}
+          onClick={onClose}
         >
           <div className='w-full flex flex-col whitespace-nowrap pl-16 bg-red-00'>
             <p className='font-serif text-xl/8 font-black'>

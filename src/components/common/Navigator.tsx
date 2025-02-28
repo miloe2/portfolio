@@ -5,16 +5,6 @@ import React, { useEffect, useState, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import Contact from "../../pages/Contact";
 
-// xbtn 으로 네비 on/off
-// route 에 따른 폰트 색상
-// device 100vh 이상이면, 색상 투명 => 하얀색 변경
-// contact 클릭 => 모달 창
-interface NaviStatusProps {
-  currentPage: string | null;
-  scrolledInnerHeight: boolean;
-  xBtn: boolean;
-}
-
 const Navigator = () => {
   const navigator = useNavigate();
   const { pathname } = useLocation();
@@ -86,7 +76,7 @@ const Navigator = () => {
           ${naviStatus.scrolledInnerHeight ? "glassmorphism" : "bg-transparent"}
           `}
       >
-        <ul className="w-full flex text-sm font-bold cursor-pointer mr-0 sm:mr-16">
+        <ul className="w-full flex text-sm font-bold cursor-pointer mr-2 sm:mr-16">
           {navItems.map((menu) => (
             <li
               key={menu.route}
@@ -100,7 +90,7 @@ const Navigator = () => {
           ))}
         </ul>
       </div>
-      {<Contact contactIsOpen={contactIsOpen}/>}
+      {<Contact contactIsOpen={contactIsOpen} onClose={() => setContactIsOpen(false)}/>}
     </React.Fragment>
   );
 };
