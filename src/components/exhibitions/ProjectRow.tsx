@@ -1,140 +1,60 @@
-import  { useEffect, useRef, useState, useCallback  } from 'react';
-import  projectData  from '../../assets/Data/ProjectData';
-
+import { useEffect, useRef, useState } from "react";
+import projectData from "../../assets/data/ProjectData";
+import TitleText from "../common/TitleText";
 
 const ProjectRow = () => {
-    const diaryImageRef = useRef<HTMLDivElement | null>(null);
-    // const [scrollX, setScrollX] = useState(0);
-    const [totalWidth, setTotalWidth] = useState(0);
-    const [windowWidth] = useState(window.innerWidth);
-    const [barWidth, setBarWidth] = useState(0);
-    const [paddingLeft] = useState(window.innerWidth >= 1024 ? 192 : 10);
-    // 컴포넌트가 마운트될 때 스크롤 이벤트 리스너 등록
- // 가로 스크롤 적용
- const scrollHorizontally = useCallback((e: WheelEvent) => {
-    e.preventDefault();
-    const element = e.currentTarget as HTMLElement;
-    element.scrollLeft += (e.deltaY + e.deltaX) * 1.4;
-    if (diaryImageRef.current) {
-        const scrollX = diaryImageRef.current.scrollLeft;
-        setBarWidth((scrollX / (totalWidth + paddingLeft - windowWidth)) * 100);
-    }
-}, [totalWidth, paddingLeft, windowWidth]);
+  const diaryImageRef = useRef<HTMLDivElement | null>(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
-// 스크롤 이벤트 핸들러
-const handleScroll = useCallback(() => {
-    if (diaryImageRef.current) {
-        const scrollX = diaryImageRef.current.scrollLeft;
-        setBarWidth((scrollX / (totalWidth + paddingLeft - windowWidth)) * 100);
-    }
-}, [totalWidth, paddingLeft, windowWidth]);
+  useEffect(() => {
+    const updateProgress = () => {
+      if (!diaryImageRef.current) return;
+      const { scrollLeft, scrollWidth, clientWidth } = diaryImageRef.current;
+      const progress = (scrollLeft / (scrollWidth - clientWidth)) * 100;
+      setScrollProgress(progress);
+    };
 
-useEffect(() => {
-    const scrollElement = diaryImageRef.current;
-    setTotalWidth(scrollElement?.scrollWidth || 0);
-    if (scrollElement) {
-        scrollElement.addEventListener('wheel', scrollHorizontally);
+    if (diaryImageRef.current) {
+      diaryImageRef.current.addEventListener("scroll", updateProgress);
+      updateProgress();
     }
-    window.addEventListener('scroll', handleScroll);
 
     return () => {
-        if (scrollElement) {
-            scrollElement.removeEventListener('wheel', scrollHorizontally);
-        }
-        window.removeEventListener('scroll', handleScroll);
+      diaryImageRef.current?.removeEventListener("scroll", updateProgress);
     };
-}, [scrollHorizontally, handleScroll]);
+  }, []);
 
-    // useEffect(() => {
-    //     const scrollElement = diaryImageRef.current;
-    //     setTotalWidth(scrollElement?.scrollWidth || 0);
-    //     if (scrollElement) {
-    //         scrollElement.addEventListener('wheel', scrollHorizontally);
-    //     }
-    //     window.addEventListener('scroll', handleScroll);
-
-    //     return () => {
-    //         if (scrollElement) {
-    //         scrollElement.removeEventListener('wheel', scrollHorizontally);
-    //         }
-    //         window.removeEventListener('scroll', handleScroll);
-    //     };
-    //     },[scrollHorizontally]);
-
-    //     // 가로 스크롤 적용
-    //     function scrollHorizontally(e: WheelEvent) {
-    //         e.preventDefault();
-    //         const element = e.currentTarget as HTMLElement;
-    //         element.scrollLeft += (e.deltaY + e.deltaX) * 1.4;
-    //         if (diaryImageRef.current) {
-    //             const scrollX = diaryImageRef.current.scrollLeft;
-                
-    //             setBarWidth((scrollX / (totalWidth + paddingLeft - windowWidth)) * 100);
-    //         }
-    //     }
-    
-    //     // 스크롤 이벤트 핸들러
-    //     const handleScroll = () => {
-    //         if (diaryImageRef.current) {
-    //             const scrollX = diaryImageRef.current.scrollLeft;
-    //             setBarWidth((scrollX / (totalWidth + paddingLeft - windowWidth)) * 100);
-    //         }
-    //     };
-    
-
-
-    const BlackBG =  'bg-black w-full h-full absolute top-0 left-0 opacity-10 ';
-
-    return (
-        <>
-        <div className='w-full h-screen bg-black flex justify-center flex-col lg:pl-48 pl-10'>
-        <div className='text-xl font-bold py-8 text-red-600'> 프로젝트 </div>
-            {/* 이미지 들어가는 공간 */}
-            <div ref={diaryImageRef} 
-                className=' w-auto h-1/2 items-center whitespace-nowrap flex  overflow-x-auto  scrollbar-hide'>
-                {projectData.map((item, index) => (
-                    <div className=' w-72 h-full box-border flex-shrink-0 overflow-hidden relative mr-1' key={index}>
-                        <div className={BlackBG}/>
-                        <div className='w-full h-2/5 absolute bottom-0 text-zinc-100 justify-center flex'>
-                            <div className=' w-4/5 h-auto pr-10'>
-                                <div className='text-sm/6 whitespace-pre-line'> {item.date} </div>
-                                <div className='text-sm/6 whitespace-pre-line'> {item.location} </div>
-                                <div className='text-xl font-bold py-1 whitespace-pre-line'> {item.title} </div>
-                                {/* <div className='text-sm/6 whitespace-pre-line'> {item.desc} </div> */}
-                            </div>
-                        </div>
-                        
-
-                        <img src={item.img} alt="" className='w-full h-full object-cover'/>
-
-                    </div>
-                ))}
+  return (
+    <>
+      <section className="w-full max-w-7xl ml-auto  flex justify-center flex-col pb-60 pl-10 xl:pl-0">
+        <TitleText title="프로젝트" txtColor="#D81519" />
+        <div
+          ref={diaryImageRef}
+          className="items-center whitespace-nowrap flex overflow-x-auto scrollbar-hide space-x-4 mt-4 pr-10"
+        >
+          {projectData.map((item, index) => (
+            <div className="w-72 h-96 flex-shrink-0 relative" key={index}>
+              <div
+                className="w-full h-3/5 bg-cover rounded-t-lg"
+                style={{ backgroundImage: `url(${item.img})` }}
+              ></div>
+              <div className="w-full h-2/5 p-4 absolute bottom-0 text-gray-200 flex flex-col bg-[#353742] rounded-b-lg">
+                <p className="text-sm/6 "> {item.date} </p>
+                <p className="text-base/6 font-thin"> {item.location} </p>
+                <p className="text-xl font-medium whitespace-pre-wrap mt-2">{item.title} </p>
+              </div>
             </div>
-            {/* 가로 스크롤바  */}
-            <div className='h-16 lg:min-w-[20rem] w-full  items-end flex overflow-hidden'>
-                {/* <div className='w-full h-10 bg-yellow-500 ' > */}
-                <div className='lg:w-96 w-[200px] h-2 bg-[#616060] ' >
-                    {/* {(scrollX / totalWidth) * 100} <br /> */}
-                    {/* { scrollX / (totalWidth + 192 - windowWidth )* 100} <br />
-                    
-                    {totalWidth}
-                    {windowWidth} */}
-                    <div className=' h-full bg-red-600 max-w-[100%]'
-                    style={{ width: `${barWidth}%` }}
-                    >
-                    </div>
-                </div>
-                {/* <div className='hidden'> */}
-                {barWidth}
-
-
-                {/* </div> */}
-
-            </div>
-           
+          ))}
         </div>
-        </>
-    );
+        <div className="max-w-xs w-full h-2 bg-[#616060] mt-8">
+          <div
+            className="h-full bg-[#D81519]"
+            style={{ width: `${Math.min(scrollProgress, 100)}%` }}
+          />
+        </div>
+      </section>
+    </>
+  );
 };
 
 export default ProjectRow;
