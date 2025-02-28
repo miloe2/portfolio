@@ -26,7 +26,7 @@ const Left3Image: React.FC<LeftImageProps> = ({ bgColor, txtColor, images, title
       <div
         className={`lg:w-1/2 w-full  lg:mt-0 mt-4 h-full  flex justify-center items-center flex-col`}
       >
-        <div className="w-72 h-72">
+        <div className="w-80 mx-auto lg:mb-0 mb-6">
           <TitleText title={title} txtColor={txtColor} />
           <Text desc={desc} />
         </div>

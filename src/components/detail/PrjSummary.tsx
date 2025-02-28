@@ -10,7 +10,7 @@ const PrjSummary: React.FC<prjSummaryProps> = ({ desc1, desc2, txtColor }) => {
 
   return (
     <div className="lg:max-w-5xl sm:max-w-2xl h-full flex sm:flex-row flex-col text-left mx-auto mb-20 mt-10">
-      <div className="sm:w-1/2 w-2/3  mx-auto min-w-[320px] flex flex-col px-0 ">
+      <div className="sm:w-1/2 w-2/3 mx-auto min-w-[320px] flex flex-col px-0 ">
         <div className="text-3xl/12 font-bold">개요</div>
         <div className="flex lg:flex-row flex-col lg:space-x-5 lg:space-y-0 space-x-0 space-y-1 text-zinc-600 font-semibold mt-2">
           {labels.map((label, index) => (

@@ -36,7 +36,7 @@ const LeftImage: React.FC<LefttImageLeftProps> = ({
           )}
         </div>
       </div>
-        <div className="w-80 h-auto mx-auto">
+        <div className="w-80 mx-auto lg:mb-0 mb-6">
           <TitleText title={title} txtColor={txtColor} />
           <Text desc={desc} />
         </div>

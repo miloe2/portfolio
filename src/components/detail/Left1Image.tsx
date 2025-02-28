@@ -16,7 +16,7 @@ const Left1Image: React.FC<Left1ImageProps> = ({ bgColor, txtColor, img1, title,
       <div className={`lg:mr-10 mr-0 p-6`} style={{ backgroundColor: bgColor }}>
         <img src={img1} alt={img1} className="" />
       </div>
-      <div className={`flex flex-col min-w-[360px] lg:mb-0 mb-6`}>
+      <div className={`flex flex-col min-w-[320px] h-auto mx-auto lg:mb-0 mb-6`}>
         <TitleText title={title} txtColor={txtColor} />
         <Text desc={desc} />
       </div>

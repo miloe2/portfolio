@@ -81,7 +81,7 @@ const DetailPortfolio = () => {
       />
 
       <LeftImage
-        bgColor="#f5f5f5"
+        bgColor={themeColor}
         txtColor={txtColor}
         title="Scroll 기반 
               애니메이션"

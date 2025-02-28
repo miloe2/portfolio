@@ -10,7 +10,7 @@ const StackCircle = ({ stack }: StackCircleType) => {
 
   return (
     <React.Fragment>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center mb-2">
         <div className="w-12 h-12 rounded-full border border-zinc-500 justify-center items-center flex">
           <div className="w-10 h-10 bg-white rounded-full border-zinc-300 border">
             <img

@@ -22,7 +22,7 @@ const RightImage: React.FC<RightImageLeftProps> = ({
   return (
     <div className="max-w-7xl w-full mx-auto h-full flex lg:flex-row flex-col relative justify-end items-center mb-60">
       <div className={`lg:w-1/2 w-full h-full flex justify-center items-center flex-col mx-auto`}>
-        <div className="w-80 h-auto lg:mb-0 mb-10 ">
+        <div className="w-80 lg:mb-0 mb-10 ">
           <TitleText title={title} txtColor={txtColor} />
           <Text desc={desc} />
         </div>

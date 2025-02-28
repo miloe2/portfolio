@@ -46,12 +46,12 @@ const PrjList = () => {
   };
 
   return (
-    <section className="mb-40">
-      <div className=" w-full h-10 px-10 text-right text-sm">
-        클릭 하시면 자세히 보실수 있습니다.{" "}
+    <section className="mb-40 xl:px-10 px-4">
+      <div className=" w-full h-10 text-right text-sm">
+        클릭 하시면 자세히 보실수 있습니다.
       </div>
       <div
-        className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4 w-screen h-auto px-10 relative"
+        className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4 w-full h-auto relative"
         onMouseMove={CircleMouseMove}
         onMouseLeave={CircleMouseLeave}
       >
@@ -61,7 +61,6 @@ const PrjList = () => {
                 transition-all ease-linear duration-100 pointer-events-none text-center flex flex-col justify-center items-center"
           style={{ left: `${offsetX}px`, top: `${offsetY}px`, opacity: opacity }}
         >
-          {" "}
           VIEW <br />
           PROJECT <br />↓
         </div>
@@ -100,16 +99,6 @@ const PrjList = () => {
             </div>
           </div>
         ))}
-
-        {/* <div
-            className={`w-full h-96 flex items-end relative bg-zinc-100 text-white`}
-            >
-          <div className={`w-full h-full absolute top-0 transition duration-500`}/>
-              <div className='m-10 z-0 text-white absolute bottom-0'>
-                  <div className={`text-xs h-2 w-10 bg-zinc-300 rounded-full ml-1`}>  </div>
-                  <div className={`text-4xl font-bold h-4 w-20 bg-zinc-300 rounded-full mt-4`}>  </div>
-              </div>  
-          </div> */}
       </div>
     </section>
   );
