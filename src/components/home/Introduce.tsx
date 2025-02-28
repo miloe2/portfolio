@@ -28,8 +28,7 @@ const Introduce = () => {
   ];
 
   return (
-    //  bg-green-500 lg:bg-red-500 2xl:bg-blue-500
-    <div className="w-full flex flex-col max-w-sm lg:max-w-2xl 2xl:max-w-4xl mx-auto bg-green-00">
+    <div className="w-full flex flex-col max-w-sm px-4 lg:px-0 lg:max-w-2xl 2xl:max-w-4xl mx-auto bg-green-00">
       <div
         ref={textRef}
         className={`
@@ -54,14 +53,14 @@ const Introduce = () => {
         ${isImageVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-40"}
         min-w-60 w-1/2 self-end sm:translate-x-10 -translate-y-[10%] transition-all duration-1000 -top-10 relative`}
       >
-        <img src={pht1} alt={pht1} className="w-full h-full object-cover  opacity-10" />
+        <img src={pht1} alt={pht1} className="w-full h-full object-cover" />
       </div>
       <div
         className={`
         ${isImageVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}
         min-w-64 w-1/2 delay-1000 duration-1000`}
       >
-        <img src={pht2} alt={pht2} className="w-full h-full object-cover opacity-10" />
+        <img src={pht2} alt={pht2} className="w-full h-full object-cover" />
       </div>
     </div>
   );
