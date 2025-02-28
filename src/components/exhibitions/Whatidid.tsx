@@ -53,7 +53,11 @@ const Whatidid = () => {
 
   return (
     <>
-      <section className="flex justify-between max-w-5xl mx-auto relative my-60 ">
+      <section className="flex max-w-5xl mx-auto relative my-60
+      md:justify-between 
+      md:flex-row flex-col-reverse
+      md:px-0 px-10
+      ">
         <div className="max-w-sm w-full flex flex-col ">
           {whatIdidPhotos.map((photo, index) => (
             <div
@@ -67,18 +71,18 @@ const Whatidid = () => {
           ))}
         </div>
 
-        <div className="max-w-sm w-full sticky top-1/3 h-auto self-start">
+        <div className="max-w-sm w-full sticky md:top-1/3 top-0 h-auto self-start bg-black md:pt-0 pt-16">
           <figure>
             <Text desc="Exhibitions" txtColor="#71717A" />
             <TitleText title="What I did" txtColor="#D81519" />
             <Text
               desc="전시 대행사 해외컨벤션 팀에 근무하며
               해외 전시회 기획 및 현장 운영과
-              제안서 기획/작성, 입찰 제안 발표를 수행하였습니다."
+              제안서 작성 및 제안 발표를 수행하였습니다."
               txtColor="#fff"
             />
           </figure>
-          <figure className="mt-6">
+          <figure className="hidden md:block">
             <Text desc={`업무분야`} txtColor="#aaa" className="mt-0 mb-4 font-bold text-lg" />
             {whatIdidText.map((text, index) => (
               <Text
@@ -89,6 +93,7 @@ const Whatidid = () => {
               />
             ))}
           </figure>
+          <div className="bg-gradient-to-b from-black to-transparent w-full h-20 absolute -bottom-20 bg-red-00" />
         </div>
       </section>
     </>
