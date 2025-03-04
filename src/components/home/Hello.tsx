@@ -21,7 +21,7 @@ const Hello = () => {
               className='box-border min-w-1/2 h-11/12 relative bg-[#FF5851] transition-width duration-700 ease-in-out'
               style={scrollY < 50 ? { width: '50%' } : { width: '95%' }}
             >
-              <div className={`absolute top-1/2 -translate-y-1/2 right-0 translate-x-1/2 font-black text-[#242424] transition-opacity duration-1000 text-hello-heading ${scrollY > 50 ? 'opacity-0' : 'opacity-100'}`}>
+              <div className={`absolute top-1/2 -translate-y-1/2 leading-tight right-0 translate-x-1/2 font-black text-[#242424] transition-opacity duration-1000 text-hello-heading ${scrollY > 50 ? 'opacity-0' : 'opacity-100'}`}>
                 안녕<br />
                 하세요<span className='text-[#FF5851]'>.</span>
               </div>

@@ -13,11 +13,10 @@ const Exhibitions = () => {
 
 
   return (
-    <div className='bg-black '>
-      {/* <div className='w-full bg-black h-10'/> */}
+    <div className='bg-black pb-40 '>
       <Intro />
       <Whatidid />
-      <CarouselSlide />
+      {/* <CarouselSlide /> */}
       <ProjectRow />
     </div>
   );

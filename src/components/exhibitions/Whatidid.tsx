@@ -10,7 +10,7 @@ const Whatidid = () => {
   const blackBG = "bg-black w-full h-full absolute top-0 left-0 opacity-80  transition-opacity";
   const blackOpacity = "bg-black w-full h-full absolute top-0 left-0 opacity-5  transition-opacity";
 
-  // 위치 값 배열에 초기값 세팅 
+  // 위치 값 배열에 초기값 세팅
   useEffect(() => {
     if (imageRefs.current.length > 0) {
       const offsets = imageRefs.current.map(
@@ -18,7 +18,7 @@ const Whatidid = () => {
       );
       setImageOffsets(offsets);
     }
-  }, [whatIdidPhotos]); 
+  }, [whatIdidPhotos]);
 
   // 스크롤 이동시 activeIndex 변경
   const handleScroll = useCallback(() => {
@@ -53,11 +53,13 @@ const Whatidid = () => {
 
   return (
     <>
-      <section className="flex max-w-5xl mx-auto relative my-60
+      <section
+        className="flex max-w-5xl mx-auto relative my-60
       md:justify-between 
       md:flex-row flex-col-reverse
       md:px-0 px-10
-      ">
+      "
+      >
         <div className="max-w-sm w-full flex flex-col ">
           {whatIdidPhotos.map((photo, index) => (
             <div
