@@ -6,23 +6,37 @@ const ProjectRow = () => {
   const diaryImageRef = useRef<HTMLDivElement | null>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
 
-  useEffect(() => {
-    const updateProgress = () => {
-      if (!diaryImageRef.current) return;
-      const { scrollLeft, scrollWidth, clientWidth } = diaryImageRef.current;
-      const progress = (scrollLeft / (scrollWidth - clientWidth)) * 100;
-      setScrollProgress(progress);
-    };
+  // 마우스 휠 가로 스크롤 핸들러
+  const handleWheelScroll = (e: WheelEvent) => {
+    if (!diaryImageRef.current) return;
+    e.preventDefault();
+    diaryImageRef.current.scrollLeft += (e.deltaY + e.deltaX) * 1.4;
+  };
 
-    if (diaryImageRef.current) {
-      diaryImageRef.current.addEventListener("scroll", updateProgress);
-      updateProgress();
-    }
+  // 가로 스크롤 진행률 업데이트 핸들러
+  const handleScrollProgress = () => {
+    if (!diaryImageRef.current) return;
+    const { scrollLeft, scrollWidth, clientWidth } = diaryImageRef.current;
+    const progress = (scrollLeft / (scrollWidth - clientWidth)) * 100;
+    setScrollProgress(progress);
+  };
+
+  // 이벤트 리스너 등록 및 정리
+  useEffect(() => {
+    const scrollElement = diaryImageRef.current;
+    if (!scrollElement) return;
+
+    scrollElement.addEventListener("wheel", handleWheelScroll);
+    scrollElement.addEventListener("scroll", handleScrollProgress);
+
+    // 초기 진행률 설정
+    handleScrollProgress();
 
     return () => {
-      diaryImageRef.current?.removeEventListener("scroll", updateProgress);
+      scrollElement.removeEventListener("wheel", handleWheelScroll);
+      scrollElement.removeEventListener("scroll", handleScrollProgress);
     };
-  }, []);
+  }, [diaryImageRef.current]);
 
   return (
     <>
