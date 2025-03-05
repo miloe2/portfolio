@@ -15,7 +15,7 @@ const Navigator = () => {
     currentPage: "",
     scrolledInnerHeight: false,
     xBtn: false,
-    contactToggle : false,
+    contactToggle: false,
   });
 
   const navItems = [
@@ -28,7 +28,7 @@ const Navigator = () => {
   // contact modal hanlder
   const handleContact = () => {
     setContactIsOpen(!contactIsOpen);
-    naviStatus.contactToggle = (!naviStatus.contactToggle)
+    naviStatus.contactToggle = !naviStatus.contactToggle;
   };
 
   // navi menu button handler
@@ -41,7 +41,6 @@ const Navigator = () => {
         ...prev,
         currentPage: route,
       }));
-  
     }
   };
 
@@ -52,7 +51,7 @@ const Navigator = () => {
 
       setNaviStatus((prev) => ({
         ...prev,
-        scrolledInnerHeight: currentScrollY > INNER_HEIGHT, 
+        scrolledInnerHeight: currentScrollY > INNER_HEIGHT,
       }));
     };
     window.addEventListener("scroll", handleScroll);
@@ -90,7 +89,7 @@ const Navigator = () => {
           ))}
         </ul>
       </div>
-      {<Contact contactIsOpen={contactIsOpen} onClose={() => setContactIsOpen(false)}/>}
+      {<Contact contactIsOpen={contactIsOpen} onClose={() => setContactIsOpen(false)} />}
     </React.Fragment>
   );
 };

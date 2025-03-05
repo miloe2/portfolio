@@ -75,7 +75,7 @@ const IntroItems = () => {
     sm:translate-x-80 sm:translate-y-40
     lg:translate-x-40 lg:translate-y-20
     xl:translate-x-0 xl:translate-y-0 
-    2xl:-translate-x-40 2xl:-translate-y-40 
+    2xl:-translate-x-20 2xl:-translate-y-20 
     "
     >
       {itemsList.map((item) => (

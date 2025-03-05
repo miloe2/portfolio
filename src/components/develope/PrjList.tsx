@@ -47,11 +47,9 @@ const PrjList = () => {
 
   return (
     <section className="mb-40 xl:px-10 px-4">
-      <div className=" w-full h-10 text-right text-sm">
-        클릭 하시면 자세히 보실수 있습니다.
-      </div>
+      <p className=" w-full h-10 text-right text-sm">클릭 하시면 자세히 보실수 있습니다.</p>
       <div
-        className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4 w-full h-auto relative"
+        className="grid grid-cols-1 xl:grid-cols-3 md:grid-cols-2 gap-4 w-full h-auto relative"
         onMouseMove={CircleMouseMove}
         onMouseLeave={CircleMouseLeave}
       >

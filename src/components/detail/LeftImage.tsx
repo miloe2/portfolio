@@ -20,7 +20,9 @@ const LeftImage: React.FC<LefttImageLeftProps> = ({
   items,
 }) => {
   return (
-    <div className={`max-w-7xl h-full mx-auto flex relative items-center lg:flex-row flex-col-reverse mb-60 `}>
+    <div
+      className={`max-w-7xl h-full mx-auto flex relative items-center lg:flex-row flex-col-reverse mb-60 `}
+    >
       <div
         className={`lg:w-1/2 w-full h-auto py-10 flex
             justify-center items-${items} flex-col `}
@@ -36,11 +38,11 @@ const LeftImage: React.FC<LefttImageLeftProps> = ({
           )}
         </div>
       </div>
-        <div className="w-80 mx-auto lg:mb-0 mb-6">
-          <TitleText title={title} txtColor={txtColor} />
-          <Text desc={desc} />
-        </div>
+      <div className="w-80 mx-auto lg:mb-0 mb-6">
+        <TitleText title={title} txtColor={txtColor} />
+        <Text desc={desc} />
       </div>
+    </div>
   );
 };
 

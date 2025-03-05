@@ -3,14 +3,14 @@ interface TextProps {
   className?: string;
   desc: string;
 }
-const Text = ({ txtColor='#0B0D0F', className, desc } : TextProps) => {
+const Text = ({ txtColor = "#0B0D0F", className, desc }: TextProps) => {
   return (
     <p
       className={`
-        ${className?.includes('mt-') ? className : 'mt-4'}
+        ${className?.includes("mt-") ? className : "mt-4"}
         text-base/8
       `}
-      style={{ color: txtColor}}
+      style={{ color: txtColor }}
     >
       {desc.split("\n").map((line, index) => (
         <span key={index}>
