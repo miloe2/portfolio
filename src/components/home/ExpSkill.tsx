@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import Marquee from "react-fast-marquee";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
-import SkillsList from "../../assets/data/SkillsList";
+import { SkillsList } from "../../assets/data/SkillsList";
 
 const ExpSkill = () => {
   const textRef = useRef(null);

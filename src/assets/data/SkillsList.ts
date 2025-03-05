@@ -16,27 +16,60 @@ import styled from "../../assets/Images/icon/styled.png";
 import vue from "../../assets/Images/icon/vue.svg";
 import nuxt from "../../assets/Images/icon/nuxt.svg";
 
+import storybook from "../../assets/Images/icon/storybook_icon.png";
+import zeplin from "../../assets/Images/icon/zeplin_icon.svg";
+import zustand from "../../assets/Images/icon/zustand_icon.svg";
+import pinia from "../../assets/Images/icon/Pinialogo.svg";
+import scss from "../../assets/Images/icon/scss_icon.svg";
+
 interface SkillType {
   skill: string;
   imgUrl: string;
 }
 
 const SkillsList: SkillType[] = [
-  { skill: "Java", imgUrl: java },
   { skill: "Javascript", imgUrl: javascript },
-  { skill: "AWS", imgUrl: aws },
-  { skill: "Figma", imgUrl: figma },
-  { skill: "git", imgUrl: git },
-  { skill: "mariaDB", imgUrl: mariadb },
-  { skill: "MySQL", imgUrl: mysql },
-  { skill: "React", imgUrl: react },
   { skill: "Typescript", imgUrl: typescript },
-  // { skill: "Notion", imgUrl: notion },
+  { skill: "React", imgUrl: react },
+  { skill: "zustand", imgUrl: zustand },
+  { skill: "vue", imgUrl: vue },
+  { skill: "nuxt", imgUrl: nuxt },
+  { skill: "pinia", imgUrl: pinia },
+  { skill: "AWS", imgUrl: aws },
+  { skill: "Java", imgUrl: java },
   { skill: "Springboot", imgUrl: springboot },
   { skill: "TailwindCSS", imgUrl: tailwindcss },
   { skill: "Styled-Component", imgUrl: styled },
-  { skill: "vue", imgUrl: vue },
-  { skill: "nuxt", imgUrl: nuxt },
+  { skill: "SCSS", imgUrl: scss },
+  { skill: "mariaDB", imgUrl: mariadb },
+  { skill: "MySQL", imgUrl: mysql },
+  // { skill: "Notion", imgUrl: notion },
+  { skill: "git", imgUrl: git },
+  { skill: "storybook", imgUrl: storybook },
+  { skill: "zeplin", imgUrl: zeplin },
+  { skill: "Figma", imgUrl: figma },
 ];
 
-export default SkillsList;
+const stackIcon = { 
+  java, 
+  javascript, 
+  aws, 
+  figma, 
+  git, 
+  mariadb, 
+  mysql, 
+  react, 
+  typescript, 
+  // notion, 
+  springboot, 
+  tailwindcss, 
+  styled, 
+  scss, 
+  vue, 
+  nuxt, 
+  storybook, 
+  zeplin, 
+  zustand, 
+  pinia
+};
+export { SkillsList, stackIcon };

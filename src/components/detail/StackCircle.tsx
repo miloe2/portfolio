@@ -1,5 +1,5 @@
 import React from "react";
-import SkillsList from "../../assets/data/SkillsList";
+import { SkillsList } from "../../assets/data/SkillsList";
 
 interface StackCircleType {
   stack: string;

@@ -5,7 +5,8 @@ interface CareerDescriptionProps {
 }
 interface desc {
   title: string;
-  content: string;
+  content: string | string[];
+  icons?: string[];
   subText?: string;
 }
 const CareerDescription = ({ content }: { content: CareerDescriptionProps }) => {
@@ -48,8 +49,21 @@ const CareerDescription = ({ content }: { content: CareerDescriptionProps }) => 
           <p className="font-bold text-lg mb-4">{content.title}</p>
           {content.desc.map((item, index) => (
             <div key={index} className="flex flex-col text-sm mb-2">
-              <p className="text-zinc-600">{item.title}</p>
-              <p className="font-medium">{item.content}</p>
+              <p className="">{item.title}</p>
+              <div className="flex">
+                {item.icons?.map((icon, index) => (
+                  <div key={index} className="flex justify-center items-center">
+                    <img
+                      src={icon}
+                      alt={icon}
+                      className="w-4 h-4 mr-1 bg-zinc-200 rounded-full opacity-80"
+                    />
+                    <span className="mr-2 text-zinc-700">{item.content[index]}</span>
+                  </div>
+                ))}
+
+                {/* <p className="font-medium">{item.content}</p> */}
+              </div>
             </div>
           ))}
         </div>

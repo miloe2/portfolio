@@ -1,6 +1,7 @@
 import { BiAlignLeft } from "react-icons/bi";
 import { FcInvite, FcCalendar } from "react-icons/fc";
 import { TfiLocationPin } from "react-icons/tfi";
+import { stackIcon } from "./SkillsList";
 
 export const career = {
   title: "경력사항",
@@ -27,10 +28,27 @@ export const skills = {
   title: "프론트엔드 사용 기술",
   type: "icon",
   desc: [
-    { title: "프레임워크", content: ["vue/nuxt, react/next"], icons: [] },
-    { title: "상태관리", content: ["vuex/pinia, zustand"], icons: [] },
-    { title: "스타일링", content: ["SCSS, tailwind, styled-components"], icons: [] },
-    { title: "UI개발툴", content: ["storybook, figma, zeplin"], icons: [] },
+    {
+      title: "프레임워크",
+      content: ["vue/nuxt", "react/next"],
+      icons: [stackIcon.vue, stackIcon.react],
+    },
+    {
+      title: "상태관리",
+      content: ["vuex/pinia", "zustand"],
+      icons: [stackIcon.pinia, stackIcon.zustand],
+    },
+    {
+      title: "스타일링",
+      content: ["SCSS", "tailwind"],
+      icons: [stackIcon.scss, stackIcon.tailwindcss],
+    },
+    {
+      title: "UI개발툴",
+      content: ["storybook", "figma", "zeplin"],
+      icons: [stackIcon.storybook, stackIcon.figma, stackIcon.zeplin],
+    },
+    { title: "배포", content: ["AWS-S3/CloudFront/Route53"], icons: [stackIcon.aws] },
   ],
 };
 
