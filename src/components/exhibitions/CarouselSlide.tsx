@@ -3,7 +3,7 @@ import carouselData from "../../assets/data/CarouselData";
 // import { BsFillPauseFill, BsPlayFill } from "react-icons/bs";
 // import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 // // import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 // // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
@@ -42,24 +42,13 @@ const CarouselSlide = () => {
               left-1/2 -translate-x-1/2 
               sm:left-16 sm:translate-x-0"
                 >
-                  <Text desc={location} txtColor="white" className="text-sm" />
-                  <Text desc={venue} txtColor="white" className="text-sm" />
+                  <Text desc={location} txtColor="#aaa" size="sm" />
                   <TitleText title={title} txtColor="white" />
-                  <Text desc={desc} txtColor="white" className="text-sm" />
-                  {/* {title} {desc} {venue} {location} */}
+                  <Text desc={desc} txtColor="white" />
                 </p>
               </div>
             </SwiperSlide>
           ))}
-          {/* <SwiperSlide>
-            <div className="bg-blue-500 h-full">hi</div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="bg-blue-800 h-full">hi</div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="bg-yellow-500 h-full">hi</div>
-          </SwiperSlide> */}
         </Swiper>
       </div>
     </section>

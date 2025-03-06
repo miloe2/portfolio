@@ -85,7 +85,7 @@ const Whatidid = () => {
             />
           </figure>
           <figure className="hidden md:block">
-            <Text desc={`업무분야`} txtColor="#aaa" className="mt-0 mb-4 font-bold text-lg" />
+            <Text desc={`업무분야`} txtColor="#aaa" size="lg" className="my-4 font-bold" />
             {whatIdidText.map((text, index) => (
               <Text
                 key={index}

@@ -1,14 +1,22 @@
 interface TextProps {
   txtColor?: string;
   className?: string;
+  size?: "lg" | "base" | "sm" | "xs";
   desc: string;
 }
-const Text = ({ txtColor = "#0B0D0F", className, desc }: TextProps) => {
+const Text = ({ txtColor = "#0B0D0F", size = "base", className, desc }: TextProps) => {
+  const checkSize = (size: string) => {
+    if (size === "lg") return "text-lg";
+    if (size === "base") return "text-base/8";
+    if (size === "sm") return "text-sm";
+    if (size === "xs") return "text-xs";
+  };
+
   return (
     <p
       className={`
-        ${className?.includes("mt-") ? className : "mt-4"}
-        text-base/8
+        ${className}
+        ${checkSize(size)}
       `}
       style={{ color: txtColor }}
     >

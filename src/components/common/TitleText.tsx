@@ -5,7 +5,7 @@ interface TitleTextProps {
 
 const TitleText: React.FC<TitleTextProps> = ({ txtColor, title }) => {
   return (
-    <h1 className="lg:text-4xl/12 text-3xl/10 font-bold" style={{ color: txtColor }}>
+    <h1 className="lg:text-4xl/12 text-3xl/10 font-bold mb-4" style={{ color: txtColor }}>
       {title.split("\n").map((line, index) => (
         <span key={index}>
           {line}
