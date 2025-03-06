@@ -10,10 +10,10 @@ const Exhibitions = () => {
   }, []); // 빈 배열로 전달하여 컴포넌트가 처음 마운트될 때 한 번만 실행
 
   return (
-    <div className="bg-black pb-40 ">
+    <div className="bg-black pb-40">
       <Intro />
       <Whatidid />
-      {/* <CarouselSlide /> */}
+      <CarouselSlide />
       <ProjectRow />
     </div>
   );

@@ -53,16 +53,10 @@ const CareerDescription = ({ content }: { content: CareerDescriptionProps }) => 
               <div className="flex">
                 {item.icons?.map((icon, index) => (
                   <div key={index} className="flex justify-center items-center">
-                    <img
-                      src={icon}
-                      alt={icon}
-                      className="w-4 h-4 mr-1 bg-zinc-200 rounded-full opacity-80"
-                    />
+                    <img src={icon} alt={icon} className="w-4 h-4 mr-1 rounded-full" />
                     <span className="mr-2 text-zinc-700">{item.content[index]}</span>
                   </div>
                 ))}
-
-                {/* <p className="font-medium">{item.content}</p> */}
               </div>
             </div>
           ))}
