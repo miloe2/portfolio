@@ -7,6 +7,7 @@ import mariadb from "../../assets/Images/icon/mariadb.svg";
 import mysql from "../../assets/Images/icon/Mysql2.webp";
 
 import react from "../../assets/Images/icon/React-logo.svg";
+import nextjs from "../../assets/Images/icon/nextjs_logo.svg";
 import typescript from "../../assets/Images/icon/Typescript_logo_2020.svg";
 // import notion from "../../assets/Images/icon/notion.svg";
 import springboot from "../../assets/Images/icon/spring-boot.png";
@@ -31,6 +32,7 @@ const SkillsList: SkillType[] = [
   { skill: "Javascript", imgUrl: javascript },
   { skill: "Typescript", imgUrl: typescript },
   { skill: "React", imgUrl: react },
+  { skill: "Nextjs", imgUrl: nextjs },
   { skill: "zustand", imgUrl: zustand },
   { skill: "vue", imgUrl: vue },
   { skill: "nuxt", imgUrl: nuxt },
@@ -59,6 +61,7 @@ const stackIcon = {
   mariadb, 
   mysql, 
   react, 
+  nextjs,
   typescript, 
   // notion, 
   springboot, 
@@ -70,6 +73,6 @@ const stackIcon = {
   storybook, 
   zeplin, 
   zustand, 
-  pinia
+  pinia,
 };
 export { SkillsList, stackIcon };

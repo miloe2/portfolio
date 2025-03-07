@@ -83,8 +83,8 @@ const PrjList = () => {
               className={`w-full h-full absolute top-0 ${hoverState[index] ? item.color.bg : ""} transition duration-500`}
             />
             <div className="m-10 z-0 text-black absolute bottom-0">
-              <div className={`text-xs h-6 ${hoverState[index] ? item.color.text : ""}`}>
-                {item.date}
+              <div className={`text-sm h-6 ${hoverState[index] ? item.color.text : ""}`}>
+                {hoverState[index] ? item.date : item.desc}
               </div>
               <div className={`text-4xl font-bold ${hoverState[index] ? item.color.title : ""}`}>
                 {item.title}

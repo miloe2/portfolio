@@ -26,7 +26,7 @@ const useStore = create<Store>((set) => ({
     devOpen: false,
     setDevOpen: (isOpen) => set({ devOpen: isOpen }),
 
-    devPage: 'PADA',
+    devPage: '오늘의 칵테일',
     setDevPage: (component) => set({ devPage: component }),
 
     currentPage :'home', 
