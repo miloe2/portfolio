@@ -23,13 +23,19 @@ const DetailTodaycocktail = () => {
           "SEO 최적화를 위한 SSR",
           "IO를 활용한 이전 채팅 내역 호출",
           "Lottie기반 로딩 애니메이션",
+          "Cookie를 활용한 사용자 설정 저장",
         ]}
         txtColor={txtColor}
         themeColor={themeColor}
       />
       <div className="bg-rose-500"></div>
 
-      <ViewCode bgColor={themeColor} txtColor="black" site="https://today-cocktail.vercel.app" />
+      <ViewCode
+        bgColor={themeColor}
+        txtColor="black"
+        git="https://github.com/miloe2/my-cocktail"
+        site="https://today-cocktail.vercel.app"
+      />
 
       <MobileSource
         txtColor={txtColor}
