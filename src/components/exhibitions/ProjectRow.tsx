@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState, useMemo } from "react";
 import projectData from "../../assets/data/ProjectData";
 import TitleText from "../common/TitleText";
 
@@ -7,19 +7,19 @@ const ProjectRow = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
 
   // 마우스 휠 가로 스크롤 핸들러
-  const handleWheelScroll = (e: WheelEvent) => {
+  const handleWheelScroll = useCallback((e: WheelEvent) => {
     if (!diaryImageRef.current) return;
     e.preventDefault();
     diaryImageRef.current.scrollLeft += (e.deltaY + e.deltaX) * 1.4;
-  };
+  }, []);
 
   // 가로 스크롤 진행률 업데이트 핸들러
-  const handleScrollProgress = () => {
+  const handleScrollProgress = useCallback(() => {
     if (!diaryImageRef.current) return;
     const { scrollLeft, scrollWidth, clientWidth } = diaryImageRef.current;
     const progress = (scrollLeft / (scrollWidth - clientWidth)) * 100;
     setScrollProgress(progress);
-  };
+  }, []);
 
   // 이벤트 리스너 등록 및 정리
   useEffect(() => {
@@ -37,7 +37,17 @@ const ProjectRow = () => {
       scrollElement.removeEventListener("scroll", handleScrollProgress);
     };
   }, [diaryImageRef.current]);
-
+  const progressBar = useMemo(
+    () => (
+      <div className="max-w-xs w-full h-2 bg-[#616060] mt-8">
+        <div
+          className="h-full bg-[#D81519]"
+          style={{ width: `${Math.min(scrollProgress, 100)}%` }}
+        />
+      </div>
+    ),
+    [scrollProgress],
+  );
   return (
     <>
       <section className="w-full max-w-7xl mx-auto  flex justify-center flex-col pl-10 xl:pl-0">
@@ -60,12 +70,7 @@ const ProjectRow = () => {
             </div>
           ))}
         </div>
-        <div className="max-w-xs w-full h-2 bg-[#616060] mt-8">
-          <div
-            className="h-full bg-[#D81519]"
-            style={{ width: `${Math.min(scrollProgress, 100)}%` }}
-          />
-        </div>
+        {progressBar}
       </section>
     </>
   );

@@ -48,10 +48,11 @@ const Navigator = () => {
       const currentScrollY = window.scrollY;
       scrollYRef.current = currentScrollY;
 
-      setNaviStatus((prev) => ({
-        ...prev,
-        scrolledInnerHeight: currentScrollY > INNER_HEIGHT,
-      }));
+      setNaviStatus((prev) =>
+        prev.scrolledInnerHeight !== currentScrollY > INNER_HEIGHT
+          ? { ...prev, scrolledInnerHeight: currentScrollY > INNER_HEIGHT }
+          : prev,
+      );
     };
     window.addEventListener("scroll", handleScroll);
     return () => {

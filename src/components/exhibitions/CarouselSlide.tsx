@@ -1,19 +1,15 @@
 import { useState, useRef } from "react";
-import carouselData from "../../assets/data/CarouselData";
 import { BsFillPauseFill, BsPlayFill } from "react-icons/bs";
-// import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
-// // import Swiper core and required modules
+import { IconContext } from "react-icons";
 import { Autoplay, Pagination } from "swiper/modules";
-// // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
+import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+import carouselData from "../../assets/data/CarouselData";
 import TitleText from "../common/TitleText";
 import Text from "../common/Text";
-import type { Swiper as SwiperType } from "swiper"; // ✅ Swiper 타입 가져오기
 const bulletStyle = `
   .custom-pagination .swiper-pagination-bullet {
     width: 0.4rem;
@@ -81,7 +77,7 @@ const CarouselSlide = () => {
             <div className="relative w-full 2xl:h-96 h-80 cursor-pointer">
               <img src={imgUrl} alt="" className="w-full h-full object-cover rounded-lg" />
               <div className="absolute inset-0 bg-black opacity-60 rounded-lg" />
-              <p
+              <div
                 className="absolute text-white opacity-100 max-w-xs w-full top-1/2 -translate-y-1/2
                 left-1/2 -translate-x-1/2 px-4
                 md:left-16 md:translate-x-0 md:px-0
@@ -90,7 +86,7 @@ const CarouselSlide = () => {
                 <Text desc={location} txtColor="#aaa" size="sm" />
                 <TitleText title={title} txtColor="white" />
                 <Text desc={desc} txtColor="white" />
-              </p>
+              </div>
             </div>
           </SwiperSlide>
         ))}
@@ -100,7 +96,11 @@ const CarouselSlide = () => {
             className="mt-1 ml-2 text-white ring-1 ring-white opacity-70 rounded-full w-5 h-5 justify-center flex items-center"
             onClick={handleToggleAutoplay}
           >
-            {!isPlaying ? <BsPlayFill /> : <BsFillPauseFill />}
+                    <IconContext.Provider value={{ className: "w-4 h-4" }}> {/* ✅ 아이콘 스타일 설정 */}
+            
+            {!isPlaying ? 
+            <BsPlayFill /> : <BsFillPauseFill />}
+            </IconContext.Provider>
           </button>
         </div>
       </Swiper>
