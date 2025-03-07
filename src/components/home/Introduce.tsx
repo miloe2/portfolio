@@ -21,10 +21,10 @@ const Introduce = () => {
   useIntersectionObserver([textRef, imageRef], handleVisibilityChange);
 
   const texts = [
-    { text: "Similique", class: "", delay: "delay-300" },
-    { text: "Lorem um", class: "text-right", delay: "delay-500" },
-    { text: "dolor sitip,", class: "text-cente", delay: "delay-700" },
-    { text: "consectetr", class: "text-center pl-[10%]", delay: "delay-1000" },
+    { text: "안녕하세요", class: "", delay: "delay-300" },
+    { text: "환하게 빛을", class: "text-right", delay: "delay-500" },
+    { text: "밝히고 있는,", class: "text-cente", delay: "delay-700" },
+    { text: "이택현입니다.", class: "text-center pl-[10%]", delay: "delay-1000" },
   ];
 
   return (
