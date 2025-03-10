@@ -9,7 +9,7 @@ import Home from './pages/Home';
 function App() {
   return (
     <>
-      <Router basename="/portfolio.ts.vite">
+      <Router basename="/portfolio/">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/develope" element={<Develope />} />

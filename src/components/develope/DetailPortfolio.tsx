@@ -41,8 +41,8 @@ const DetailPortfolio = () => {
       <ViewCode
         bgColor={themeColor}
         txtColor="black"
-        site="https://miloe2.github.io/portfolio.ts.vite/"
-        git="https://github.com/miloe2/portfolio.ts.vite"
+        site="https://miloe2.github.io/portfolio"
+        git="https://github.com/miloe2/portfolio"
       />
 
       <TSLogoSnipet />
