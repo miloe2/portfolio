@@ -75,7 +75,7 @@ const DevPrjData = [
     id: 5,
     title: "오늘의 칵테일",
     date: "24. 11. - 25. 01.",
-    desc: "영상프로덕션 홍보페이지 ",
+    desc: "AI기반 칵테일 레시피 추천 서비스",
     stack: ["Nextjs", "TailwindCSS", "git", "Figma"],
     imgUrl: todaycocktail,
     color: {

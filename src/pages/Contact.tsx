@@ -27,10 +27,10 @@ const Contact = ({ contactIsOpen, onClose }: ContactProps) => {
 
   return (
     <React.Fragment>
-      <section>
+      <section className="z-50 absolute">
         <div
           className={`
-            fixed inset-0 bg-black opacity-80 transition-all duration-300 
+            fixed inset-0 bg-black opacity-80 transition-all duration-300  
             ${contactIsOpen ? "block" : "hidden"}
           `}
         />
