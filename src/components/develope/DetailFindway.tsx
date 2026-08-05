@@ -3,10 +3,10 @@ import LeftImage from "../detail/LeftImage";
 import RightFullImage from "../detail/RightFullImage";
 import PrjSummary from "../detail/PrjSummary";
 
-import img1 from "../../assets/Images/Photos/fw1.webp";
-import img2 from "../../assets/Images/Photos/fw2.webp";
-import img3 from "../../assets/Images/Photos/fw3.webp";
-import img4 from "../../assets/Images/Photos/findway2.webp";
+import img1 from "../../assets/images/Photos/fw1.webp";
+import img2 from "../../assets/images/Photos/fw2.webp";
+import img3 from "../../assets/images/Photos/fw3.webp";
+import img4 from "../../assets/images/Photos/findway2.webp";
 
 const DetailFindway = () => {
   const themeColor = "#101420";

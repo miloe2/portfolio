@@ -1,9 +1,9 @@
-import portfolioThumnail from "../Images/Photos/portfolio.webp";
-import findwayThumnail from "../Images/Photos/findway2.webp";
-import dddThumnail from "../Images/Photos/DDD.webp";
-import pada from "../Images/Photos/pada.png";
-import pia from "../Images/Photos/pia_main.webp";
-import todaycocktail from "../Images/Photos/cocktail/cocktail_detail01.png";
+import portfolioThumnail from "../images/Photos/portfolio.webp";
+import findwayThumnail from "../images/Photos/findway2.webp";
+import dddThumnail from "../images/Photos/DDD.webp";
+import pada from "../images/Photos/pada.png";
+import pia from "../images/Photos/pia_main.webp";
+import todaycocktail from "../images/Photos/cocktail/cocktail_detail01.png";
 
 const DevPrjData = [
   {

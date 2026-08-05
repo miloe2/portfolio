@@ -1,7 +1,7 @@
 import React from "react";
 
 import MobileSource from "../detail/MobileSource";
-import videoUrl from "../../assets/Video/cocktail_video.mp4";
+import videoUrl from "../../assets/video/cocktail_video.mp4";
 import cocktail01 from "../../assets/images/Photos/cocktail/cocktail_detail01.png";
 import cocktail02 from "../../assets/images/Photos/cocktail/cocktail_detail02.png";
 import cocktail03 from "../../assets/images/Photos/cocktail/cocktail_detail03.mp4";

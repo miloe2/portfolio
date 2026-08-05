@@ -1,13 +1,13 @@
-import asdSummer from "../Images/photos/ASD22SUMMER.webp";
-import vietnamSBA from "../Images/photos/VietnamSBA.webp";
-import jbtp from "../Images/photos/jbtp.webp";
-import UsBiz from "../Images/photos/USbiz.webp";
-import growtech from "../Images/Photos/growtech.webp";
-import ces from "../Images/Photos/CES.webp";
-import fime from "../Images/Photos/FIME.webp";
-import gFair from "../Images/Photos/g-fair.webp";
-import dubai from "../Images/Photos/dubai.webp";
-import ces21 from "../Images/Photos/ces21.webp";
+import asdSummer from "../images/Photos/ASD22SUMMER.webp";
+import vietnamSBA from "../images/Photos/VietnamSBA.webp";
+import jbtp from "../images/Photos/jbtp.webp";
+import UsBiz from "../images/Photos/USbiz.webp";
+import growtech from "../images/Photos/growtech.webp";
+import ces from "../images/Photos/CES.webp";
+import fime from "../images/Photos/FIME.webp";
+import gFair from "../images/Photos/g-fair.webp";
+import dubai from "../images/Photos/dubai.webp";
+import ces21 from "../images/Photos/ces21.webp";
 
 const projectData = [
   {

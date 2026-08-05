@@ -1,8 +1,8 @@
 import React from "react";
 
-import pia1 from "../../assets/Images/Photos/pia_grid.webp";
-import pia2 from "../../assets/Images/Photos/pia_matter.webp";
-import pia3 from "../../assets/Images/Photos/pia_aws.webp";
+import pia1 from "../../assets/images/Photos/pia_grid.webp";
+import pia2 from "../../assets/images/Photos/pia_matter.webp";
+import pia3 from "../../assets/images/Photos/pia_aws.webp";
 
 import RightFullImage from "../detail/RightFullImage";
 import LeftImage from "../detail/LeftImage";
@@ -10,7 +10,7 @@ import ViewCode from "../detail/ViewCode";
 import PrjSummary from "../detail/PrjSummary";
 // import Left3Image from '../Detail/Left3Image';
 import RightImage from "../detail/RightImage";
-import videoUrl from "../../assets/Video/pia_video.mp4";
+import videoUrl from "../../assets/video/pia_video.mp4";
 
 const DetailPia = () => {
   const themeColor = "#000";

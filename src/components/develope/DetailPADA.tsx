@@ -1,8 +1,8 @@
 import React from "react";
-import pada1 from "../../assets/Images/Photos/pada1.png";
-import pada2 from "../../assets/Images/Photos/pada2.png";
-import pada3 from "../../assets/Images/Photos/pada3.png";
-import pada4 from "../../assets/Images/Photos/pada_event.png";
+import pada1 from "../../assets/images/Photos/pada1.png";
+import pada2 from "../../assets/images/Photos/pada2.png";
+import pada3 from "../../assets/images/Photos/pada3.png";
+import pada4 from "../../assets/images/Photos/pada_event.png";
 
 import RightFullImage from "../detail/RightFullImage";
 import LeftImage from "../detail/LeftImage";
@@ -10,7 +10,7 @@ import ViewCode from "../detail/ViewCode";
 import PrjSummary from "../detail/PrjSummary";
 import Left1Image from "../detail/Left1Image";
 import RightImage from "../detail/RightImage";
-import videoUrl from "../../assets/Video/pada3video.mp4";
+import videoUrl from "../../assets/video/pada3video.mp4";
 
 const DetailPortfolio = () => {
   const themeColor = "#00D191";

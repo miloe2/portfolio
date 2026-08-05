@@ -1,16 +1,16 @@
-import Mywork from "../Images/photos/MyworkImg.webp";
-import tradeshow from "../Images/Photos/tradeshow.webp";
-import conference from "../Images/Photos/conference.webp";
-import communication from "../Images/Photos/communication.webp";
-import rfp from "../Images/Photos/rfp.webp";
-import asdSummer from "../Images/photos/ASD22SUMMER.webp";
-import vietnamSBA from "../Images/photos/VietnamSBA.webp";
-import jbtp from "../Images/photos/jbtp.webp";
-import UsBiz from "../Images/photos/USbiz.webp";
-import growtech from "../Images/Photos/growtech.webp";
-import ces from "../Images/Photos/CES.webp";
-import fime from "../Images/Photos/FIME.webp";
-import asd from "../Images/Photos/asd.webp";
+import Mywork from "../images/Photos/MyworkImg.webp";
+import tradeshow from "../images/Photos/tradeshow.webp";
+import conference from "../images/Photos/conference.webp";
+import communication from "../images/Photos/communication.webp";
+import rfp from "../images/Photos/rfp.webp";
+import asdSummer from "../images/Photos/ASD22SUMMER.webp";
+import vietnamSBA from "../images/Photos/VietnamSBA.webp";
+import jbtp from "../images/Photos/jbtp.webp";
+import UsBiz from "../images/Photos/USbiz.webp";
+import growtech from "../images/Photos/growtech.webp";
+import ces from "../images/Photos/CES.webp";
+import fime from "../images/Photos/FIME.webp";
+import asd from "../images/Photos/asd.webp";
 
 // mywork 배경 화면 이미지 배열
 const ImageUrl1 = [vietnamSBA, UsBiz, communication, growtech, ces, asd];

@@ -3,6 +3,7 @@ import pluginJs from "@eslint/js";
 import tseslint from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
 import pluginReact from "eslint-plugin-react";
+import pluginReactHooks from "eslint-plugin-react-hooks";
 import prettierPlugin from "eslint-plugin-prettier";
 import prettierConfig from "eslint-config-prettier";
 
@@ -26,6 +27,7 @@ export default [
     plugins: {
       prettier: prettierPlugin,
       react: pluginReact,
+      "react-hooks": pluginReactHooks,
       "@typescript-eslint": tseslint,
       js: pluginJs,
     },
@@ -40,13 +42,14 @@ export default [
         },
       ],
       "react/react-in-jsx-scope": "off", // React 17+에서는 필요하지 않음
+      "react-hooks/rules-of-hooks": "error",
       "react/jsx-indent": ["error", 2], // JSX 요소 들여쓰기 2 스페이스 적용
       "react/jsx-indent-props": ["error", 2], // JSX 속성도 2 스페이스 들여쓰기
       "react/jsx-closing-bracket-location": ["error", "line-aligned"], // JSX 닫기 위치 정리
       "react/jsx-props-no-multi-spaces": "error", // JSX 속성 간 불필요한 공백 제거
-      "max-len": ["error", { "code": 100, "ignoreStrings": true, "ignoreTemplateLiterals": true }],
+      "max-len": ["error", { code: 100, ignoreStrings: true, ignoreTemplateLiterals: true }],
     },
-    
+
     settings: {
       react: {
         version: "detect",

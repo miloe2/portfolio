@@ -1,5 +1,5 @@
 import React from "react";
-import twcssImg from "../../assets/Images/photos/tailwind css.png";
+import twcssImg from "../../assets/images/Photos/tailwind css.png";
 import TSLogoSnipet from "../detail/TSLogoSnipet";
 import RightFullImage from "../detail/RightFullImage";
 import ParagraphRow from "../detail/ParagraphRow";
@@ -8,16 +8,16 @@ import LeftImage from "../detail/LeftImage";
 import ViewCode from "../detail/ViewCode";
 import PrjSummary from "../detail/PrjSummary";
 
-import videoUrl from "../../assets/Video/exhibitVideo.mp4";
-import pfDetail1 from "../../assets/Images/Photos/Detail/dv2.webp";
-import pfDetail2 from "../../assets/Images/Photos/Detail/dv1.webp";
-import pfDetail3 from "../../assets/Images/Photos/Detail/dv3.webp";
-import pfDetail4 from "../../assets/Images/Photos/Detail/dv4.webp";
-import pfDetail5 from "../../assets/Images/Photos/Detail/dv5.webp";
-import pfDetail6 from "../../assets/Images/Photos/Detail/dv6.webp";
-import pfDetail7 from "../../assets/Images/Photos/Detail/dv7.webp";
-import pfDetail8 from "../../assets/Images/Photos/Detail/dv8.webp";
-import pfDetail9 from "../../assets/Images/Photos/Detail/dv9.webp";
+import videoUrl from "../../assets/video/exhibitVideo.mp4";
+import pfDetail1 from "../../assets/images/Photos/Detail/dv2.webp";
+import pfDetail2 from "../../assets/images/Photos/Detail/dv1.webp";
+import pfDetail3 from "../../assets/images/Photos/Detail/dv3.webp";
+import pfDetail4 from "../../assets/images/Photos/Detail/dv4.webp";
+import pfDetail5 from "../../assets/images/Photos/Detail/dv5.webp";
+import pfDetail6 from "../../assets/images/Photos/Detail/dv6.webp";
+import pfDetail7 from "../../assets/images/Photos/Detail/dv7.webp";
+import pfDetail8 from "../../assets/images/Photos/Detail/dv8.webp";
+import pfDetail9 from "../../assets/images/Photos/Detail/dv9.webp";
 
 const DetailPortfolio = () => {
   const themeColor = "#FF5851";

@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
-import pht1 from "../../assets/Images/photos/Int-pht1.webp";
-import pht2 from "../../assets/Images/photos/Int-pht2.webp";
+import pht1 from "../../assets/images/Photos/Int-pht1.webp";
+import pht2 from "../../assets/images/Photos/Int-pht2.webp";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
 const Introduce = () => {

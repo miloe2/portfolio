@@ -1,4 +1,4 @@
-import BGItemsBG from "../../assets/Images/photos/BGItemsBG.jpg";
+import BGItemsBG from "../../assets/images/Photos/BGItemsBG.jpg";
 import IntroItems from "./IntroItems";
 
 const Intro = () => {

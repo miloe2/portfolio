@@ -1,27 +1,27 @@
-import java from "../../assets/Images/icon/java.jpg";
-import javascript from "../../assets/Images/icon/javascript.png";
-import aws from "../../assets/Images/icon/aws.jpg";
-import figma from "../../assets/Images/icon/Figma-logo.svg";
-import git from "../../assets/Images/icon/GitHub_Logo.svg";
-import mariadb from "../../assets/Images/icon/mariadb.svg";
-import mysql from "../../assets/Images/icon/Mysql2.webp";
+import java from "../../assets/images/icon/java.jpg";
+import javascript from "../../assets/images/icon/javascript.png";
+import aws from "../../assets/images/icon/aws.jpg";
+import figma from "../../assets/images/icon/Figma-logo.svg";
+import git from "../../assets/images/icon/GitHub_Logo.svg";
+import mariadb from "../../assets/images/icon/mariadb.svg";
+import mysql from "../../assets/images/icon/Mysql2.webp";
 
-import react from "../../assets/Images/icon/React-logo.svg";
-import nextjs from "../../assets/Images/icon/nextjs_logo.svg";
-import typescript from "../../assets/Images/icon/Typescript_logo_2020.svg";
-// import notion from "../../assets/Images/icon/notion.svg";
-import springboot from "../../assets/Images/icon/spring-boot.png";
-import tailwindcss from "../../assets/Images/icon/tailwindcss.svg";
+import react from "../../assets/images/icon/React-logo.svg";
+import nextjs from "../../assets/images/icon/nextjs_logo.svg";
+import typescript from "../../assets/images/icon/Typescript_logo_2020.svg";
+// import notion from "../../assets/images/icon/notion.svg";
+import springboot from "../../assets/images/icon/spring-boot.png";
+import tailwindcss from "../../assets/images/icon/tailwindcss.svg";
 
-import styled from "../../assets/Images/icon/styled.png";
-import vue from "../../assets/Images/icon/vue.svg";
-import nuxt from "../../assets/Images/icon/nuxt.svg";
+import styled from "../../assets/images/icon/styled.png";
+import vue from "../../assets/images/icon/vue.svg";
+import nuxt from "../../assets/images/icon/nuxt.svg";
 
-import storybook from "../../assets/Images/icon/storybook_icon.png";
-import zeplin from "../../assets/Images/icon/zeplin_icon.svg";
-import zustand from "../../assets/Images/icon/zustand_icon.svg";
-import pinia from "../../assets/Images/icon/Pinialogo.svg";
-import scss from "../../assets/Images/icon/scss_icon.svg";
+import storybook from "../../assets/images/icon/storybook_icon.png";
+import zeplin from "../../assets/images/icon/zeplin_icon.svg";
+import zustand from "../../assets/images/icon/zustand_icon.svg";
+import pinia from "../../assets/images/icon/Pinialogo.svg";
+import scss from "../../assets/images/icon/scss_icon.svg";
 
 interface SkillType {
   skill: string;
@@ -52,27 +52,27 @@ const SkillsList: SkillType[] = [
   { skill: "Figma", imgUrl: figma },
 ];
 
-const stackIcon = { 
-  java, 
-  javascript, 
-  aws, 
-  figma, 
-  git, 
-  mariadb, 
-  mysql, 
-  react, 
+const stackIcon = {
+  java,
+  javascript,
+  aws,
+  figma,
+  git,
+  mariadb,
+  mysql,
+  react,
   nextjs,
-  typescript, 
-  // notion, 
-  springboot, 
-  tailwindcss, 
-  styled, 
-  scss, 
-  vue, 
-  nuxt, 
-  storybook, 
-  zeplin, 
-  zustand, 
+  typescript,
+  // notion,
+  springboot,
+  tailwindcss,
+  styled,
+  scss,
+  vue,
+  nuxt,
+  storybook,
+  zeplin,
+  zustand,
   pinia,
 };
 export { SkillsList, stackIcon };
