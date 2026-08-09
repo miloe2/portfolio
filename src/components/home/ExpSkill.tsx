@@ -1,17 +1,18 @@
-import { useRef, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import Marquee from "react-fast-marquee";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import { SkillsList } from "../../assets/data/SkillsList";
 
 const ExpSkill = () => {
-  const textRef = useRef(null);
+  const textRef = useRef<HTMLDivElement>(null);
+  const refs = useMemo(() => [textRef], []);
   const [isVisible, setIsVisible] = useState(false);
 
   const handleVisibilityChange = (_target: Element, isIntersecting: boolean) => {
     setIsVisible(isIntersecting);
   };
 
-  useIntersectionObserver([textRef], handleVisibilityChange);
+  useIntersectionObserver(refs, handleVisibilityChange);
 
   const texts = [
     { text: "Experienced Skills", class: "text-zinc-300", delay: "delay-300" },
@@ -20,7 +21,7 @@ const ExpSkill = () => {
     { text: "Experienced Skills", class: "text-zinc-50", delay: "delay-1000" },
   ];
   return (
-    <div className="max-w-8xl mx-auto px-40 mt-40 flex flex-col items-center justify-center relative bg-red-00 ">
+    <div className="max-w-7xl mx-auto px-40 mt-40 flex flex-col items-center justify-center relative bg-red-00 ">
       <div
         ref={textRef}
         className={`text-exp-title font-extrabold  whitespace-nowrap transition-all duration-1000 `}
@@ -46,7 +47,7 @@ const ExpSkill = () => {
               key={index}
               className="justify-center items-center flex flex-col mr-20 w-20 bg-red-00"
             >
-              <div className="flex flex-col w-14 h-14 border-1 rounded-full justify-start items-start bg-white">
+              <div className="flex flex-col w-14 h-14 border rounded-full justify-start items-start bg-white">
                 <img
                   src={skill.imgUrl}
                   alt={skill.skill}
@@ -58,7 +59,7 @@ const ExpSkill = () => {
           ))}
         </Marquee>
       </div>
-      <div className="w-44 h-80 rounded-3xl border-zinc-600 border-1 absolute top-1/2 -translate-y-1/2" />
+      <div className="w-44 h-80 rounded-3xl border-zinc-600 border absolute top-1/2 -translate-y-1/2" />
     </div>
   );
 };

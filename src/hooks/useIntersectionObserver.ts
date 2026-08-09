@@ -1,33 +1,36 @@
-import React, { useEffect } from 'react';
+import { useEffect, useRef, type RefObject } from "react";
 type IntersectionCallback = (target: Element, isVisible: boolean) => void;
 
 const useIntersectionObserver = (
-  refs: React.RefObject<HTMLDivElement>[],
+  refs: RefObject<HTMLDivElement>[],
   callback?: IntersectionCallback,
-  options?: globalThis.IntersectionObserverInit
-)  => {
+  options?: globalThis.IntersectionObserverInit,
+) => {
+  const callbackRef = useRef(callback);
+
   useEffect(() => {
+    callbackRef.current = callback;
+  }, [callback]);
+
+  useEffect(() => {
+    if (typeof IntersectionObserver === "undefined") {
+      return;
+    }
+
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        // console.log(`Observing element: ${entry.target}, isIntersecting: ${entry.isIntersecting}`);
-        if(callback) callback(entry.target, entry.isIntersecting);
+      entries.forEach((entry) => {
+        callbackRef.current?.(entry.target, entry.isIntersecting);
       });
     }, options);
 
-    refs.forEach(ref => {
-      if (ref.current) {
-        observer.observe(ref.current);
-      }
-    });
+    const elements = refs
+      .map((ref) => ref.current)
+      .filter((element): element is HTMLDivElement => element !== null);
 
-    return () => {
-      refs.forEach(ref => {
-        if (ref.current) {
-          observer.unobserve(ref.current);
-        }
-      });
-    };
-  }, [refs, options]);
+    elements.forEach((element) => observer.observe(element));
+
+    return () => observer.disconnect();
+  }, [options, refs]);
 };
 
 export default useIntersectionObserver;

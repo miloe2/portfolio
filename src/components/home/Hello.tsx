@@ -18,7 +18,7 @@ const Hello = () => {
         <div className="sticky top-0 h-full w-full overflow-hidden">
           <div className=" w-full h-screen justify-start items-center flex sm:pl-10 pl-0">
             <div
-              className="box-border min-w-1/2 h-11/12 relative bg-[#FF5851] transition-width duration-700 ease-in-out"
+              className="box-border min-w-1/2 h-11/12 relative bg-[#FF5851] transition-[width] duration-700 ease-in-out"
               style={scrollY < 50 ? { width: "50%" } : { width: "95%" }}
             >
               <div

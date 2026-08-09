@@ -42,7 +42,7 @@ const DetailFindway = () => {
       />
 
       <RightFullImage
-        bgColor="[#ffffff]"
+        bgColor="#ffffff"
         txtColor={txtColor}
         descColor=""
         img={img3}

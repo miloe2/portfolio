@@ -5,9 +5,27 @@ import pada from "../images/Photos/pada.png";
 import pia from "../images/Photos/pia_main.webp";
 import todaycocktail from "../images/Photos/cocktail/cocktail_detail01.png";
 
-const DevPrjData = [
+export type ProjectSlug = "findway" | "ddd" | "portfolio" | "pada" | "piaenm" | "today-cocktail";
+
+export interface DevProject {
+  id: number;
+  slug: ProjectSlug;
+  title: string;
+  date: string;
+  desc: string;
+  stack: string[];
+  imgUrl: string;
+  color: {
+    bg: string;
+    title: string;
+    text: string;
+  };
+}
+
+const DevPrjData: DevProject[] = [
   {
     id: 0,
+    slug: "findway",
     title: "찾기",
     date: "23. 04. - 23. 05.",
     desc: "막차 시간 이후 길 찾기 사이트",
@@ -21,6 +39,7 @@ const DevPrjData = [
   },
   {
     id: 1,
+    slug: "ddd",
     title: ":DDD",
     date: "23. 06. - 23. 07.",
     desc: "전시 예매 및 커뮤니티 사이트",
@@ -34,6 +53,7 @@ const DevPrjData = [
   },
   {
     id: 2,
+    slug: "portfolio",
     title: "portfolio",
     date: "23. 08. - 23. 09.",
     desc: "개인 포트폴리오",
@@ -47,6 +67,7 @@ const DevPrjData = [
   },
   {
     id: 3,
+    slug: "pada",
     title: "PADA",
     date: "23. 12. - 24. 03.",
     desc: "파충류 커뮤니티 플랫폼 / Admin",
@@ -60,6 +81,7 @@ const DevPrjData = [
   },
   {
     id: 4,
+    slug: "piaenm",
     title: "piaenm",
     date: "24. 06. - 24. 07.",
     desc: "영상프로덕션 홍보페이지 ",
@@ -73,6 +95,7 @@ const DevPrjData = [
   },
   {
     id: 5,
+    slug: "today-cocktail",
     title: "오늘의 칵테일",
     date: "24. 11. - 25. 01.",
     desc: "AI기반 칵테일 레시피 추천 서비스",

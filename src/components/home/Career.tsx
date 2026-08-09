@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import CareerDescription from "./CareerDescription";
 import { career, project, skills, education } from "../../assets/data/careerData";
@@ -16,8 +16,9 @@ const Career = () => {
     { content: education, delay: "delay-500" },
   ];
 
-  const divRef = useRef(null);
-  useIntersectionObserver([divRef], handleVisibilityChange);
+  const divRef = useRef<HTMLDivElement>(null);
+  const refs = useMemo(() => [divRef], []);
+  useIntersectionObserver(refs, handleVisibilityChange);
 
   return (
     <div

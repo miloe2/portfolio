@@ -1,13 +1,14 @@
 import React from "react";
 import TitleText from "../common/TitleText";
 import Text from "../common/Text";
+import { verticalAlignClass, type VerticalAlign } from "./detailLayout";
 
 interface RightImageLeftProps {
   bgColor: string;
   title: string;
   desc: string;
   img: string;
-  items: string;
+  items: VerticalAlign;
   txtColor: string;
 }
 
@@ -28,7 +29,7 @@ const RightImage: React.FC<RightImageLeftProps> = ({
         </div>
       </div>
       <div
-        className={`lg:w-1/2 w-full h-auto py-20 flex justify-center items-${items} flex-col`}
+        className={`lg:w-1/2 w-full h-auto py-20 flex justify-center ${verticalAlignClass[items]} flex-col`}
         style={{ backgroundColor: bgColor }}
       >
         <div className="lg:w-11/12 w-full h-auto">

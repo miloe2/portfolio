@@ -9,7 +9,7 @@ const PrjList = () => {
   const [opacity, setOpacity] = useState<number>(1); // opacity 상태 추가
   const circleRef = useRef<HTMLDivElement>(null);
 
-  const latestArray = [...DevPrjData].reverse().map((item) => item);
+  const latestArray = [...DevPrjData].reverse();
   const [hoverState, setHoverState] = useState(new Array(latestArray.length).fill(false));
 
   const CircleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
@@ -57,7 +57,11 @@ const PrjList = () => {
           ref={circleRef}
           className="z-50 absolute w-28 h-28 bg-white opacity-0 rounded-full text-xs
                 transition-all ease-linear duration-100 pointer-events-none text-center flex flex-col justify-center items-center"
-          style={{ left: `${offsetX}px`, top: `${offsetY}px`, opacity: opacity }}
+          style={{
+            left: `${offsetX}px`,
+            top: `${offsetY}px`,
+            opacity: opacity,
+          }}
         >
           VIEW <br />
           PROJECT <br />↓

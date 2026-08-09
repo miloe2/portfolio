@@ -28,7 +28,7 @@ const Detail = () => {
       const timer = setTimeout(() => {
         setDevOpen(false);
       }, 1400);
-      return () => clearTimeout(timer); // Cleanup function
+      return () => clearTimeout(timer);
     }
   }, [devOpen]);
 

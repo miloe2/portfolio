@@ -1,6 +1,7 @@
 import React from "react";
 import Text from "../common/Text";
 import TitleText from "../common/TitleText";
+import { verticalAlignClass, type VerticalAlign } from "./detailLayout";
 
 interface LefttImageLeftProps {
   bgColor: string;
@@ -8,7 +9,7 @@ interface LefttImageLeftProps {
   title: string;
   desc: string;
   source: string;
-  items: string;
+  items: VerticalAlign;
 }
 // bg-${bgColor}
 const LeftImage: React.FC<LefttImageLeftProps> = ({
@@ -25,10 +26,10 @@ const LeftImage: React.FC<LefttImageLeftProps> = ({
     >
       <div
         className={`lg:w-1/2 w-full h-auto py-10 flex
-            justify-center items-${items} flex-col `}
+            justify-center ${verticalAlignClass[items]} flex-col `}
         style={{ backgroundColor: bgColor }}
       >
-        <div className="w-full min-h-76">
+        <div className="w-full min-h-[19rem]">
           {source.includes("mp4") ? (
             <video autoPlay loop muted playsInline className="w-full h-full object-cover ">
               <source src={source} type="video/mp4" />

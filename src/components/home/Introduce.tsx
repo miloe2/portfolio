@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useMemo, useState, useRef } from "react";
 import pht1 from "../../assets/images/Photos/Int-pht1.webp";
 import pht2 from "../../assets/images/Photos/Int-pht2.webp";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
@@ -7,8 +7,9 @@ const Introduce = () => {
   const [isTextVisible, setTextVisible] = useState(false);
   const [isImageVisible, setImageVisible] = useState(false);
 
-  const textRef = useRef(null);
-  const imageRef = useRef(null);
+  const textRef = useRef<HTMLDivElement>(null);
+  const imageRef = useRef<HTMLDivElement>(null);
+  const refs = useMemo(() => [textRef, imageRef], []);
 
   const handleVisibilityChange = (target: Element, isIntersecting: boolean) => {
     if (target === textRef.current) {
@@ -18,13 +19,17 @@ const Introduce = () => {
     }
   };
 
-  useIntersectionObserver([textRef, imageRef], handleVisibilityChange);
+  useIntersectionObserver(refs, handleVisibilityChange);
 
   const texts = [
     { text: "안녕하세요", class: "", delay: "delay-300" },
     { text: "환하게 빛을", class: "text-right", delay: "delay-500" },
     { text: "밝히고 있는,", class: "text-cente", delay: "delay-700" },
-    { text: "이택현입니다.", class: "text-center pl-[10%]", delay: "delay-1000" },
+    {
+      text: "이택현입니다.",
+      class: "text-center pl-[10%]",
+      delay: "delay-1000",
+    },
   ];
 
   return (
