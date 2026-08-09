@@ -7,9 +7,21 @@ export const career = {
   title: "경력사항",
   type: "text",
   desc: [
-    { title: "2024.07 \n ~ 재직중", content: "리즌디자인", subText: "프론트엔드" },
-    { title: "2023.10 \n ~ 2024.07", content: "피소프트", subText: "프론트엔드" },
-    { title: "2019.11 \n ~ 2022.12", content: "트레이드월드", subText: "해외전시팀" },
+    {
+      title: "2024.07 \n ~ 재직중",
+      content: "리즌디자인",
+      subText: "프론트엔드",
+    },
+    {
+      title: "2023.10 \n ~ 2024.07",
+      content: "피소프트",
+      subText: "프론트엔드",
+    },
+    {
+      title: "2019.11 \n ~ 2022.12",
+      content: "트레이드월드",
+      subText: "해외전시팀",
+    },
   ],
 };
 
@@ -17,10 +29,22 @@ export const project = {
   title: "주요 프로젝트",
   type: "desc",
   desc: [
-    { title: "OO카드 APP 통합 마이그레이션 ", content: "vue2, Storybook, SCSS" },
-    { title: "파충류 커뮤니티 웹서비스 제작", content: "vue3, TS, vuex, S3, tailwind" },
-    { title: "PiaENM 프로모션 페이지 제작", content: "nuxt3, TS, pinia, S3, tailwind" },
-    { title: "칵테일 Ai 추천 웹서비스 ", content: "next18, TS, opneAi, zustand,  indexedDB" },
+    {
+      title: "OO카드 APP 통합 마이그레이션 ",
+      content: "vue2, Storybook, SCSS",
+    },
+    {
+      title: "파충류 커뮤니티 웹서비스 제작",
+      content: "vue3, TS, vuex, S3, tailwind",
+    },
+    {
+      title: "PiaENM 프로모션 페이지 제작",
+      content: "nuxt3, TS, pinia, S3, tailwind",
+    },
+    {
+      title: "칵테일 Ai 추천 웹서비스 ",
+      content: "next18, TS, opneAi, zustand,  indexedDB",
+    },
   ],
 };
 
@@ -48,7 +72,11 @@ export const skills = {
       content: ["storybook", "figma", "zeplin"],
       icons: [stackIcon.storybook, stackIcon.figma, stackIcon.zeplin],
     },
-    { title: "배포", content: ["AWS-S3/CloudFront/Route53"], icons: [stackIcon.aws] },
+    {
+      title: "배포",
+      content: ["AWS-S3/CloudFront/Route53"],
+      icons: [stackIcon.aws],
+    },
   ],
 };
 

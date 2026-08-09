@@ -8,10 +8,14 @@ interface TextProps {
 }
 
 const Text: React.FC<TextProps> = ({ txtColor = "#0B0D0F", size = "base", className, desc }) => {
-  const sizeClass = size === "lg" ? "text-lg"
-    : size === "base" ? "text-base/8"
-    : size === "sm" ? "text-sm"
-    : "text-xs";
+  const sizeClass =
+    size === "lg"
+      ? "text-lg"
+      : size === "base"
+        ? "text-base/8"
+        : size === "sm"
+          ? "text-sm"
+          : "text-xs";
 
   const processedDesc = useMemo(
     () =>
@@ -21,7 +25,7 @@ const Text: React.FC<TextProps> = ({ txtColor = "#0B0D0F", size = "base", classN
           {index !== desc.split("\n").length - 1 && <br />}
         </span>
       )),
-    [desc]
+    [desc],
   );
 
   return (
@@ -32,9 +36,11 @@ const Text: React.FC<TextProps> = ({ txtColor = "#0B0D0F", size = "base", classN
 };
 
 // ✅ memo의 areEqual을 활용하여 props가 변경되지 않으면 재렌더링 방지
-export default memo(Text, (prevProps, nextProps) =>
-  prevProps.desc === nextProps.desc &&
-  prevProps.txtColor === nextProps.txtColor &&
-  prevProps.size === nextProps.size &&
-  prevProps.className === nextProps.className
+export default memo(
+  Text,
+  (prevProps, nextProps) =>
+    prevProps.desc === nextProps.desc &&
+    prevProps.txtColor === nextProps.txtColor &&
+    prevProps.size === nextProps.size &&
+    prevProps.className === nextProps.className,
 );

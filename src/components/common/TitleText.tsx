@@ -14,7 +14,7 @@ const TitleText: React.FC<TitleTextProps> = ({ txtColor, title }) => {
           {index !== title.split("\n").length - 1 && <br />}
         </span>
       )),
-    [title]
+    [title],
   );
 
   return (
@@ -25,6 +25,8 @@ const TitleText: React.FC<TitleTextProps> = ({ txtColor, title }) => {
 };
 
 // ✅ `memo`의 `areEqual`을 활용하여 불필요한 리렌더링 방지
-export default memo(TitleText, (prevProps, nextProps) =>
-  prevProps.title === nextProps.title && prevProps.txtColor === nextProps.txtColor
+export default memo(
+  TitleText,
+  (prevProps, nextProps) =>
+    prevProps.title === nextProps.title && prevProps.txtColor === nextProps.txtColor,
 );

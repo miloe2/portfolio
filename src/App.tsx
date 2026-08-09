@@ -1,15 +1,15 @@
-import './App.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Exhibitions from './pages/Exhibitions';
-import Navigator from './components/common/Navigator';
-import Develope from './pages/Develope';
-import Home from './pages/Home';
+import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Exhibitions from "./pages/Exhibitions";
+import Navigator from "./components/common/Navigator";
+import Develope from "./pages/Develope";
+import Home from "./pages/Home";
 
 // max-w-7xl 1280px 분기 설정
 function App() {
   return (
     <>
-      <Router basename="/portfolio/">
+      <Router basename="/portfolio">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/develope" element={<Develope />} />
@@ -17,7 +17,6 @@ function App() {
         </Routes>
         <Navigator />
       </Router>
-
     </>
   );
 }

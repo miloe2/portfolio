@@ -28,15 +28,15 @@ const bulletStyle = `
 
 const CarouselSlide = () => {
   const swiperRef = useRef<SwiperType | null>(null);
-  const [isPlaying, setIsPlaying] = useState(true); 
+  const [isPlaying, setIsPlaying] = useState(true);
 
   // 재생/일시정지
   const handleToggleAutoplay = () => {
     if (!swiperRef.current) return;
     if (isPlaying) {
-      swiperRef.current.autoplay.stop(); 
+      swiperRef.current.autoplay.stop();
     } else {
-      swiperRef.current.autoplay.start(); 
+      swiperRef.current.autoplay.start();
     }
     setIsPlaying(!isPlaying);
   };
@@ -96,10 +96,8 @@ const CarouselSlide = () => {
             className="mt-1 ml-2 text-white ring-1 ring-white opacity-70 rounded-full w-5 h-5 justify-center flex items-center"
             onClick={handleToggleAutoplay}
           >
-                    <IconContext.Provider value={{ className: "w-4 h-4" }}> {/* ✅ 아이콘 스타일 설정 */}
-            
-            {!isPlaying ? 
-            <BsPlayFill /> : <BsFillPauseFill />}
+            <IconContext.Provider value={{ className: "w-4 h-4" }}>
+              {!isPlaying ? <BsPlayFill /> : <BsFillPauseFill />}
             </IconContext.Provider>
           </button>
         </div>
