@@ -1,5 +1,7 @@
 import { useRef, useEffect } from "react";
-import useStore from "../../store";
+import type { ComponentType } from "react";
+import { useLocation, useParams } from "react-router-dom";
+import DevPrjData, { type ProjectSlug } from "../../assets/data/DevPrjData";
 import DetailDDD from "./DetailDDD";
 import DetailPortfolio from "./DetailPortfolio";
 import DetailFindway from "./DetailFindway";
@@ -8,8 +10,21 @@ import DetailPia from "./DetailPia";
 import Stack from "./Stack";
 import DetailTodaycocktail from "./DetailTodaycocktail";
 
+const detailComponentBySlug: Record<ProjectSlug, ComponentType> = {
+  findway: DetailFindway,
+  ddd: DetailDDD,
+  portfolio: DetailPortfolio,
+  pada: DetailPADA,
+  piaenm: DetailPia,
+  "today-cocktail": DetailTodaycocktail,
+};
+
 const Detail = () => {
-  const { devPage, devOpen, setDevOpen } = useStore();
+  const { projectSlug } = useParams();
+  const location = useLocation();
+  const routeProject = DevPrjData.find((project) => project.slug === projectSlug);
+  const selectedProject = routeProject ?? DevPrjData[DevPrjData.length - 1];
+  const DetailComponent = detailComponentBySlug[selectedProject.slug];
 
   const componentRef = useRef<HTMLDivElement>(null);
 
@@ -23,25 +38,17 @@ const Detail = () => {
   };
 
   useEffect(() => {
-    if (devOpen) {
-      scrollToComponent();
-      const timer = setTimeout(() => {
-        setDevOpen(false);
-      }, 1400);
-      return () => clearTimeout(timer);
-    }
-  }, [devOpen]);
+    if (!location.state?.scrollToDetail) return;
+
+    const frame = requestAnimationFrame(scrollToComponent);
+    return () => cancelAnimationFrame(frame);
+  }, [location.key, location.state]);
 
   return (
     <div className="w-screen h-auto bg-white">
       <div ref={componentRef}>
-        <Stack />
-        {devPage === "찾기" && <DetailFindway />}
-        {devPage === "portfolio" && <DetailPortfolio />}
-        {devPage === ":DDD" && <DetailDDD />}
-        {devPage === "PADA" && <DetailPADA />}
-        {devPage === "piaenm" && <DetailPia />}
-        {devPage === "오늘의 칵테일" && <DetailTodaycocktail />}
+        <Stack project={selectedProject} />
+        <DetailComponent />
       </div>
     </div>
   );

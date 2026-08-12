@@ -1,9 +1,9 @@
 import React, { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import DevPrjData from "../../assets/data/DevPrjData";
-import useStore from "../../store";
 
 const PrjList = () => {
-  const { setDevOpen, setDevPage } = useStore();
+  const navigate = useNavigate();
   const [offsetX, setOffsetX] = useState<number>(0);
   const [offsetY, setOffsetY] = useState<number>(0);
   const [opacity, setOpacity] = useState<number>(1); // opacity 상태 추가
@@ -74,8 +74,9 @@ const PrjList = () => {
             onMouseOver={() => handleMouseOver(index)}
             onMouseLeave={handleMouseLeave}
             onClick={() => {
-              setDevOpen(true);
-              setDevPage(item.title);
+              navigate(`/work/${item.slug}`, {
+                state: { scrollToDetail: true },
+              });
             }}
           >
             <img

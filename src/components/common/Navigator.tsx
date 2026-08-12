@@ -19,7 +19,7 @@ const Navigator = () => {
 
   const navItems = [
     { route: "/", page: "home", label: "home" },
-    { route: "/develope", page: "dev", label: "work.dev" },
+    { route: "/work", page: "dev", label: "work.dev" },
     { route: "/exhibitions", page: "exhibit", label: "work.exhibit" },
     { route: "/contact", page: "contact", label: "contact" },
   ];

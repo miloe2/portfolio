@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Navigate, Route, Routes } from "react-router-dom";
 import Exhibitions from "./pages/Exhibitions";
 import Navigator from "./components/common/Navigator";
 import Develope from "./pages/Develope";
@@ -12,7 +12,9 @@ function App() {
       <Router basename="/portfolio">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/develope" element={<Develope />} />
+          <Route path="/work" element={<Develope />} />
+          <Route path="/work/:projectSlug" element={<Develope />} />
+          <Route path="/develope" element={<Navigate to="/work" replace />} />
           <Route path="/exhibitions" element={<Exhibitions />} />
         </Routes>
         <Navigator />

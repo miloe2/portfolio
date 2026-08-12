@@ -1,11 +1,7 @@
-import DevPrjData from "../../assets/data/DevPrjData";
-import useStore from "../../store";
+import type { DevProject } from "../../assets/data/DevPrjData";
 import StackCircle from "../detail/StackCircle";
 
-const Stack = () => {
-  const { devPage } = useStore();
-  const project = DevPrjData.find((data) => data.title === devPage);
-
+const Stack = ({ project }: { project: DevProject | undefined }) => {
   if (!project) {
     return null;
   }
