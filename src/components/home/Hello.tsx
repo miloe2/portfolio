@@ -32,9 +32,9 @@ const Hello = () => {
                 className={`absolute left-1/12 sm:left-3/12 top-1/2 text-white transition-all duration-700
                 ${scrollY > 0 && scrollY < 1000 ? "-translate-y-1/2 opacity-100" : "opacity-0"}`}
               >
-                <p className="text-4xl leading-normal whitespace-nowrap font-bold text-hello-title">
-                  내안에 빛이 있으면 <br />
-                  스스로 빛나는 법이다.
+                <p className="text-3xl leading-normal whitespace-nowrap text-hello-title font-serif">
+                  " I hope to have a good <br />
+                  relationship with you. "
                 </p>
               </div>
             </div>

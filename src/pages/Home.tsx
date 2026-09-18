@@ -1,8 +1,7 @@
 import { useEffect } from "react";
 import Hello from "../components/home/Hello";
-import Introduce from "../components/home/Introduce";
-import ExpSkill from "../components/home/ExpSkill";
 import Career from "../components/home/Career";
+import FeaturedProjects from "../components/home/FeaturedProjects";
 
 const Home = () => {
   useEffect(() => {
@@ -12,9 +11,8 @@ const Home = () => {
   return (
     <div className="pb-40">
       <Hello />
-      <Introduce />
-      <ExpSkill />
       <Career />
+      <FeaturedProjects />
     </div>
   );
 };
