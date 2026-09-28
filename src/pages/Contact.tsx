@@ -41,7 +41,7 @@ const Contact = ({ contactIsOpen, onClose }: ContactProps) => {
           `}
           onClick={onClose}
         >
-          <div className="w-full flex flex-col whitespace-nowrap pl-16 bg-red-00">
+          <div className="w-full flex flex-col whitespace-nowrap pl-16">
             <p className="font-serif text-xl/8 font-black">
               " I hope to <br />
               have a good <br />

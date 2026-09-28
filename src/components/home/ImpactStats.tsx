@@ -33,7 +33,7 @@ const ImpactStats = () => {
           `}
           style={{ transitionDelay: isVisible ? `${index * 150}ms` : "0ms" }}
         >
-          <div className="roboto-font font-black text-6xl lg:text-8xl leading-none bg-gradient-to-b from-[#FF5851] to-[#242424] bg-clip-text text-transparent">
+          <div className="roboto-font font-black text-6xl lg:text-8xl leading-none bg-gradient-to-b from-brand-coral to-brand-ink bg-clip-text text-transparent">
             {item.value}
             <span className="text-3xl lg:text-5xl align-top">{item.suffix}</span>
           </div>

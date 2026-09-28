@@ -95,7 +95,7 @@ const Whatidid = () => {
               />
             ))}
           </figure>
-          <div className="bg-gradient-to-b from-black to-transparent w-full h-20 absolute -bottom-20 bg-red-00" />
+          <div className="bg-gradient-to-b from-black to-transparent w-full h-20 absolute -bottom-20" />
         </div>
       </section>
     </>

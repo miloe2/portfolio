@@ -21,7 +21,7 @@ const ExpSkill = () => {
     { text: "Experienced Skills", class: "text-zinc-50", delay: "delay-1000" },
   ];
   return (
-    <div className="max-w-7xl mx-auto px-40 mt-40 flex flex-col items-center justify-center relative bg-red-00 ">
+    <div className="max-w-7xl mx-auto px-40 mt-40 flex flex-col items-center justify-center relative">
       <div
         ref={textRef}
         className={`text-exp-title font-extrabold  whitespace-nowrap transition-all duration-1000 `}
@@ -43,10 +43,7 @@ const ExpSkill = () => {
       <div className="w-full absolute top-1/2 -translate-y-1/2 cursor-pointer">
         <Marquee speed={100} pauseOnClick gradient>
           {SkillsList.map((skill, index) => (
-            <div
-              key={index}
-              className="justify-center items-center flex flex-col mr-20 w-20 bg-red-00"
-            >
+            <div key={index} className="justify-center items-center flex flex-col mr-20 w-20">
               <div className="flex flex-col w-14 h-14 border rounded-full justify-start items-start bg-white">
                 <img
                   src={skill.imgUrl}

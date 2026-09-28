@@ -36,7 +36,7 @@ const FeaturedProjects = () => {
         </p>
         <button
           onClick={() => navigate("/work")}
-          className="text-sm text-zinc-500 hover:text-[#242424] transition-colors"
+          className="text-sm text-zinc-500 hover:text-brand-ink transition-colors"
         >
           전체 프로젝트 보기 ↗
         </button>

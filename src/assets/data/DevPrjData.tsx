@@ -60,7 +60,7 @@ const DevPrjData: DevProject[] = [
     stack: ["Typescript", "React", "TailwindCSS", "git", "Figma"],
     imgUrl: portfolioThumnail,
     color: {
-      bg: "bg-[#FF5851]",
+      bg: "bg-brand-coral",
       title: "text-[#0041AF]",
       text: "text-white",
     },

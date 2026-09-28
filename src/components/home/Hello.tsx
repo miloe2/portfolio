@@ -18,15 +18,15 @@ const Hello = () => {
         <div className="sticky top-0 h-full w-full overflow-hidden">
           <div className=" w-full h-screen justify-start items-center flex sm:pl-10 pl-0">
             <div
-              className="box-border min-w-1/2 h-11/12 relative bg-[#FF5851] transition-[width] duration-700 ease-in-out"
+              className="box-border min-w-1/2 h-11/12 relative bg-brand-coral transition-[width] duration-700 ease-in-out"
               style={scrollY < 50 ? { width: "50%" } : { width: "95%" }}
             >
               <div
-                className={`absolute top-1/2 -translate-y-1/2 leading-tight right-0 translate-x-1/2 font-black text-[#242424] transition-opacity duration-1000 text-hello-heading ${scrollY > 50 ? "opacity-0" : "opacity-100"}`}
+                className={`absolute top-1/2 -translate-y-1/2 leading-tight right-0 translate-x-1/2 font-black text-brand-ink transition-opacity duration-1000 text-hello-heading ${scrollY > 50 ? "opacity-0" : "opacity-100"}`}
               >
                 안녕
                 <br />
-                하세요<span className="text-[#FF5851]">.</span>
+                하세요<span className="text-brand-coral">.</span>
               </div>
               <div
                 className={`absolute left-1/12 sm:left-3/12 top-1/2 text-white transition-all duration-700

@@ -22,6 +22,15 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      colors: {
+        brand: {
+          coral: "#FF5851",
+          ink: "#242424",
+        },
+      },
+      minWidth: {
+        card: "320px",
+      },
       fontSize: {
         "hello-heading": "clamp(3rem, 9vw, 8.5rem)",
         "hello-title": "clamp(1.875rem, 3vw, 3rem)",

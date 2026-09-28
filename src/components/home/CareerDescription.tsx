@@ -14,7 +14,7 @@ const CareerDescription = ({ content }: { content: CareerDescriptionProps }) => 
     <div className="mx-auto max-w-[15rem]">
       {/* type text */}
       {content.type === "text" && (
-        <div className=" w-full bg-yellow-00 ">
+        <div className="w-full">
           <p className="font-bold text-lg mb-4">{content.title}</p>
           {content.desc.map((item, index) => (
             <div key={index} className="flex  text-sm mb-2">
@@ -31,7 +31,7 @@ const CareerDescription = ({ content }: { content: CareerDescriptionProps }) => 
 
       {/* type desc */}
       {content.type === "desc" && (
-        <div className=" w-full bg-yellow-00">
+        <div className="w-full">
           <p className="font-bold text-lg mb-4">{content.title}</p>
           {content.desc.map((item, index) => (
             <div key={index} className="flex flex-col text-sm mb-2">
@@ -45,7 +45,7 @@ const CareerDescription = ({ content }: { content: CareerDescriptionProps }) => 
 
       {/* type icon */}
       {content.type === "icon" && (
-        <div className=" w-full bg-yellow-00">
+        <div className="w-full">
           <p className="font-bold text-lg mb-4">{content.title}</p>
           {content.desc.map((item, index) => (
             <div key={index} className="flex flex-col text-sm mb-2">

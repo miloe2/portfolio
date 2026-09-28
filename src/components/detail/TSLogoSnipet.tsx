@@ -50,7 +50,7 @@ const TSLogoSnipet = () => {
           <div className="w-40 border-8 rounded-full border-yellow-500 " />
         </div>
       </div>
-      <div className="w-full lg:w-full max-w-lg mx-auto mb-10 lg:mb-0 flex flex-col justify-center h-60 bg-[#FF5851] pl-10">
+      <div className="w-full lg:w-full max-w-lg mx-auto mb-10 lg:mb-0 flex flex-col justify-center h-60 bg-brand-coral pl-10">
         <TitleText title={"Typescript"} txtColor="#0041AF" />
         <Text
           txtColor="white"

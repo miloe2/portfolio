@@ -33,17 +33,13 @@ const Introduce = () => {
   ];
 
   return (
-    <div className="w-full flex flex-col max-w-sm px-4 lg:px-0 lg:max-w-2xl 2xl:max-w-4xl mx-auto bg-green-00">
-      <div
-        ref={textRef}
-        className={`
-          w-full h-full mx-auto  bg-red-00 `}
-      >
+    <div className="w-full flex flex-col max-w-sm px-4 lg:px-0 lg:max-w-2xl 2xl:max-w-4xl mx-auto">
+      <div ref={textRef} className="w-full h-full mx-auto">
         {texts.map((item, index) => (
           <p
             key={index}
             className={`
-              ${item.class} transition-all z-10 duration-1000 transform text-introduce-heading font-bold leading-snug text-[#242424] relative whitespace-nowrap 
+              ${item.class} transition-all z-10 duration-1000 transform text-introduce-heading font-bold leading-snug text-brand-ink relative whitespace-nowrap 
               ${item.delay} 
               ${isTextVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
             `}
