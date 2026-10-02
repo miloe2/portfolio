@@ -32,7 +32,7 @@ const Hello = () => {
                 className={`absolute left-1/12 sm:left-3/12 top-1/2 text-white transition-all duration-700
                 ${scrollY > 0 && scrollY < 1000 ? "-translate-y-1/2 opacity-100" : "opacity-0"}`}
               >
-                <p className="text-3xl leading-normal whitespace-nowrap text-hello-title font-serif">
+                <p className="text-3xl leading-normal whitespace-nowrap font-nexon">
                   " I hope to have a good <br />
                   relationship with you. "
                 </p>
