@@ -1,5 +1,6 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/@kfonts/nexon-lv1-gothic@0.2.0/index.css");
 
 @tailwind base;
 @tailwind components;
@@ -9,16 +10,369 @@
   font-family: "pretendard";
 }
 
-.roboto-font {
+.font-roboto {
   font-family: "Roboto", sans-serif;
+}
+
+/* 위의 * 규칙이 모든 요소에 직접 font-family를 걸기 때문에, 부모에 font-nexon을 줘도
+   자식은 상속을 못 받는다. 자손까지 명시적으로 덮어쓴다. */
+.font-nexon,
+.font-nexon * {
+  font-family: "넥슨Lv1고딕", "pretendard", sans-serif;
 }
 
 @layer components {
   .glassmorphism {
     background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     /* border-radius: 10px; */
+  }
+
+  /*
+   * .widd-section은 도킹 애니메이션 구간 + 카드 목록을 모두 감싸는 하나의 컨테이너다.
+   * sticky는 자신의 부모 박스 범위 안에서만 붙어있기 때문에, 카드 목록까지 같은 부모 안에
+   * 둬야 카드를 스크롤하는 동안에도 도킹된 타이틀이 계속 따라온다.
+   * 타임라인은 section이 아니라 .widd-runway(빈 스페이서)에 걸어서, 카드 개수와 무관하게
+   * runway 높이 = 애니메이션 길이가 되도록 한다. timeline-scope로 형제인 타이틀이 참조한다.
+   */
+  .widd-section {
+    timeline-scope: --widd;
+    /* 도킹 애니메이션이 재생되는 스크롤 거리. 세로로 긴 패드에서 과하게 늘어나지 않게 상한 */
+    --widd-anim: clamp(12rem, 35vh, 18rem);
+    /* 애니메이션이 끝난 뒤 카드가 올라오기 전까지의 여유 거리 */
+    --widd-gap: clamp(5rem, 15vh, 9rem);
+    /* 시작 위치는 카드 윗선(= runway 높이)보다 위에 둬서 카드와 겹치지 않게 한다 */
+    --widd-start-y: calc(var(--widd-anim) - 6rem);
+    --widd-start-scale: 3;
+  }
+
+  .widd-runway {
+    view-timeline: --widd block;
+    height: calc(var(--widd-anim) + var(--widd-gap));
+  }
+
+  .widd-dock {
+    z-index: 51; /* fixed 네비(z-50) 위에 도킹 */
+  }
+
+  .widd-title {
+    transform-origin: center;
+  }
+
+  /* 스크롤 타임라인을 지원할 때만 큰 시작 상태를 준다 (미지원이면 그냥 도킹된 상태) */
+  @supports (animation-timeline: view()) {
+    .widd-title {
+      transform: translateY(var(--widd-start-y)) scale(var(--widd-start-scale));
+      animation: widd-dock linear both;
+      animation-timeline: --widd; /* shorthand 뒤에 선언해야 리셋되지 않음 */
+      animation-range: exit 0% exit var(--widd-anim);
+    }
+  }
+
+  /* ---------- WhatIDid 카드 ----------
+   * data-inview="false"일 때의 숨김 상태에서 "true"로 바뀌면 transition으로 등장한다.
+   * 포인트 컬러는 카드 루트의 --accent 변수. 변수 + color-mix로 파생색을 만든다.
+   */
+  .widd-card {
+    view-timeline: --card block; /* 스택/진행바 애니메이션의 기준 타임라인 */
+  }
+
+  .widd-panel {
+    --accent-soft: color-mix(in srgb, var(--accent) 14%, white);
+    position: relative;
+    overflow: hidden;
+    border-radius: 2.5rem;
+    border: 1px solid #e4e4e7;
+    background: #fff;
+    box-shadow: 0 20px 50px -35px rgb(0 0 0 / 0.25);
+    transform-origin: 50% 0;
+    transition:
+      translate 0.5s cubic-bezier(0.2, 0.7, 0.2, 1),
+      border-color 0.5s,
+      box-shadow 0.5s;
+  }
+
+  .widd-panel:hover {
+    translate: 0 -6px;
+    border-color: var(--accent);
+    box-shadow: 0 40px 70px -35px color-mix(in srgb, var(--accent) 55%, transparent);
+  }
+
+  /* 마우스를 따라다니는 스포트라이트 (--mx/--my는 pointermove에서 직접 세팅) */
+  .widd-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s;
+    background: radial-gradient(
+      520px circle at var(--mx, 50%) var(--my, 50%),
+      color-mix(in srgb, var(--accent) 14%, transparent),
+      transparent 60%
+    );
+  }
+  .widd-panel:hover::before {
+    opacity: 1;
+  }
+
+  /* 다음 카드가 덮을 때 살짝 어두워지는 오버레이 */
+  .widd-panel::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: #141414;
+    opacity: 0;
+  }
+
+  /* 이미지: 대각선 와이프 리빌 (tailwind의 my-animation과 같은 폴리곤) */
+  .widd-media {
+    overflow: hidden;
+    border-radius: 2rem;
+    background: var(--accent-soft);
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+    transition: clip-path 1s cubic-bezier(0.7, 0, 0.2, 1) 0.1s;
+  }
+  .widd-card[data-inview="false"] .widd-media {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  }
+
+  /* 패럴랙스 레이어: 컨테이너보다 위아래로 8%씩 크게 */
+  .widd-parallax {
+    position: absolute;
+    inset: -8% 0;
+  }
+
+  /* 리빌 시 줌아웃 + 호버 시 줌인 (transform / scale 속성을 분리해서 서로 안 덮음) */
+  .widd-media-img {
+    transition:
+      transform 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) 0.1s,
+      scale 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .widd-card[data-inview="false"] .widd-media-img {
+    transform: scale(1.25);
+  }
+  .widd-panel:hover .widd-media-img {
+    scale: 1.05;
+  }
+
+  /* 이미지가 없을 때의 placeholder 비주얼 */
+  .widd-placeholder {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-image:
+      linear-gradient(to right, rgb(0 0 0 / 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(0 0 0 / 0.05) 1px, transparent 1px);
+    background-size: 2.5rem 2.5rem;
+  }
+  .widd-blob {
+    position: absolute;
+    border-radius: 9999px;
+    background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+    opacity: 0.35;
+    filter: blur(12px);
+    animation: widd-float 8s ease-in-out infinite alternate;
+  }
+
+  /* 텍스트 스태거 등장 */
+  .widd-item {
+    transition:
+      opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1),
+      transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+    transition-delay: calc(var(--i, 0) * 70ms + 300ms);
+  }
+  .widd-card[data-inview="false"] .widd-item {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  /* highlight 행 구분선이 왼쪽에서 그려진다 */
+  .widd-row {
+    position: relative;
+  }
+  .widd-row::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: #e4e4e7;
+    transform-origin: left;
+    transition:
+      transform 0.9s cubic-bezier(0.7, 0, 0.2, 1) calc(var(--i, 0) * 70ms + 400ms),
+      background-color 0.3s;
+  }
+  .widd-row:hover::after {
+    background: var(--accent);
+  }
+  .widd-card[data-inview="false"] .widd-row::after {
+    transform: scaleX(0);
+  }
+
+  /* 배경의 거대한 아웃라인 번호 */
+  .widd-bignum {
+    position: absolute;
+    top: -1.5rem;
+    right: 0;
+    font-family: "넥슨Lv1고딕", "pretendard", sans-serif;
+    font-size: clamp(7rem, 14vw, 12rem);
+    font-weight: 700;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 1px color-mix(in srgb, var(--accent) 35%, transparent);
+    pointer-events: none;
+    user-select: none;
+    transition:
+      opacity 1s ease 0.5s,
+      transform 1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.5s;
+  }
+  .widd-card[data-inview="false"] .widd-bignum {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  /* 번호 롤링 (카드 헤더) */
+  .widd-roll {
+    display: inline-block;
+    overflow: hidden;
+    height: 1em;
+    line-height: 1;
+  }
+  .widd-roll-slide {
+    display: block;
+    transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) 0.3s;
+  }
+  .widd-card[data-inview="false"] .widd-roll-slide {
+    transform: translateY(110%);
+  }
+  /* 번호 롤링 (도크의 현재 카드 카운터. key가 바뀔 때마다 재생) */
+  .widd-roll-in {
+    display: block;
+    animation: widd-roll-in 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+
+  /* 스크롤 진행바 트랙 */
+  .widd-track {
+    position: relative;
+    height: 1px;
+    flex: 1;
+    background: #e4e4e7;
+  }
+  .widd-progress {
+    position: absolute;
+    inset: 0;
+    background: var(--accent);
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+
+  /* 스크롤 연동 (CSS only, 미지원 브라우저는 정적 상태 유지) */
+  @supports (animation-timeline: view()) {
+    .widd-parallax {
+      animation: widd-parallax linear both;
+      animation-timeline: view();
+    }
+    .widd-progress {
+      animation: widd-fill linear both;
+      animation-timeline: --card;
+      animation-range: cover 15% cover 85%;
+    }
+    /* 스택: 다음 카드가 올라오는 동안(wrapper가 위로 빠지는 구간) 살짝 작아지고 어두워진다 */
+    .widd-card:not(:last-child) .widd-panel {
+      animation: widd-stack linear both;
+      animation-timeline: --card;
+      animation-range: exit 0% exit 100%;
+    }
+    .widd-card:not(:last-child) .widd-panel::after {
+      animation: widd-dim linear both;
+      animation-timeline: --card;
+      animation-range: exit 0% exit 100%;
+    }
+  }
+}
+
+@keyframes widd-parallax {
+  from {
+    transform: translateY(-5%);
+  }
+  to {
+    transform: translateY(5%);
+  }
+}
+
+@keyframes widd-fill {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes widd-stack {
+  to {
+    transform: scale(0.93);
+  }
+}
+
+@keyframes widd-dim {
+  to {
+    opacity: 0.1;
+  }
+}
+
+@keyframes widd-float {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+  to {
+    transform: translate(8%, -6%) scale(1.15);
+  }
+}
+
+@keyframes widd-roll-in {
+  from {
+    transform: translateY(110%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .widd-card,
+  .widd-card *,
+  .widd-card *::before,
+  .widd-card *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .widd-panel:hover {
+    translate: none;
+  }
+  .widd-progress {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes widd-dock {
+  from {
+    transform: translateY(var(--widd-start-y)) scale(var(--widd-start-scale));
+  }
+  to {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .widd-title {
+    animation: none;
+    transform: none;
   }
 }
