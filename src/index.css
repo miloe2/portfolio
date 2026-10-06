@@ -71,94 +71,19 @@
     }
   }
 
-  /* ---------- WhatIDid 카드 ----------
-   * data-inview="false"일 때의 숨김 상태에서 "true"로 바뀌면 transition으로 등장한다.
-   * 포인트 컬러는 카드 루트의 --accent 변수. 변수 + color-mix로 파생색을 만든다.
-   */
-  .widd-card {
-    view-timeline: --card block; /* 스택/진행바 애니메이션의 기준 타임라인 */
-  }
-
+  /* ---------- WhatIDid 카드 (정적) ---------- */
   .widd-panel {
-    --accent-soft: color-mix(in srgb, var(--accent) 14%, white);
     position: relative;
     overflow: hidden;
     border-radius: 2.5rem;
-    border: 1px solid #e4e4e7;
-    background: #fff;
-    box-shadow: 0 20px 50px -35px rgb(0 0 0 / 0.25);
-    transform-origin: 50% 0;
-    transition:
-      translate 0.5s cubic-bezier(0.2, 0.7, 0.2, 1),
-      border-color 0.5s,
-      box-shadow 0.5s;
+    background: transparent;
+    cursor: pointer;
   }
 
-  .widd-panel:hover {
-    translate: 0 -6px;
-    border-color: var(--accent);
-    box-shadow: 0 40px 70px -35px color-mix(in srgb, var(--accent) 55%, transparent);
-  }
-
-  /* 마우스를 따라다니는 스포트라이트 (--mx/--my는 pointermove에서 직접 세팅) */
-  .widd-panel::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.4s;
-    background: radial-gradient(
-      520px circle at var(--mx, 50%) var(--my, 50%),
-      color-mix(in srgb, var(--accent) 14%, transparent),
-      transparent 60%
-    );
-  }
-  .widd-panel:hover::before {
-    opacity: 1;
-  }
-
-  /* 다음 카드가 덮을 때 살짝 어두워지는 오버레이 */
-  .widd-panel::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    pointer-events: none;
-    background: #141414;
-    opacity: 0;
-  }
-
-  /* 이미지: 대각선 와이프 리빌 (tailwind의 my-animation과 같은 폴리곤) */
   .widd-media {
     overflow: hidden;
     border-radius: 2rem;
-    background: var(--accent-soft);
-    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
-    transition: clip-path 1s cubic-bezier(0.7, 0, 0.2, 1) 0.1s;
-  }
-  .widd-card[data-inview="false"] .widd-media {
-    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-  }
-
-  /* 패럴랙스 레이어: 컨테이너보다 위아래로 8%씩 크게 */
-  .widd-parallax {
-    position: absolute;
-    inset: -8% 0;
-  }
-
-  /* 리빌 시 줌아웃 + 호버 시 줌인 (transform / scale 속성을 분리해서 서로 안 덮음) */
-  .widd-media-img {
-    transition:
-      transform 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) 0.1s,
-      scale 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
-  }
-  .widd-card[data-inview="false"] .widd-media-img {
-    transform: scale(1.25);
-  }
-  .widd-panel:hover .widd-media-img {
-    scale: 1.05;
+    background: #f4f4f5;
   }
 
   /* 이미지가 없을 때의 placeholder 비주얼 */
@@ -173,28 +98,26 @@
       linear-gradient(to bottom, rgb(0 0 0 / 0.05) 1px, transparent 1px);
     background-size: 2.5rem 2.5rem;
   }
-  .widd-blob {
-    position: absolute;
-    border-radius: 9999px;
-    background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
-    opacity: 0.35;
-    filter: blur(12px);
-    animation: widd-float 8s ease-in-out infinite alternate;
+
+  /* 텍스트 마스크 리빌: 줄 박스가 넘치는 부분을 가리고, 안쪽 글자가 아래에서 올라온다.
+   * 카드가 화면에 들어와 data-inview="true"가 되면 transition으로 재생된다. */
+  .widd-mask {
+    display: block;
+    overflow: hidden;
+    /* 디센더 잘림 방지 */
+    padding-bottom: 0.12em;
+    margin-bottom: -0.12em;
+  }
+  .widd-mask-in {
+    display: block;
+    transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+    transition-delay: calc(var(--i, 0) * 80ms);
+  }
+  .widd-card[data-inview="false"] .widd-mask-in,
+  .widd-dock[data-inview="false"] .widd-mask-in {
+    transform: translateY(110%);
   }
 
-  /* 텍스트 스태거 등장 */
-  .widd-item {
-    transition:
-      opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1),
-      transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
-    transition-delay: calc(var(--i, 0) * 70ms + 300ms);
-  }
-  .widd-card[data-inview="false"] .widd-item {
-    opacity: 0;
-    transform: translateY(1rem);
-  }
-
-  /* highlight 행 구분선이 왼쪽에서 그려진다 */
   .widd-row {
     position: relative;
   }
@@ -206,158 +129,213 @@
     bottom: 0;
     height: 1px;
     background: #e4e4e7;
-    transform-origin: left;
-    transition:
-      transform 0.9s cubic-bezier(0.7, 0, 0.2, 1) calc(var(--i, 0) * 70ms + 400ms),
-      background-color 0.3s;
   }
-  .widd-row:hover::after {
-    background: var(--accent);
-  }
-  .widd-card[data-inview="false"] .widd-row::after {
-    transform: scaleX(0);
-  }
+}
 
-  /* 배경의 거대한 아웃라인 번호 */
-  .widd-bignum {
-    position: absolute;
-    top: -1.5rem;
-    right: 0;
-    font-family: "넥슨Lv1고딕", "pretendard", sans-serif;
-    font-size: clamp(7rem, 14vw, 12rem);
-    font-weight: 700;
-    line-height: 1;
-    color: transparent;
-    -webkit-text-stroke: 1px color-mix(in srgb, var(--accent) 35%, transparent);
-    pointer-events: none;
-    user-select: none;
-    transition:
-      opacity 1s ease 0.5s,
-      transform 1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.5s;
-  }
-  .widd-card[data-inview="false"] .widd-bignum {
-    opacity: 0;
-    transform: translateY(2rem);
-  }
-
-  /* 번호 롤링 (카드 헤더) */
-  .widd-roll {
-    display: inline-block;
-    overflow: hidden;
-    height: 1em;
-    line-height: 1;
-  }
-  .widd-roll-slide {
-    display: block;
-    transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) 0.3s;
-  }
-  .widd-card[data-inview="false"] .widd-roll-slide {
-    transform: translateY(110%);
-  }
-  /* 번호 롤링 (도크의 현재 카드 카운터. key가 바뀔 때마다 재생) */
-  .widd-roll-in {
-    display: block;
-    animation: widd-roll-in 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-  }
-
-  /* 스크롤 진행바 트랙 */
-  .widd-track {
+/* ---------- /test 페이지: 칩 효과 샘플 (.ct-*) ---------- */
+@layer components {
+  .ct-fill,
+  .ct-circle,
+  .ct-flow,
+  .ct-jelly,
+  .ct-float,
+  .ct-slot,
+  .ct-expand,
+  .ct-badge {
     position: relative;
-    height: 1px;
-    flex: 1;
-    background: #e4e4e7;
+    cursor: pointer;
   }
-  .widd-progress {
+
+  /* 1. 아래에서 차오르는 채움 */
+  .ct-fill {
+    overflow: hidden;
+    transition:
+      color 0.3s,
+      border-color 0.3s;
+  }
+  .ct-fill::before {
+    content: "";
     position: absolute;
     inset: 0;
-    background: var(--accent);
-    transform-origin: left;
-    transform: scaleX(0);
+    background: theme("colors.brand.coral");
+    transform: translateY(101%);
+    transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
   }
-
-  /* 스크롤 연동 (CSS only, 미지원 브라우저는 정적 상태 유지) */
-  @supports (animation-timeline: view()) {
-    .widd-parallax {
-      animation: widd-parallax linear both;
-      animation-timeline: view();
-    }
-    .widd-progress {
-      animation: widd-fill linear both;
-      animation-timeline: --card;
-      animation-range: cover 15% cover 85%;
-    }
-    /* 스택: 다음 카드가 올라오는 동안(wrapper가 위로 빠지는 구간) 살짝 작아지고 어두워진다 */
-    .widd-card:not(:last-child) .widd-panel {
-      animation: widd-stack linear both;
-      animation-timeline: --card;
-      animation-range: exit 0% exit 100%;
-    }
-    .widd-card:not(:last-child) .widd-panel::after {
-      animation: widd-dim linear both;
-      animation-timeline: --card;
-      animation-range: exit 0% exit 100%;
-    }
+  .ct-fill:hover {
+    color: #fff;
+    border-color: theme("colors.brand.coral");
   }
-}
-
-@keyframes widd-parallax {
-  from {
-    transform: translateY(-5%);
-  }
-  to {
-    transform: translateY(5%);
-  }
-}
-
-@keyframes widd-fill {
-  to {
-    transform: scaleX(1);
-  }
-}
-
-@keyframes widd-stack {
-  to {
-    transform: scale(0.93);
-  }
-}
-
-@keyframes widd-dim {
-  to {
-    opacity: 0.1;
-  }
-}
-
-@keyframes widd-float {
-  from {
-    transform: translate(0, 0) scale(1);
-  }
-  to {
-    transform: translate(8%, -6%) scale(1.15);
-  }
-}
-
-@keyframes widd-roll-in {
-  from {
-    transform: translateY(110%);
-  }
-  to {
+  .ct-fill:hover::before {
     transform: translateY(0);
   }
+
+  /* 2. 중앙에서 퍼지는 원 채움 */
+  .ct-circle {
+    overflow: hidden;
+    transition:
+      color 0.3s,
+      border-color 0.3s;
+  }
+  .ct-circle::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: theme("colors.brand.coral");
+    clip-path: circle(0% at 50% 50%);
+    transition: clip-path 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .ct-circle:hover {
+    color: #fff;
+    border-color: theme("colors.brand.coral");
+  }
+  .ct-circle:hover::before {
+    clip-path: circle(75% at 50% 50%);
+  }
+
+  /* 3. 그라디언트 흐름 (호버 중에만) */
+  .ct-flow {
+    overflow: hidden;
+    transition:
+      color 0.3s,
+      border-color 0.3s;
+  }
+  .ct-flow::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      theme("colors.brand.coral"),
+      #ff9a76,
+      #ffd1a6,
+      #ff9a76,
+      theme("colors.brand.coral")
+    );
+    background-size: 200% 100%;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .ct-flow:hover {
+    color: #fff;
+    border-color: transparent;
+  }
+  .ct-flow:hover::before {
+    opacity: 1;
+    animation: ct-flow 1.2s linear infinite;
+  }
+
+  /* 4. 젤리 */
+  .ct-jelly:hover {
+    animation: ct-jelly 0.7s both;
+    color: theme("colors.brand.coral");
+    border-color: theme("colors.brand.coral");
+  }
+
+  /* 5. 떠오름 + 이웃 흐림 */
+  .ct-float {
+    transition:
+      transform 0.25s,
+      box-shadow 0.25s,
+      opacity 0.25s;
+  }
+  .ct-float:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 16px -10px rgb(0 0 0 / 0.35);
+  }
+  .ct-float-list:has(.ct-float:hover) .ct-float:not(:hover) {
+    opacity: 0.35;
+  }
+
+  /* 6. 글자 슬롯 교체: 한 줄 높이만큼만 보이고, 호버하면 한 줄 위로 굴러간다 */
+  .ct-slot {
+    --h: 1rem;
+    overflow: hidden;
+  }
+  .ct-slot-in {
+    display: flex;
+    flex-direction: column;
+    height: var(--h);
+    line-height: var(--h);
+    text-align: center;
+    transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .ct-slot:hover .ct-slot-in {
+    transform: translateY(calc(var(--h) * -1));
+  }
+
+  /* 7. 칩 확장: grid 트랙을 0fr -> 1fr로 늘려서 너비를 애니메이션한다 */
+  .ct-expand {
+    display: inline-flex;
+    align-items: center;
+  }
+  .ct-expand-more {
+    display: grid;
+    grid-template-columns: 0fr;
+    transition: grid-template-columns 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .ct-expand-more > span {
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-left: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .ct-expand:hover .ct-expand-more {
+    grid-template-columns: 1fr;
+  }
+  .ct-expand:hover .ct-expand-more > span {
+    opacity: 1;
+  }
+
+  /* 8. 카운터 뱃지 */
+  .ct-badge-dot {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 9999px;
+    background: theme("colors.brand.coral");
+    color: #fff;
+    font-size: 0.625rem;
+    line-height: 1.1rem;
+    text-align: center;
+    transform: scale(0);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .ct-badge-group:hover .ct-badge-dot {
+    transform: scale(1);
+  }
+  .ct-badge-group > li:nth-child(2) .ct-badge-dot {
+    transition-delay: 0.08s;
+  }
+  .ct-badge-group > li:nth-child(3) .ct-badge-dot {
+    transition-delay: 0.16s;
+  }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .widd-card,
-  .widd-card *,
-  .widd-card *::before,
-  .widd-card *::after {
-    animation: none !important;
-    transition: none !important;
+@keyframes ct-flow {
+  to {
+    background-position: 200% 0;
   }
-  .widd-panel:hover {
-    translate: none;
+}
+
+@keyframes ct-jelly {
+  0% {
+    transform: scale(1, 1);
   }
-  .widd-progress {
-    transform: scaleX(1);
+  25% {
+    transform: scale(1.3, 0.75);
+  }
+  50% {
+    transform: scale(0.88, 1.12);
+  }
+  75% {
+    transform: scale(1.06, 0.95);
+  }
+  100% {
+    transform: scale(1, 1);
   }
 }
 
@@ -367,12 +345,5 @@
   }
   to {
     transform: translateY(0) scale(1);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .widd-title {
-    animation: none;
-    transform: none;
   }
 }
