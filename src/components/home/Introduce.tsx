@@ -1,7 +1,7 @@
 import { useMemo, useState, useRef } from "react";
-import pht1 from "../../assets/images/Photos/Int-pht1.webp";
-import pht2 from "../../assets/images/Photos/Int-pht2.webp";
-import useIntersectionObserver from "../../hooks/useIntersectionObserver";
+import pht1 from "@/assets/images/Photos/Int-pht1.webp";
+import pht2 from "@/assets/images/Photos/Int-pht2.webp";
+import useIntersectionObserver from "@/hooks/useIntersectionObserver";
 
 const Introduce = () => {
   const [isTextVisible, setTextVisible] = useState(false);

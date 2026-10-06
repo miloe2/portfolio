@@ -1,6 +1,6 @@
 import { useMemo, useRef, useState } from "react";
-import useIntersectionObserver from "../../hooks/useIntersectionObserver";
-import { career } from "../../assets/data/careerData";
+import useIntersectionObserver from "@/hooks/useIntersectionObserver";
+import { career } from "@/assets/data/careerData";
 
 const Career = () => {
   const [isVisible, setIsVisible] = useState(false);

@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react";
 import type { ComponentType } from "react";
 import { useLocation, useParams } from "react-router-dom";
-import DevPrjData, { type ProjectSlug } from "../../assets/data/DevPrjData";
+import DevPrjData, { type ProjectSlug } from "@/assets/data/DevPrjData";
 import DetailDDD from "./DetailDDD";
 import DetailPortfolio from "./DetailPortfolio";
 import DetailFindway from "./DetailFindway";

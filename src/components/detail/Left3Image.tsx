@@ -1,6 +1,6 @@
 import React from "react";
-import TitleText from "../common/TitleText";
-import Text from "../common/Text";
+import TitleText from "@/components/common/TitleText";
+import Text from "@/components/common/Text";
 
 interface LeftImageProps {
   bgColor: string;

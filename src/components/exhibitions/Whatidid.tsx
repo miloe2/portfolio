@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef, useCallback } from "react";
-import { whatIdidPhotos, whatIdidText } from "../../assets/data/ExhibitData";
-import Text from "../common/Text";
-import TitleText from "../common/TitleText";
+import { whatIdidPhotos, whatIdidText } from "@/assets/data/ExhibitData";
+import Text from "@/components/common/Text";
+import TitleText from "@/components/common/TitleText";
 
 const Whatidid = () => {
   const imageRefs = useRef<(HTMLDivElement | null)[]>([]);

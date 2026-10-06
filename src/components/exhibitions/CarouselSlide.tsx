@@ -7,9 +7,9 @@ import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import carouselData from "../../assets/data/CarouselData";
-import TitleText from "../common/TitleText";
-import Text from "../common/Text";
+import carouselData from "@/assets/data/CarouselData";
+import TitleText from "@/components/common/TitleText";
+import Text from "@/components/common/Text";
 const bulletStyle = `
   .custom-pagination .swiper-pagination-bullet {
     width: 0.4rem;

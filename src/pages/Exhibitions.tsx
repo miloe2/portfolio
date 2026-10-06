@@ -1,8 +1,8 @@
 import { useEffect } from "react";
-import Intro from "../components/exhibitions/Intro";
-import CarouselSlide from "../components/exhibitions/CarouselSlide";
-import Whatidid from "../components/exhibitions/Whatidid";
-import ProjectRow from "../components/exhibitions/ProjectRow";
+import Intro from "@/components/exhibitions/Intro";
+import CarouselSlide from "@/components/exhibitions/CarouselSlide";
+import Whatidid from "@/components/exhibitions/Whatidid";
+import ProjectRow from "@/components/exhibitions/ProjectRow";
 
 const Exhibitions = () => {
   useEffect(() => {

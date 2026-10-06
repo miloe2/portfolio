@@ -1,4 +1,4 @@
-import { ImageUrl1, ImageUrl2, ImageUrl3 } from "../../assets/data/ExhibitData";
+import { ImageUrl1, ImageUrl2, ImageUrl3 } from "@/assets/data/ExhibitData";
 import { useEffect, useState } from "react";
 
 const IntroItems = () => {

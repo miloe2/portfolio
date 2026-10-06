@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import DevPrjData from "../../assets/data/DevPrjData";
+import DevPrjData from "@/assets/data/DevPrjData";
 
 const PrjList = () => {
   const navigate = useNavigate();

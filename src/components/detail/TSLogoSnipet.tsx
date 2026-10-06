@@ -1,6 +1,6 @@
-import tslogo from "../../assets/images/icon/Typescript_logo_2020.svg";
-import Text from "../common/Text";
-import TitleText from "../common/TitleText";
+import tslogo from "@/assets/images/icon/Typescript_logo_2020.svg";
+import Text from "@/components/common/Text";
+import TitleText from "@/components/common/TitleText";
 
 const TSLogoSnipet = () => {
   return (

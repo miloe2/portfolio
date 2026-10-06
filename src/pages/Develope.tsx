@@ -1,6 +1,6 @@
-import MainWork from "../components/develope/MainWork";
-import PrjList from "../components/develope/PrjList";
-import Detail from "../components/develope/Detail";
+import MainWork from "@/components/develope/MainWork";
+import PrjList from "@/components/develope/PrjList";
+import Detail from "@/components/develope/Detail";
 import { useRef, useEffect } from "react";
 import { SlArrowUp } from "react-icons/sl";
 import { IconContext } from "react-icons";

@@ -1,7 +1,7 @@
 import { useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import useIntersectionObserver from "../../hooks/useIntersectionObserver";
-import DevPrjData from "../../assets/data/DevPrjData";
+import useIntersectionObserver from "@/hooks/useIntersectionObserver";
+import DevPrjData from "@/assets/data/DevPrjData";
 
 const FEATURED_COUNT = 3;
 

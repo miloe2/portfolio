@@ -1,18 +1,18 @@
-import FullVideo from "../detail/FullVideo";
-import Left3Image from "../detail/Left3Image";
-import RightImage from "../detail/RightImage";
-import Left1Image from "../detail/Left1Image";
-import FullImage from "../detail/FullImage";
-import ViewCode from "../detail/ViewCode";
-import PrjSummary from "../detail/PrjSummary";
+import FullVideo from "@/components/detail/FullVideo";
+import Left3Image from "@/components/detail/Left3Image";
+import RightImage from "@/components/detail/RightImage";
+import Left1Image from "@/components/detail/Left1Image";
+import FullImage from "@/components/detail/FullImage";
+import ViewCode from "@/components/detail/ViewCode";
+import PrjSummary from "@/components/detail/PrjSummary";
 
-import videoUrl from "../../assets/video/DDD2.mp4";
-import img1 from "../../assets/images/Photos/DDD.webp";
-import img2 from "../../assets/images/Photos/dd1.webp";
-import img3 from "../../assets/images/Photos/dd2.webp";
-import img4 from "../../assets/images/Photos/dd3.webp";
-import img5 from "../../assets/images/Photos/dd4.webp";
-import mobile from "../../assets/images/Photos/Detail/DDDMobile.webp";
+import videoUrl from "@/assets/video/DDD2.mp4";
+import img1 from "@/assets/images/Photos/DDD.webp";
+import img2 from "@/assets/images/Photos/dd1.webp";
+import img3 from "@/assets/images/Photos/dd2.webp";
+import img4 from "@/assets/images/Photos/dd3.webp";
+import img5 from "@/assets/images/Photos/dd4.webp";
+import mobile from "@/assets/images/Photos/Detail/DDDMobile.webp";
 import React from "react";
 
 const DetailDDD = () => {

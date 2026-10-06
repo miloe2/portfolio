@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { contactInfo } from "../assets/data/careerData";
+import { contactInfo } from "@/assets/data/careerData";
 import { AiFillGithub } from "react-icons/ai";
 import { RiNotionFill } from "react-icons/ri";
 

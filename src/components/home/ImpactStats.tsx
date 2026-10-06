@@ -1,5 +1,5 @@
 import { useMemo, useRef, useState } from "react";
-import useIntersectionObserver from "../../hooks/useIntersectionObserver";
+import useIntersectionObserver from "@/hooks/useIntersectionObserver";
 
 const stats = [
   { value: "4", suffix: "+", label: "Years" },

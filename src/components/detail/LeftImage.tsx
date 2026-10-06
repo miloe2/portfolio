@@ -1,6 +1,6 @@
 import React from "react";
-import Text from "../common/Text";
-import TitleText from "../common/TitleText";
+import Text from "@/components/common/Text";
+import TitleText from "@/components/common/TitleText";
 import { verticalAlignClass, type VerticalAlign } from "./detailLayout";
 
 interface LefttImageLeftProps {

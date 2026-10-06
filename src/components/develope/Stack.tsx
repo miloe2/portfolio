@@ -1,5 +1,5 @@
-import type { DevProject } from "../../assets/data/DevPrjData";
-import StackCircle from "../detail/StackCircle";
+import type { DevProject } from "@/assets/data/DevPrjData";
+import StackCircle from "@/components/detail/StackCircle";
 
 const Stack = ({ project }: { project: DevProject | undefined }) => {
   if (!project) {

@@ -1,5 +1,5 @@
-import carouselData from "../../assets/data/CarouselData";
-// import carouselData from '../../assets/Data/CarouselData.js';
+import carouselData from "@/assets/data/CarouselData";
+// import carouselData from '@/assets/Data/CarouselData.js';
 
 const Carousel = () => {
   return (

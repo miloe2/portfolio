@@ -1,23 +1,23 @@
 import React from "react";
-import twcssImg from "../../assets/images/Photos/tailwind css.png";
-import TSLogoSnipet from "../detail/TSLogoSnipet";
-import RightFullImage from "../detail/RightFullImage";
-import ParagraphRow from "../detail/ParagraphRow";
-import Center9image from "../detail/Center9image";
-import LeftImage from "../detail/LeftImage";
-import ViewCode from "../detail/ViewCode";
-import PrjSummary from "../detail/PrjSummary";
+import twcssImg from "@/assets/images/Photos/tailwind css.png";
+import TSLogoSnipet from "@/components/detail/TSLogoSnipet";
+import RightFullImage from "@/components/detail/RightFullImage";
+import ParagraphRow from "@/components/detail/ParagraphRow";
+import Center9image from "@/components/detail/Center9image";
+import LeftImage from "@/components/detail/LeftImage";
+import ViewCode from "@/components/detail/ViewCode";
+import PrjSummary from "@/components/detail/PrjSummary";
 
-import videoUrl from "../../assets/video/exhibitVideo.mp4";
-import pfDetail1 from "../../assets/images/Photos/Detail/dv2.webp";
-import pfDetail2 from "../../assets/images/Photos/Detail/dv1.webp";
-import pfDetail3 from "../../assets/images/Photos/Detail/dv3.webp";
-import pfDetail4 from "../../assets/images/Photos/Detail/dv4.webp";
-import pfDetail5 from "../../assets/images/Photos/Detail/dv5.webp";
-import pfDetail6 from "../../assets/images/Photos/Detail/dv6.webp";
-import pfDetail7 from "../../assets/images/Photos/Detail/dv7.webp";
-import pfDetail8 from "../../assets/images/Photos/Detail/dv8.webp";
-import pfDetail9 from "../../assets/images/Photos/Detail/dv9.webp";
+import videoUrl from "@/assets/video/exhibitVideo.mp4";
+import pfDetail1 from "@/assets/images/Photos/Detail/dv2.webp";
+import pfDetail2 from "@/assets/images/Photos/Detail/dv1.webp";
+import pfDetail3 from "@/assets/images/Photos/Detail/dv3.webp";
+import pfDetail4 from "@/assets/images/Photos/Detail/dv4.webp";
+import pfDetail5 from "@/assets/images/Photos/Detail/dv5.webp";
+import pfDetail6 from "@/assets/images/Photos/Detail/dv6.webp";
+import pfDetail7 from "@/assets/images/Photos/Detail/dv7.webp";
+import pfDetail8 from "@/assets/images/Photos/Detail/dv8.webp";
+import pfDetail9 from "@/assets/images/Photos/Detail/dv9.webp";
 
 const DetailPortfolio = () => {
   const themeColor = "#FF5851";

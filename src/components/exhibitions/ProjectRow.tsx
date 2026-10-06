@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState, useMemo } from "react";
-import projectData from "../../assets/data/ProjectData";
-import TitleText from "../common/TitleText";
+import projectData from "@/assets/data/ProjectData";
+import TitleText from "@/components/common/TitleText";
 
 const ProjectRow = () => {
   const diaryImageRef = useRef<HTMLDivElement | null>(null);

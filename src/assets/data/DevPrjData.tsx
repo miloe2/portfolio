@@ -1,9 +1,9 @@
-import portfolioThumnail from "../images/Photos/portfolio.webp";
-import findwayThumnail from "../images/Photos/findway2.webp";
-import dddThumnail from "../images/Photos/DDD.webp";
-import pada from "../images/Photos/pada.png";
-import pia from "../images/Photos/pia_main.webp";
-import todaycocktail from "../images/Photos/cocktail/cocktail_detail01.png";
+import portfolioThumnail from "@/assets/images/Photos/portfolio.webp";
+import findwayThumnail from "@/assets/images/Photos/findway2.webp";
+import dddThumnail from "@/assets/images/Photos/DDD.webp";
+import pada from "@/assets/images/Photos/pada.png";
+import pia from "@/assets/images/Photos/pia_main.webp";
+import todaycocktail from "@/assets/images/Photos/cocktail/cocktail_detail01.png";
 
 export type ProjectSlug = "findway" | "ddd" | "portfolio" | "pada" | "piaenm" | "today-cocktail";
 

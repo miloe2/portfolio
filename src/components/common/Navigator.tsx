@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 // import {BiWorld} from 'react-icons/bi'
 import React, { useEffect, useState, useRef } from "react";
 import { useLocation } from "react-router-dom";
-import Contact from "../../pages/Contact";
+import Contact from "@/pages/Contact";
 
 const Navigator = () => {
   const navigator = useNavigate();

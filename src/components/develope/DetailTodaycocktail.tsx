@@ -1,14 +1,14 @@
 import React from "react";
 
-import MobileSource from "../detail/MobileSource";
-import videoUrl from "../../assets/video/cocktail_video.mp4";
-import cocktail01 from "../../assets/images/Photos/cocktail/cocktail_detail01.png";
-import cocktail02 from "../../assets/images/Photos/cocktail/cocktail_detail02.png";
-import cocktail03 from "../../assets/images/Photos/cocktail/cocktail_detail03.mp4";
+import MobileSource from "@/components/detail/MobileSource";
+import videoUrl from "@/assets/video/cocktail_video.mp4";
+import cocktail01 from "@/assets/images/Photos/cocktail/cocktail_detail01.png";
+import cocktail02 from "@/assets/images/Photos/cocktail/cocktail_detail02.png";
+import cocktail03 from "@/assets/images/Photos/cocktail/cocktail_detail03.mp4";
 
-import RightFullImage from "../detail/RightFullImage";
-import ViewCode from "../detail/ViewCode";
-import PrjSummary from "../detail/PrjSummary";
+import RightFullImage from "@/components/detail/RightFullImage";
+import ViewCode from "@/components/detail/ViewCode";
+import PrjSummary from "@/components/detail/PrjSummary";
 
 const DetailTodaycocktail = () => {
   const themeColor = "#262626";
