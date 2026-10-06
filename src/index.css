@@ -53,14 +53,6 @@
     height: calc(var(--widd-anim) + var(--widd-gap));
   }
 
-  .widd-dock {
-    z-index: 51; /* fixed 네비(z-50) 위에 도킹 */
-  }
-
-  .widd-title {
-    transform-origin: center;
-  }
-
   /* 스크롤 타임라인을 지원할 때만 큰 시작 상태를 준다 (미지원이면 그냥 도킹된 상태) */
   @supports (animation-timeline: view()) {
     .widd-title {
@@ -69,66 +61,6 @@
       animation-timeline: --widd; /* shorthand 뒤에 선언해야 리셋되지 않음 */
       animation-range: exit 0% exit var(--widd-anim);
     }
-  }
-
-  /* ---------- WhatIDid 카드 (정적) ---------- */
-  .widd-panel {
-    position: relative;
-    overflow: hidden;
-    border-radius: 2.5rem;
-    background: transparent;
-    cursor: pointer;
-  }
-
-  .widd-media {
-    overflow: hidden;
-    border-radius: 2rem;
-    background: #f4f4f5;
-  }
-
-  /* 이미지가 없을 때의 placeholder 비주얼 */
-  .widd-placeholder {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background-image:
-      linear-gradient(to right, rgb(0 0 0 / 0.05) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(0 0 0 / 0.05) 1px, transparent 1px);
-    background-size: 2.5rem 2.5rem;
-  }
-
-  /* 텍스트 마스크 리빌: 줄 박스가 넘치는 부분을 가리고, 안쪽 글자가 아래에서 올라온다.
-   * 카드가 화면에 들어와 data-inview="true"가 되면 transition으로 재생된다. */
-  .widd-mask {
-    display: block;
-    overflow: hidden;
-    /* 디센더 잘림 방지 */
-    padding-bottom: 0.12em;
-    margin-bottom: -0.12em;
-  }
-  .widd-mask-in {
-    display: block;
-    transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
-    transition-delay: calc(var(--i, 0) * 80ms);
-  }
-  .widd-card[data-inview="false"] .widd-mask-in,
-  .widd-dock[data-inview="false"] .widd-mask-in {
-    transform: translateY(110%);
-  }
-
-  .widd-row {
-    position: relative;
-  }
-  .widd-row::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 1px;
-    background: #e4e4e7;
   }
 }
 

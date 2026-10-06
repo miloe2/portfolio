@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import { BsArrowLeft } from "react-icons/bs";
 
+// 이 컴포넌트에서만 쓰는 유동 폰트 크기
+const HEADING_SIZE = "text-[clamp(3rem,9vw,8.5rem)]";
+
 const Hello = () => {
   const [scrollY, setScrollY] = useState<number>(0);
   useEffect(() => {
@@ -22,7 +25,7 @@ const Hello = () => {
               style={scrollY < 50 ? { width: "50%" } : { width: "95%" }}
             >
               <div
-                className={`absolute top-1/2 -translate-y-1/2 leading-tight right-0 translate-x-1/2 font-black text-brand-ink transition-opacity duration-1000 text-hello-heading ${scrollY > 50 ? "opacity-0" : "opacity-100"}`}
+                className={`absolute top-1/2 -translate-y-1/2 leading-tight right-0 translate-x-1/2 font-black text-brand-ink transition-opacity duration-1000 ${HEADING_SIZE} ${scrollY > 50 ? "opacity-0" : "opacity-100"}`}
               >
                 안녕
                 <br />

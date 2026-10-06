@@ -3,6 +3,9 @@ import pht1 from "@/assets/images/Photos/Int-pht1.webp";
 import pht2 from "@/assets/images/Photos/Int-pht2.webp";
 import useIntersectionObserver from "@/hooks/useIntersectionObserver";
 
+// 이 컴포넌트에서만 쓰는 유동 폰트 크기
+const HEADING_SIZE = "text-[clamp(3rem,6.5vw,8rem)]";
+
 const Introduce = () => {
   const [isTextVisible, setTextVisible] = useState(false);
   const [isImageVisible, setImageVisible] = useState(false);
@@ -39,7 +42,7 @@ const Introduce = () => {
           <p
             key={index}
             className={`
-              ${item.class} transition-all z-10 duration-1000 transform text-introduce-heading font-bold leading-snug text-brand-ink relative whitespace-nowrap 
+              ${item.class} transition-all z-10 duration-1000 transform ${HEADING_SIZE} font-bold leading-snug text-brand-ink relative whitespace-nowrap 
               ${item.delay} 
               ${isTextVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
             `}

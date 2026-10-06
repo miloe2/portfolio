@@ -3,6 +3,9 @@ import Marquee from "react-fast-marquee";
 import useIntersectionObserver from "@/hooks/useIntersectionObserver";
 import { SkillsList } from "@/assets/data/SkillsList";
 
+// 이 컴포넌트에서만 쓰는 유동 폰트 크기
+const TITLE_SIZE = "text-[clamp(2.1rem,9vw,8.5rem)]";
+
 const ExpSkill = () => {
   const textRef = useRef<HTMLDivElement>(null);
   const refs = useMemo(() => [textRef], []);
@@ -24,7 +27,7 @@ const ExpSkill = () => {
     <div className="max-w-7xl mx-auto px-40 mt-40 flex flex-col items-center justify-center relative">
       <div
         ref={textRef}
-        className={`text-exp-title font-extrabold  whitespace-nowrap transition-all duration-1000 `}
+        className={`${TITLE_SIZE} font-extrabold  whitespace-nowrap transition-all duration-1000 `}
       >
         {texts.map((item, index) => (
           <div

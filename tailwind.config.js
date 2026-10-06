@@ -31,13 +31,6 @@ export default {
       minWidth: {
         card: "320px",
       },
-      fontSize: {
-        "hello-heading": "clamp(3rem, 9vw, 8.5rem)",
-        "hello-title": "clamp(1.875rem, 3vw, 3rem)",
-        "introduce-heading": "clamp(3rem, 6.5vw, 8rem)",
-        "exp-title": "clamp(2.1rem, 9vw, 8.5rem)",
-        "deck-body": "clamp(1rem, 1.19vw, 1.5rem)",
-      },
       // animation
       animation: {
         bounce: "bounce 1.5s infinite ease-in-out",
