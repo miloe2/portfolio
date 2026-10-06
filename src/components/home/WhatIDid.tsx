@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import WhatIDidCard, { type WhatIDidItem } from "./WhatIDidCard";
 
@@ -8,7 +7,6 @@ const items: WhatIDidItem[] = [
     title: "mepii",
     date: "2025.07 ~ 현재",
     headline: "소재 공학 데이터 플랫폼",
-    accent: "#FF5851",
     highlights: [
       { text: "온톨로지 지식그래프 시각화", tech: ["Cytoscape"] },
       { text: "LLM 자연어 검색, 처리 단계 실시간 표시", tech: ["SSE"] },
@@ -22,7 +20,6 @@ const items: WhatIDidItem[] = [
     title: "Chemidas",
     date: "2025.07 ~ 현재",
     headline: "[헤드라인 placeholder]",
-    accent: "#7C5CFF",
     highlights: [
       { text: "[하이라이트 placeholder]", tech: ["Plotly"] },
       { text: "대용량 엑셀 업로드·미리보기", tech: ["Web Worker", "RevoGrid"] },
@@ -36,24 +33,20 @@ const items: WhatIDidItem[] = [
     title: "삼성카드 통합 APP",
     date: "2024.07 ~ 2025.07",
     headline: "[헤드라인 placeholder]",
-    accent: "#13A88A",
     highlights: [{ text: "[하이라이트 placeholder]", tech: ["Legacy Migration"] }],
     tags: ["지식그래프", "자연어 LLM검색", "대용량 업로드"],
     stack: ["Vue"],
   },
 ];
 
-const pad = (n: number) => String(n).padStart(2, "0");
-
 const WhatIDid = () => {
   const navigate = useNavigate();
-  const [active, setActive] = useState(0);
 
   return (
     <section className="widd-section relative mt-32">
       <div className="widd-dock sticky top-0 flex h-16 w-full items-center justify-center pointer-events-none">
         <p className="widd-title font-nexon whitespace-nowrap font-semibold leading-none text-2xl text-brand-ink">
-          WhatIDid
+          widd
           <span className="text-brand-coral text-4xl">.</span>
         </p>
       </div>
@@ -75,14 +68,7 @@ const WhatIDid = () => {
 
         <div className="flex flex-col gap-10 pb-24 lg:gap-0">
           {items.map((item, index) => (
-            <WhatIDidCard
-              key={item.key}
-              item={item}
-              index={index}
-              total={items.length}
-              reversed={index % 2 === 1}
-              onActive={setActive}
-            />
+            <WhatIDidCard key={item.key} item={item} index={index} reversed={index % 2 === 1} />
           ))}
         </div>
       </div>
