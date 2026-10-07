@@ -1,5 +1,11 @@
+import { useMemo, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import mepiiMain from "@/assets/images/Photos/mepii/mepii_main.png";
+import chemidasMain from "@/assets/images/Photos/chemidas/chemidas_main.png";
+import useIntersectionObserver from "@/hooks/useIntersectionObserver";
+
 import WhatIDidCard, { type WhatIDidItem } from "./WhatIDidCard";
+import { MASK, MASK_IN } from "./maskReveal";
 
 const items: WhatIDidItem[] = [
   {
@@ -7,6 +13,8 @@ const items: WhatIDidItem[] = [
     title: "mepii",
     date: "2025.07 ~ 현재",
     headline: "소재 공학 데이터 플랫폼",
+    image: mepiiMain,
+    brand: "#fb923c",
     highlights: [
       { text: "온톨로지 지식그래프 시각화", tech: ["Cytoscape"] },
       { text: "LLM 자연어 검색, 처리 단계 실시간 표시", tech: ["SSE"] },
@@ -20,6 +28,8 @@ const items: WhatIDidItem[] = [
     title: "Chemidas",
     date: "2025.07 ~ 현재",
     headline: "[헤드라인 placeholder]",
+    image: chemidasMain,
+    brand: "#089892",
     highlights: [
       { text: "[하이라이트 placeholder]", tech: ["Plotly"] },
       { text: "대용량 엑셀 업로드·미리보기", tech: ["Web Worker", "RevoGrid"] },
@@ -30,7 +40,7 @@ const items: WhatIDidItem[] = [
   },
   {
     key: "samsungcard",
-    title: "삼성카드 통합 APP",
+    title: "APP",
     date: "2024.07 ~ 2025.07",
     headline: "[헤드라인 placeholder]",
     highlights: [{ text: "[하이라이트 placeholder]", tech: ["Legacy Migration"] }],
@@ -39,15 +49,34 @@ const items: WhatIDidItem[] = [
   },
 ];
 
+// 한 번 보이면 data-inview="true"로 고정 (카드와 같은 방식)
+// 타이틀은 도킹 애니메이션 때문에 박스보다 아래(화면 밖)에서 시작하므로, 아래쪽 40%를 비워서
+// 글자가 실제로 화면에 올라온 뒤에 리빌이 재생되게 한다.
+const DOCK_OPTIONS: IntersectionObserverInit = { rootMargin: "0px 0px -40% 0px" };
+const markInView = (target: Element, isVisible: boolean) => {
+  if (isVisible) target.setAttribute("data-inview", "true");
+};
+
 const WhatIDid = () => {
   const navigate = useNavigate();
+  const dockRef = useRef<HTMLDivElement>(null);
+  const dockRefs = useMemo(() => [dockRef], []);
+  useIntersectionObserver(dockRefs, markInView, DOCK_OPTIONS);
 
   return (
     <section className="widd-section relative mt-32">
-      <div className="widd-dock sticky top-0 flex h-16 w-full items-center justify-center pointer-events-none">
-        <p className="widd-title font-nexon whitespace-nowrap font-semibold leading-none text-2xl text-brand-ink">
-          widd
-          <span className="text-brand-coral text-4xl">.</span>
+      <div
+        ref={dockRef}
+        data-inview="false"
+        className="group/inview sticky top-0 z-[51] flex h-16 w-full items-center justify-center pointer-events-none"
+      >
+        <p className="widd-title origin-center font-nexon whitespace-nowrap font-semibold leading-none text-2xl text-brand-ink">
+          <span className={MASK}>
+            <span className={MASK_IN}>
+              widd
+              <span className="text-brand-coral text-4xl">.</span>
+            </span>
+          </span>
         </p>
       </div>
 
