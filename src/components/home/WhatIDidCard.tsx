@@ -13,7 +13,8 @@ export interface WhatIDidItem {
   date: string;
   headline: string;
   image?: string;
-  brand?: string;
+  brand?: `#${string}`;
+  brandSub?: `#${string}`;
   highlights: Highlight[];
   tags: string[];
   stack: string[];
@@ -57,7 +58,12 @@ const WhatIDidCard = ({ item, index, reversed = false }: WhatIDidCardProps) => {
     <div ref={ref} data-inview="false" className="group/inview relative lg:pb-[30vh] lg:last:pb-0 ">
       <div className={`lg:sticky ${stickyTops[index % stickyTops.length]}`}>
         <article
-          style={item.brand ? ({ "--brand": item.brand } as CSSProperties) : undefined}
+          data-cursor-label="VIEW ↗"
+          style={
+            item.brand
+              ? ({ "--brand": item.brand, "--brand-sub": item.brandSub } as CSSProperties)
+              : undefined
+          }
           className={`relative flex cursor-pointer flex-col overflow-hidden rounded-[2.5rem] bg-transparent items-stretch gap-8 p-5 lg:gap-12 lg:p-8 group/card ${
             reversed ? "lg:flex-row-reverse" : "lg:flex-row"
           }`}

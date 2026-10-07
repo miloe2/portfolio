@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import mepiiMain from "@/assets/images/Photos/mepii/mepii_main.png";
 import chemidasMain from "@/assets/images/Photos/chemidas/chemidas_main.png";
 import useIntersectionObserver from "@/hooks/useIntersectionObserver";
+import CursorLabel from "@/components/common/CursorLabel";
 
 import WhatIDidCard, { type WhatIDidItem } from "./WhatIDidCard";
 import { MASK, MASK_IN } from "./maskReveal";
@@ -15,6 +16,7 @@ const items: WhatIDidItem[] = [
     headline: "소재 공학 데이터 플랫폼",
     image: mepiiMain,
     brand: "#fb923c",
+    brandSub: "#ffffff",
     highlights: [
       { text: "온톨로지 지식그래프 시각화", tech: ["Cytoscape"] },
       { text: "LLM 자연어 검색, 처리 단계 실시간 표시", tech: ["SSE"] },
@@ -30,6 +32,7 @@ const items: WhatIDidItem[] = [
     headline: "[헤드라인 placeholder]",
     image: chemidasMain,
     brand: "#089892",
+    brandSub: "#ffffff",
     highlights: [
       { text: "[하이라이트 placeholder]", tech: ["Plotly"] },
       { text: "대용량 엑셀 업로드·미리보기", tech: ["Web Worker", "RevoGrid"] },
@@ -100,6 +103,7 @@ const WhatIDid = () => {
             <WhatIDidCard key={item.key} item={item} index={index} reversed={index % 2 === 1} />
           ))}
         </div>
+        <CursorLabel />
       </div>
     </section>
   );

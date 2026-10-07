@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import Hello from "../components/home/Hello";
-import Career from "../components/home/Career";
-import WhatIDid from "../components/home/WhatIDid";
+import Career from "@/components/home/Career";
+import WhatIDid from "@/components/home/WhatIDid";
+import Hello from "@/components/home/Hello";
 
 const Home = () => {
   useEffect(() => {
