@@ -1,56 +1,11 @@
 import { useMemo, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import mepiiMain from "@/assets/images/Photos/mepii/mepii_main.png";
-import chemidasMain from "@/assets/images/Photos/chemidas/chemidas_main.png";
 import useIntersectionObserver from "@/hooks/useIntersectionObserver";
 import CursorLabel from "@/components/common/CursorLabel";
 
-import WhatIDidCard, { type WhatIDidItem } from "./WhatIDidCard";
+import { whatIDidItems } from "@/constants/projects";
+import WhatIDidCard from "./WhatIDidCard";
 import { MASK, MASK_IN } from "./maskReveal";
-
-const items: WhatIDidItem[] = [
-  {
-    key: "mepii",
-    title: "mepii",
-    date: "2025.07 ~ 현재",
-    headline: "소재 공학 데이터 플랫폼",
-    image: mepiiMain,
-    brand: "#fb923c",
-    brandSub: "#ffffff",
-    highlights: [
-      { text: "온톨로지 지식그래프 시각화", tech: ["Cytoscape"] },
-      { text: "LLM 자연어 검색, 처리 단계 실시간 표시", tech: ["SSE"] },
-      { text: "분석 플러그인 업로드 (Python·zip)", tech: ["Presigned URL"] },
-    ],
-    tags: ["지식그래프", "자연어 검색", "대용량 업로드"],
-    stack: ["Nuxt", "Pinia", "Vue-query"],
-  },
-  {
-    key: "chemidas",
-    title: "Chemidas",
-    date: "2025.07 ~ 현재",
-    headline: "[헤드라인 placeholder]",
-    image: chemidasMain,
-    brand: "#089892",
-    brandSub: "#ffffff",
-    highlights: [
-      { text: "[하이라이트 placeholder]", tech: ["Plotly"] },
-      { text: "대용량 엑셀 업로드·미리보기", tech: ["Web Worker", "RevoGrid"] },
-    ],
-    tags: ["지식그래프", "자연어 LLM검색", "대용량 업로드"],
-
-    stack: ["Nuxt", "Pinia"],
-  },
-  {
-    key: "samsungcard",
-    title: "APP",
-    date: "2024.07 ~ 2025.07",
-    headline: "[헤드라인 placeholder]",
-    highlights: [{ text: "[하이라이트 placeholder]", tech: ["Legacy Migration"] }],
-    tags: ["지식그래프", "자연어 LLM검색", "대용량 업로드"],
-    stack: ["Vue"],
-  },
-];
 
 // 한 번 보이면 data-inview="true"로 고정 (카드와 같은 방식)
 // 타이틀은 도킹 애니메이션 때문에 박스보다 아래(화면 밖)에서 시작하므로, 아래쪽 40%를 비워서
@@ -99,7 +54,7 @@ const WhatIDid = () => {
         </div>
 
         <div className="flex flex-col gap-10 pb-24 lg:gap-0">
-          {items.map((item, index) => (
+          {whatIDidItems.map((item, index) => (
             <WhatIDidCard key={item.key} item={item} index={index} reversed={index % 2 === 1} />
           ))}
         </div>

@@ -1,24 +1,7 @@
 import { useMemo, useRef, type CSSProperties } from "react";
 import useIntersectionObserver from "@/hooks/useIntersectionObserver";
+import type { WhatIDidItem } from "@/constants/projects";
 import { MASK, MASK_IN, maskOrder } from "./maskReveal";
-
-export interface Highlight {
-  text: string;
-  tech: string[];
-}
-
-export interface WhatIDidItem {
-  key: string;
-  title: string;
-  date: string;
-  headline: string;
-  image?: string;
-  brand?: `#${string}`;
-  brandSub?: `#${string}`;
-  highlights: Highlight[];
-  tags: string[];
-  stack: string[];
-}
 
 interface WhatIDidCardProps {
   item: WhatIDidItem;
