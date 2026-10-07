@@ -30,32 +30,33 @@ export const projects: Project[] = [
     key: "mepii",
     title: "mepii",
     date: "2025.07 ~ 현재",
-    headline: "소재 공학 데이터 플랫폼",
+    headline: "지식그래프 기반 소재 연구 플랫폼",
     image: mepiiMain,
     brand: "#fb923c",
     brandSub: "#ffffff",
     highlights: [
       { text: "온톨로지 지식그래프 시각화", tech: ["Cytoscape"] },
       { text: "LLM 자연어 검색, 처리 단계 실시간 표시", tech: ["SSE"] },
-      { text: "분석 플러그인 업로드 (Python·zip)", tech: ["Presigned URL"] },
+      { text: "분석 플러그인(Python·zip) 업로드 ", tech: ["Presigned URL"] },
     ],
-    tags: ["지식그래프", "자연어 검색", "대용량 업로드"],
+    tags: ["지식그래프 시각화", "자연어 검색", "대용량 파일 업로드"],
     stack: ["Nuxt", "Pinia", "Vue-query"],
   },
   {
     key: "chemidas",
     title: "Chemidas",
     date: "2025.07 ~ 현재",
-    headline: "[헤드라인 placeholder]",
+    headline: "소재 데이터 검색·분석·예측 플랫폼",
     image: chemidasMain,
     brand: "#089892",
     brandSub: "#ffffff",
     highlights: [
-      { text: "[하이라이트 placeholder]", tech: ["Plotly"] },
+      { text: "복합 데이터 차트 시각화 (3D, Scatter, Heatmap)", tech: ["Plotly"] },
+      { text: " 검색 → 분석 → 예측 간 데이터 연결", tech: ["Pinia", "Vue-query"] },
       { text: "대용량 엑셀 업로드·미리보기", tech: ["Web Worker", "RevoGrid"] },
     ],
-    tags: ["지식그래프", "자연어 LLM검색", "대용량 업로드"],
-    stack: ["Nuxt", "Pinia"],
+    tags: ["데이터 시각화", "대용량 엑셀 처리", "서버데이터 캐싱"],
+    stack: ["Nuxt", "Pinia", "Vue-query"],
   },
   {
     key: "samsungcard",
@@ -94,14 +95,18 @@ export const projects: Project[] = [
   {
     key: "pada",
     title: "PADA",
-    date: "2023.12 ~ 2024.03",
+    date: "2023.10 ~ 2024.07",
     headline: "파충류 커뮤니티 플랫폼 / Admin",
     image: pada,
-    brand: "#fde047",
+    brand: "#00d191",
     brandSub: "#ffffff",
-    highlights: [],
-    tags: [],
-    stack: ["vue", "Typescript", "TailwindCSS", "AWS", "git", "Figma"],
+    highlights: [
+      { text: "카카오 로그인·지도 연동", tech: ["Kakao API"] },
+      { text: "Flutter 앱 딥링크 연동", tech: ["Deep Link"] },
+      { text: "정적 호스팅 배포·운영", tech: ["AWS S3"] },
+    ],
+    tags: ["파충류 커뮤니티", "APP-WEB 연동", "S3 정적호스팅"],
+    stack: ["Vue 3", "Vuex", "Axios"],
   },
   {
     key: "portfolio",
@@ -142,10 +147,10 @@ export const projects: Project[] = [
 ];
 
 // 홈 whatIDid 섹션에 보여줄 프로젝트 key (표시 순서 = 배열 순서)
-export const WHAT_I_DID_KEYS = ["mepii", "chemidas", "samsungcard"] as const;
+export const WHAT_I_DID_KEYS = ["mepii", "chemidas", "pada"] as const;
 
 // 임시: 내용 확인용으로 전체 노출 중. key로 제한하려면 아래 주석 처리된 값으로 교체.
-export const whatIDidItems: Project[] = projects;
-// export const whatIDidItems: Project[] = WHAT_I_DID_KEYS.flatMap((key) =>
-//   projects.filter((project) => project.key === key),
-// );
+// export const whatIDidItems: Project[] = projects;
+export const whatIDidItems: Project[] = WHAT_I_DID_KEYS.flatMap((key) =>
+  projects.filter((project) => project.key === key),
+);

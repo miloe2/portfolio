@@ -1,10 +1,10 @@
 import { useMemo, useRef, type CSSProperties } from "react";
 import useIntersectionObserver from "@/hooks/useIntersectionObserver";
-import type { WhatIDidItem } from "@/constants/projects";
+import type { Project } from "@/constants/projects";
 import { MASK, MASK_IN, maskOrder } from "./maskReveal";
 
 interface WhatIDidCardProps {
-  item: WhatIDidItem;
+  item: Project;
   index: number;
   reversed?: boolean;
 }
