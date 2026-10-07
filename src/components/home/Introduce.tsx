@@ -1,6 +1,6 @@
 import { useMemo, useState, useRef } from "react";
-import pht1 from "@/assets/images/Photos/Int-pht1.webp";
-import pht2 from "@/assets/images/Photos/Int-pht2.webp";
+import pht1 from "@/assets/images/home/int-pht1.webp";
+import pht2 from "@/assets/images/home/int-pht2.webp";
 import useIntersectionObserver from "@/hooks/useIntersectionObserver";
 
 // 이 컴포넌트에서만 쓰는 유동 폰트 크기

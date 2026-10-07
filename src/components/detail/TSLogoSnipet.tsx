@@ -1,4 +1,4 @@
-import tslogo from "@/assets/images/icon/Typescript_logo_2020.svg";
+import tslogo from "@/assets/images/icons/typescript-logo-2020.svg";
 import Text from "@/components/common/Text";
 import TitleText from "@/components/common/TitleText";
 

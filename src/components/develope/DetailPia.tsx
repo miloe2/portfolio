@@ -1,8 +1,8 @@
 import React from "react";
 
-import pia1 from "@/assets/images/Photos/pia_grid.webp";
-import pia2 from "@/assets/images/Photos/pia_matter.webp";
-import pia3 from "@/assets/images/Photos/pia_aws.webp";
+import pia1 from "@/assets/images/projects/pia/pia-grid.webp";
+import pia2 from "@/assets/images/projects/pia/pia-matter.webp";
+import pia3 from "@/assets/images/projects/pia/pia-aws.webp";
 
 import RightFullImage from "@/components/detail/RightFullImage";
 import LeftImage from "@/components/detail/LeftImage";

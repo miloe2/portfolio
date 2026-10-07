@@ -7,12 +7,12 @@ import ViewCode from "@/components/detail/ViewCode";
 import PrjSummary from "@/components/detail/PrjSummary";
 
 import videoUrl from "@/assets/video/DDD2.mp4";
-import img1 from "@/assets/images/Photos/DDD.webp";
-import img2 from "@/assets/images/Photos/dd1.webp";
-import img3 from "@/assets/images/Photos/dd2.webp";
-import img4 from "@/assets/images/Photos/dd3.webp";
-import img5 from "@/assets/images/Photos/dd4.webp";
-import mobile from "@/assets/images/Photos/Detail/DDDMobile.webp";
+import img1 from "@/assets/images/projects/ddd/ddd.webp";
+import img2 from "@/assets/images/projects/ddd/dd1.webp";
+import img3 from "@/assets/images/projects/ddd/dd2.webp";
+import img4 from "@/assets/images/projects/ddd/dd3.webp";
+import img5 from "@/assets/images/projects/ddd/dd4.webp";
+import mobile from "@/assets/images/projects/ddd/ddd-mobile.webp";
 import React from "react";
 
 const DetailDDD = () => {

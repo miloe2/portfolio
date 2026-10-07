@@ -1,7 +1,7 @@
-import growtech from "@/assets/images/Photos/growtech.webp";
-import ces from "@/assets/images/Photos/CES.webp";
-import fime from "@/assets/images/Photos/FIME.webp";
-import asd from "@/assets/images/Photos/asd.webp";
+import growtech from "@/assets/images/exhibitions/growtech.webp";
+import ces from "@/assets/images/exhibitions/ces.webp";
+import fime from "@/assets/images/exhibitions/fime.webp";
+import asd from "@/assets/images/exhibitions/asd.webp";
 
 const carouselData = [
   {

@@ -2,9 +2,9 @@ import React from "react";
 
 import MobileSource from "@/components/detail/MobileSource";
 import videoUrl from "@/assets/video/cocktail_video.mp4";
-import cocktail01 from "@/assets/images/Photos/cocktail/cocktail_detail01.png";
-import cocktail02 from "@/assets/images/Photos/cocktail/cocktail_detail02.png";
-import cocktail03 from "@/assets/images/Photos/cocktail/cocktail_detail03.mp4";
+import cocktail01 from "@/assets/images/projects/cocktail/cocktail-detail01.png";
+import cocktail02 from "@/assets/images/projects/cocktail/cocktail-detail02.png";
+import cocktail03 from "@/assets/images/projects/cocktail/cocktail-detail03.mp4";
 
 import RightFullImage from "@/components/detail/RightFullImage";
 import ViewCode from "@/components/detail/ViewCode";

@@ -1,8 +1,8 @@
 import React from "react";
-import pada1 from "@/assets/images/Photos/pada1.png";
-import pada2 from "@/assets/images/Photos/pada2.png";
-import pada3 from "@/assets/images/Photos/pada3.png";
-import pada4 from "@/assets/images/Photos/pada_event.png";
+import pada1 from "@/assets/images/projects/pada/pada1.png";
+import pada2 from "@/assets/images/projects/pada/pada2.png";
+import pada3 from "@/assets/images/projects/pada/pada3.png";
+import pada4 from "@/assets/images/projects/pada/pada-event.png";
 
 import RightFullImage from "@/components/detail/RightFullImage";
 import LeftImage from "@/components/detail/LeftImage";
